@@ -1,0 +1,103 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="return"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="key_bitlen"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="pt"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="Clefia_enc"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="Clefia_dec"/>
+            </pragma>
+        </directive>
+        <directive functionName="ClefiaKeySet256" label="ClefiaKeySet256_label10" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ClefiaKeySet192" label="ClefiaKeySet192_label8" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ClefiaKeySet192" label="ClefiaKeySet192_label9" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ClefiaKeySet128" label="ClefiaKeySet128_label7" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ClefiaConSet" label="ClefiaConSet_label6" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ClefiaGfn4Inv" label="ClefiaGfn4Inv_label5" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ByteXor" label="ByteXor_label2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ByteCpy" label="ByteCpy_label1" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clefia"/>
+            </pragma>
+        </directive>
+        <directive functionName="ByteCpy" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ByteXor" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="ClefiaMul2" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="recursive" value="" positionalBoolean="1"/>
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ClefiaF0Xor" label="" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ClefiaF1Xor" label="" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ClefiaGfn4" label="ClefiaGfn4_label3" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="ClefiaGfn8" label="ClefiaGfn8_label4" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

@@ -1,0 +1,162 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clefia_enc'
+================================================================
++ General Information: 
+    * Date:           Tue Dec 13 15:16:38 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        enc_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |                  Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |           |     |
+    |                  & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |+ clefia_enc                              |     -|  0.30|      435|  4.350e+03|         -|      436|     -|        no|   3 (1%)|   -|  932 (~0%)|  2810 (5%)|    -|
+    | + clefia_enc_Pipeline_ByteCpy_label1     |     -|  2.66|       19|    190.000|         -|       19|     -|        no|        -|   -|   12 (~0%)|   60 (~0%)|    -|
+    |  o ByteCpy_label1                        |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteXor_label2     |     -|  0.48|        7|     70.000|         -|        7|     -|        no|        -|   -|   81 (~0%)|  119 (~0%)|    -|
+    |  o ByteXor_label2                        |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteXor_label22    |     -|  0.48|        7|     70.000|         -|        7|     -|        no|        -|   -|   80 (~0%)|  119 (~0%)|    -|
+    |  o ByteXor_label2                        |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteCpy_label13    |     -|  2.66|       19|    190.000|         -|       19|     -|        no|        -|   -|   12 (~0%)|   60 (~0%)|    -|
+    |  o ByteCpy_label1                        |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ClefiaGfn4_label3  |     -|  0.30|      300|  3.000e+03|         -|      300|     -|        no|  2 (~0%)|   -|  417 (~0%)|  1263 (2%)|    -|
+    |  o ClefiaGfn4_label3                     |    II|  7.30|      298|  2.980e+03|        13|       13|    22|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteCpy_label14    |     -|  2.66|       19|    190.000|         -|       19|     -|        no|        -|   -|   12 (~0%)|   60 (~0%)|    -|
+    |  o ByteCpy_label1                        |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteCpy_label15    |     -|  2.66|       19|    190.000|         -|       19|     -|        no|        -|   -|   12 (~0%)|   60 (~0%)|    -|
+    |  o ByteCpy_label1                        |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteXor_label26    |     -|  0.73|       10|    100.000|         -|       10|     -|        no|        -|   -|    9 (~0%)|   87 (~0%)|    -|
+    |  o ByteXor_label2                        |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|        -|   -|          -|          -|    -|
+    | + clefia_enc_Pipeline_ByteXor_label27    |     -|  0.73|       10|    100.000|         -|       10|     -|        no|        -|   -|   10 (~0%)|   87 (~0%)|    -|
+    |  o ByteXor_label2                        |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|        -|   -|          -|          -|    -|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-----------------------+
+| Argument | Direction | Datatype              |
++----------+-----------+-----------------------+
+| pt       | in        | unsigned char const * |
+| ct       | inout     | unsigned char*        |
++----------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++----------+---------------+---------+----------------------------+
+| Argument | HW Interface  | HW Type | HW Info                    |
++----------+---------------+---------+----------------------------+
+| pt       | s_axi_control | memory  | name=pt offset=16 range=16 |
+| ct       | s_axi_control | memory  | name=ct offset=32 range=16 |
++----------+---------------+---------+----------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + clefia_enc                             | 0   |        |             |     |        |         |
+|  + clefia_enc_Pipeline_ByteCpy_label1    | 0   |        |             |     |        |         |
+|    add_ln117_fu_88_p2                    | -   |        | add_ln117   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteXor_label2    | 0   |        |             |     |        |         |
+|    add_ln124_fu_116_p2                   | -   |        | add_ln124   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteXor_label22   | 0   |        |             |     |        |         |
+|    add_ln124_fu_120_p2                   | -   |        | add_ln124   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteCpy_label13   | 0   |        |             |     |        |         |
+|    add_ln117_fu_74_p2                    | -   |        | add_ln117   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ClefiaGfn4_label3 | 0   |        |             |     |        |         |
+|    add_ln188_fu_569_p2                   | -   |        | add_ln188   | add | fabric | 0       |
+|    add_ln121_fu_586_p2                   | -   |        | add_ln121   | add | fabric | 0       |
+|    add_ln121_1_fu_601_p2                 | -   |        | add_ln121_1 | add | fabric | 0       |
+|    add_ln121_2_fu_620_p2                 | -   |        | add_ln121_2 | add | fabric | 0       |
+|    add_ln121_3_fu_798_p2                 | -   |        | add_ln121_3 | add | fabric | 0       |
+|    add_ln121_4_fu_899_p2                 | -   |        | add_ln121_4 | add | fabric | 0       |
+|    add_ln121_5_fu_1129_p2                | -   |        | add_ln121_5 | add | fabric | 0       |
+|    add_ln121_6_fu_1148_p2                | -   |        | add_ln121_6 | add | fabric | 0       |
+|    add_ln193_fu_1778_p2                  | -   |        | add_ln193   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteCpy_label14   | 0   |        |             |     |        |         |
+|    add_ln117_fu_74_p2                    | -   |        | add_ln117   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteCpy_label15   | 0   |        |             |     |        |         |
+|    add_ln117_fu_88_p2                    | -   |        | add_ln117   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteXor_label26   | 0   |        |             |     |        |         |
+|    add_ln124_fu_92_p2                    | -   |        | add_ln124   | add | fabric | 0       |
+|  + clefia_enc_Pipeline_ByteXor_label27   | 0   |        |             |     |        |         |
+|    add_ln124_fu_92_p2                    | -   |        | add_ln124   | add | fabric | 0       |
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| Name                                     | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| + clefia_enc                             | 3    | 0    |        |           |         |      |         |
+|   fin_U                                  | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|   fout_U                                 | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|   rin_U                                  | -    | -    |        | rin       | ram_s2p | auto | 1       |
+|   rout_U                                 | -    | -    |        | rout      | ram_1p  | auto | 1       |
+|   rk_U                                   | 1    | -    |        | rk        | rom_1p  | auto | 1       |
+|  + clefia_enc_Pipeline_ClefiaGfn4_label3 | 2    | 0    |        |           |         |      |         |
+|    clefia_s0_U                           | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|    clefia_s1_U                           | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
++------------------------------------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------+---------------------------------------------------------+
+| Type      | Options               | Location                                                |
++-----------+-----------------------+---------------------------------------------------------+
+| inline    | recursive             | enc_ip/solution1/directives.tcl:7 in clefia_enc         |
+| interface | s_axilite port=ct     | enc_ip/solution1/directives.tcl:10 in clefia_enc, ct    |
+| interface | s_axilite port=pt     | enc_ip/solution1/directives.tcl:8 in clefia_enc, pt     |
+| interface | s_axilite port=return | enc_ip/solution1/directives.tcl:6 in clefia_enc, return |
++-----------+-----------------------+---------------------------------------------------------+
+
+

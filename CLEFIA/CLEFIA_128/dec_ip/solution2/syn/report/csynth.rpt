@@ -1,0 +1,113 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clefia_dec'
+================================================================
++ General Information: 
+    * Date:           Mon Dec 26 15:20:57 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        dec_ip
+    * Solution:       solution2 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-----------+-------------+-----+
+    |    Modules   | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |    |           |             |     |
+    |    & Loops   | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT     | URAM|
+    +--------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-----------+-------------+-----+
+    |+ clefia_dec  |     -|  0.30|      126|  1.260e+03|         -|      127|     -|        no|  7 (2%)|   -|  9417 (8%)|  33783 (63%)|    -|
+    +--------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-----------------------+
+| Argument | Direction | Datatype              |
++----------+-----------+-----------------------+
+| ct       | in        | unsigned char const * |
+| skey     | in        | unsigned char const * |
+| pt       | out       | unsigned char*        |
++----------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++----------+---------------+---------+------------------------------+
+| Argument | HW Interface  | HW Type | HW Info                      |
++----------+---------------+---------+------------------------------+
+| ct       | s_axi_control | memory  | name=ct offset=16 range=16   |
+| skey     | s_axi_control | memory  | name=skey offset=32 range=32 |
+| pt       | s_axi_control | memory  | name=pt offset=64 range=16   |
++----------+---------------+---------+------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------+------+------+--------+-----------+---------+------+---------+
+| Name          | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++---------------+------+------+--------+-----------+---------+------+---------+
+| + clefia_dec  | 7    | 0    |        |           |         |      |         |
+|   rk_U        | 1    | -    |        | rk        | ram_t2p | auto | 1       |
+|   clefia_s0_U | 3    | -    |        | clefia_s0 | rom_np  | auto | 1       |
+|   clefia_s1_U | 3    | -    |        | clefia_s1 | rom_np  | auto | 1       |
++---------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------+---------------------------------------------------------+
+| Type      | Options               | Location                                                |
++-----------+-----------------------+---------------------------------------------------------+
+| inline    | recursive             | dec_ip/solution2/directives.tcl:8 in clefia_dec         |
+| interface | s_axilite port=ct     | dec_ip/solution2/directives.tcl:7 in clefia_dec, ct     |
+| interface | s_axilite port=pt     | dec_ip/solution2/directives.tcl:9 in clefia_dec, pt     |
+| interface | s_axilite port=return | dec_ip/solution2/directives.tcl:6 in clefia_dec, return |
+| interface | s_axilite port=skey   | dec_ip/solution2/directives.tcl:10 in clefia_dec, skey  |
+| pipeline  |                       | dec_ip/solution2/directives.tcl:11 in clefiadecrypt     |
+| pipeline  |                       | dec_ip/solution2/directives.tcl:12 in clefiakeyset128   |
++-----------+-----------------------+---------------------------------------------------------+
+
+

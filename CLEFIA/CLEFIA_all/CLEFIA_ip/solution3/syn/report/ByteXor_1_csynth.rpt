@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'ByteXor_1'
+================================================================
+* Date:           Wed Dec  7 16:30:01 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution3 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.566 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7|  70.000 ns|  70.000 ns|    8|    8|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    155|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    149|    -|
+|Register         |        -|    -|      52|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      52|    304|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln124_1_fu_239_p2   |         +|   0|  0|  13|           4|           1|
+    |add_ln124_26_fu_186_p2  |         +|   0|  0|  15|           8|           1|
+    |add_ln124_27_fu_209_p2  |         +|   0|  0|  15|           8|           2|
+    |add_ln124_28_fu_219_p2  |         +|   0|  0|  15|           8|           2|
+    |add_ln124_2_fu_255_p2   |         +|   0|  0|  13|           4|           2|
+    |add_ln124_3_fu_265_p2   |         +|   0|  0|  13|           4|           2|
+    |add_ln124_4_fu_281_p2   |         +|   0|  0|  13|           4|           2|
+    |add_ln124_5_fu_291_p2   |         +|   0|  0|  13|           4|           2|
+    |add_ln124_fu_229_p2     |         +|   0|  0|  13|           4|           1|
+    |xor_ln124_1_fu_249_p2   |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_2_fu_275_p2   |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_3_fu_301_p2   |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_fu_202_p2     |       xor|   0|  0|   8|           8|           8|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 155|          80|          47|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |Clefia_enc_address0  |  48|          9|    4|         36|
+    |Clefia_enc_d0        |  25|          5|    8|         40|
+    |ap_NS_fsm            |  48|          9|    1|          9|
+    |b_address0           |  14|          3|    8|         24|
+    |b_address1           |  14|          3|    8|         24|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                | 149|         29|   29|        133|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |a_offset_read_reg_313    |  4|   0|    4|          0|
+    |ap_CS_fsm                |  8|   0|    8|          0|
+    |ap_port_reg_dst_offset   |  4|   0|    4|          0|
+    |b_load_1_reg_342         |  8|   0|    8|          0|
+    |b_load_2_reg_362         |  8|   0|    8|          0|
+    |b_load_3_reg_367         |  8|   0|    8|          0|
+    |b_offset_read_reg_307    |  8|   0|    8|          0|
+    |dst_offset_read_reg_335  |  4|   0|    4|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 52|   0|   52|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|ap_ce                |   in|    1|  ap_ctrl_hs|     ByteXor.1|  return value|
+|Clefia_enc_address0  |  out|    4|   ap_memory|    Clefia_enc|         array|
+|Clefia_enc_ce0       |  out|    1|   ap_memory|    Clefia_enc|         array|
+|Clefia_enc_we0       |  out|    1|   ap_memory|    Clefia_enc|         array|
+|Clefia_enc_d0        |  out|    8|   ap_memory|    Clefia_enc|         array|
+|Clefia_enc_q0        |   in|    8|   ap_memory|    Clefia_enc|         array|
+|dst_offset           |   in|    4|     ap_none|    dst_offset|        scalar|
+|a_offset             |   in|    4|     ap_none|      a_offset|        scalar|
+|b_address0           |  out|    8|   ap_memory|             b|         array|
+|b_ce0                |  out|    1|   ap_memory|             b|         array|
+|b_q0                 |   in|    8|   ap_memory|             b|         array|
+|b_address1           |  out|    8|   ap_memory|             b|         array|
+|b_ce1                |  out|    1|   ap_memory|             b|         array|
+|b_q1                 |   in|    8|   ap_memory|             b|         array|
+|b_offset             |   in|    8|     ap_none|      b_offset|        scalar|
++---------------------+-----+-----+------------+--------------+--------------+
+

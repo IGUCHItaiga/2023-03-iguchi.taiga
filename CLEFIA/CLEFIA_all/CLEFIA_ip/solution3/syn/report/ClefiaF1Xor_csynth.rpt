@@ -1,0 +1,218 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaF1Xor'
+================================================================
+* Date:           Wed Dec  7 16:29:54 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution3 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.724 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       32|       80|  0.320 us|  0.800 us|   32|   80|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                          |               |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |         Instance         |     Module    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +--------------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_ByteXor_11150_fu_98   |ByteXor_11150  |        9|        9|  90.000 ns|  90.000 ns|    9|    9|       no|
+        |grp_ByteCpy_118_fu_110    |ByteCpy_118    |        9|       57|  90.000 ns|   0.570 us|    9|   57|       no|
+        |tmp_ClefiaMul2_fu_123     |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_1_ClefiaMul2_fu_128   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_2_ClefiaMul2_fu_134   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_3_ClefiaMul2_fu_140   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_4_ClefiaMul2_fu_145   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_5_ClefiaMul2_fu_150   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_6_ClefiaMul2_fu_156   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_7_ClefiaMul2_fu_162   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_8_ClefiaMul2_fu_167   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_9_ClefiaMul2_fu_173   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_s_ClefiaMul2_fu_179   |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |tmp_10_ClefiaMul2_fu_185  |ClefiaMul2     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |grp_ByteXor_fu_191        |ByteXor        |        9|        9|  90.000 ns|  90.000 ns|    9|    9|       no|
+        +--------------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    146|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      80|    457|    -|
+|Memory           |        2|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       -|    147|    -|
+|Register         |        -|    -|      91|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        2|    0|     171|    750|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+---------------+---------+----+----+-----+-----+
+    |         Instance         |     Module    | BRAM_18K| DSP| FF | LUT | URAM|
+    +--------------------------+---------------+---------+----+----+-----+-----+
+    |grp_ByteCpy_118_fu_110    |ByteCpy_118    |        0|   0|  18|   77|    0|
+    |grp_ByteXor_fu_191        |ByteXor        |        0|   0|  19|  103|    0|
+    |grp_ByteXor_11150_fu_98   |ByteXor_11150  |        0|   0|  43|   85|    0|
+    |tmp_ClefiaMul2_fu_123     |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_1_ClefiaMul2_fu_128   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_2_ClefiaMul2_fu_134   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_3_ClefiaMul2_fu_140   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_4_ClefiaMul2_fu_145   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_5_ClefiaMul2_fu_150   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_6_ClefiaMul2_fu_156   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_7_ClefiaMul2_fu_162   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_8_ClefiaMul2_fu_167   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_9_ClefiaMul2_fu_173   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_s_ClefiaMul2_fu_179   |ClefiaMul2     |        0|   0|   0|   16|    0|
+    |tmp_10_ClefiaMul2_fu_185  |ClefiaMul2     |        0|   0|   0|   16|    0|
+    +--------------------------+---------------+---------+----+----+-----+-----+
+    |Total                     |               |        0|   0|  80|  457|    0|
+    +--------------------------+---------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |    Memory   |                Module               | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |clefia_s0_U  |ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    |clefia_s1_U  |ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total        |                                     |        2|  0|   0|    0|   512|   16|     2|         4096|
+    +-------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln185_2_fu_336_p2   |         +|   0|  0|  13|           5|           3|
+    |add_ln185_fu_330_p2     |         +|   0|  0|  13|           5|           3|
+    |xor_ln178_14_fu_245_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln178_15_fu_251_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln178_fu_240_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln179_14_fu_269_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln179_15_fu_275_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln179_fu_264_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln180_14_fu_293_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln180_15_fu_299_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln180_fu_288_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln181_10_fu_317_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln181_fu_312_p2     |       xor|   0|  0|   8|           8|           8|
+    |y_0_fu_257_p2           |       xor|   0|  0|   8|           8|           8|
+    |y_1_fu_281_p2           |       xor|   0|  0|   8|           8|           8|
+    |y_2_fu_305_p2           |       xor|   0|  0|   8|           8|           8|
+    |y_3_fu_323_p2           |       xor|   0|  0|   8|           8|           8|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 146|         130|         126|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  37|          7|    1|          7|
+    |clefia_s0_address0  |  14|          3|    8|         24|
+    |dst_address0        |  14|          3|    5|         15|
+    |dst_ce0             |  14|          3|    1|          3|
+    |dst_d0              |  14|          3|    8|         24|
+    |dst_we0             |  14|          3|    1|          3|
+    |src_address0        |  20|          4|    5|         20|
+    |src_ce0             |  20|          4|    1|          4|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 147|         30|   30|        100|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+---+----+-----+-----------+
+    |                 Name                 | FF| LUT| Bits| Const Bits|
+    +--------------------------------------+---+----+-----+-----------+
+    |add_ln185_2_reg_434                   |  5|   0|    5|          0|
+    |add_ln185_reg_429                     |  5|   0|    5|          0|
+    |ap_CS_fsm                             |  6|   0|    6|          0|
+    |grp_ByteCpy_118_fu_110_ap_start_reg   |  1|   0|    1|          0|
+    |grp_ByteXor_11150_fu_98_ap_start_reg  |  1|   0|    1|          0|
+    |grp_ByteXor_fu_191_ap_start_reg       |  1|   0|    1|          0|
+    |x_1_reg_354                           |  8|   0|    8|          0|
+    |y_0_reg_409                           |  8|   0|    8|          0|
+    |y_1_reg_414                           |  8|   0|    8|          0|
+    |y_2_reg_419                           |  8|   0|    8|          0|
+    |y_3_reg_424                           |  8|   0|    8|          0|
+    |z_22_reg_403                          |  8|   0|    8|          0|
+    |z_23_reg_391                          |  8|   0|    8|          0|
+    |z_24_reg_397                          |  8|   0|    8|          0|
+    |z_reg_380                             |  8|   0|    8|          0|
+    +--------------------------------------+---+----+-----+-----------+
+    |Total                                 | 91|   0|   91|          0|
+    +--------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------+-----+-----+------------+--------------+--------------+
+|ap_clk        |   in|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_start      |   in|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_done       |  out|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|dst_address0  |  out|    5|   ap_memory|           dst|         array|
+|dst_ce0       |  out|    1|   ap_memory|           dst|         array|
+|dst_we0       |  out|    1|   ap_memory|           dst|         array|
+|dst_d0        |  out|    8|   ap_memory|           dst|         array|
+|dst_offset    |   in|    5|     ap_none|    dst_offset|        scalar|
+|src_address0  |  out|    5|   ap_memory|           src|         array|
+|src_ce0       |  out|    1|   ap_memory|           src|         array|
+|src_q0        |   in|    8|   ap_memory|           src|         array|
+|src_offset    |   in|    5|     ap_none|    src_offset|        scalar|
+|rk_address0   |  out|    9|   ap_memory|            rk|         array|
+|rk_ce0        |  out|    1|   ap_memory|            rk|         array|
+|rk_q0         |   in|    8|   ap_memory|            rk|         array|
+|rk_offset     |   in|    8|     ap_none|     rk_offset|        scalar|
++--------------+-----+-----+------------+--------------+--------------+
+

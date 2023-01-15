@@ -1,0 +1,1738 @@
+
+
+================================================================
+== Vitis HLS Report for 'ByteCpy_2'
+================================================================
+* Date:           Wed Dec  7 16:29:46 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution3 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.644 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 16, depth = 17
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 1
+  Pipeline-0 : II = 16, D = 17, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%src_addr = getelementptr i8 %src, i64 0, i64 0" [clefia.c:117]   --->   Operation 18 'getelementptr' 'src_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (2.32ns)   --->   "%src_load = load i4 %src_addr" [clefia.c:117]   --->   Operation 19 'load' 'src_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%src_addr_1 = getelementptr i8 %src, i64 0, i64 1" [clefia.c:117]   --->   Operation 20 'getelementptr' 'src_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (2.32ns)   --->   "%src_load_1 = load i4 %src_addr_1" [clefia.c:117]   --->   Operation 21 'load' 'src_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 4.64>
+ST_2 : Operation 22 [1/2] (2.32ns)   --->   "%src_load = load i4 %src_addr" [clefia.c:117]   --->   Operation 22 'load' 'src_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%Clefia_enc_addr = getelementptr i8 %Clefia_enc, i64 0, i64 0" [clefia.c:117]   --->   Operation 23 'getelementptr' 'Clefia_enc_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load, i4 %Clefia_enc_addr" [clefia.c:117]   --->   Operation 24 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 25 [1/2] (2.32ns)   --->   "%src_load_1 = load i4 %src_addr_1" [clefia.c:117]   --->   Operation 25 'load' 'src_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%src_addr_2 = getelementptr i8 %src, i64 0, i64 2" [clefia.c:117]   --->   Operation 26 'getelementptr' 'src_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [2/2] (2.32ns)   --->   "%src_load_2 = load i4 %src_addr_2" [clefia.c:117]   --->   Operation 27 'load' 'src_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%src_addr_3 = getelementptr i8 %src, i64 0, i64 3" [clefia.c:117]   --->   Operation 28 'getelementptr' 'src_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (2.32ns)   --->   "%src_load_3 = load i4 %src_addr_3" [clefia.c:117]   --->   Operation 29 'load' 'src_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_8 = getelementptr i8 %Clefia_enc, i64 0, i64 1" [clefia.c:117]   --->   Operation 30 'getelementptr' 'Clefia_enc_addr_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_1, i4 %Clefia_enc_addr_8" [clefia.c:117]   --->   Operation 31 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 32 [1/2] (2.32ns)   --->   "%src_load_2 = load i4 %src_addr_2" [clefia.c:117]   --->   Operation 32 'load' 'src_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 33 [1/2] (2.32ns)   --->   "%src_load_3 = load i4 %src_addr_3" [clefia.c:117]   --->   Operation 33 'load' 'src_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%src_addr_4 = getelementptr i8 %src, i64 0, i64 4" [clefia.c:117]   --->   Operation 34 'getelementptr' 'src_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [2/2] (2.32ns)   --->   "%src_load_4 = load i4 %src_addr_4" [clefia.c:117]   --->   Operation 35 'load' 'src_load_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%src_addr_5 = getelementptr i8 %src, i64 0, i64 5" [clefia.c:117]   --->   Operation 36 'getelementptr' 'src_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [2/2] (2.32ns)   --->   "%src_load_5 = load i4 %src_addr_5" [clefia.c:117]   --->   Operation 37 'load' 'src_load_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_9 = getelementptr i8 %Clefia_enc, i64 0, i64 2" [clefia.c:117]   --->   Operation 38 'getelementptr' 'Clefia_enc_addr_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_2, i4 %Clefia_enc_addr_9" [clefia.c:117]   --->   Operation 39 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 40 [1/2] (2.32ns)   --->   "%src_load_4 = load i4 %src_addr_4" [clefia.c:117]   --->   Operation 40 'load' 'src_load_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 41 [1/2] (2.32ns)   --->   "%src_load_5 = load i4 %src_addr_5" [clefia.c:117]   --->   Operation 41 'load' 'src_load_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%src_addr_6 = getelementptr i8 %src, i64 0, i64 6" [clefia.c:117]   --->   Operation 42 'getelementptr' 'src_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [2/2] (2.32ns)   --->   "%src_load_6 = load i4 %src_addr_6" [clefia.c:117]   --->   Operation 43 'load' 'src_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%src_addr_7 = getelementptr i8 %src, i64 0, i64 7" [clefia.c:117]   --->   Operation 44 'getelementptr' 'src_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [2/2] (2.32ns)   --->   "%src_load_7 = load i4 %src_addr_7" [clefia.c:117]   --->   Operation 45 'load' 'src_load_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_10 = getelementptr i8 %Clefia_enc, i64 0, i64 3" [clefia.c:117]   --->   Operation 46 'getelementptr' 'Clefia_enc_addr_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_3, i4 %Clefia_enc_addr_10" [clefia.c:117]   --->   Operation 47 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 48 [1/2] (2.32ns)   --->   "%src_load_6 = load i4 %src_addr_6" [clefia.c:117]   --->   Operation 48 'load' 'src_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 49 [1/2] (2.32ns)   --->   "%src_load_7 = load i4 %src_addr_7" [clefia.c:117]   --->   Operation 49 'load' 'src_load_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%src_addr_8 = getelementptr i8 %src, i64 0, i64 8" [clefia.c:117]   --->   Operation 50 'getelementptr' 'src_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [2/2] (2.32ns)   --->   "%src_load_8 = load i4 %src_addr_8" [clefia.c:117]   --->   Operation 51 'load' 'src_load_8' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%src_addr_9 = getelementptr i8 %src, i64 0, i64 9" [clefia.c:117]   --->   Operation 52 'getelementptr' 'src_addr_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [2/2] (2.32ns)   --->   "%src_load_9 = load i4 %src_addr_9" [clefia.c:117]   --->   Operation 53 'load' 'src_load_9' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_11 = getelementptr i8 %Clefia_enc, i64 0, i64 4" [clefia.c:117]   --->   Operation 54 'getelementptr' 'Clefia_enc_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_4, i4 %Clefia_enc_addr_11" [clefia.c:117]   --->   Operation 55 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 56 [1/2] (2.32ns)   --->   "%src_load_8 = load i4 %src_addr_8" [clefia.c:117]   --->   Operation 56 'load' 'src_load_8' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 57 [1/2] (2.32ns)   --->   "%src_load_9 = load i4 %src_addr_9" [clefia.c:117]   --->   Operation 57 'load' 'src_load_9' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%src_addr_10 = getelementptr i8 %src, i64 0, i64 10" [clefia.c:117]   --->   Operation 58 'getelementptr' 'src_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [2/2] (2.32ns)   --->   "%src_load_10 = load i4 %src_addr_10" [clefia.c:117]   --->   Operation 59 'load' 'src_load_10' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%src_addr_11 = getelementptr i8 %src, i64 0, i64 11" [clefia.c:117]   --->   Operation 60 'getelementptr' 'src_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [2/2] (2.32ns)   --->   "%src_load_11 = load i4 %src_addr_11" [clefia.c:117]   --->   Operation 61 'load' 'src_load_11' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_12 = getelementptr i8 %Clefia_enc, i64 0, i64 5" [clefia.c:117]   --->   Operation 62 'getelementptr' 'Clefia_enc_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_5, i4 %Clefia_enc_addr_12" [clefia.c:117]   --->   Operation 63 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 64 [1/2] (2.32ns)   --->   "%src_load_10 = load i4 %src_addr_10" [clefia.c:117]   --->   Operation 64 'load' 'src_load_10' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 65 [1/2] (2.32ns)   --->   "%src_load_11 = load i4 %src_addr_11" [clefia.c:117]   --->   Operation 65 'load' 'src_load_11' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%src_addr_12 = getelementptr i8 %src, i64 0, i64 12" [clefia.c:117]   --->   Operation 66 'getelementptr' 'src_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [2/2] (2.32ns)   --->   "%src_load_12 = load i4 %src_addr_12" [clefia.c:117]   --->   Operation 67 'load' 'src_load_12' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%src_addr_13 = getelementptr i8 %src, i64 0, i64 13" [clefia.c:117]   --->   Operation 68 'getelementptr' 'src_addr_13' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [2/2] (2.32ns)   --->   "%src_load_13 = load i4 %src_addr_13" [clefia.c:117]   --->   Operation 69 'load' 'src_load_13' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 8 <SV = 7> <Delay = 2.32>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_13 = getelementptr i8 %Clefia_enc, i64 0, i64 6" [clefia.c:117]   --->   Operation 70 'getelementptr' 'Clefia_enc_addr_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_6, i4 %Clefia_enc_addr_13" [clefia.c:117]   --->   Operation 71 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 72 [1/2] (2.32ns)   --->   "%src_load_12 = load i4 %src_addr_12" [clefia.c:117]   --->   Operation 72 'load' 'src_load_12' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 73 [1/2] (2.32ns)   --->   "%src_load_13 = load i4 %src_addr_13" [clefia.c:117]   --->   Operation 73 'load' 'src_load_13' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%src_addr_14 = getelementptr i8 %src, i64 0, i64 14" [clefia.c:117]   --->   Operation 74 'getelementptr' 'src_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [2/2] (2.32ns)   --->   "%src_load_14 = load i4 %src_addr_14" [clefia.c:117]   --->   Operation 75 'load' 'src_load_14' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%src_addr_15 = getelementptr i8 %src, i64 0, i64 15" [clefia.c:117]   --->   Operation 76 'getelementptr' 'src_addr_15' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [2/2] (2.32ns)   --->   "%src_load_15 = load i4 %src_addr_15" [clefia.c:117]   --->   Operation 77 'load' 'src_load_15' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 9 <SV = 8> <Delay = 2.32>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_14 = getelementptr i8 %Clefia_enc, i64 0, i64 7" [clefia.c:117]   --->   Operation 78 'getelementptr' 'Clefia_enc_addr_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_7, i4 %Clefia_enc_addr_14" [clefia.c:117]   --->   Operation 79 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 80 [1/2] (2.32ns)   --->   "%src_load_14 = load i4 %src_addr_14" [clefia.c:117]   --->   Operation 80 'load' 'src_load_14' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 81 [1/2] (2.32ns)   --->   "%src_load_15 = load i4 %src_addr_15" [clefia.c:117]   --->   Operation 81 'load' 'src_load_15' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 10 <SV = 9> <Delay = 2.32>
+ST_10 : Operation 82 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_15 = getelementptr i8 %Clefia_enc, i64 0, i64 8" [clefia.c:117]   --->   Operation 82 'getelementptr' 'Clefia_enc_addr_15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 83 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_8, i4 %Clefia_enc_addr_15" [clefia.c:117]   --->   Operation 83 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 11 <SV = 10> <Delay = 2.32>
+ST_11 : Operation 84 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_16 = getelementptr i8 %Clefia_enc, i64 0, i64 9" [clefia.c:117]   --->   Operation 84 'getelementptr' 'Clefia_enc_addr_16' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 85 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_9, i4 %Clefia_enc_addr_16" [clefia.c:117]   --->   Operation 85 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 12 <SV = 11> <Delay = 2.32>
+ST_12 : Operation 86 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_17 = getelementptr i8 %Clefia_enc, i64 0, i64 10" [clefia.c:117]   --->   Operation 86 'getelementptr' 'Clefia_enc_addr_17' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 87 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_10, i4 %Clefia_enc_addr_17" [clefia.c:117]   --->   Operation 87 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 13 <SV = 12> <Delay = 2.32>
+ST_13 : Operation 88 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_18 = getelementptr i8 %Clefia_enc, i64 0, i64 11" [clefia.c:117]   --->   Operation 88 'getelementptr' 'Clefia_enc_addr_18' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 89 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_11, i4 %Clefia_enc_addr_18" [clefia.c:117]   --->   Operation 89 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 14 <SV = 13> <Delay = 2.32>
+ST_14 : Operation 90 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_19 = getelementptr i8 %Clefia_enc, i64 0, i64 12" [clefia.c:117]   --->   Operation 90 'getelementptr' 'Clefia_enc_addr_19' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 91 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_12, i4 %Clefia_enc_addr_19" [clefia.c:117]   --->   Operation 91 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 15 <SV = 14> <Delay = 2.32>
+ST_15 : Operation 92 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_20 = getelementptr i8 %Clefia_enc, i64 0, i64 13" [clefia.c:117]   --->   Operation 92 'getelementptr' 'Clefia_enc_addr_20' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 93 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_13, i4 %Clefia_enc_addr_20" [clefia.c:117]   --->   Operation 93 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 16 <SV = 15> <Delay = 2.32>
+ST_16 : Operation 94 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_21 = getelementptr i8 %Clefia_enc, i64 0, i64 14" [clefia.c:117]   --->   Operation 94 'getelementptr' 'Clefia_enc_addr_21' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 95 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_14, i4 %Clefia_enc_addr_21" [clefia.c:117]   --->   Operation 95 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+
+State 17 <SV = 16> <Delay = 2.32>
+ST_17 : Operation 96 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %Clefia_enc, i64 666, i64 207, i64 1"   --->   Operation 96 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %Clefia_enc, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 97 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 98 [1/1] (0.00ns)   --->   "%Clefia_enc_addr_22 = getelementptr i8 %Clefia_enc, i64 0, i64 15" [clefia.c:117]   --->   Operation 98 'getelementptr' 'Clefia_enc_addr_22' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 99 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %src_load_15, i4 %Clefia_enc_addr_22" [clefia.c:117]   --->   Operation 99 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 100 [1/1] (0.00ns)   --->   "%ret_ln119 = ret" [clefia.c:119]   --->   Operation 100 'ret' 'ret_ln119' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ Clefia_enc]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
+Port [ src]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+src_addr           (getelementptr) [ 001000000000000000]
+src_addr_1         (getelementptr) [ 001000000000000000]
+src_load           (load         ) [ 000000000000000000]
+Clefia_enc_addr    (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_1         (load         ) [ 000100000000000000]
+src_addr_2         (getelementptr) [ 000100000000000000]
+src_addr_3         (getelementptr) [ 000100000000000000]
+Clefia_enc_addr_8  (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_2         (load         ) [ 000010000000000000]
+src_load_3         (load         ) [ 000011000000000000]
+src_addr_4         (getelementptr) [ 000010000000000000]
+src_addr_5         (getelementptr) [ 000010000000000000]
+Clefia_enc_addr_9  (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_4         (load         ) [ 000001100000000000]
+src_load_5         (load         ) [ 000001110000000000]
+src_addr_6         (getelementptr) [ 000001000000000000]
+src_addr_7         (getelementptr) [ 000001000000000000]
+Clefia_enc_addr_10 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_6         (load         ) [ 000000111000000000]
+src_load_7         (load         ) [ 000000111100000000]
+src_addr_8         (getelementptr) [ 000000100000000000]
+src_addr_9         (getelementptr) [ 000000100000000000]
+Clefia_enc_addr_11 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_8         (load         ) [ 000000011110000000]
+src_load_9         (load         ) [ 000000011111000000]
+src_addr_10        (getelementptr) [ 000000010000000000]
+src_addr_11        (getelementptr) [ 000000010000000000]
+Clefia_enc_addr_12 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_10        (load         ) [ 000000001111100000]
+src_load_11        (load         ) [ 000000001111110000]
+src_addr_12        (getelementptr) [ 000000001000000000]
+src_addr_13        (getelementptr) [ 000000001000000000]
+Clefia_enc_addr_13 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_12        (load         ) [ 000000000111111000]
+src_load_13        (load         ) [ 000000000111111100]
+src_addr_14        (getelementptr) [ 000000000100000000]
+src_addr_15        (getelementptr) [ 000000000100000000]
+Clefia_enc_addr_14 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+src_load_14        (load         ) [ 000000000011111110]
+src_load_15        (load         ) [ 010000000011111111]
+Clefia_enc_addr_15 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+Clefia_enc_addr_16 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+Clefia_enc_addr_17 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+Clefia_enc_addr_18 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+Clefia_enc_addr_19 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+Clefia_enc_addr_20 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+Clefia_enc_addr_21 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+specmemcore_ln0    (specmemcore  ) [ 000000000000000000]
+specinterface_ln0  (specinterface) [ 000000000000000000]
+Clefia_enc_addr_22 (getelementptr) [ 000000000000000000]
+store_ln117        (store        ) [ 000000000000000000]
+ret_ln119          (ret          ) [ 000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="Clefia_enc">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Clefia_enc"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="src">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="src"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecMemCore"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="src_addr_gep_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="8" slack="0"/>
+<pin id="56" dir="0" index="1" bw="1" slack="0"/>
+<pin id="57" dir="0" index="2" bw="1" slack="0"/>
+<pin id="58" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="grp_access_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="4" slack="0"/>
+<pin id="64" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="65" dir="0" index="2" bw="0" slack="0"/>
+<pin id="67" dir="0" index="4" bw="4" slack="2147483647"/>
+<pin id="68" dir="0" index="5" bw="8" slack="2147483647"/>
+<pin id="69" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="66" dir="1" index="3" bw="8" slack="1"/>
+<pin id="70" dir="1" index="7" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="src_load/1 src_load_1/1 src_load_2/2 src_load_3/2 src_load_4/3 src_load_5/3 src_load_6/4 src_load_7/4 src_load_8/5 src_load_9/5 src_load_10/6 src_load_11/6 src_load_12/7 src_load_13/7 src_load_14/8 src_load_15/8 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="src_addr_1_gep_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="8" slack="0"/>
+<pin id="74" dir="0" index="1" bw="1" slack="0"/>
+<pin id="75" dir="0" index="2" bw="1" slack="0"/>
+<pin id="76" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="81" class="1004" name="Clefia_enc_addr_gep_fu_81">
+<pin_list>
+<pin id="82" dir="0" index="0" bw="8" slack="0"/>
+<pin id="83" dir="0" index="1" bw="1" slack="0"/>
+<pin id="84" dir="0" index="2" bw="1" slack="0"/>
+<pin id="85" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr/2 "/>
+</bind>
+</comp>
+
+<comp id="89" class="1004" name="grp_access_fu_89">
+<pin_list>
+<pin id="90" dir="0" index="0" bw="4" slack="0"/>
+<pin id="91" dir="0" index="1" bw="8" slack="0"/>
+<pin id="92" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="93" dir="1" index="3" bw="8" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln117/2 store_ln117/3 store_ln117/4 store_ln117/5 store_ln117/6 store_ln117/7 store_ln117/8 store_ln117/9 store_ln117/10 store_ln117/11 store_ln117/12 store_ln117/13 store_ln117/14 store_ln117/15 store_ln117/16 store_ln117/17 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="src_addr_2_gep_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="8" slack="0"/>
+<pin id="98" dir="0" index="1" bw="1" slack="0"/>
+<pin id="99" dir="0" index="2" bw="3" slack="0"/>
+<pin id="100" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_2/2 "/>
+</bind>
+</comp>
+
+<comp id="105" class="1004" name="src_addr_3_gep_fu_105">
+<pin_list>
+<pin id="106" dir="0" index="0" bw="8" slack="0"/>
+<pin id="107" dir="0" index="1" bw="1" slack="0"/>
+<pin id="108" dir="0" index="2" bw="3" slack="0"/>
+<pin id="109" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_3/2 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1004" name="Clefia_enc_addr_8_gep_fu_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="8" slack="0"/>
+<pin id="116" dir="0" index="1" bw="1" slack="0"/>
+<pin id="117" dir="0" index="2" bw="1" slack="0"/>
+<pin id="118" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_8/3 "/>
+</bind>
+</comp>
+
+<comp id="123" class="1004" name="src_addr_4_gep_fu_123">
+<pin_list>
+<pin id="124" dir="0" index="0" bw="8" slack="0"/>
+<pin id="125" dir="0" index="1" bw="1" slack="0"/>
+<pin id="126" dir="0" index="2" bw="4" slack="0"/>
+<pin id="127" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_4/3 "/>
+</bind>
+</comp>
+
+<comp id="132" class="1004" name="src_addr_5_gep_fu_132">
+<pin_list>
+<pin id="133" dir="0" index="0" bw="8" slack="0"/>
+<pin id="134" dir="0" index="1" bw="1" slack="0"/>
+<pin id="135" dir="0" index="2" bw="4" slack="0"/>
+<pin id="136" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_5/3 "/>
+</bind>
+</comp>
+
+<comp id="141" class="1004" name="Clefia_enc_addr_9_gep_fu_141">
+<pin_list>
+<pin id="142" dir="0" index="0" bw="8" slack="0"/>
+<pin id="143" dir="0" index="1" bw="1" slack="0"/>
+<pin id="144" dir="0" index="2" bw="3" slack="0"/>
+<pin id="145" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_9/4 "/>
+</bind>
+</comp>
+
+<comp id="150" class="1004" name="src_addr_6_gep_fu_150">
+<pin_list>
+<pin id="151" dir="0" index="0" bw="8" slack="0"/>
+<pin id="152" dir="0" index="1" bw="1" slack="0"/>
+<pin id="153" dir="0" index="2" bw="4" slack="0"/>
+<pin id="154" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_6/4 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="src_addr_7_gep_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="8" slack="0"/>
+<pin id="161" dir="0" index="1" bw="1" slack="0"/>
+<pin id="162" dir="0" index="2" bw="4" slack="0"/>
+<pin id="163" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_7/4 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1004" name="Clefia_enc_addr_10_gep_fu_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="8" slack="0"/>
+<pin id="170" dir="0" index="1" bw="1" slack="0"/>
+<pin id="171" dir="0" index="2" bw="3" slack="0"/>
+<pin id="172" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_10/5 "/>
+</bind>
+</comp>
+
+<comp id="177" class="1004" name="src_addr_8_gep_fu_177">
+<pin_list>
+<pin id="178" dir="0" index="0" bw="8" slack="0"/>
+<pin id="179" dir="0" index="1" bw="1" slack="0"/>
+<pin id="180" dir="0" index="2" bw="5" slack="0"/>
+<pin id="181" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_8/5 "/>
+</bind>
+</comp>
+
+<comp id="186" class="1004" name="src_addr_9_gep_fu_186">
+<pin_list>
+<pin id="187" dir="0" index="0" bw="8" slack="0"/>
+<pin id="188" dir="0" index="1" bw="1" slack="0"/>
+<pin id="189" dir="0" index="2" bw="5" slack="0"/>
+<pin id="190" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_9/5 "/>
+</bind>
+</comp>
+
+<comp id="195" class="1004" name="Clefia_enc_addr_11_gep_fu_195">
+<pin_list>
+<pin id="196" dir="0" index="0" bw="8" slack="0"/>
+<pin id="197" dir="0" index="1" bw="1" slack="0"/>
+<pin id="198" dir="0" index="2" bw="4" slack="0"/>
+<pin id="199" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_11/6 "/>
+</bind>
+</comp>
+
+<comp id="204" class="1004" name="src_addr_10_gep_fu_204">
+<pin_list>
+<pin id="205" dir="0" index="0" bw="8" slack="0"/>
+<pin id="206" dir="0" index="1" bw="1" slack="0"/>
+<pin id="207" dir="0" index="2" bw="5" slack="0"/>
+<pin id="208" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_10/6 "/>
+</bind>
+</comp>
+
+<comp id="213" class="1004" name="src_addr_11_gep_fu_213">
+<pin_list>
+<pin id="214" dir="0" index="0" bw="8" slack="0"/>
+<pin id="215" dir="0" index="1" bw="1" slack="0"/>
+<pin id="216" dir="0" index="2" bw="5" slack="0"/>
+<pin id="217" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_11/6 "/>
+</bind>
+</comp>
+
+<comp id="222" class="1004" name="Clefia_enc_addr_12_gep_fu_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="8" slack="0"/>
+<pin id="224" dir="0" index="1" bw="1" slack="0"/>
+<pin id="225" dir="0" index="2" bw="4" slack="0"/>
+<pin id="226" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_12/7 "/>
+</bind>
+</comp>
+
+<comp id="231" class="1004" name="src_addr_12_gep_fu_231">
+<pin_list>
+<pin id="232" dir="0" index="0" bw="8" slack="0"/>
+<pin id="233" dir="0" index="1" bw="1" slack="0"/>
+<pin id="234" dir="0" index="2" bw="5" slack="0"/>
+<pin id="235" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_12/7 "/>
+</bind>
+</comp>
+
+<comp id="240" class="1004" name="src_addr_13_gep_fu_240">
+<pin_list>
+<pin id="241" dir="0" index="0" bw="8" slack="0"/>
+<pin id="242" dir="0" index="1" bw="1" slack="0"/>
+<pin id="243" dir="0" index="2" bw="5" slack="0"/>
+<pin id="244" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_13/7 "/>
+</bind>
+</comp>
+
+<comp id="249" class="1004" name="Clefia_enc_addr_13_gep_fu_249">
+<pin_list>
+<pin id="250" dir="0" index="0" bw="8" slack="0"/>
+<pin id="251" dir="0" index="1" bw="1" slack="0"/>
+<pin id="252" dir="0" index="2" bw="4" slack="0"/>
+<pin id="253" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_13/8 "/>
+</bind>
+</comp>
+
+<comp id="258" class="1004" name="src_addr_14_gep_fu_258">
+<pin_list>
+<pin id="259" dir="0" index="0" bw="8" slack="0"/>
+<pin id="260" dir="0" index="1" bw="1" slack="0"/>
+<pin id="261" dir="0" index="2" bw="5" slack="0"/>
+<pin id="262" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_14/8 "/>
+</bind>
+</comp>
+
+<comp id="267" class="1004" name="src_addr_15_gep_fu_267">
+<pin_list>
+<pin id="268" dir="0" index="0" bw="8" slack="0"/>
+<pin id="269" dir="0" index="1" bw="1" slack="0"/>
+<pin id="270" dir="0" index="2" bw="5" slack="0"/>
+<pin id="271" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="src_addr_15/8 "/>
+</bind>
+</comp>
+
+<comp id="276" class="1004" name="Clefia_enc_addr_14_gep_fu_276">
+<pin_list>
+<pin id="277" dir="0" index="0" bw="8" slack="0"/>
+<pin id="278" dir="0" index="1" bw="1" slack="0"/>
+<pin id="279" dir="0" index="2" bw="4" slack="0"/>
+<pin id="280" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_14/9 "/>
+</bind>
+</comp>
+
+<comp id="285" class="1004" name="Clefia_enc_addr_15_gep_fu_285">
+<pin_list>
+<pin id="286" dir="0" index="0" bw="8" slack="0"/>
+<pin id="287" dir="0" index="1" bw="1" slack="0"/>
+<pin id="288" dir="0" index="2" bw="5" slack="0"/>
+<pin id="289" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_15/10 "/>
+</bind>
+</comp>
+
+<comp id="294" class="1004" name="Clefia_enc_addr_16_gep_fu_294">
+<pin_list>
+<pin id="295" dir="0" index="0" bw="8" slack="0"/>
+<pin id="296" dir="0" index="1" bw="1" slack="0"/>
+<pin id="297" dir="0" index="2" bw="5" slack="0"/>
+<pin id="298" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_16/11 "/>
+</bind>
+</comp>
+
+<comp id="303" class="1004" name="Clefia_enc_addr_17_gep_fu_303">
+<pin_list>
+<pin id="304" dir="0" index="0" bw="8" slack="0"/>
+<pin id="305" dir="0" index="1" bw="1" slack="0"/>
+<pin id="306" dir="0" index="2" bw="5" slack="0"/>
+<pin id="307" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_17/12 "/>
+</bind>
+</comp>
+
+<comp id="312" class="1004" name="Clefia_enc_addr_18_gep_fu_312">
+<pin_list>
+<pin id="313" dir="0" index="0" bw="8" slack="0"/>
+<pin id="314" dir="0" index="1" bw="1" slack="0"/>
+<pin id="315" dir="0" index="2" bw="5" slack="0"/>
+<pin id="316" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_18/13 "/>
+</bind>
+</comp>
+
+<comp id="321" class="1004" name="Clefia_enc_addr_19_gep_fu_321">
+<pin_list>
+<pin id="322" dir="0" index="0" bw="8" slack="0"/>
+<pin id="323" dir="0" index="1" bw="1" slack="0"/>
+<pin id="324" dir="0" index="2" bw="5" slack="0"/>
+<pin id="325" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_19/14 "/>
+</bind>
+</comp>
+
+<comp id="330" class="1004" name="Clefia_enc_addr_20_gep_fu_330">
+<pin_list>
+<pin id="331" dir="0" index="0" bw="8" slack="0"/>
+<pin id="332" dir="0" index="1" bw="1" slack="0"/>
+<pin id="333" dir="0" index="2" bw="5" slack="0"/>
+<pin id="334" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_20/15 "/>
+</bind>
+</comp>
+
+<comp id="339" class="1004" name="Clefia_enc_addr_21_gep_fu_339">
+<pin_list>
+<pin id="340" dir="0" index="0" bw="8" slack="0"/>
+<pin id="341" dir="0" index="1" bw="1" slack="0"/>
+<pin id="342" dir="0" index="2" bw="5" slack="0"/>
+<pin id="343" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_21/16 "/>
+</bind>
+</comp>
+
+<comp id="348" class="1004" name="Clefia_enc_addr_22_gep_fu_348">
+<pin_list>
+<pin id="349" dir="0" index="0" bw="8" slack="0"/>
+<pin id="350" dir="0" index="1" bw="1" slack="0"/>
+<pin id="351" dir="0" index="2" bw="5" slack="0"/>
+<pin id="352" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="Clefia_enc_addr_22/17 "/>
+</bind>
+</comp>
+
+<comp id="357" class="1005" name="reg_357">
+<pin_list>
+<pin id="358" dir="0" index="0" bw="8" slack="1"/>
+<pin id="359" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_load_1 src_load_2 src_load_4 src_load_8 "/>
+</bind>
+</comp>
+
+<comp id="363" class="1005" name="reg_363">
+<pin_list>
+<pin id="364" dir="0" index="0" bw="8" slack="2"/>
+<pin id="365" dir="1" index="1" bw="8" slack="2"/>
+</pin_list>
+<bind>
+<opset="src_load_3 src_load_6 src_load_12 "/>
+</bind>
+</comp>
+
+<comp id="369" class="1005" name="reg_369">
+<pin_list>
+<pin id="370" dir="0" index="0" bw="8" slack="3"/>
+<pin id="371" dir="1" index="1" bw="8" slack="3"/>
+</pin_list>
+<bind>
+<opset="src_load_5 src_load_10 "/>
+</bind>
+</comp>
+
+<comp id="375" class="1005" name="reg_375">
+<pin_list>
+<pin id="376" dir="0" index="0" bw="8" slack="4"/>
+<pin id="377" dir="1" index="1" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opset="src_load_7 src_load_14 "/>
+</bind>
+</comp>
+
+<comp id="381" class="1005" name="src_addr_reg_381">
+<pin_list>
+<pin id="382" dir="0" index="0" bw="4" slack="1"/>
+<pin id="383" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr "/>
+</bind>
+</comp>
+
+<comp id="386" class="1005" name="src_addr_1_reg_386">
+<pin_list>
+<pin id="387" dir="0" index="0" bw="4" slack="1"/>
+<pin id="388" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="391" class="1005" name="src_addr_2_reg_391">
+<pin_list>
+<pin id="392" dir="0" index="0" bw="4" slack="1"/>
+<pin id="393" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="396" class="1005" name="src_addr_3_reg_396">
+<pin_list>
+<pin id="397" dir="0" index="0" bw="4" slack="1"/>
+<pin id="398" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="401" class="1005" name="src_addr_4_reg_401">
+<pin_list>
+<pin id="402" dir="0" index="0" bw="4" slack="1"/>
+<pin id="403" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_4 "/>
+</bind>
+</comp>
+
+<comp id="406" class="1005" name="src_addr_5_reg_406">
+<pin_list>
+<pin id="407" dir="0" index="0" bw="4" slack="1"/>
+<pin id="408" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_5 "/>
+</bind>
+</comp>
+
+<comp id="411" class="1005" name="src_addr_6_reg_411">
+<pin_list>
+<pin id="412" dir="0" index="0" bw="4" slack="1"/>
+<pin id="413" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_6 "/>
+</bind>
+</comp>
+
+<comp id="416" class="1005" name="src_addr_7_reg_416">
+<pin_list>
+<pin id="417" dir="0" index="0" bw="4" slack="1"/>
+<pin id="418" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_7 "/>
+</bind>
+</comp>
+
+<comp id="421" class="1005" name="src_addr_8_reg_421">
+<pin_list>
+<pin id="422" dir="0" index="0" bw="4" slack="1"/>
+<pin id="423" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_8 "/>
+</bind>
+</comp>
+
+<comp id="426" class="1005" name="src_addr_9_reg_426">
+<pin_list>
+<pin id="427" dir="0" index="0" bw="4" slack="1"/>
+<pin id="428" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_9 "/>
+</bind>
+</comp>
+
+<comp id="431" class="1005" name="src_load_9_reg_431">
+<pin_list>
+<pin id="432" dir="0" index="0" bw="8" slack="5"/>
+<pin id="433" dir="1" index="1" bw="8" slack="5"/>
+</pin_list>
+<bind>
+<opset="src_load_9 "/>
+</bind>
+</comp>
+
+<comp id="436" class="1005" name="src_addr_10_reg_436">
+<pin_list>
+<pin id="437" dir="0" index="0" bw="4" slack="1"/>
+<pin id="438" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_10 "/>
+</bind>
+</comp>
+
+<comp id="441" class="1005" name="src_addr_11_reg_441">
+<pin_list>
+<pin id="442" dir="0" index="0" bw="4" slack="1"/>
+<pin id="443" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_11 "/>
+</bind>
+</comp>
+
+<comp id="446" class="1005" name="src_load_11_reg_446">
+<pin_list>
+<pin id="447" dir="0" index="0" bw="8" slack="6"/>
+<pin id="448" dir="1" index="1" bw="8" slack="6"/>
+</pin_list>
+<bind>
+<opset="src_load_11 "/>
+</bind>
+</comp>
+
+<comp id="451" class="1005" name="src_addr_12_reg_451">
+<pin_list>
+<pin id="452" dir="0" index="0" bw="4" slack="1"/>
+<pin id="453" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_12 "/>
+</bind>
+</comp>
+
+<comp id="456" class="1005" name="src_addr_13_reg_456">
+<pin_list>
+<pin id="457" dir="0" index="0" bw="4" slack="1"/>
+<pin id="458" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_13 "/>
+</bind>
+</comp>
+
+<comp id="461" class="1005" name="src_load_13_reg_461">
+<pin_list>
+<pin id="462" dir="0" index="0" bw="8" slack="7"/>
+<pin id="463" dir="1" index="1" bw="8" slack="7"/>
+</pin_list>
+<bind>
+<opset="src_load_13 "/>
+</bind>
+</comp>
+
+<comp id="466" class="1005" name="src_addr_14_reg_466">
+<pin_list>
+<pin id="467" dir="0" index="0" bw="4" slack="1"/>
+<pin id="468" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_14 "/>
+</bind>
+</comp>
+
+<comp id="471" class="1005" name="src_addr_15_reg_471">
+<pin_list>
+<pin id="472" dir="0" index="0" bw="4" slack="1"/>
+<pin id="473" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="src_addr_15 "/>
+</bind>
+</comp>
+
+<comp id="476" class="1005" name="src_load_15_reg_476">
+<pin_list>
+<pin id="477" dir="0" index="0" bw="8" slack="8"/>
+<pin id="478" dir="1" index="1" bw="8" slack="8"/>
+</pin_list>
+<bind>
+<opset="src_load_15 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="59"><net_src comp="2" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="60"><net_src comp="4" pin="0"/><net_sink comp="54" pin=1"/></net>
+
+<net id="61"><net_src comp="4" pin="0"/><net_sink comp="54" pin=2"/></net>
+
+<net id="71"><net_src comp="54" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="77"><net_src comp="2" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="78"><net_src comp="4" pin="0"/><net_sink comp="72" pin=1"/></net>
+
+<net id="79"><net_src comp="6" pin="0"/><net_sink comp="72" pin=2"/></net>
+
+<net id="80"><net_src comp="72" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="86"><net_src comp="0" pin="0"/><net_sink comp="81" pin=0"/></net>
+
+<net id="87"><net_src comp="4" pin="0"/><net_sink comp="81" pin=1"/></net>
+
+<net id="88"><net_src comp="4" pin="0"/><net_sink comp="81" pin=2"/></net>
+
+<net id="94"><net_src comp="62" pin="7"/><net_sink comp="89" pin=1"/></net>
+
+<net id="95"><net_src comp="81" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="101"><net_src comp="2" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="102"><net_src comp="4" pin="0"/><net_sink comp="96" pin=1"/></net>
+
+<net id="103"><net_src comp="8" pin="0"/><net_sink comp="96" pin=2"/></net>
+
+<net id="104"><net_src comp="96" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="110"><net_src comp="2" pin="0"/><net_sink comp="105" pin=0"/></net>
+
+<net id="111"><net_src comp="4" pin="0"/><net_sink comp="105" pin=1"/></net>
+
+<net id="112"><net_src comp="10" pin="0"/><net_sink comp="105" pin=2"/></net>
+
+<net id="113"><net_src comp="105" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="119"><net_src comp="0" pin="0"/><net_sink comp="114" pin=0"/></net>
+
+<net id="120"><net_src comp="4" pin="0"/><net_sink comp="114" pin=1"/></net>
+
+<net id="121"><net_src comp="6" pin="0"/><net_sink comp="114" pin=2"/></net>
+
+<net id="122"><net_src comp="114" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="128"><net_src comp="2" pin="0"/><net_sink comp="123" pin=0"/></net>
+
+<net id="129"><net_src comp="4" pin="0"/><net_sink comp="123" pin=1"/></net>
+
+<net id="130"><net_src comp="12" pin="0"/><net_sink comp="123" pin=2"/></net>
+
+<net id="131"><net_src comp="123" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="137"><net_src comp="2" pin="0"/><net_sink comp="132" pin=0"/></net>
+
+<net id="138"><net_src comp="4" pin="0"/><net_sink comp="132" pin=1"/></net>
+
+<net id="139"><net_src comp="14" pin="0"/><net_sink comp="132" pin=2"/></net>
+
+<net id="140"><net_src comp="132" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="146"><net_src comp="0" pin="0"/><net_sink comp="141" pin=0"/></net>
+
+<net id="147"><net_src comp="4" pin="0"/><net_sink comp="141" pin=1"/></net>
+
+<net id="148"><net_src comp="8" pin="0"/><net_sink comp="141" pin=2"/></net>
+
+<net id="149"><net_src comp="141" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="155"><net_src comp="2" pin="0"/><net_sink comp="150" pin=0"/></net>
+
+<net id="156"><net_src comp="4" pin="0"/><net_sink comp="150" pin=1"/></net>
+
+<net id="157"><net_src comp="16" pin="0"/><net_sink comp="150" pin=2"/></net>
+
+<net id="158"><net_src comp="150" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="164"><net_src comp="2" pin="0"/><net_sink comp="159" pin=0"/></net>
+
+<net id="165"><net_src comp="4" pin="0"/><net_sink comp="159" pin=1"/></net>
+
+<net id="166"><net_src comp="18" pin="0"/><net_sink comp="159" pin=2"/></net>
+
+<net id="167"><net_src comp="159" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="173"><net_src comp="0" pin="0"/><net_sink comp="168" pin=0"/></net>
+
+<net id="174"><net_src comp="4" pin="0"/><net_sink comp="168" pin=1"/></net>
+
+<net id="175"><net_src comp="10" pin="0"/><net_sink comp="168" pin=2"/></net>
+
+<net id="176"><net_src comp="168" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="182"><net_src comp="2" pin="0"/><net_sink comp="177" pin=0"/></net>
+
+<net id="183"><net_src comp="4" pin="0"/><net_sink comp="177" pin=1"/></net>
+
+<net id="184"><net_src comp="20" pin="0"/><net_sink comp="177" pin=2"/></net>
+
+<net id="185"><net_src comp="177" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="191"><net_src comp="2" pin="0"/><net_sink comp="186" pin=0"/></net>
+
+<net id="192"><net_src comp="4" pin="0"/><net_sink comp="186" pin=1"/></net>
+
+<net id="193"><net_src comp="22" pin="0"/><net_sink comp="186" pin=2"/></net>
+
+<net id="194"><net_src comp="186" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="200"><net_src comp="0" pin="0"/><net_sink comp="195" pin=0"/></net>
+
+<net id="201"><net_src comp="4" pin="0"/><net_sink comp="195" pin=1"/></net>
+
+<net id="202"><net_src comp="12" pin="0"/><net_sink comp="195" pin=2"/></net>
+
+<net id="203"><net_src comp="195" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="209"><net_src comp="2" pin="0"/><net_sink comp="204" pin=0"/></net>
+
+<net id="210"><net_src comp="4" pin="0"/><net_sink comp="204" pin=1"/></net>
+
+<net id="211"><net_src comp="24" pin="0"/><net_sink comp="204" pin=2"/></net>
+
+<net id="212"><net_src comp="204" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="218"><net_src comp="2" pin="0"/><net_sink comp="213" pin=0"/></net>
+
+<net id="219"><net_src comp="4" pin="0"/><net_sink comp="213" pin=1"/></net>
+
+<net id="220"><net_src comp="26" pin="0"/><net_sink comp="213" pin=2"/></net>
+
+<net id="221"><net_src comp="213" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="227"><net_src comp="0" pin="0"/><net_sink comp="222" pin=0"/></net>
+
+<net id="228"><net_src comp="4" pin="0"/><net_sink comp="222" pin=1"/></net>
+
+<net id="229"><net_src comp="14" pin="0"/><net_sink comp="222" pin=2"/></net>
+
+<net id="230"><net_src comp="222" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="236"><net_src comp="2" pin="0"/><net_sink comp="231" pin=0"/></net>
+
+<net id="237"><net_src comp="4" pin="0"/><net_sink comp="231" pin=1"/></net>
+
+<net id="238"><net_src comp="28" pin="0"/><net_sink comp="231" pin=2"/></net>
+
+<net id="239"><net_src comp="231" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="245"><net_src comp="2" pin="0"/><net_sink comp="240" pin=0"/></net>
+
+<net id="246"><net_src comp="4" pin="0"/><net_sink comp="240" pin=1"/></net>
+
+<net id="247"><net_src comp="30" pin="0"/><net_sink comp="240" pin=2"/></net>
+
+<net id="248"><net_src comp="240" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="254"><net_src comp="0" pin="0"/><net_sink comp="249" pin=0"/></net>
+
+<net id="255"><net_src comp="4" pin="0"/><net_sink comp="249" pin=1"/></net>
+
+<net id="256"><net_src comp="16" pin="0"/><net_sink comp="249" pin=2"/></net>
+
+<net id="257"><net_src comp="249" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="263"><net_src comp="2" pin="0"/><net_sink comp="258" pin=0"/></net>
+
+<net id="264"><net_src comp="4" pin="0"/><net_sink comp="258" pin=1"/></net>
+
+<net id="265"><net_src comp="32" pin="0"/><net_sink comp="258" pin=2"/></net>
+
+<net id="266"><net_src comp="258" pin="3"/><net_sink comp="62" pin=2"/></net>
+
+<net id="272"><net_src comp="2" pin="0"/><net_sink comp="267" pin=0"/></net>
+
+<net id="273"><net_src comp="4" pin="0"/><net_sink comp="267" pin=1"/></net>
+
+<net id="274"><net_src comp="34" pin="0"/><net_sink comp="267" pin=2"/></net>
+
+<net id="275"><net_src comp="267" pin="3"/><net_sink comp="62" pin=0"/></net>
+
+<net id="281"><net_src comp="0" pin="0"/><net_sink comp="276" pin=0"/></net>
+
+<net id="282"><net_src comp="4" pin="0"/><net_sink comp="276" pin=1"/></net>
+
+<net id="283"><net_src comp="18" pin="0"/><net_sink comp="276" pin=2"/></net>
+
+<net id="284"><net_src comp="276" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="290"><net_src comp="0" pin="0"/><net_sink comp="285" pin=0"/></net>
+
+<net id="291"><net_src comp="4" pin="0"/><net_sink comp="285" pin=1"/></net>
+
+<net id="292"><net_src comp="20" pin="0"/><net_sink comp="285" pin=2"/></net>
+
+<net id="293"><net_src comp="285" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="299"><net_src comp="0" pin="0"/><net_sink comp="294" pin=0"/></net>
+
+<net id="300"><net_src comp="4" pin="0"/><net_sink comp="294" pin=1"/></net>
+
+<net id="301"><net_src comp="22" pin="0"/><net_sink comp="294" pin=2"/></net>
+
+<net id="302"><net_src comp="294" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="308"><net_src comp="0" pin="0"/><net_sink comp="303" pin=0"/></net>
+
+<net id="309"><net_src comp="4" pin="0"/><net_sink comp="303" pin=1"/></net>
+
+<net id="310"><net_src comp="24" pin="0"/><net_sink comp="303" pin=2"/></net>
+
+<net id="311"><net_src comp="303" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="317"><net_src comp="0" pin="0"/><net_sink comp="312" pin=0"/></net>
+
+<net id="318"><net_src comp="4" pin="0"/><net_sink comp="312" pin=1"/></net>
+
+<net id="319"><net_src comp="26" pin="0"/><net_sink comp="312" pin=2"/></net>
+
+<net id="320"><net_src comp="312" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="326"><net_src comp="0" pin="0"/><net_sink comp="321" pin=0"/></net>
+
+<net id="327"><net_src comp="4" pin="0"/><net_sink comp="321" pin=1"/></net>
+
+<net id="328"><net_src comp="28" pin="0"/><net_sink comp="321" pin=2"/></net>
+
+<net id="329"><net_src comp="321" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="335"><net_src comp="0" pin="0"/><net_sink comp="330" pin=0"/></net>
+
+<net id="336"><net_src comp="4" pin="0"/><net_sink comp="330" pin=1"/></net>
+
+<net id="337"><net_src comp="30" pin="0"/><net_sink comp="330" pin=2"/></net>
+
+<net id="338"><net_src comp="330" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="344"><net_src comp="0" pin="0"/><net_sink comp="339" pin=0"/></net>
+
+<net id="345"><net_src comp="4" pin="0"/><net_sink comp="339" pin=1"/></net>
+
+<net id="346"><net_src comp="32" pin="0"/><net_sink comp="339" pin=2"/></net>
+
+<net id="347"><net_src comp="339" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="353"><net_src comp="0" pin="0"/><net_sink comp="348" pin=0"/></net>
+
+<net id="354"><net_src comp="4" pin="0"/><net_sink comp="348" pin=1"/></net>
+
+<net id="355"><net_src comp="34" pin="0"/><net_sink comp="348" pin=2"/></net>
+
+<net id="356"><net_src comp="348" pin="3"/><net_sink comp="89" pin=0"/></net>
+
+<net id="360"><net_src comp="62" pin="3"/><net_sink comp="357" pin=0"/></net>
+
+<net id="361"><net_src comp="357" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="362"><net_src comp="62" pin="7"/><net_sink comp="357" pin=0"/></net>
+
+<net id="366"><net_src comp="62" pin="3"/><net_sink comp="363" pin=0"/></net>
+
+<net id="367"><net_src comp="363" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="368"><net_src comp="62" pin="7"/><net_sink comp="363" pin=0"/></net>
+
+<net id="372"><net_src comp="62" pin="3"/><net_sink comp="369" pin=0"/></net>
+
+<net id="373"><net_src comp="369" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="374"><net_src comp="62" pin="7"/><net_sink comp="369" pin=0"/></net>
+
+<net id="378"><net_src comp="62" pin="3"/><net_sink comp="375" pin=0"/></net>
+
+<net id="379"><net_src comp="375" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="380"><net_src comp="62" pin="7"/><net_sink comp="375" pin=0"/></net>
+
+<net id="384"><net_src comp="54" pin="3"/><net_sink comp="381" pin=0"/></net>
+
+<net id="385"><net_src comp="381" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="389"><net_src comp="72" pin="3"/><net_sink comp="386" pin=0"/></net>
+
+<net id="390"><net_src comp="386" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="394"><net_src comp="96" pin="3"/><net_sink comp="391" pin=0"/></net>
+
+<net id="395"><net_src comp="391" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="399"><net_src comp="105" pin="3"/><net_sink comp="396" pin=0"/></net>
+
+<net id="400"><net_src comp="396" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="404"><net_src comp="123" pin="3"/><net_sink comp="401" pin=0"/></net>
+
+<net id="405"><net_src comp="401" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="409"><net_src comp="132" pin="3"/><net_sink comp="406" pin=0"/></net>
+
+<net id="410"><net_src comp="406" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="414"><net_src comp="150" pin="3"/><net_sink comp="411" pin=0"/></net>
+
+<net id="415"><net_src comp="411" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="419"><net_src comp="159" pin="3"/><net_sink comp="416" pin=0"/></net>
+
+<net id="420"><net_src comp="416" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="424"><net_src comp="177" pin="3"/><net_sink comp="421" pin=0"/></net>
+
+<net id="425"><net_src comp="421" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="429"><net_src comp="186" pin="3"/><net_sink comp="426" pin=0"/></net>
+
+<net id="430"><net_src comp="426" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="434"><net_src comp="62" pin="3"/><net_sink comp="431" pin=0"/></net>
+
+<net id="435"><net_src comp="431" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="439"><net_src comp="204" pin="3"/><net_sink comp="436" pin=0"/></net>
+
+<net id="440"><net_src comp="436" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="444"><net_src comp="213" pin="3"/><net_sink comp="441" pin=0"/></net>
+
+<net id="445"><net_src comp="441" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="449"><net_src comp="62" pin="3"/><net_sink comp="446" pin=0"/></net>
+
+<net id="450"><net_src comp="446" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="454"><net_src comp="231" pin="3"/><net_sink comp="451" pin=0"/></net>
+
+<net id="455"><net_src comp="451" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="459"><net_src comp="240" pin="3"/><net_sink comp="456" pin=0"/></net>
+
+<net id="460"><net_src comp="456" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="464"><net_src comp="62" pin="3"/><net_sink comp="461" pin=0"/></net>
+
+<net id="465"><net_src comp="461" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+<net id="469"><net_src comp="258" pin="3"/><net_sink comp="466" pin=0"/></net>
+
+<net id="470"><net_src comp="466" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="474"><net_src comp="267" pin="3"/><net_sink comp="471" pin=0"/></net>
+
+<net id="475"><net_src comp="471" pin="1"/><net_sink comp="62" pin=0"/></net>
+
+<net id="479"><net_src comp="62" pin="3"/><net_sink comp="476" pin=0"/></net>
+
+<net id="480"><net_src comp="476" pin="1"/><net_sink comp="89" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: Clefia_enc | {2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 }
+ - Input state : 
+	Port: ByteCpy.2 : src | {1 2 3 4 5 6 7 8 9 }
+  - Chain level:
+	State 1
+		src_load : 1
+		src_load_1 : 1
+	State 2
+		store_ln117 : 1
+		src_load_2 : 1
+		src_load_3 : 1
+	State 3
+		store_ln117 : 1
+		src_load_4 : 1
+		src_load_5 : 1
+	State 4
+		store_ln117 : 1
+		src_load_6 : 1
+		src_load_7 : 1
+	State 5
+		store_ln117 : 1
+		src_load_8 : 1
+		src_load_9 : 1
+	State 6
+		store_ln117 : 1
+		src_load_10 : 1
+		src_load_11 : 1
+	State 7
+		store_ln117 : 1
+		src_load_12 : 1
+		src_load_13 : 1
+	State 8
+		store_ln117 : 1
+		src_load_14 : 1
+		src_load_15 : 1
+	State 9
+		store_ln117 : 1
+	State 10
+		store_ln117 : 1
+	State 11
+		store_ln117 : 1
+	State 12
+		store_ln117 : 1
+	State 13
+		store_ln117 : 1
+	State 14
+		store_ln117 : 1
+	State 15
+		store_ln117 : 1
+	State 16
+		store_ln117 : 1
+	State 17
+		store_ln117 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------|
+| Operation| Functional Unit|
+|----------|----------------|
+|   Total  |                |
+|----------|----------------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------+--------+
+|                   |   FF   |
++-------------------+--------+
+|      reg_357      |    8   |
+|      reg_363      |    8   |
+|      reg_369      |    8   |
+|      reg_375      |    8   |
+|src_addr_10_reg_436|    4   |
+|src_addr_11_reg_441|    4   |
+|src_addr_12_reg_451|    4   |
+|src_addr_13_reg_456|    4   |
+|src_addr_14_reg_466|    4   |
+|src_addr_15_reg_471|    4   |
+| src_addr_1_reg_386|    4   |
+| src_addr_2_reg_391|    4   |
+| src_addr_3_reg_396|    4   |
+| src_addr_4_reg_401|    4   |
+| src_addr_5_reg_406|    4   |
+| src_addr_6_reg_411|    4   |
+| src_addr_7_reg_416|    4   |
+| src_addr_8_reg_421|    4   |
+| src_addr_9_reg_426|    4   |
+|  src_addr_reg_381 |    4   |
+|src_load_11_reg_446|    8   |
+|src_load_13_reg_461|    8   |
+|src_load_15_reg_476|    8   |
+| src_load_9_reg_431|    8   |
++-------------------+--------+
+|       Total       |   128  |
++-------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_62 |  p0  |  16  |   4  |   64   ||    65   |
+| grp_access_fu_62 |  p2  |  16  |   0  |    0   ||    65   |
+| grp_access_fu_89 |  p0  |  16  |   4  |   64   ||    65   |
+| grp_access_fu_89 |  p1  |   9  |   8  |   72   ||    48   |
+|      reg_357     |  p0  |   2  |   8  |   16   ||    9    |
+|      reg_363     |  p0  |   2  |   8  |   16   ||    9    |
+|      reg_369     |  p0  |   2  |   8  |   16   ||    9    |
+|      reg_375     |  p0  |   2  |   8  |   16   ||    9    |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   264  || 14.9671 ||   279   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    -   |    -   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|   14   |    -   |   279  |
+|  Register |    -   |   128  |    -   |
++-----------+--------+--------+--------+
+|   Total   |   14   |   128  |   279  |
++-----------+--------+--------+--------+

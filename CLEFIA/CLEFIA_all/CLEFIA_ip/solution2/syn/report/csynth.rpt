@@ -1,0 +1,482 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clefia'
+================================================================
++ General Information: 
+    * Date:           Tue Dec  6 21:01:42 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        CLEFIA_ip
+    * Solution:       solution2 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+------------+-------------+-----+
+    |                       Modules                       | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |    |            |             |     |
+    |                       & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF     |     LUT     | URAM|
+    +-----------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+------------+-------------+-----+
+    |+ clefia                                             |     -|  0.22|        -|          -|         -|        -|     -|        no|  30 (10%)|   -|   7753 (7%)|  19538 (36%)|    -|
+    | + ClefiaKeySet256                                   |     -|  0.30|     1372|  1.372e+04|         -|     1372|     -|        no|    7 (2%)|   -|  1037 (~0%)|    5262 (9%)|    -|
+    |  + ClefiaKeySet256_Pipeline_ClefiaGfn8_label4       |     -|  0.30|      585|  5.850e+03|         -|      585|     -|        no|    5 (1%)|   -|   488 (~0%)|    2585 (4%)|    -|
+    |   o ClefiaGfn8_label4                               |    II|  7.30|      583|  5.830e+03|        54|       53|    10|       yes|         -|   -|           -|            -|    -|
+    |    + ClefiaF0Xor_2                                  |    II|  0.56|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|   200 (~0%)|     775 (1%)|    -|
+    |    + ClefiaF1Xor_2                                  |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|   208 (~0%)|     831 (1%)|    -|
+    |  + ClefiaKeySet256_Pipeline_ByteXor_label2          |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|    11 (~0%)|     68 (~0%)|    -|
+    |   o ByteXor_label2                                  |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|           -|            -|    -|
+    |  + ClefiaKeySet256_Pipeline_ByteXor_label25         |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|    11 (~0%)|     87 (~0%)|    -|
+    |   o ByteXor_label2                                  |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|           -|            -|    -|
+    |  o ClefiaKeySet256_label10                          |     -|  7.30|      741|  7.410e+03|        57|        -|    13|        no|         -|   -|           -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_ByteXor_label23        |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|    28 (~0%)|     98 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_ByteXor_label21        |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|    28 (~0%)|    104 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_ByteXor_label24        |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|    34 (~0%)|     90 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    |   + ClefiaDoubleSwap_1                              |    II|  3.20|       15|    150.000|         -|       16|     -|       yes|         -|   -|   229 (~0%)|     534 (1%)|    -|
+    |   + ClefiaKeySet256_Pipeline_ByteXor_label22        |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|    34 (~0%)|     84 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    | + ClefiaKeySet192                                   |     -|  0.30|     1258|  1.258e+04|         -|     1258|     -|        no|    7 (2%)|   -|  1037 (~0%)|    5269 (9%)|    -|
+    |  + ClefiaKeySet192_Pipeline_ClefiaGfn8_label4       |     -|  0.30|      585|  5.850e+03|         -|      585|     -|        no|    5 (1%)|   -|   488 (~0%)|    2585 (4%)|    -|
+    |   o ClefiaGfn8_label4                               |    II|  7.30|      583|  5.830e+03|        54|       53|    10|       yes|         -|   -|           -|            -|    -|
+    |    + ClefiaF0Xor_1                                  |    II|  0.56|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|   200 (~0%)|     775 (1%)|    -|
+    |    + ClefiaF1Xor_1                                  |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|   208 (~0%)|     831 (1%)|    -|
+    |  + ClefiaKeySet192_Pipeline_ByteXor_label2          |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|    11 (~0%)|     68 (~0%)|    -|
+    |   o ByteXor_label2                                  |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|           -|            -|    -|
+    |  + ClefiaKeySet192_Pipeline_ByteXor_label210        |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|    11 (~0%)|     88 (~0%)|    -|
+    |   o ByteXor_label2                                  |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|           -|            -|    -|
+    |  o ClefiaKeySet192_label9                           |     -|  7.30|      627|  6.270e+03|        57|        -|    11|        no|         -|   -|           -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_ByteXor_label28        |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|    28 (~0%)|     98 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_ByteXor_label26        |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|    28 (~0%)|    104 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_ByteXor_label29        |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|    34 (~0%)|     90 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    |   + ClefiaDoubleSwap_1                              |    II|  3.20|       15|    150.000|         -|       16|     -|       yes|         -|   -|   229 (~0%)|     534 (1%)|    -|
+    |   + ClefiaKeySet192_Pipeline_ByteXor_label27        |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|    34 (~0%)|     84 (~0%)|    -|
+    |    o ByteXor_label2                                 |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|           -|            -|    -|
+    | + ClefiaKeySet128                                   |     -|  0.30|      236|  2.360e+03|         -|      236|     -|        no|    7 (2%)|   -|   2188 (2%)|    3585 (6%)|    -|
+    |  + ClefiaKeySet128_Pipeline_ClefiaGfn4_label3       |     -|  0.30|       80|    800.000|         -|       80|     -|        no|    4 (1%)|   -|   1716 (1%)|    1803 (3%)|    -|
+    |   o ClefiaGfn4_label3                               |    II|  7.30|       78|    780.000|         7|        6|    12|       yes|         -|   -|           -|            -|    -|
+    |    + ClefiaF0Xor_121                                |    II|  0.56|        4|     40.000|         -|        1|     -|       yes|   2 (~0%)|   -|   660 (~0%)|     612 (1%)|    -|
+    |    + ClefiaF1Xor                                    |    II|  0.30|        4|     40.000|         -|        1|     -|       yes|   2 (~0%)|   -|   701 (~0%)|     671 (1%)|    -|
+    |  + ClefiaKeySet128_Pipeline_ClefiaKeySet128_label7  |     -|  2.13|      147|  1.470e+03|         -|      147|     -|        no|         -|   -|   396 (~0%)|    1400 (2%)|    -|
+    |   o ClefiaKeySet128_label7                          |    II|  7.30|      145|  1.450e+03|        18|       16|     9|       yes|         -|   -|           -|            -|    -|
+    | + ClefiaEncrypt_1                                   |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|   1565 (1%)|    2364 (4%)|    -|
+    |  + ClefiaEncrypt_1_Pipeline_ClefiaGfn4_label3       |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|   1108 (1%)|    1566 (2%)|    -|
+    |   o ClefiaGfn4_label3                               |    II|  7.30|        -|          -|        12|       11|     -|       yes|         -|   -|           -|            -|    -|
+    |    + ClefiaF0Xor                                    |    II|  0.56|        4|     40.000|         -|        2|     -|       yes|   2 (~0%)|   -|   261 (~0%)|    447 (~0%)|    -|
+    |    + ClefiaF1Xor_3                                  |    II|  0.30|        5|     50.000|         -|        2|     -|       yes|   2 (~0%)|   -|   309 (~0%)|    494 (~0%)|    -|
+    | + ClefiaDecrypt_1                                   |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|   1410 (1%)|    2206 (4%)|    -|
+    |  + ClefiaDecrypt_1_Pipeline_ClefiaGfn4Inv_label5    |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|  1052 (~0%)|    1531 (2%)|    -|
+    |   o ClefiaGfn4Inv_label5                            |    II|  7.30|        -|          -|        12|       11|     -|       yes|         -|   -|           -|            -|    -|
+    |    + ClefiaF0Xor                                    |    II|  0.56|        4|     40.000|         -|        2|     -|       yes|   2 (~0%)|   -|   261 (~0%)|    447 (~0%)|    -|
+    |    + ClefiaF1Xor_3                                  |    II|  0.30|        5|     50.000|         -|        2|     -|       yes|   2 (~0%)|   -|   309 (~0%)|    494 (~0%)|    -|
+    +-----------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | key_bitlen | 0x20   | 32    | W      | Data signal of key_bitlen        |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+-----------------------+
+| Argument   | Direction | Datatype              |
++------------+-----------+-----------------------+
+| pt         | in        | unsigned char const * |
+| key_bitlen | in        | int                   |
+| Clefia_enc | inout     | unsigned char*        |
+| Clefia_dec | out       | unsigned char*        |
++------------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++------------+---------------+----------+--------------------------------------+
+| Argument   | HW Interface  | HW Type  | HW Info                              |
++------------+---------------+----------+--------------------------------------+
+| pt         | s_axi_control | memory   | name=pt offset=16 range=16           |
+| key_bitlen | s_axi_control | register | name=key_bitlen offset=0x20 range=32 |
+| Clefia_enc | s_axi_control | memory   | name=Clefia_enc offset=48 range=16   |
+| Clefia_dec | s_axi_control | memory   | name=Clefia_dec offset=64 range=16   |
++------------+---------------+----------+--------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                                    | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++---------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + clefia                                                | 0   |        |              |     |        |         |
+|  + ClefiaKeySet256                                      | 0   |        |              |     |        |         |
+|    add_ln373_fu_1134_p2                                 | -   |        | add_ln373    | add | fabric | 0       |
+|    add_ln381_fu_1172_p2                                 | -   |        | add_ln381    | add | fabric | 0       |
+|    add_ln387_fu_1180_p2                                 | -   |        | add_ln387    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ClefiaGfn8_label4          | 0   |        |              |     |        |         |
+|     add_ln215_fu_798_p2                                 | -   |        | add_ln215    | add | fabric | 0       |
+|     add_ln210_fu_783_p2                                 | -   |        | add_ln210    | add | fabric | 0       |
+|    + ClefiaF0Xor_2                                      | 0   |        |              |     |        |         |
+|      add_ln124_fu_322_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_53_fu_341_p2                             | -   |        | add_ln124_53 | add | fabric | 0       |
+|      add_ln124_54_fu_358_p2                             | -   |        | add_ln124_54 | add | fabric | 0       |
+|      add_ln124_55_fu_389_p2                             | -   |        | add_ln124_55 | add | fabric | 0       |
+|      add_ln124_56_fu_368_p2                             | -   |        | add_ln124_56 | add | fabric | 0       |
+|      add_ln124_57_fu_423_p2                             | -   |        | add_ln124_57 | add | fabric | 0       |
+|      add_ln117_fu_378_p2                                | -   |        | add_ln117    | add | fabric | 0       |
+|      add_ln117_5_fu_403_p2                              | -   |        | add_ln117_5  | add | fabric | 0       |
+|      add_ln117_6_fu_413_p2                              | -   |        | add_ln117_6  | add | fabric | 0       |
+|      add_ln162_fu_796_p2                                | -   |        | add_ln162    | add | fabric | 0       |
+|      add_ln162_1_fu_770_p2                              | -   |        | add_ln162_1  | add | fabric | 0       |
+|      add_ln124_58_fu_780_p2                             | -   |        | add_ln124_58 | add | fabric | 0       |
+|      add_ln124_59_fu_827_p2                             | -   |        | add_ln124_59 | add | fabric | 0       |
+|      add_ln124_60_fu_837_p2                             | -   |        | add_ln124_60 | add | fabric | 0       |
+|      add_ln124_61_fu_890_p2                             | -   |        | add_ln124_61 | add | fabric | 0       |
+|      add_ln124_62_fu_868_p2                             | -   |        | add_ln124_62 | add | fabric | 0       |
+|      add_ln124_63_fu_928_p2                             | -   |        | add_ln124_63 | add | fabric | 0       |
+|    + ClefiaF1Xor_2                                      | 0   |        |              |     |        |         |
+|      add_ln124_fu_322_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_29_fu_341_p2                             | -   |        | add_ln124_29 | add | fabric | 0       |
+|      add_ln124_30_fu_358_p2                             | -   |        | add_ln124_30 | add | fabric | 0       |
+|      add_ln124_31_fu_389_p2                             | -   |        | add_ln124_31 | add | fabric | 0       |
+|      add_ln124_32_fu_368_p2                             | -   |        | add_ln124_32 | add | fabric | 0       |
+|      add_ln124_33_fu_423_p2                             | -   |        | add_ln124_33 | add | fabric | 0       |
+|      add_ln117_fu_378_p2                                | -   |        | add_ln117    | add | fabric | 0       |
+|      add_ln117_1_fu_403_p2                              | -   |        | add_ln117_1  | add | fabric | 0       |
+|      add_ln117_2_fu_413_p2                              | -   |        | add_ln117_2  | add | fabric | 0       |
+|      add_ln185_fu_974_p2                                | -   |        | add_ln185    | add | fabric | 0       |
+|      add_ln185_1_fu_936_p2                              | -   |        | add_ln185_1  | add | fabric | 0       |
+|      add_ln124_34_fu_946_p2                             | -   |        | add_ln124_34 | add | fabric | 0       |
+|      add_ln124_35_fu_1012_p2                            | -   |        | add_ln124_35 | add | fabric | 0       |
+|      add_ln124_36_fu_1022_p2                            | -   |        | add_ln124_36 | add | fabric | 0       |
+|      add_ln124_37_fu_1063_p2                            | -   |        | add_ln124_37 | add | fabric | 0       |
+|      add_ln124_38_fu_1053_p2                            | -   |        | add_ln124_38 | add | fabric | 0       |
+|      add_ln124_39_fu_1094_p2                            | -   |        | add_ln124_39 | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label2             | 0   |        |              |     |        |         |
+|     add_ln124_fu_90_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label23            | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_1_fu_142_p2                               | -   |        | add_ln121_1  | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label21            | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_2_fu_148_p2                               | -   |        | add_ln121_2  | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label25            | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_122_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label24            | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_109_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaDoubleSwap_1 (grp_ClefiaDoubleSwap_1_fu_1095) | 0   |        |              |     |        |         |
+|     add_ln246_fu_234_p2                                 | -   |        | add_ln246    | add | fabric | 0       |
+|     add_ln247_fu_253_p2                                 | -   |        | add_ln247    | add | fabric | 0       |
+|     add_ln248_fu_263_p2                                 | -   |        | add_ln248    | add | fabric | 0       |
+|     add_ln249_fu_281_p2                                 | -   |        | add_ln249    | add | fabric | 0       |
+|     add_ln250_fu_291_p2                                 | -   |        | add_ln250    | add | fabric | 0       |
+|     add_ln251_fu_309_p2                                 | -   |        | add_ln251    | add | fabric | 0       |
+|     add_ln252_fu_319_p2                                 | -   |        | add_ln252    | add | fabric | 0       |
+|     add_ln253_fu_333_p2                                 | -   |        | add_ln253    | add | fabric | 0       |
+|     add_ln255_fu_347_p2                                 | -   |        | add_ln255    | add | fabric | 0       |
+|     add_ln256_fu_361_p2                                 | -   |        | add_ln256    | add | fabric | 0       |
+|     add_ln257_fu_375_p2                                 | -   |        | add_ln257    | add | fabric | 0       |
+|     add_ln258_fu_389_p2                                 | -   |        | add_ln258    | add | fabric | 0       |
+|     add_ln259_fu_403_p2                                 | -   |        | add_ln259    | add | fabric | 0       |
+|     add_ln260_fu_417_p2                                 | -   |        | add_ln260    | add | fabric | 0       |
+|     add_ln261_fu_431_p2                                 | -   |        | add_ln261    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label22            | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_103_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|  + ClefiaKeySet192                                      | 0   |        |              |     |        |         |
+|    add_ln340_fu_1123_p2                                 | -   |        | add_ln340    | add | fabric | 0       |
+|    add_ln348_fu_1161_p2                                 | -   |        | add_ln348    | add | fabric | 0       |
+|    add_ln354_fu_1169_p2                                 | -   |        | add_ln354    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ClefiaGfn8_label4          | 0   |        |              |     |        |         |
+|     add_ln215_fu_798_p2                                 | -   |        | add_ln215    | add | fabric | 0       |
+|     add_ln210_fu_783_p2                                 | -   |        | add_ln210    | add | fabric | 0       |
+|    + ClefiaF0Xor_1                                      | 0   |        |              |     |        |         |
+|      add_ln124_fu_322_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_66_fu_341_p2                             | -   |        | add_ln124_66 | add | fabric | 0       |
+|      add_ln124_67_fu_358_p2                             | -   |        | add_ln124_67 | add | fabric | 0       |
+|      add_ln124_68_fu_389_p2                             | -   |        | add_ln124_68 | add | fabric | 0       |
+|      add_ln124_69_fu_368_p2                             | -   |        | add_ln124_69 | add | fabric | 0       |
+|      add_ln124_70_fu_423_p2                             | -   |        | add_ln124_70 | add | fabric | 0       |
+|      add_ln117_fu_378_p2                                | -   |        | add_ln117    | add | fabric | 0       |
+|      add_ln117_7_fu_403_p2                              | -   |        | add_ln117_7  | add | fabric | 0       |
+|      add_ln117_8_fu_413_p2                              | -   |        | add_ln117_8  | add | fabric | 0       |
+|      add_ln162_fu_796_p2                                | -   |        | add_ln162    | add | fabric | 0       |
+|      add_ln162_2_fu_770_p2                              | -   |        | add_ln162_2  | add | fabric | 0       |
+|      add_ln124_71_fu_780_p2                             | -   |        | add_ln124_71 | add | fabric | 0       |
+|      add_ln124_72_fu_827_p2                             | -   |        | add_ln124_72 | add | fabric | 0       |
+|      add_ln124_73_fu_837_p2                             | -   |        | add_ln124_73 | add | fabric | 0       |
+|      add_ln124_74_fu_890_p2                             | -   |        | add_ln124_74 | add | fabric | 0       |
+|      add_ln124_75_fu_868_p2                             | -   |        | add_ln124_75 | add | fabric | 0       |
+|      add_ln124_76_fu_928_p2                             | -   |        | add_ln124_76 | add | fabric | 0       |
+|    + ClefiaF1Xor_1                                      | 0   |        |              |     |        |         |
+|      add_ln124_fu_322_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_40_fu_341_p2                             | -   |        | add_ln124_40 | add | fabric | 0       |
+|      add_ln124_41_fu_358_p2                             | -   |        | add_ln124_41 | add | fabric | 0       |
+|      add_ln124_42_fu_389_p2                             | -   |        | add_ln124_42 | add | fabric | 0       |
+|      add_ln124_43_fu_368_p2                             | -   |        | add_ln124_43 | add | fabric | 0       |
+|      add_ln124_44_fu_423_p2                             | -   |        | add_ln124_44 | add | fabric | 0       |
+|      add_ln117_fu_378_p2                                | -   |        | add_ln117    | add | fabric | 0       |
+|      add_ln117_3_fu_403_p2                              | -   |        | add_ln117_3  | add | fabric | 0       |
+|      add_ln117_4_fu_413_p2                              | -   |        | add_ln117_4  | add | fabric | 0       |
+|      add_ln185_fu_974_p2                                | -   |        | add_ln185    | add | fabric | 0       |
+|      add_ln185_2_fu_936_p2                              | -   |        | add_ln185_2  | add | fabric | 0       |
+|      add_ln124_45_fu_946_p2                             | -   |        | add_ln124_45 | add | fabric | 0       |
+|      add_ln124_46_fu_1012_p2                            | -   |        | add_ln124_46 | add | fabric | 0       |
+|      add_ln124_47_fu_1022_p2                            | -   |        | add_ln124_47 | add | fabric | 0       |
+|      add_ln124_48_fu_1063_p2                            | -   |        | add_ln124_48 | add | fabric | 0       |
+|      add_ln124_49_fu_1053_p2                            | -   |        | add_ln124_49 | add | fabric | 0       |
+|      add_ln124_50_fu_1094_p2                            | -   |        | add_ln124_50 | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label2             | 0   |        |              |     |        |         |
+|     add_ln124_fu_90_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label28            | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_3_fu_142_p2                               | -   |        | add_ln121_3  | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label26            | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_4_fu_148_p2                               | -   |        | add_ln121_4  | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label210           | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_122_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label29            | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_109_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaDoubleSwap_1 (grp_ClefiaDoubleSwap_1_fu_1084) | 0   |        |              |     |        |         |
+|     add_ln246_fu_234_p2                                 | -   |        | add_ln246    | add | fabric | 0       |
+|     add_ln247_fu_253_p2                                 | -   |        | add_ln247    | add | fabric | 0       |
+|     add_ln248_fu_263_p2                                 | -   |        | add_ln248    | add | fabric | 0       |
+|     add_ln249_fu_281_p2                                 | -   |        | add_ln249    | add | fabric | 0       |
+|     add_ln250_fu_291_p2                                 | -   |        | add_ln250    | add | fabric | 0       |
+|     add_ln251_fu_309_p2                                 | -   |        | add_ln251    | add | fabric | 0       |
+|     add_ln252_fu_319_p2                                 | -   |        | add_ln252    | add | fabric | 0       |
+|     add_ln253_fu_333_p2                                 | -   |        | add_ln253    | add | fabric | 0       |
+|     add_ln255_fu_347_p2                                 | -   |        | add_ln255    | add | fabric | 0       |
+|     add_ln256_fu_361_p2                                 | -   |        | add_ln256    | add | fabric | 0       |
+|     add_ln257_fu_375_p2                                 | -   |        | add_ln257    | add | fabric | 0       |
+|     add_ln258_fu_389_p2                                 | -   |        | add_ln258    | add | fabric | 0       |
+|     add_ln259_fu_403_p2                                 | -   |        | add_ln259    | add | fabric | 0       |
+|     add_ln260_fu_417_p2                                 | -   |        | add_ln260    | add | fabric | 0       |
+|     add_ln261_fu_431_p2                                 | -   |        | add_ln261    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label27            | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_103_p2                                 | -   |        | add_ln121    | add | fabric | 0       |
+|  + ClefiaKeySet128                                      | 0   |        |              |     |        |         |
+|   + ClefiaKeySet128_Pipeline_ClefiaGfn4_label3          | 0   |        |              |     |        |         |
+|     add_ln196_fu_573_p2                                 | -   |        | add_ln196    | add | fabric | 0       |
+|     add_ln193_fu_666_p2                                 | -   |        | add_ln193    | add | fabric | 0       |
+|    + ClefiaF0Xor_121                                    | 0   |        |              |     |        |         |
+|      add_ln124_fu_227_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_64_fu_201_p2                             | -   |        | add_ln124_64 | add | fabric | 0       |
+|      add_ln124_65_fu_212_p2                             | -   |        | add_ln124_65 | add | fabric | 0       |
+|    + ClefiaF1Xor                                        | 0   |        |              |     |        |         |
+|      add_ln124_fu_210_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_51_fu_221_p2                             | -   |        | add_ln124_51 | add | fabric | 0       |
+|      add_ln124_52_fu_232_p2                             | -   |        | add_ln124_52 | add | fabric | 0       |
+|   + ClefiaKeySet128_Pipeline_ClefiaKeySet128_label7     | 0   |        |              |     |        |         |
+|     add_ln309_fu_751_p2                                 | -   |        | add_ln309    | add | fabric | 0       |
+|     add_ln310_fu_765_p2                                 | -   |        | add_ln310    | add | fabric | 0       |
+|     add_ln124_fu_780_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln124_1_fu_808_p2                               | -   |        | add_ln124_1  | add | fabric | 0       |
+|     add_ln124_2_fu_851_p2                               | -   |        | add_ln124_2  | add | fabric | 0       |
+|     add_ln124_3_fu_835_p2                               | -   |        | add_ln124_3  | add | fabric | 0       |
+|     add_ln124_4_fu_868_p2                               | -   |        | add_ln124_4  | add | fabric | 0       |
+|     add_ln124_5_fu_917_p2                               | -   |        | add_ln124_5  | add | fabric | 0       |
+|     add_ln124_6_fu_901_p2                               | -   |        | add_ln124_6  | add | fabric | 0       |
+|     add_ln124_7_fu_950_p2                               | -   |        | add_ln124_7  | add | fabric | 0       |
+|     add_ln124_8_fu_934_p2                               | -   |        | add_ln124_8  | add | fabric | 0       |
+|     add_ln124_9_fu_983_p2                               | -   |        | add_ln124_9  | add | fabric | 0       |
+|     add_ln124_10_fu_967_p2                              | -   |        | add_ln124_10 | add | fabric | 0       |
+|     add_ln124_11_fu_1000_p2                             | -   |        | add_ln124_11 | add | fabric | 0       |
+|     add_ln124_12_fu_1049_p2                             | -   |        | add_ln124_12 | add | fabric | 0       |
+|     add_ln124_13_fu_1033_p2                             | -   |        | add_ln124_13 | add | fabric | 0       |
+|     add_ln124_14_fu_1082_p2                             | -   |        | add_ln124_14 | add | fabric | 0       |
+|     add_ln124_15_fu_1066_p2                             | -   |        | add_ln124_15 | add | fabric | 0       |
+|     add_ln124_16_fu_1115_p2                             | -   |        | add_ln124_16 | add | fabric | 0       |
+|     add_ln124_17_fu_1099_p2                             | -   |        | add_ln124_17 | add | fabric | 0       |
+|     add_ln124_18_fu_1148_p2                             | -   |        | add_ln124_18 | add | fabric | 0       |
+|     add_ln124_19_fu_1132_p2                             | -   |        | add_ln124_19 | add | fabric | 0       |
+|     add_ln124_20_fu_1181_p2                             | -   |        | add_ln124_20 | add | fabric | 0       |
+|     add_ln124_21_fu_1165_p2                             | -   |        | add_ln124_21 | add | fabric | 0       |
+|     add_ln124_22_fu_1214_p2                             | -   |        | add_ln124_22 | add | fabric | 0       |
+|     add_ln124_23_fu_1198_p2                             | -   |        | add_ln124_23 | add | fabric | 0       |
+|     add_ln124_24_fu_1251_p2                             | -   |        | add_ln124_24 | add | fabric | 0       |
+|     add_ln124_25_fu_1231_p2                             | -   |        | add_ln124_25 | add | fabric | 0       |
+|     add_ln124_26_fu_1281_p2                             | -   |        | add_ln124_26 | add | fabric | 0       |
+|     add_ln315_fu_1639_p2                                | -   |        | add_ln315    | add | fabric | 0       |
+|  + ClefiaEncrypt_1                                      | 0   |        |              |     |        |         |
+|    add_ln422_fu_948_p2                                  | -   |        | add_ln422    | add | fabric | 0       |
+|    add_ln124_fu_959_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|    add_ln124_79_fu_976_p2                               | -   |        | add_ln124_79 | add | fabric | 0       |
+|    add_ln124_80_fu_992_p2                               | -   |        | add_ln124_80 | add | fabric | 0       |
+|    add_ln423_fu_1014_p2                                 | -   |        | add_ln423    | add | fabric | 0       |
+|    add_ln124_81_fu_1024_p2                              | -   |        | add_ln124_81 | add | fabric | 0       |
+|    add_ln124_82_fu_1040_p2                              | -   |        | add_ln124_82 | add | fabric | 0       |
+|    add_ln124_83_fu_1056_p2                              | -   |        | add_ln124_83 | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_ClefiaGfn4_label3          | 0   |        |              |     |        |         |
+|     add_ln188_1_fu_647_p2                               | -   |        | add_ln188_1  | add | fabric | 0       |
+|     add_ln188_fu_659_p2                                 | -   |        | add_ln188    | add | fabric | 0       |
+|     grp_ClefiaF0Xor_fu_396_rk_offset                    | -   |        | add_ln194    | add | fabric | 0       |
+|     grp_ClefiaF1Xor_3_fu_415_rk_offset                  | -   |        | add_ln195    | add | fabric | 0       |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_396)               | 0   |        |              |     |        |         |
+|      add_ln124_fu_217_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_77_fu_191_p2                             | -   |        | add_ln124_77 | add | fabric | 0       |
+|      add_ln124_78_fu_202_p2                             | -   |        | add_ln124_78 | add | fabric | 0       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_415)           | 0   |        |              |     |        |         |
+|      add_ln124_fu_196_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_27_fu_207_p2                             | -   |        | add_ln124_27 | add | fabric | 0       |
+|      add_ln124_28_fu_217_p2                             | -   |        | add_ln124_28 | add | fabric | 0       |
+|  + ClefiaDecrypt_1                                      | 0   |        |              |     |        |         |
+|    add_ln432_fu_825_p2                                  | -   |        | add_ln432    | add | fabric | 0       |
+|    add_ln124_fu_836_p2                                  | -   |        | add_ln124    | add | fabric | 0       |
+|    add_ln124_84_fu_847_p2                               | -   |        | add_ln124_84 | add | fabric | 0       |
+|    add_ln124_85_fu_857_p2                               | -   |        | add_ln124_85 | add | fabric | 0       |
+|    add_ln433_fu_867_p2                                  | -   |        | add_ln433    | add | fabric | 0       |
+|    add_ln124_86_fu_877_p2                               | -   |        | add_ln124_86 | add | fabric | 0       |
+|    add_ln124_87_fu_887_p2                               | -   |        | add_ln124_87 | add | fabric | 0       |
+|    add_ln124_88_fu_897_p2                               | -   |        | add_ln124_88 | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_ClefiaGfn4Inv_label5       | 0   |        |              |     |        |         |
+|     add_ln224_1_fu_654_p2                               | -   |        | add_ln224_1  | add | fabric | 0       |
+|     grp_ClefiaF0Xor_fu_404_rk_offset                    | -   |        | add_ln224    | add | fabric | 0       |
+|     add_ln233_fu_706_p2                                 | -   |        | add_ln233    | add | fabric | 0       |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_404)               | 0   |        |              |     |        |         |
+|      add_ln124_fu_217_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_77_fu_191_p2                             | -   |        | add_ln124_77 | add | fabric | 0       |
+|      add_ln124_78_fu_202_p2                             | -   |        | add_ln124_78 | add | fabric | 0       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_423)           | 0   |        |              |     |        |         |
+|      add_ln124_fu_196_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|      add_ln124_27_fu_207_p2                             | -   |        | add_ln124_27 | add | fabric | 0       |
+|      add_ln124_28_fu_217_p2                             | -   |        | add_ln124_28 | add | fabric | 0       |
++---------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| Name                                              | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++---------------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| + clefia                                          | 30   | 0    |        |           |         |      |         |
+|   rk_U                                            | 1    | -    |        | rk        | ram_t2p | auto | 1       |
+|  + ClefiaKeySet256                                | 7    | 0    |        |           |         |      |         |
+|    fin_U                                          | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                         | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    lk_U                                           | -    | -    |        | lk        | ram_t2p | auto | 1       |
+|    skey_U                                         | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_ClefiaGfn8_label4    | 5    | 0    |        |           |         |      |         |
+|     con256_U                                      | 1    | -    |        | con256    | rom_1p  | auto | 1       |
+|    + ClefiaF0Xor_2                                | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_2                                | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label23      | 1    | 0    |        |           |         |      |         |
+|     con256_U                                      | 1    | -    |        | con256    | rom_1p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_ByteXor_label21      | 1    | 0    |        |           |         |      |         |
+|     con256_U                                      | 1    | -    |        | con256    | rom_1p  | auto | 1       |
+|  + ClefiaKeySet192                                | 7    | 0    |        |           |         |      |         |
+|    fin_U                                          | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                         | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    lk_U                                           | -    | -    |        | lk        | ram_t2p | auto | 1       |
+|    skey256_U                                      | -    | -    |        | skey256   | rom_2p  | auto | 1       |
+|   + ClefiaKeySet192_Pipeline_ClefiaGfn8_label4    | 5    | 0    |        |           |         |      |         |
+|     con192_U                                      | 1    | -    |        | con192    | rom_1p  | auto | 1       |
+|    + ClefiaF0Xor_1                                | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_1                                | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label28      | 1    | 0    |        |           |         |      |         |
+|     con192_U                                      | 1    | -    |        | con192    | rom_1p  | auto | 1       |
+|   + ClefiaKeySet192_Pipeline_ByteXor_label26      | 1    | 0    |        |           |         |      |         |
+|     con192_U                                      | 1    | -    |        | con192    | rom_1p  | auto | 1       |
+|  + ClefiaKeySet128                                | 7    | 0    |        |           |         |      |         |
+|    con128_U                                       | 3    | -    |        | con128    | rom_np  | auto | 1       |
+|   + ClefiaKeySet128_Pipeline_ClefiaGfn4_label3    | 4    | 0    |        |           |         |      |         |
+|    + ClefiaF0Xor_121                              | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_2p  | auto | 1       |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_2p  | auto | 1       |
+|    + ClefiaF1Xor                                  | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_2p  | auto | 1       |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_2p  | auto | 1       |
+|  + ClefiaEncrypt_1                                | 4    | 0    |        |           |         |      |         |
+|   + ClefiaEncrypt_1_Pipeline_ClefiaGfn4_label3    | 4    | 0    |        |           |         |      |         |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_396)         | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_415)     | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|  + ClefiaDecrypt_1                                | 4    | 0    |        |           |         |      |         |
+|   + ClefiaDecrypt_1_Pipeline_ClefiaGfn4Inv_label5 | 4    | 0    |        |           |         |      |         |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_404)         | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_423)     | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                  | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                  | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
++---------------------------------------------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------+-------------------------------------------------------------+
+| Type      | Options                   | Location                                                    |
++-----------+---------------------------+-------------------------------------------------------------+
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:22 in bytecpy            |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:23 in bytexor            |
+| interface | s_axilite port=Clefia_dec | CLEFIA_ip/solution2/directives.tcl:10 in clefia, Clefia_dec |
+| interface | s_axilite port=Clefia_enc | CLEFIA_ip/solution2/directives.tcl:9 in clefia, Clefia_enc  |
+| interface | s_axilite port=key_bitlen | CLEFIA_ip/solution2/directives.tcl:7 in clefia, key_bitlen  |
+| interface | s_axilite port=pt         | CLEFIA_ip/solution2/directives.tcl:8 in clefia, pt          |
+| interface | s_axilite port=return     | CLEFIA_ip/solution2/directives.tcl:6 in clefia, return      |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:17 in clefiaconset       |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:14 in clefiagfn4         |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:16 in clefiagfn4inv      |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:15 in clefiagfn8         |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:18 in clefiakeyset128    |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:20 in clefiakeyset192    |
+| pipeline  |                           | CLEFIA_ip/solution2/directives.tcl:21 in clefiakeyset256    |
++-----------+---------------------------+-------------------------------------------------------------+
+
+

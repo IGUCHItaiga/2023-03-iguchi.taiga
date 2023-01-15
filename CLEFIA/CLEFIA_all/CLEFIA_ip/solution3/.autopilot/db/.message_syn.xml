@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 718.207 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;clefia.c&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.794 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaGfn4Inv_label5&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:230:24)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaKeySet256_label10&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:373:27)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaKeySet192_label9&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:340:26)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaKeySet192_label8&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:329:26)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaGfn8_label4&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:210:21)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaKeySet128_label7&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:309:26)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ClefiaGfn4_label3&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:193:21)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ByteXor_label2&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:123:18)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;ByteCpy_label1&apos; is marked as complete unroll implied by the pipeline pragma (clefia.c:116:18)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ClefiaKeySet256_label10&apos; (clefia.c:373:27) in function &apos;ClefiaKeySet256&apos; completely with a factor of 13 (clefia.c:360:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ClefiaKeySet192_label9&apos; (clefia.c:340:26) in function &apos;ClefiaKeySet192&apos; completely with a factor of 11 (clefia.c:321:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ClefiaKeySet192_label8&apos; (clefia.c:329:26) in function &apos;ClefiaKeySet192&apos; completely with a factor of 8 (clefia.c:321:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ClefiaGfn8_label4&apos; (clefia.c:210:21) in function &apos;ClefiaGfn8&apos; completely with a factor of 10 (clefia.c:206:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ClefiaKeySet128_label7&apos; (clefia.c:309:26) in function &apos;ClefiaKeySet128&apos; completely with a factor of 9 (clefia.c:296:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaGfn4&apos; into &apos;ClefiaKeySet128&apos; (clefia.c:296:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaKeySet128&apos; into &apos;ClefiaKeySet&apos; (clefia.c:394:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaKeySet192&apos; into &apos;ClefiaKeySet&apos; (clefia.c:394:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaKeySet256&apos; into &apos;ClefiaKeySet&apos; (clefia.c:394:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaGfn4&apos; into &apos;ClefiaEncrypt&apos; (clefia.c:410:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaGfn4Inv&apos; into &apos;ClefiaDecrypt&apos; (clefia.c:427:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaEncrypt&apos; into &apos;clefia&apos; (clefia.c:451:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;ClefiaDecrypt&apos; into &apos;clefia&apos; (clefia.c:451:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ClefiaGfn4_label3&apos; (clefia.c:193:21) in function &apos;ClefiaKeySet&apos; completely with a factor of 12 (clefia.c:394:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ByteXor_label2&apos; (clefia.c:123:18) in function &apos;ByteXor.1&apos; completely with a factor of 4 (clefia.c:122:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ByteCpy_label1&apos; (clefia.c:116:18) in function &apos;ByteCpy.2&apos; completely with a factor of 16 (clefia.c:115:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;ByteCpy_label1&apos; (clefia.c:116:18) in function &apos;ByteCpy.1&apos; completely with a factor of 16 (clefia.c:115:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.927 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ClefiaGfn8.1&apos; into &apos;ClefiaKeySet&apos; (clefia.c:336) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ClefiaGfn8&apos; into &apos;ClefiaKeySet&apos; (clefia.c:369) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;clefia&apos; (clefia.c:450)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.111&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.116&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.112.1&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.112.2&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.117&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.11831&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.112&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.113&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.114&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.143&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.118&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.119&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.120&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.121&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.110&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.11150&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.11151&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteXor.11152&apos; (clefia.c:21:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.115&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;ByteCpy.114&apos; (clefia.c:20:1)." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ClefiaGfn4_label3&apos; (clefia.c:188) in function &apos;clefia&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ClefiaGfn4Inv_label5&apos; (clefia.c:224) in function &apos;clefia&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.111&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.116&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.112.1&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.112.2&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.117&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.11831&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.112&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.113&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.114&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.143&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.118&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.119&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.120&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.121&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.110&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.11150&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.11151&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.11152&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteXor_label2&apos; (clefia.c:124) in function &apos;ByteXor.11153&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.115&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-936]" key="HLS 200-936" tag="LOOP,VITIS_LATENCY" content="Cannot unroll loop &apos;ByteCpy_label1&apos; (clefia.c:117) in function &apos;ByteCpy.114&apos;: cannot completely unroll a loop with a variable trip count." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-936.html"/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:167) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;x&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;y&apos; (clefia.c:144) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:167) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;x&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;y&apos; (clefia.c:144) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ClefiaGfn8.1&apos; into &apos;ClefiaKeySet&apos; (clefia.c:336) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ClefiaGfn8&apos; into &apos;ClefiaKeySet&apos; (clefia.c:369) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ClefiaF0Xor&apos; into &apos;clefia&apos; (clefia.c:194) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ClefiaF1Xor.3&apos; into &apos;clefia&apos; (clefia.c:195) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;clefia&apos; (clefia.c:450)...64 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;ClefiaF1Xor.2&apos; (clefia.c:171:1)...16 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;ClefiaF1Xor.1&apos; (clefia.c:171:1)...16 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;ClefiaF1Xor&apos; (clefia.c:171:1)...16 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;ClefiaF0Xor.2&apos; (clefia.c:148:1)...16 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;ClefiaF0Xor.125&apos; (clefia.c:148:1)...16 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;ClefiaF0Xor.1&apos; (clefia.c:148:1)...16 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.446 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;skey256&apos; (clefia.c:330:21)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:246:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:247:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:248:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:249:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:250:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:251:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:252:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:253:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:255:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:256:8)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:257:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:258:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:259:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:260:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:261:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;t&apos; (clefia.c:262:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;dst&apos; (clefia.c:124:12)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;dst&apos; (clefia.c:117:12)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.864 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;clefia&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.115&apos; to &apos;ByteCpy_115&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.110&apos; to &apos;ByteXor_110&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.118&apos; to &apos;ByteCpy_118&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ClefiaF0Xor.2&apos; to &apos;ClefiaF0Xor_2&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ClefiaF1Xor.1&apos; to &apos;ClefiaF1Xor_1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.114&apos; to &apos;ByteCpy_114&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.112&apos; to &apos;ByteXor_112&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.113&apos; to &apos;ByteXor_113&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.117&apos; to &apos;ByteCpy_117&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ClefiaDoubleSwap.1&apos; to &apos;ClefiaDoubleSwap_1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.112.1&apos; to &apos;ByteXor_112_1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.11150&apos; to &apos;ByteXor_11150&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ClefiaF0Xor.1&apos; to &apos;ClefiaF0Xor_1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.114&apos; to &apos;ByteXor_114&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.121&apos; to &apos;ByteCpy_121&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.11152&apos; to &apos;ByteXor_11152&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.143&apos; to &apos;ByteXor_143&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ClefiaF0Xor.125&apos; to &apos;ClefiaF0Xor_125&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.119&apos; to &apos;ByteCpy_119&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ClefiaF1Xor.2&apos; to &apos;ClefiaF1Xor_2&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.116&apos; to &apos;ByteCpy_116&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.120&apos; to &apos;ByteCpy_120&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.111&apos; to &apos;ByteXor_111&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.1&apos; to &apos;ByteCpy_1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.112.2&apos; to &apos;ByteXor_112_2&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.11831&apos; to &apos;ByteCpy_11831&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.11151&apos; to &apos;ByteXor_11151&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteCpy.2&apos; to &apos;ByteCpy_2&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;ByteXor.1&apos; to &apos;ByteXor_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_115&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.115&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.541 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_110&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.110&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaMul2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;ClefiaMul2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 1, function &apos;ClefiaMul2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_118&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.118&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaF0Xor_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaF0Xor.2&apos;: contains subfunction &apos;ByteXor.110&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.131 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaF1Xor_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaF1Xor.1&apos;: contains subfunction &apos;ByteXor.110&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.228 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_114&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.114&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.232 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_112&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.112&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_113&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.113&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_117&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.117&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.124 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaDoubleSwap_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaDoubleSwap.1&apos;: contains subfunction &apos;ByteCpy.117&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.185 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_112_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.112.1&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_11150&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.11150&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaF0Xor_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaF0Xor.1&apos;: contains subfunction &apos;ByteXor.11150&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaF1Xor&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaF1Xor&apos;: contains subfunction &apos;ByteXor.11150&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_114&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.114&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.301 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_121&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.121&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_11152&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.11152&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_143&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.143&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaF0Xor_125&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaF0Xor.125&apos;: contains subfunction &apos;ByteXor.11152&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_119&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.119&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.218 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaF1Xor_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaF1Xor.2&apos;: contains subfunction &apos;ByteXor.11152&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.143 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_116&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.116&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_120&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.120&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_111&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.111&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaDoubleSwap&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaDoubleSwap&apos;: contains subfunction &apos;ByteCpy&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.168 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ClefiaKeySet&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-67]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ClefiaKeySet&apos;: contains subfunction &apos;ByteCpy.115&apos; which is not pipelined." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.891 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.117 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;ByteCpy.1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_1&apos; (function &apos;ByteCpy.1&apos;): Unable to schedule &apos;load&apos; operation (&apos;pt_load&apos;, clefia.c:117) on array &apos;pt&apos; due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array &apos;pt&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_1&apos; (function &apos;ByteCpy.1&apos;): Unable to schedule &apos;load&apos; operation (&apos;pt_load_1&apos;, clefia.c:117) on array &apos;pt&apos; due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array &apos;pt&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_1&apos; (function &apos;ByteCpy.1&apos;): Unable to schedule &apos;load&apos; operation (&apos;pt_load_2&apos;, clefia.c:117) on array &apos;pt&apos; due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array &apos;pt&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_1&apos; (function &apos;ByteCpy.1&apos;): Unable to schedule &apos;load&apos; operation (&apos;pt_load_3&apos;, clefia.c:117) on array &apos;pt&apos; due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array &apos;pt&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_1&apos; (function &apos;ByteCpy.1&apos;): Unable to schedule &apos;load&apos; operation (&apos;pt_load_10&apos;, clefia.c:117) on array &apos;pt&apos; due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array &apos;pt&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_1&apos; (function &apos;ByteCpy.1&apos;): Unable to schedule &apos;load&apos; operation (&apos;pt_load_14&apos;, clefia.c:117) on array &apos;pt&apos; due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array &apos;pt&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 16, Depth = 17, function &apos;ByteCpy.1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.419 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.178 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_112_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.112.2&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.172 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_11831&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteCpy.11831&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_11151&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;ByteXor.11151&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteCpy_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;ByteCpy.2&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_2&apos; (function &apos;ByteCpy.2&apos;): Unable to schedule &apos;load&apos; operation (&apos;src_load_1&apos;, clefia.c:117) on array &apos;src&apos; due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array &apos;src&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_2&apos; (function &apos;ByteCpy.2&apos;): Unable to schedule &apos;load&apos; operation (&apos;src_load_3&apos;, clefia.c:117) on array &apos;src&apos; due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array &apos;src&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_2&apos; (function &apos;ByteCpy.2&apos;): Unable to schedule &apos;load&apos; operation (&apos;src_load_5&apos;, clefia.c:117) on array &apos;src&apos; due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array &apos;src&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_2&apos; (function &apos;ByteCpy.2&apos;): Unable to schedule &apos;load&apos; operation (&apos;src_load_7&apos;, clefia.c:117) on array &apos;src&apos; due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array &apos;src&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_2&apos; (function &apos;ByteCpy.2&apos;): Unable to schedule &apos;store&apos; operation (&apos;Clefia_enc_addr_17_write_ln117&apos;, clefia.c:117) of variable &apos;src_load_10&apos;, clefia.c:117 on array &apos;Clefia_enc&apos; due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="The II Violation in module &apos;ByteCpy_2&apos; (function &apos;ByteCpy.2&apos;): Unable to schedule &apos;store&apos; operation (&apos;Clefia_enc_addr_21_write_ln117&apos;, clefia.c:117) of variable &apos;src_load_14&apos;, clefia.c:117 on array &apos;Clefia_enc&apos; due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html"/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 16, Depth = 17, function &apos;ByteCpy.2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.424 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;ByteXor_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;ByteXor.1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-880]" key="HLS 200-880" tag="LOOP,SCHEDULE,VITIS_THROUGHPUT" content="The II Violation in module &apos;ByteXor_1&apos; (function &apos;ByteXor.1&apos;): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between &apos;store&apos; operation (&apos;Clefia_enc_addr_1_write_ln124&apos;, clefia.c:124) of variable &apos;xor_ln124&apos;, clefia.c:124 on array &apos;Clefia_enc&apos; and &apos;load&apos; operation (&apos;Clefia_enc_load&apos;, clefia.c:124) on array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-880]" key="HLS 200-880" tag="LOOP,SCHEDULE,VITIS_THROUGHPUT" content="The II Violation in module &apos;ByteXor_1&apos; (function &apos;ByteXor.1&apos;): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between &apos;store&apos; operation (&apos;Clefia_enc_addr_3_write_ln124&apos;, clefia.c:124) of variable &apos;xor_ln124_1&apos;, clefia.c:124 on array &apos;Clefia_enc&apos; and &apos;load&apos; operation (&apos;Clefia_enc_load&apos;, clefia.c:124) on array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-880]" key="HLS 200-880" tag="LOOP,SCHEDULE,VITIS_THROUGHPUT" content="The II Violation in module &apos;ByteXor_1&apos; (function &apos;ByteXor.1&apos;): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between &apos;store&apos; operation (&apos;Clefia_enc_addr_3_write_ln124&apos;, clefia.c:124) of variable &apos;xor_ln124_1&apos;, clefia.c:124 on array &apos;Clefia_enc&apos; and &apos;load&apos; operation (&apos;Clefia_enc_load&apos;, clefia.c:124) on array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-880]" key="HLS 200-880" tag="LOOP,SCHEDULE,VITIS_THROUGHPUT" content="The II Violation in module &apos;ByteXor_1&apos; (function &apos;ByteXor.1&apos;): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between &apos;store&apos; operation (&apos;Clefia_enc_addr_5_write_ln124&apos;, clefia.c:124) of variable &apos;xor_ln124_2&apos;, clefia.c:124 on array &apos;Clefia_enc&apos; and &apos;load&apos; operation (&apos;Clefia_enc_load&apos;, clefia.c:124) on array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-880]" key="HLS 200-880" tag="LOOP,SCHEDULE,VITIS_THROUGHPUT" content="The II Violation in module &apos;ByteXor_1&apos; (function &apos;ByteXor.1&apos;): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between &apos;store&apos; operation (&apos;Clefia_enc_addr_7_write_ln124&apos;, clefia.c:124) of variable &apos;xor_ln124_3&apos;, clefia.c:124 on array &apos;Clefia_enc&apos; and &apos;load&apos; operation (&apos;Clefia_enc_load&apos;, clefia.c:124) on array &apos;Clefia_enc&apos;." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html"/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 8, Depth = 8, function &apos;ByteXor.1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;clefia&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;clefia&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive for function &apos;clefia&apos;: contains subloop(s) that are not unrolled." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.042 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_115&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_115&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.322 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_110&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_110&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaMul2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaMul2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_118&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_118&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mux_42_8_1_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaF0Xor_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaF0Xor_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.191 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaF1Xor_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaF1Xor_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_114&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_114&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_112&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_112&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.152 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_113&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_113&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_117&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_117&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaDoubleSwap_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaDoubleSwap_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_112_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_112_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.525 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_11150&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_11150&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaF0Xor_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaF0Xor_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaF1Xor&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaF1Xor&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.362 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_114&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_114&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.365 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_121&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_121&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_11152&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_11152&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.208 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_143&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mux_42_8_1_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_143&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaF0Xor_125&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaF0Xor_125&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_119&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_119&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.325 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaF1Xor_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaF1Xor_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.176 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_116&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_116&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.347 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_120&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_120&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_111&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_111&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaDoubleSwap&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaDoubleSwap&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ClefiaKeySet&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ClefiaKeySet&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.779 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;ByteCpy_1&apos; pipeline &apos;ByteCpy.1&apos; pipeline type &apos;function pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.744 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_112_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_112_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_11831&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_11831&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_11151&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_11151&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.181 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteCpy_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;ByteCpy_2&apos; pipeline &apos;ByteCpy.2&apos; pipeline type &apos;function pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteCpy_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;ByteXor_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;ByteXor_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.232 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;clefia&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_918" tag="" content="Design contains AXI ports. Reset is fixed to synchronous and active low." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;clefia/pt&apos; to &apos;s_axilite &amp; ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;clefia/key_bitlen&apos; to &apos;s_axilite &amp; ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;clefia/Clefia_enc&apos; to &apos;s_axilite &amp; ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;clefia/Clefia_dec&apos; to &apos;s_axilite &amp; ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;clefia&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;pt&apos;, &apos;key_bitlen&apos;, &apos;Clefia_enc&apos;, &apos;Clefia_dec&apos; and &apos;return&apos; to AXI-Lite port control." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;clefia&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.67 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ByteCpy_120_skey_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_skey_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_con192_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_con256_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_con128_ROM_AUTO_1R&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_fin_3_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_lk_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_fin_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_ClefiaKeySet_lk_2_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_fin_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_rout_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;clefia_rk_RAM_AUTO_1R1W_ram (RAM)&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 4.483 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.784 seconds; current allocated memory: 1.100 GB." resolution=""/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for clefia." resolution=""/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for clefia." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,VITIS_KERNEL" content="**** Loop Constraint Status: All loop constraints were satisfied." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,VITIS_KERNEL" content="**** Estimated Fmax: 141.16 MHz" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 27 seconds. CPU system time: 2 seconds. Elapsed time: 44.857 seconds; current allocated memory: 416.414 MB." resolution=""/>
+</Messages>

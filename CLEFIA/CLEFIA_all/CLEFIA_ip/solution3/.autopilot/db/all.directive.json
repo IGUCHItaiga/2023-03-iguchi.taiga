@@ -1,0 +1,332 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "return"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "key_bitlen"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "pt"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "Clefia_enc"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "10",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "Clefia_dec"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "ClefiaKeySet256",
+          "label": "ClefiaKeySet256_label10",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "11",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ClefiaKeySet192",
+          "label": "ClefiaKeySet192_label8",
+          "functionLabel": "",
+          "id": "7",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "12",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ClefiaKeySet192",
+          "label": "ClefiaKeySet192_label9",
+          "functionLabel": "",
+          "id": "8",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "13",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ClefiaKeySet128",
+          "label": "ClefiaKeySet128_label7",
+          "functionLabel": "",
+          "id": "9",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "14",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ClefiaConSet",
+          "label": "ClefiaConSet_label6",
+          "functionLabel": "",
+          "id": "10",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "15",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ClefiaGfn4Inv",
+          "label": "ClefiaGfn4Inv_label5",
+          "functionLabel": "",
+          "id": "11",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "16",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ByteXor",
+          "label": "ByteXor_label2",
+          "functionLabel": "",
+          "id": "12",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "ByteCpy",
+          "label": "ByteCpy_label1",
+          "functionLabel": "",
+          "id": "13",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "18",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "14",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "19",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "clefia"
+              }]
+          }
+        },
+        {
+          "functionName": "ByteCpy",
+          "label": "",
+          "functionLabel": "",
+          "id": "15",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "20",
+          "pragma": {
+            "name": "INLINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "ByteXor",
+          "label": "",
+          "functionLabel": "",
+          "id": "16",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "21",
+          "pragma": {
+            "name": "INLINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "17",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "22",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "ClefiaMul2",
+          "label": "",
+          "functionLabel": "",
+          "id": "18",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "23",
+          "pragma": {
+            "name": "INLINE",
+            "option": [
+              {
+                "name": "recursive",
+                "value": ""
+              },
+              {
+                "name": "off",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "ClefiaF0Xor",
+          "label": "",
+          "functionLabel": "",
+          "id": "19",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "24",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "ClefiaF1Xor",
+          "label": "",
+          "functionLabel": "",
+          "id": "20",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "25",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "ClefiaGfn4",
+          "label": "ClefiaGfn4_label3",
+          "functionLabel": "",
+          "id": "21",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "26",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "ClefiaGfn8",
+          "label": "ClefiaGfn8_label4",
+          "functionLabel": "",
+          "id": "22",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/directives.tcl",
+          "sourceLine": "27",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "clefia",
+          "label": "",
+          "functionLabel": "",
+          "id": "23",
+          "sourceFile": "D:\/tmp\/CLEFIA_ip\/solution3\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "clefia"
+              }]
+          }
+        }
+      ]
+    }]}

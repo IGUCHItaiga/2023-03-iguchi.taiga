@@ -1,0 +1,23 @@
+<pragmas>
+<pragma file="clefia.c" line="11" pragmaType="unroll" parentfunction="ClefiaKeySet256" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="14" pragmaType="unroll" parentfunction="ClefiaKeySet128" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="21" pragmaType="inline" parentfunction="ByteXor" off="1" region="0" recursive="0"/>
+<pragma file="clefia.c" line="17" pragmaType="pipeline" parentfunction="ByteXor" off="1" ii="0" rewind="0" style=""/>
+<pragma file="clefia.c" line="23" pragmaType="inline" parentfunction="ClefiaMul2" off="1" region="0" recursive="1"/>
+<pragma file="clefia.c" line="22" pragmaType="pipeline" parentfunction="clefia" off="0" ii="-1" style=""/>
+<pragma file="clefia.c" line="10" pragmaType="interface" parentfunction="clefia" mode="s_axilite" port="Clefia_dec" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clefia.c" line="6" pragmaType="interface" parentfunction="clefia" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clefia.c" line="7" pragmaType="interface" parentfunction="clefia" mode="s_axilite" port="key_bitlen" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clefia.c" line="8" pragmaType="interface" parentfunction="clefia" mode="s_axilite" port="pt" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clefia.c" line="9" pragmaType="interface" parentfunction="clefia" mode="s_axilite" port="Clefia_enc" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clefia.c" line="25" pragmaType="pipeline" parentfunction="ClefiaF1Xor" off="1" ii="0" style=""/>
+<pragma file="clefia.c" line="26" pragmaType="unroll" parentfunction="ClefiaGfn4" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="24" pragmaType="pipeline" parentfunction="ClefiaF0Xor" off="1" ii="0" style=""/>
+<pragma file="clefia.c" line="16" pragmaType="unroll" parentfunction="ClefiaGfn4Inv" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="13" pragmaType="unroll" parentfunction="ClefiaKeySet192" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="12" pragmaType="unroll" parentfunction="ClefiaKeySet192" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="15" pragmaType="unroll" parentfunction="ClefiaConSet" factor="-1" skip_exit_check="0"/>
+<pragma file="clefia.c" line="20" pragmaType="inline" parentfunction="ByteCpy" off="1" region="0" recursive="0"/>
+<pragma file="clefia.c" line="18" pragmaType="pipeline" parentfunction="ByteCpy" off="1" ii="0" rewind="0" style=""/>
+<pragma file="clefia.c" line="27" pragmaType="unroll" parentfunction="ClefiaGfn8" factor="-1" skip_exit_check="0"/>
+</pragmas>

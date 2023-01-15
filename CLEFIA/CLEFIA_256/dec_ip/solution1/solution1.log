@@ -1,0 +1,1006 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec Clefia_dec 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 11.315 seconds; current allocated memory: 471.430 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.407 seconds; peak allocated memory: 1.099 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec Clefia_dec 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.581 seconds; current allocated memory: 485.066 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.662 seconds; peak allocated memory: 1.099 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec Clefia_dec 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 647.133 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/dec.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.77 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaGfn4Inv' (src/dec.c:208:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaDecrypt' (src/dec.c:312:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaDecrypt' (src/dec.c:312:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaGfn4Inv' into 'ClefiaDecrypt' (src/dec.c:312:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:12)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:21)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 4.977 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ClefiaDecrypt.1' into 'clefia_dec' (src/dec.c:348).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_dec' (src/dec.c:214).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_dec' (src/dec.c:215).
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.664 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.100 GB.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ClefiaGfn4Inv_label5' (src/dec.c:207) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ClefiaGfn4Inv_label5' (src/dec.c:207) in function 'clefia_dec' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'x.1' (src/dec.c:167) automatically.
+INFO: [XFORM 203-102] Partitioning array 'y.1' (src/dec.c:167) automatically.
+INFO: [XFORM 203-102] Partitioning array 'x' (src/dec.c:144) automatically.
+INFO: [XFORM 203-102] Partitioning array 'y' (src/dec.c:144) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'clefia_dec' (src/dec.c:114:18)...68 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.378 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'rin' (src/dec.c:117:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rin' (src/dec.c:124:12)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.196 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'clefia_dec' ...
+WARNING: [SYN 201-107] Renaming port name 'clefia_dec/Clefia_dec' to 'clefia_dec/Clefia_dec_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ClefiaGfn4Inv_label5'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'load' operation ('rk_load_4', src/dec.c:124) on array 'rk' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'rk'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_6_write_ln117', src/dec.c:117) of variable 'xor_ln124_9', src/dec.c:124 on array 'fin' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'fin'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_4_write_ln117', src/dec.c:117) of variable 'xor_ln124_11', src/dec.c:124 on array 'fin' due to limited memory ports (II = 12). Please consider using a memory core with more ports or partitioning the array 'fin'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 13, Depth = 13, loop 'ClefiaGfn4Inv_label5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.173 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.293 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.436 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label26' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('Clefia_dec_load', src/dec.c:124) on array 'Clefia_dec' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'Clefia_dec'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label27' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('Clefia_dec_load', src/dec.c:124) on array 'Clefia_dec' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'Clefia_dec'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label1' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.377 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteXor_label2' pipeline 'ByteXor_label2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.168 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteXor_label22' pipeline 'ByteXor_label2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label13' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.723 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label14' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.235 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label15' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label26'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label27'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_dec/ct' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_dec/Clefia_dec_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clefia_dec' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'ct', 'Clefia_dec_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 1.100 GB.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_clefia_dec_Pipeline_ClefiaGfn4Inv_label5_clefia_s0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_clefia_dec_Pipeline_ClefiaGfn4Inv_label5_clefia_s1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_rk_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_fin_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_fout_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_rin_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_rout_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.115 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.063 seconds; current allocated memory: 1.100 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clefia_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for clefia_dec.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.90 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 1 seconds. Elapsed time: 17.989 seconds; current allocated memory: 487.352 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 2 seconds. Total elapsed time: 19.078 seconds; peak allocated memory: 1.100 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec Clefia_dec 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file dec_ip/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 25.216 seconds; current allocated memory: 456.121 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 26.937 seconds; peak allocated memory: 1.108 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec Clefia_dec 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 676.445 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/dec.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.7 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaGfn4Inv' (src/dec.c:208:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaDecrypt' (src/dec.c:312:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaDecrypt' (src/dec.c:312:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaGfn4Inv' into 'ClefiaDecrypt' (src/dec.c:312:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:12)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:21)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 4.003 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ClefiaDecrypt.1' into 'clefia_dec' (src/dec.c:348).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_dec' (src/dec.c:214).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_dec' (src/dec.c:215).
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.638 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 1.100 GB.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ClefiaGfn4Inv_label5' (src/dec.c:207) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ClefiaGfn4Inv_label5' (src/dec.c:207) in function 'clefia_dec' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'x.1' (src/dec.c:167) automatically.
+INFO: [XFORM 203-102] Partitioning array 'y.1' (src/dec.c:167) automatically.
+INFO: [XFORM 203-102] Partitioning array 'x' (src/dec.c:144) automatically.
+INFO: [XFORM 203-102] Partitioning array 'y' (src/dec.c:144) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'clefia_dec' (src/dec.c:114:18)...68 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'rin' (src/dec.c:117:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rin' (src/dec.c:124:12)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.181 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'clefia_dec' ...
+WARNING: [SYN 201-107] Renaming port name 'clefia_dec/Clefia_dec' to 'clefia_dec/Clefia_dec_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ClefiaGfn4Inv_label5'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'load' operation ('rk_load_4', src/dec.c:124) on array 'rk' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'rk'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_6_write_ln117', src/dec.c:117) of variable 'xor_ln124_9', src/dec.c:124 on array 'fin' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'fin'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_4_write_ln117', src/dec.c:117) of variable 'xor_ln124_11', src/dec.c:124 on array 'fin' due to limited memory ports (II = 12). Please consider using a memory core with more ports or partitioning the array 'fin'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 13, Depth = 13, loop 'ClefiaGfn4Inv_label5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.063 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.373 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label26' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('Clefia_dec_load', src/dec.c:124) on array 'Clefia_dec' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'Clefia_dec'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label27' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('Clefia_dec_load', src/dec.c:124) on array 'Clefia_dec' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'Clefia_dec'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label1' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteXor_label2' pipeline 'ByteXor_label2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteXor_label22' pipeline 'ByteXor_label2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label13' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label14' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.841 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label15' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label26'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label27'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_dec/ct' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_dec/Clefia_dec_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clefia_dec' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'ct', 'Clefia_dec_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.176 seconds; current allocated memory: 1.100 GB.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_clefia_dec_Pipeline_ClefiaGfn4Inv_label5_clefia_s0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_clefia_dec_Pipeline_ClefiaGfn4Inv_label5_clefia_s1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_rk_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_fin_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_fout_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_rin_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_rout_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.308 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.556 seconds; current allocated memory: 1.100 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clefia_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for clefia_dec.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.90 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 13.471 seconds; current allocated memory: 458.203 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 2 seconds. Total elapsed time: 14.562 seconds; peak allocated memory: 1.100 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec Clefia_dec 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file dec_ip/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 8.039 seconds; current allocated memory: 474.609 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.155 seconds; peak allocated memory: 1.109 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec pt 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.746 seconds; current allocated memory: 480.094 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.763 seconds; peak allocated memory: 1.099 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec pt 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 663.832 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/dec.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.71 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF0Xor' (src/dec.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF1Xor' (src/dec.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaGfn4Inv' (src/dec.c:208:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaDecrypt' (src/dec.c:312:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaDecrypt' (src/dec.c:312:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaGfn4Inv' into 'ClefiaDecrypt' (src/dec.c:312:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:14)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:12)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:21)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.99 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ClefiaDecrypt.1' into 'clefia_dec' (src/dec.c:348).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_dec' (src/dec.c:214).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_dec' (src/dec.c:215).
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.596 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.100 GB.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ClefiaGfn4Inv_label5' (src/dec.c:207) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ClefiaGfn4Inv_label5' (src/dec.c:207) in function 'clefia_dec' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'ByteXor_label2' (src/dec.c:121) in function 'clefia_dec' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ByteCpy_label1' (src/dec.c:114) in function 'clefia_dec' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'x.1' (src/dec.c:167) automatically.
+INFO: [XFORM 203-102] Partitioning array 'y.1' (src/dec.c:167) automatically.
+INFO: [XFORM 203-102] Partitioning array 'x' (src/dec.c:144) automatically.
+INFO: [XFORM 203-102] Partitioning array 'y' (src/dec.c:144) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'clefia_dec' (src/dec.c:114:18)...68 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.312 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'rin' (src/dec.c:117:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rin' (src/dec.c:124:12)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'clefia_dec' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.131 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ClefiaGfn4Inv_label5'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'load' operation ('rk_load_4', src/dec.c:124) on array 'rk' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'rk'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_6_write_ln117', src/dec.c:117) of variable 'xor_ln124_9', src/dec.c:124 on array 'fin' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'fin'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_4_write_ln117', src/dec.c:117) of variable 'xor_ln124_11', src/dec.c:124 on array 'fin' due to limited memory ports (II = 12). Please consider using a memory core with more ports or partitioning the array 'fin'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 13, Depth = 13, loop 'ClefiaGfn4Inv_label5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.06 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteCpy_label15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteCpy_label1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'ByteCpy_label1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label26' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('pt_load', src/dec.c:124) on array 'pt' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'pt'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec_Pipeline_ByteXor_label27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ByteXor_label2'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label27' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('pt_load', src/dec.c:124) on array 'pt' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'pt'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'ByteXor_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label1' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteXor_label2' pipeline 'ByteXor_label2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteXor_label22' pipeline 'ByteXor_label2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label13' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.131 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label14' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.807 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteCpy_label15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_dec_Pipeline_ByteCpy_label15' pipeline 'ByteCpy_label1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteCpy_label15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label26'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec_Pipeline_ByteXor_label27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec_Pipeline_ByteXor_label27'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_dec/ct' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_dec/pt' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clefia_dec' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'ct', 'pt' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_dec'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 1.100 GB.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_clefia_dec_Pipeline_ClefiaGfn4Inv_label5_clefia_s0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_clefia_dec_Pipeline_ClefiaGfn4Inv_label5_clefia_s1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_dec_rk_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_fin_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_fout_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_rin_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_dec_rout_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.29 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.547 seconds; current allocated memory: 1.100 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clefia_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for clefia_dec.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.90 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 13.22 seconds; current allocated memory: 470.668 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 2 seconds. Total elapsed time: 14.267 seconds; peak allocated memory: 1.100 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./dec_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_dec 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_dec pt 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file dec_ip/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 8.06 seconds; current allocated memory: 486.539 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.056 seconds; peak allocated memory: 1.108 GB.

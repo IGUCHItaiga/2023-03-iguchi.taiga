@@ -1,0 +1,253 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaKeySet128'
+================================================================
+* Date:           Tue Dec  6 21:01:15 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.998 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      236|      236|  2.360 us|  2.360 us|  236|  236|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.25>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%fin_11_loc = alloca i64 1"   --->   Operation 11 'alloca' 'fin_11_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%fin_10_loc = alloca i64 1"   --->   Operation 12 'alloca' 'fin_10_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%fin_9_loc = alloca i64 1"   --->   Operation 13 'alloca' 'fin_9_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%fin_8_loc = alloca i64 1"   --->   Operation 14 'alloca' 'fin_8_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%fin_7_loc = alloca i64 1"   --->   Operation 15 'alloca' 'fin_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%fin_6_loc = alloca i64 1"   --->   Operation 16 'alloca' 'fin_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%fin_5_loc = alloca i64 1"   --->   Operation 17 'alloca' 'fin_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%fin_4_loc = alloca i64 1"   --->   Operation 18 'alloca' 'fin_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%fin_3_loc = alloca i64 1"   --->   Operation 19 'alloca' 'fin_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%fin_2_loc = alloca i64 1"   --->   Operation 20 'alloca' 'fin_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%fin_1_loc = alloca i64 1"   --->   Operation 21 'alloca' 'fin_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%fin_0_loc = alloca i64 1"   --->   Operation 22 'alloca' 'fin_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%fin_15_loc = alloca i64 1"   --->   Operation 23 'alloca' 'fin_15_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%fin_14_loc = alloca i64 1"   --->   Operation 24 'alloca' 'fin_14_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%fin_13_loc = alloca i64 1"   --->   Operation 25 'alloca' 'fin_13_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%fin_12_loc = alloca i64 1"   --->   Operation 26 'alloca' 'fin_12_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%rk_addr = getelementptr i8 %rk, i64 0, i64 0" [clefia.c:295]   --->   Operation 27 'getelementptr' 'rk_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_ClefiaGfn4_label3, i8 %fin_12_loc, i8 %fin_13_loc, i8 %fin_14_loc, i8 %fin_15_loc, i8 %fin_0_loc, i8 %fin_1_loc, i8 %fin_2_loc, i8 %fin_3_loc, i8 %fin_4_loc, i8 %fin_5_loc, i8 %fin_6_loc, i8 %fin_7_loc, i8 %fin_8_loc, i8 %fin_9_loc, i8 %fin_10_loc, i8 %fin_11_loc, i8 %clefia_s0, i8 %clefia_s1, i8 %con128"   --->   Operation 28 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%rk_addr_11 = getelementptr i8 %rk, i64 0, i64 1" [clefia.c:117]   --->   Operation 29 'getelementptr' 'rk_addr_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 255, i8 %rk_addr" [clefia.c:117]   --->   Operation 30 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_1 : Operation 31 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 238, i8 %rk_addr_11" [clefia.c:117]   --->   Operation 31 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 32 [1/2] (1.98ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_ClefiaGfn4_label3, i8 %fin_12_loc, i8 %fin_13_loc, i8 %fin_14_loc, i8 %fin_15_loc, i8 %fin_0_loc, i8 %fin_1_loc, i8 %fin_2_loc, i8 %fin_3_loc, i8 %fin_4_loc, i8 %fin_5_loc, i8 %fin_6_loc, i8 %fin_7_loc, i8 %fin_8_loc, i8 %fin_9_loc, i8 %fin_10_loc, i8 %fin_11_loc, i8 %clefia_s0, i8 %clefia_s1, i8 %con128"   --->   Operation 32 'call' 'call_ln0' <Predicate = true> <Delay = 1.98> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%rk_addr_12 = getelementptr i8 %rk, i64 0, i64 2" [clefia.c:117]   --->   Operation 33 'getelementptr' 'rk_addr_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%rk_addr_13 = getelementptr i8 %rk, i64 0, i64 3" [clefia.c:117]   --->   Operation 34 'getelementptr' 'rk_addr_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 221, i8 %rk_addr_12" [clefia.c:117]   --->   Operation 35 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_2 : Operation 36 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 204, i8 %rk_addr_13" [clefia.c:117]   --->   Operation 36 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%rk_addr_14 = getelementptr i8 %rk, i64 0, i64 4" [clefia.c:117]   --->   Operation 37 'getelementptr' 'rk_addr_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%rk_addr_15 = getelementptr i8 %rk, i64 0, i64 5" [clefia.c:117]   --->   Operation 38 'getelementptr' 'rk_addr_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 187, i8 %rk_addr_14" [clefia.c:117]   --->   Operation 39 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_3 : Operation 40 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 170, i8 %rk_addr_15" [clefia.c:117]   --->   Operation 40 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%rk_addr_16 = getelementptr i8 %rk, i64 0, i64 6" [clefia.c:117]   --->   Operation 41 'getelementptr' 'rk_addr_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%rk_addr_17 = getelementptr i8 %rk, i64 0, i64 7" [clefia.c:117]   --->   Operation 42 'getelementptr' 'rk_addr_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 153, i8 %rk_addr_16" [clefia.c:117]   --->   Operation 43 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_4 : Operation 44 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 136, i8 %rk_addr_17" [clefia.c:117]   --->   Operation 44 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 5 <SV = 4> <Delay = 1.58>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%fin_12_loc_load = load i8 %fin_12_loc"   --->   Operation 45 'load' 'fin_12_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%fin_13_loc_load = load i8 %fin_13_loc"   --->   Operation 46 'load' 'fin_13_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%fin_14_loc_load = load i8 %fin_14_loc"   --->   Operation 47 'load' 'fin_14_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%fin_15_loc_load = load i8 %fin_15_loc"   --->   Operation 48 'load' 'fin_15_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%fin_0_loc_load = load i8 %fin_0_loc"   --->   Operation 49 'load' 'fin_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%fin_1_loc_load = load i8 %fin_1_loc"   --->   Operation 50 'load' 'fin_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%fin_2_loc_load = load i8 %fin_2_loc"   --->   Operation 51 'load' 'fin_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%fin_3_loc_load = load i8 %fin_3_loc"   --->   Operation 52 'load' 'fin_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%fin_4_loc_load = load i8 %fin_4_loc"   --->   Operation 53 'load' 'fin_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%fin_5_loc_load = load i8 %fin_5_loc"   --->   Operation 54 'load' 'fin_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%fin_6_loc_load = load i8 %fin_6_loc"   --->   Operation 55 'load' 'fin_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%fin_7_loc_load = load i8 %fin_7_loc"   --->   Operation 56 'load' 'fin_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%fin_8_loc_load = load i8 %fin_8_loc"   --->   Operation 57 'load' 'fin_8_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%fin_9_loc_load = load i8 %fin_9_loc"   --->   Operation 58 'load' 'fin_9_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%fin_10_loc_load = load i8 %fin_10_loc"   --->   Operation 59 'load' 'fin_10_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%fin_11_loc_load = load i8 %fin_11_loc"   --->   Operation 60 'load' 'fin_11_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 61 [2/2] (1.58ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_ClefiaKeySet128_label7, i8 %fin_11_loc_load, i8 %fin_10_loc_load, i8 %fin_9_loc_load, i8 %fin_8_loc_load, i8 %fin_7_loc_load, i8 %fin_6_loc_load, i8 %fin_5_loc_load, i8 %fin_4_loc_load, i8 %fin_3_loc_load, i8 %fin_2_loc_load, i8 %fin_1_loc_load, i8 %fin_0_loc_load, i8 %fin_15_loc_load, i8 %fin_14_loc_load, i8 %fin_13_loc_load, i8 %fin_12_loc_load, i8 %rk, i8 %con128"   --->   Operation 61 'call' 'call_ln0' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 62 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_ClefiaKeySet128_label7, i8 %fin_11_loc_load, i8 %fin_10_loc_load, i8 %fin_9_loc_load, i8 %fin_8_loc_load, i8 %fin_7_loc_load, i8 %fin_6_loc_load, i8 %fin_5_loc_load, i8 %fin_4_loc_load, i8 %fin_3_loc_load, i8 %fin_2_loc_load, i8 %fin_1_loc_load, i8 %fin_0_loc_load, i8 %fin_15_loc_load, i8 %fin_14_loc_load, i8 %fin_13_loc_load, i8 %fin_12_loc_load, i8 %rk, i8 %con128"   --->   Operation 62 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%rk_addr_18 = getelementptr i8 %rk, i64 0, i64 152" [clefia.c:309]   --->   Operation 63 'getelementptr' 'rk_addr_18' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%rk_addr_19 = getelementptr i8 %rk, i64 0, i64 153" [clefia.c:117]   --->   Operation 64 'getelementptr' 'rk_addr_19' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 119, i8 %rk_addr_18" [clefia.c:117]   --->   Operation 65 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_7 : Operation 66 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 102, i8 %rk_addr_19" [clefia.c:117]   --->   Operation 66 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%rk_addr_20 = getelementptr i8 %rk, i64 0, i64 154" [clefia.c:117]   --->   Operation 67 'getelementptr' 'rk_addr_20' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%rk_addr_21 = getelementptr i8 %rk, i64 0, i64 155" [clefia.c:117]   --->   Operation 68 'getelementptr' 'rk_addr_21' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 69 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 85, i8 %rk_addr_20" [clefia.c:117]   --->   Operation 69 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_8 : Operation 70 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 68, i8 %rk_addr_21" [clefia.c:117]   --->   Operation 70 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 71 [1/1] (0.00ns)   --->   "%rk_addr_22 = getelementptr i8 %rk, i64 0, i64 156" [clefia.c:117]   --->   Operation 71 'getelementptr' 'rk_addr_22' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "%rk_addr_23 = getelementptr i8 %rk, i64 0, i64 157" [clefia.c:117]   --->   Operation 72 'getelementptr' 'rk_addr_23' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 73 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 51, i8 %rk_addr_22" [clefia.c:117]   --->   Operation 73 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_9 : Operation 74 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 34, i8 %rk_addr_23" [clefia.c:117]   --->   Operation 74 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 10 <SV = 9> <Delay = 3.25>
+ST_10 : Operation 75 [1/1] (0.00ns)   --->   "%rk_addr_24 = getelementptr i8 %rk, i64 0, i64 158" [clefia.c:117]   --->   Operation 75 'getelementptr' 'rk_addr_24' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 76 [1/1] (0.00ns)   --->   "%rk_addr_25 = getelementptr i8 %rk, i64 0, i64 159" [clefia.c:117]   --->   Operation 76 'getelementptr' 'rk_addr_25' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 77 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 17, i8 %rk_addr_24" [clefia.c:117]   --->   Operation 77 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_10 : Operation 78 [1/1] (3.25ns)   --->   "%store_ln117 = store i8 0, i8 %rk_addr_25" [clefia.c:117]   --->   Operation 78 'store' 'store_ln117' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_10 : Operation 79 [1/1] (0.00ns)   --->   "%ret_ln318 = ret" [clefia.c:318]   --->   Operation 79 'ret' 'ret_ln318' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('rk_addr', clefia.c:295) [21]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 255 on array 'rk' [40]  (3.25 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:117) [41]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 221 on array 'rk' [44]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:117) [45]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 187 on array 'rk' [48]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:117) [49]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 153 on array 'rk' [52]  (3.25 ns)
+
+ <State 5>: 1.59ns
+The critical path consists of the following:
+	'load' operation ('fin_12_loc_load') on local variable 'fin_12_loc' [23]  (0 ns)
+	'call' operation ('call_ln0') to 'ClefiaKeySet128_Pipeline_ClefiaKeySet128_label7' [54]  (1.59 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:309) [55]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 119 on array 'rk' [57]  (3.25 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:117) [58]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 85 on array 'rk' [61]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:117) [62]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 51 on array 'rk' [65]  (3.25 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst', clefia.c:117) [66]  (0 ns)
+	'store' operation ('store_ln117', clefia.c:117) of constant 17 on array 'rk' [69]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

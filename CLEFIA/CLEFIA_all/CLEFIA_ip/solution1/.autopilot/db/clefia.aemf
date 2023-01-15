@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670321473248">
+  <ports id="1" name="pt" type="PortType" coreName="RAM_1P" coreId="1702129263" bitwidth="8" iftype="IfTypeRegister" arraysize="16">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="key_bitlen" type="PortType" originalName="key_bitlen" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="Clefia_enc" type="PortType" coreName="RAM_1P" coreId="539122999" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="16">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="Clefia_dec" type="PortType" coreName="RAM_1P" coreId="1702129263" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="16">
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <edges id="76" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="83" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="84" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="85" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="88" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="93" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="103" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="105" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="109" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="112" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="115" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="124" source_obj="//@ports.2" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="125" source_obj="//@ports.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="126" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="127" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="130" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="131" source_obj="//@ports.2" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="133" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="136" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="137" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="140" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="142" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="146" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="148" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="155" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="164" source_obj="//@ports.3" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="166" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="167" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="168" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="169" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="170" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="171" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="172" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="173" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="174" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="175" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="176" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="177" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="178" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="179" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="180" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="181" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="182" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="183" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="184" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="185" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="186" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="187" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="188" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="189" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="190" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="191" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="192" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="193" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="194" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="195" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="411" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.5"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="413" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="414" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="415" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="416" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.6"/>
+  <edges id="417" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6"/>
+  <edges id="418" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6"/>
+  <edges id="419" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="420" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.11"/>
+  <edges id="421" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="422" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.10"/>
+  <edges id="423" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="425" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.12"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.12"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.12"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.12"/>
+  <edges id="429" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="430" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="431" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="432" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="433" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="434" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="435" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="436" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="437" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="438" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="439" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="440" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="441" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="442" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="443" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="444" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="445" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="446" edge_type="VirtEdge" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="447" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="448" edge_type="VirtEdge" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="449" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="450" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="451" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="452" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="453" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="454" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="455" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="456" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="457" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="458" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="459" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="460" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="461" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="462" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="463" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="464" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="465" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="466" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="467" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="468" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="469" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="470" edge_type="VirtEdge" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="471" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="472" edge_type="VirtEdge" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="-124" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@ports.2"/>
+  <edges id="-131" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@ports.2"/>
+  <edges id="-164" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@ports.3"/>
+  <blocks id="34" name="entry" type="BlockType">
+    <controlOutputObjs>if.then.i</controlOutputObjs>
+    <controlOutputObjs>if.else.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="key_bitlen_read" originalName="key_bitlen" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>key_bitlen</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="ct" lineNumber="467" originalName="ct" fileName="clefia.c" fileDirectory=".." rtlName="ct_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="467" fileDirectory="D:\tmp"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="rk" lineNumber="468" originalName="rk" fileName="clefia.c" fileDirectory=".." rtlName="rk_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="468" fileDirectory="D:\tmp"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln395" lineNumber="395" fileName="clefia.c" fileDirectory=".." rtlName="icmp_ln395_fu_238_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ClefiaKeySet" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.47" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="395" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="br_ln395" lineNumber="395" fileName="clefia.c" fileDirectory=".." coreId="5" contextFuncName="ClefiaKeySet" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="395" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.else.i</controlInputObjs>
+      <controlInputObjs>if.then.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>467</validLinenumbers>
+      <validLinenumbers>468</validLinenumbers>
+      <validLinenumbers>395</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="37" name="if.else.i" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>if.then2.i</controlOutputObjs>
+    <controlOutputObjs>if.else3.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln398" lineNumber="398" fileName="clefia.c" fileDirectory=".." rtlName="grp_fu_226_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ClefiaKeySet" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.47" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="398" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln398" lineNumber="398" fileName="clefia.c" fileDirectory=".." coreId="100" contextFuncName="ClefiaKeySet" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="398" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.else3.i</controlInputObjs>
+      <controlInputObjs>if.then2.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>398</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="40" name="if.else3.i" type="BlockType">
+    <controlInputObjs>if.else.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>if.then5.i</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="icmp_ln401" lineNumber="401" fileName="clefia.c" fileDirectory=".." rtlName="grp_fu_232_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ClefiaKeySet" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.47" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="401" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln401" lineNumber="401" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaKeySet" opcode="br" m_display="0" m_delay="1.82" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="401" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>ClefiaKeySet.exit</controlInputObjs>
+      <controlInputObjs>if.then5.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>401</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="43" name="if.then5.i" type="BlockType">
+    <controlInputObjs>if.else3.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln402" lineNumber="402" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaKeySet256_fu_148" coreId="497" contextFuncName="ClefiaKeySet" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="402" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>ClefiaKeySet256</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln403" lineNumber="403" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="403" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <controlInputObjs>ClefiaKeySet.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>402</validLinenumbers>
+      <validLinenumbers>403</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="46" name="if.then2.i" type="BlockType">
+    <controlInputObjs>if.else.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln399" lineNumber="399" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaKeySet192_fu_162" coreId="0" contextFuncName="ClefiaKeySet" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="399" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>ClefiaKeySet192</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln400" lineNumber="400" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="400" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <controlInputObjs>ClefiaKeySet.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>399</validLinenumbers>
+      <validLinenumbers>400</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="49" name="if.then.i" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln396" lineNumber="396" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaKeySet128_fu_176" coreId="116560640" contextFuncName="ClefiaKeySet" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>ClefiaKeySet128</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln397" lineNumber="397" fileName="clefia.c" fileDirectory=".." coreId="4294967295" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="397" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <controlInputObjs>ClefiaKeySet.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>396</validLinenumbers>
+      <validLinenumbers>397</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="54" name="ClefiaKeySet.exit" type="BlockType">
+    <controlInputObjs>if.else3.i</controlInputObjs>
+    <controlInputObjs>if.then5.i</controlInputObjs>
+    <controlInputObjs>if.then2.i</controlInputObjs>
+    <controlInputObjs>if.then.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>if.then.i3</controlOutputObjs>
+    <controlOutputObjs>if.else.i5</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="r" originalName="r" coreId="0" bitwidth="5" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>if.then.i</controlInputObjs>
+      <controlInputObjs>if.then2.i</controlInputObjs>
+      <controlInputObjs>if.then5.i</controlInputObjs>
+      <controlInputObjs>if.else3.i</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln473" lineNumber="473" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaEncrypt_1_fu_190" coreId="497" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.36" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="473" fileDirectory="D:\tmp"/>
+      <dataInputObjs>Clefia_enc</dataInputObjs>
+      <dataInputObjs>pt</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>Clefia_enc</dataOutputObjs>
+      <constName>ClefiaEncrypt_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln0" rtlName="grp_clefia_Pipeline_VITIS_LOOP_116_1_fu_205" coreId="1717924352" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>Clefia_enc</dataInputObjs>
+      <dataOutputObjs>Clefia_enc</dataOutputObjs>
+      <constName>clefia_Pipeline_VITIS_LOOP_116_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln395" lineNumber="395" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="395" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.else.i5</controlInputObjs>
+      <controlInputObjs>if.then.i3</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>473</validLinenumbers>
+      <validLinenumbers>395</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="57" name="if.else.i5" type="BlockType">
+    <controlInputObjs>ClefiaKeySet.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>if.then2.i6</controlOutputObjs>
+    <controlOutputObjs>if.else3.i8</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="icmp_ln398_1" lineNumber="398" fileName="clefia.c" fileDirectory=".." rtlName="grp_fu_226_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ClefiaKeySet" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.47" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="398" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="br_ln398" lineNumber="398" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="398" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.else3.i8</controlInputObjs>
+      <controlInputObjs>if.then2.i6</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>398</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="60" name="if.else3.i8" type="BlockType">
+    <controlInputObjs>if.else.i5</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>if.then5.i9</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit11</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="icmp_ln401_1" lineNumber="401" fileName="clefia.c" fileDirectory=".." rtlName="grp_fu_232_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ClefiaKeySet" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.47" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="401" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln401" lineNumber="401" fileName="clefia.c" fileDirectory=".." coreId="100" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="5.0" m_display="0" m_delay="1.82" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="401" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>ClefiaKeySet.exit11</controlInputObjs>
+      <controlInputObjs>if.then5.i9</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>401</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="63" name="if.then5.i9" type="BlockType">
+    <controlInputObjs>if.else3.i8</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit11</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="_ln402" lineNumber="402" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaKeySet256_fu_148" coreId="53396672" contextFuncName="ClefiaKeySet" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="402" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>ClefiaKeySet256</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln403" lineNumber="403" fileName="clefia.c" fileDirectory=".." coreId="540697965" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="6.0" m_display="0" m_delay="1.82" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="403" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <controlInputObjs>ClefiaKeySet.exit11</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>402</validLinenumbers>
+      <validLinenumbers>403</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="66" name="if.then2.i6" type="BlockType">
+    <controlInputObjs>if.else.i5</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit11</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln399" lineNumber="399" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaKeySet192_fu_162" coreId="119781952" contextFuncName="ClefiaKeySet" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="399" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>ClefiaKeySet192</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln400" lineNumber="400" fileName="clefia.c" fileDirectory=".." coreId="119799488" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="7.0" m_display="0" m_delay="1.82" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="400" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <controlInputObjs>ClefiaKeySet.exit11</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>399</validLinenumbers>
+      <validLinenumbers>400</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="69" name="if.then.i3" type="BlockType">
+    <controlInputObjs>ClefiaKeySet.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>ClefiaKeySet.exit11</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln396" lineNumber="396" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaKeySet128_fu_176" coreId="118820880" contextFuncName="ClefiaKeySet" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>ClefiaKeySet128</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="br_ln397" lineNumber="397" fileName="clefia.c" fileDirectory=".." coreId="1869833472" contextFuncName="ClefiaKeySet" opcode="br" nodeLabel="8.0" m_display="0" m_delay="1.82" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="397" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+      <controlInputObjs>ClefiaKeySet.exit11</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>396</validLinenumbers>
+      <validLinenumbers>397</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="73" name="ClefiaKeySet.exit11" type="BlockType">
+    <controlInputObjs>if.else3.i8</controlInputObjs>
+    <controlInputObjs>if.then5.i9</controlInputObjs>
+    <controlInputObjs>if.then2.i6</controlInputObjs>
+    <controlInputObjs>if.then.i3</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="r_1" originalName="r" coreId="0" bitwidth="5" opcode="phi" nodeLabel="9.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>if.then.i3</controlInputObjs>
+      <controlInputObjs>if.then2.i6</controlInputObjs>
+      <controlInputObjs>if.then5.i9</controlInputObjs>
+      <controlInputObjs>if.else3.i8</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln478" lineNumber="478" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaDecrypt_1_fu_212" coreId="118827840" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="478" fileDirectory="D:\tmp"/>
+      <dataInputObjs>Clefia_dec</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>Clefia_dec</dataOutputObjs>
+      <constName>ClefiaDecrypt_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="_ln479" lineNumber="479" fileName="clefia.c" fileDirectory=".." coreId="0" opcode="ret" nodeLabel="10.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clefia.c" linenumber="479" fileDirectory="D:\tmp"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="clefia.c">
+      <validLinenumbers>478</validLinenumbers>
+      <validLinenumbers>479</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <regnodes realName="icmp_ln398_reg_254">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="key_bitlen_read_reg_244">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="r_1_reg_126">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln395_reg_250">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="r_reg_104">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln401_reg_258">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <expressionNodes realName="r_phi_fu_111">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rk_alloca_fu_94">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_226">
+    <nodeIds>35</nodeIds>
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln395_fu_238">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_1_phi_fu_133">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ct_alloca_fu_90">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_232">
+    <nodeIds>38</nodeIds>
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_ClefiaEncrypt_1_fu_190">
+    <nodeIds>51</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ClefiaKeySet256_fu_148">
+    <nodeIds>41</nodeIds>
+    <nodeIds>61</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ClefiaKeySet192_fu_162">
+    <nodeIds>44</nodeIds>
+    <nodeIds>64</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_clefia_Pipeline_VITIS_LOOP_116_1_fu_205">
+    <nodeIds>52</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ClefiaDecrypt_1_fu_212">
+    <nodeIds>71</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ClefiaKeySet128_fu_176">
+    <nodeIds>47</nodeIds>
+    <nodeIds>67</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="key_bitlen_read_read_fu_98">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="clefia_s0" portID="100">
+    <nodeIds>47</nodeIds>
+    <nodeIds>44</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>67</nodeIds>
+    <nodeIds>64</nodeIds>
+    <nodeIds>61</nodeIds>
+    <nodeIds>71</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="clefia_s1" portID="100">
+    <nodeIds>47</nodeIds>
+    <nodeIds>44</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>67</nodeIds>
+    <nodeIds>64</nodeIds>
+    <nodeIds>61</nodeIds>
+    <nodeIds>71</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="con128" portID="100">
+    <nodeIds>47</nodeIds>
+    <nodeIds>67</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="con192" portID="100">
+    <nodeIds>44</nodeIds>
+    <nodeIds>64</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="con256" portID="100">
+    <nodeIds>41</nodeIds>
+    <nodeIds>61</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="skey" portID="100">
+    <nodeIds>47</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>67</nodeIds>
+    <nodeIds>61</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="skey256" portID="100">
+    <nodeIds>44</nodeIds>
+    <nodeIds>64</nodeIds>
+  </memoryPorts>
+  <ioPorts name="key_bitlen">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="2" latency="2"/>
+      <operations id="44" stage="2" latency="2"/>
+      <operations id="47" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="41" stage="1" latency="2"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="2"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="2"/>
+      <operations id="48" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="51" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="52" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="52" stage="1" latency="2"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="61" stage="2" latency="2"/>
+      <operations id="64" stage="2" latency="2"/>
+      <operations id="67" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="61" stage="1" latency="2"/>
+      <operations id="62" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="64" stage="1" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="67" stage="1" latency="2"/>
+      <operations id="68" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="71" stage="1" latency="2"/>
+      <operations id="72" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="clefia" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="278" mMaxLatency="-1">
+      <basicBlocks>34</basicBlocks>
+      <basicBlocks>37</basicBlocks>
+      <basicBlocks>40</basicBlocks>
+      <basicBlocks>43</basicBlocks>
+      <basicBlocks>46</basicBlocks>
+      <basicBlocks>49</basicBlocks>
+      <basicBlocks>54</basicBlocks>
+      <basicBlocks>57</basicBlocks>
+      <basicBlocks>60</basicBlocks>
+      <basicBlocks>63</basicBlocks>
+      <basicBlocks>66</basicBlocks>
+      <basicBlocks>69</basicBlocks>
+      <basicBlocks>73</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

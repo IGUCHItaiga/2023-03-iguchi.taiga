@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'clefia_Pipeline_ByteXor_label249'
+================================================================
+* Date:           Mon Dec 12 08:58:45 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution4 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.566 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       19|       19|  0.190 us|  0.190 us|   19|   19|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ByteXor_label2  |       17|       17|         3|          1|          1|    16|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.36>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%idx_i1051 = alloca i32 1"   --->   Operation 6 'alloca' 'idx_i1051' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %idx_i1051"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %while.body.i1053"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%idx_i1051_load = load i5 %idx_i1051" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 9 'load' 'idx_i1051_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 10 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.36ns)   --->   "%icmp_ln123 = icmp_eq  i5 %idx_i1051_load, i5 16" [clefia.c:123->clefia.c:310->clefia.c:396]   --->   Operation 11 'icmp' 'icmp_ln123' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.78ns)   --->   "%add_ln124 = add i5 %idx_i1051_load, i5 1" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 13 'add' 'add_ln124' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln123 = br i1 %icmp_ln123, void %while.body.split.i1056, void %ByteXor.exit1057.exitStub" [clefia.c:123->clefia.c:310->clefia.c:396]   --->   Operation 14 'br' 'br_ln123' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%or_ln121_s = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 1, i5 %idx_i1051_load" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 15 'bitconcatenate' 'or_ln121_s' <Predicate = (!icmp_ln123)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln121 = sext i6 %or_ln121_s" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 16 'sext' 'sext_ln121' <Predicate = (!icmp_ln123)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln121 = zext i8 %sext_ln121" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 17 'zext' 'zext_ln121' <Predicate = (!icmp_ln123)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%con128_addr = getelementptr i8 %con128, i64 0, i64 %zext_ln121" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 18 'getelementptr' 'con128_addr' <Predicate = (!icmp_ln123)> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (3.25ns)   --->   "%con128_load = load i8 %con128_addr" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 19 'load' 'con128_load' <Predicate = (!icmp_ln123)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 240> <ROM>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln123 = store i5 %add_ln124, i5 %idx_i1051" [clefia.c:123->clefia.c:310->clefia.c:396]   --->   Operation 20 'store' 'store_ln123' <Predicate = (!icmp_ln123)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln121_16 = zext i5 %idx_i1051_load" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 21 'zext' 'zext_ln121_16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%lk_addr = getelementptr i8 %lk, i64 0, i64 %zext_ln121_16" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 22 'getelementptr' 'lk_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [2/2] (2.32ns)   --->   "%lk_load = load i4 %lk_addr" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 23 'load' 'lk_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 24 [1/2] (3.25ns)   --->   "%con128_load = load i8 %con128_addr" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 24 'load' 'con128_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 240> <ROM>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 34 'ret' 'ret_ln0' <Predicate = (icmp_ln123)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.56>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specloopname_ln121 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 25 'specloopname' 'specloopname_ln121' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln121_235 = zext i5 %idx_i1051_load" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 26 'zext' 'zext_ln121_235' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (1.91ns)   --->   "%add_ln121_72 = add i8 %zext_ln121_235, i8 136" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 27 'add' 'add_ln121_72' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln121_237 = zext i8 %add_ln121_72" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 28 'zext' 'zext_ln121_237' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%rk_addr = getelementptr i8 %rk, i64 0, i64 %zext_ln121_237" [clefia.c:121->clefia.c:310->clefia.c:396]   --->   Operation 29 'getelementptr' 'rk_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/2] (2.32ns)   --->   "%lk_load = load i4 %lk_addr" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 30 'load' 'lk_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 31 [1/1] (0.99ns)   --->   "%xor_ln124_44 = xor i8 %con128_load, i8 %lk_load" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 31 'xor' 'xor_ln124_44' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (3.25ns)   --->   "%store_ln124 = store i8 %xor_ln124_44, i8 %rk_addr" [clefia.c:124->clefia.c:310->clefia.c:396]   --->   Operation 32 'store' 'store_ln124' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln123 = br void %while.body.i1053" [clefia.c:123->clefia.c:310->clefia.c:396]   --->   Operation 33 'br' 'br_ln123' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.37ns
+The critical path consists of the following:
+	'alloca' operation ('idx_i1051') [4]  (0 ns)
+	'load' operation ('idx_i1051_load', clefia.c:124->clefia.c:310->clefia.c:396) on local variable 'idx_i1051' [8]  (0 ns)
+	'add' operation ('add_ln124', clefia.c:124->clefia.c:310->clefia.c:396) [12]  (1.78 ns)
+	'store' operation ('store_ln123', clefia.c:123->clefia.c:310->clefia.c:396) of variable 'add_ln124', clefia.c:124->clefia.c:310->clefia.c:396 on local variable 'idx_i1051' [30]  (1.59 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('con128_load', clefia.c:124->clefia.c:310->clefia.c:396) on array 'con128' [27]  (3.25 ns)
+
+ <State 3>: 6.57ns
+The critical path consists of the following:
+	'load' operation ('lk_load', clefia.c:124->clefia.c:310->clefia.c:396) on array 'lk' [26]  (2.32 ns)
+	'xor' operation ('xor_ln124_44', clefia.c:124->clefia.c:310->clefia.c:396) [28]  (0.99 ns)
+	'store' operation ('store_ln124', clefia.c:124->clefia.c:310->clefia.c:396) of variable 'xor_ln124_44', clefia.c:124->clefia.c:310->clefia.c:396 on array 'rk' [29]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

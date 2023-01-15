@@ -1,0 +1,568 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_pipeline clefia_enc 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 670.098 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/enc.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.705 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'ClefiaGfn4_label3' is marked as complete unroll implied by the pipeline pragma (src/enc.c:193:21)
+INFO: [HLS 214-291] Loop 'ByteXor_label2' is marked as complete unroll implied by the pipeline pragma (src/enc.c:123:18)
+INFO: [HLS 214-291] Loop 'ByteCpy_label1' is marked as complete unroll implied by the pipeline pragma (src/enc.c:116:18)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaGfn4_label3' (src/enc.c:193:21) in function 'ClefiaGfn4' completely with a factor of 22 (src/enc.c:189:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ByteXor' completely with a factor of 4 (src/enc.c:122:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaEncrypt' (src/enc.c:317:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaGfn4' into 'ClefiaEncrypt' (src/enc.c:317:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaEncrypt' completely with a factor of 16 (src/enc.c:317:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaF1Xor' completely with a factor of 4 (src/enc.c:166:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaF0Xor' completely with a factor of 4 (src/enc.c:143:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 4.097 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ClefiaEncrypt.1' into 'clefia_enc' (src/enc.c:352).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:322->src/enc.c:352).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:323->src/enc.c:352).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:192).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:202).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.1' into 'clefia_enc' (src/enc.c:329->src/enc.c:352).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.1' into 'clefia_enc' (src/enc.c:330->src/enc.c:352).
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.891 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.501 seconds; current allocated memory: 1.100 GB.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'clefia_enc' (src/enc.c:11:18).
+INFO: [HLS 200-489] Unrolling loop 'ByteCpy_label1' (src/enc.c:114) in function 'clefia_enc' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'fin' (src/enc.c:190) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fout' (src/enc.c:190) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rin' (src/enc.c:318) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rout.i' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'clefia_enc' (src/enc.c:11:19)...1574 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.294 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.948 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'clefia_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'clefia_enc'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_enc' (function 'clefia_enc'): Unable to schedule 'load' operation ('pt_load', src/enc.c:117) on array 'pt' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'pt'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_enc' (function 'clefia_enc'): Unable to schedule 'load' operation ('pt_load_1', src/enc.c:117) on array 'pt' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'pt'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_enc' (function 'clefia_enc'): Unable to schedule 'load' operation ('pt_load_2', src/enc.c:117) on array 'pt' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'pt'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_enc' (function 'clefia_enc'): Unable to schedule 'load' operation ('pt_load_3', src/enc.c:117) on array 'pt' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'pt'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_enc' (function 'clefia_enc'): Unable to schedule 'load' operation ('pt_load_6', src/enc.c:117) on array 'pt' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'pt'.
+WARNING: [HLS 200-885] The II Violation in module 'clefia_enc' (function 'clefia_enc'): Unable to schedule 'load' operation ('pt_load_14', src/enc.c:117) on array 'pt' due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array 'pt'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 16, Depth = 74, function 'clefia_enc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 7.843 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.804 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/pt' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/ct' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clefia_enc' to 's_axilite & ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clefia_enc' pipeline 'clefia_enc' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Bundling port 'pt', 'ct' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_enc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 5.657 seconds; current allocated memory: 1.100 GB.
+INFO: [RTMG 210-279] Implementing memory 'clefia_enc_clefia_s0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_enc_clefia_s1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 16 seconds. CPU system time: 1 seconds. Elapsed time: 17.704 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.688 seconds; current allocated memory: 1.100 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clefia_enc.
+INFO: [VLOG 209-307] Generating Verilog RTL for clefia_enc.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.90 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 43 seconds. CPU system time: 1 seconds. Elapsed time: 49.341 seconds; current allocated memory: 465.055 MB.
+INFO: [HLS 200-112] Total CPU user time: 44 seconds. Total CPU system time: 2 seconds. Total elapsed time: 50.485 seconds; peak allocated memory: 1.100 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_pipeline clefia_enc 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file enc_ip/solution2/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 8.012 seconds; current allocated memory: 494.539 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.018 seconds; peak allocated memory: 1.108 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc skey 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaEncrypt 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaKeySet192 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 13.804 seconds; current allocated memory: 434.145 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 15.204 seconds; peak allocated memory: 1.099 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc skey 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaEncrypt 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaKeySet192 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.015 seconds; current allocated memory: 691.953 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/enc.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.906 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'ClefiaGfn4_label3' is marked as complete unroll implied by the pipeline pragma (src/enc.c:193:21)
+INFO: [HLS 214-291] Loop 'ClefiaKeySet192_label9' is marked as complete unroll implied by the pipeline pragma (src/enc.c:297:26)
+INFO: [HLS 214-291] Loop 'ClefiaKeySet192_label8' is marked as complete unroll implied by the pipeline pragma (src/enc.c:286:26)
+INFO: [HLS 214-291] Loop 'ClefiaGfn8_label4' is marked as complete unroll implied by the pipeline pragma (src/enc.c:210:21)
+INFO: [HLS 214-291] Loop 'ByteXor_label2' is marked as complete unroll implied by the pipeline pragma (src/enc.c:123:18)
+INFO: [HLS 214-291] Loop 'ByteCpy_label1' is marked as complete unroll implied by the pipeline pragma (src/enc.c:116:18)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaGfn4_label3' (src/enc.c:193:21) in function 'ClefiaGfn4' completely with a factor of 22 (src/enc.c:189:0)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaKeySet192_label9' (src/enc.c:297:26) in function 'ClefiaKeySet192' completely with a factor of 11 (src/enc.c:278:0)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaKeySet192_label8' (src/enc.c:286:26) in function 'ClefiaKeySet192' completely with a factor of 8 (src/enc.c:278:0)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaGfn8_label4' (src/enc.c:210:21) in function 'ClefiaGfn8' completely with a factor of 10 (src/enc.c:206:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaDoubleSwap' (src/enc.c:225:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaKeySet192' (src/enc.c:278:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaGfn8' into 'ClefiaKeySet192' (src/enc.c:278:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaEncrypt' (src/enc.c:317:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaEncrypt' (src/enc.c:317:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ClefiaEncrypt' completely with a factor of 4 (src/enc.c:317:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaEncrypt' completely with a factor of 16 (src/enc.c:317:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaKeySet192' completely with a factor of 24 (src/enc.c:278:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaDoubleSwap' completely with a factor of 16 (src/enc.c:225:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ClefiaF1Xor' completely with a factor of 4 (src/enc.c:166:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaF1Xor' completely with a factor of 4 (src/enc.c:166:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ClefiaF0Xor' completely with a factor of 4 (src/enc.c:143:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaF0Xor' completely with a factor of 4 (src/enc.c:143:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.32 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ClefiaKeySet192.1' into 'clefia_enc' (src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaEncrypt.1' into 'clefia_enc' (src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:209).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:221).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:295->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:305->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:309->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:305->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:307->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:309->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:301->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:305->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:309->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:305->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:307->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:309->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:301->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:305->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:309->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:305->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:307->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:309->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:313->src/enc.c:345).
+INFO: [XFORM 203-603] Inlining function 'ClefiaGfn4' into 'clefia_enc' (src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:192->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:326->src/enc.c:346).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:202->src/enc.c:326->src/enc.c:346).
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.941 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.154 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-489] Unrolling loop 'ByteCpy_label1' (src/enc.c:114) in function 'clefia_enc' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'ByteXor_label2' (src/enc.c:121) in function 'clefia_enc' completely with a factor of 8.
+INFO: [XFORM 203-102] Partitioning array 'fin.1' (src/enc.c:190) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fout.1' (src/enc.c:190) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rin' (src/enc.c:318) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rout.i' automatically.
+INFO: [XFORM 203-102] Partitioning array 'fin' (src/enc.c:207) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fout' (src/enc.c:207) automatically.
+INFO: [XFORM 203-102] Partitioning array 'skey256' (src/enc.c:280) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lk' (src/enc.c:281) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'clefia_enc' (src/enc.c:117:85)...3014 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 33 seconds. CPU system time: 0 seconds. Elapsed time: 32.559 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 53 seconds. CPU system time: 0 seconds. Elapsed time: 53.795 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'clefia_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 30 seconds. CPU system time: 0 seconds. Elapsed time: 30.726 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 34 seconds. CPU system time: 1 seconds. Elapsed time: 34.99 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/pt' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/skey' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/ct' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clefia_enc' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'pt', 'skey', 'ct' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_enc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 36 seconds. CPU system time: 0 seconds. Elapsed time: 38.183 seconds; current allocated memory: 1.100 GB.
+INFO: [RTMG 210-279] Implementing memory 'clefia_enc_clefia_s0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'clefia_enc_clefia_s1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'clefia_enc_rk_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 110 seconds. CPU system time: 8 seconds. Elapsed time: 121.766 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.102 seconds; current allocated memory: 1.100 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clefia_enc.
+INFO: [VLOG 209-307] Generating Verilog RTL for clefia_enc.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.67 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 308 seconds. CPU system time: 11 seconds. Elapsed time: 331.645 seconds; current allocated memory: 442.188 MB.
+INFO: [HLS 200-112] Total CPU user time: 309 seconds. Total CPU system time: 12 seconds. Total elapsed time: 333.238 seconds; peak allocated memory: 1.100 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc skey 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaEncrypt 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaKeySet192 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file enc_ip/solution2/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 12.779 seconds; current allocated memory: 453.328 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 13.928 seconds; peak allocated memory: 1.108 GB.

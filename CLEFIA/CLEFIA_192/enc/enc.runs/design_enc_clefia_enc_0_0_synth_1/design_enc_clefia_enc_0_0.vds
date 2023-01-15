@@ -1,0 +1,548 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Dec 26 15:05:47 2022
+# Process ID: 7804
+# Current directory: D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1
+# Command line: vivado.exe -log design_enc_clefia_enc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_enc_clefia_enc_0_0.tcl
+# Log file: D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1/design_enc_clefia_enc_0_0.vds
+# Journal file: D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-CTM6DMJ, OS: Windows, CPU Frequency: 1190 MHz, CPU Physical cores: 4, Host memory: 16974 MB
+#-----------------------------------------------------------
+source design_enc_clefia_enc_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/tmp/CLEFIA/CLEFIA_192/enc_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:clefia_enc:1.0'. The one found in IP location 'd:/tmp/CLEFIA/CLEFIA_192/enc_ip/solution2/impl/ip' will take precedence over the same IP in location d:/tmp/CLEFIA/CLEFIA_192/enc_ip/solution1/impl/ip
+Command: synth_design -top design_enc_clefia_enc_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5836
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1281.332 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_enc_clefia_enc_0_0' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ip/design_enc_clefia_enc_0_0/synth/design_enc_clefia_enc_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_clefia_s0_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s0_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_enc_clefia_s0_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s0_ROM_AUTO_1R.v:40]
+INFO: [Synth 8-3876] $readmem data file './clefia_enc_clefia_s0_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s0_ROM_AUTO_1R.v:41]
+INFO: [Synth 8-3876] $readmem data file './clefia_enc_clefia_s0_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s0_ROM_AUTO_1R.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_clefia_s0_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s0_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_clefia_s1_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s1_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_enc_clefia_s1_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s1_ROM_AUTO_1R.v:40]
+INFO: [Synth 8-3876] $readmem data file './clefia_enc_clefia_s1_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s1_ROM_AUTO_1R.v:41]
+INFO: [Synth 8-3876] $readmem data file './clefia_enc_clefia_s1_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s1_ROM_AUTO_1R.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_clefia_s1_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_clefia_s1_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_rk_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_rk_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_rk_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_rk_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_control_s_axi' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_control_s_axi_ram' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:626]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_control_s_axi_ram' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:626]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_control_s_axi_ram__parameterized0' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:626]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_control_s_axi_ram__parameterized0' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:626]
+INFO: [Synth 8-6157] synthesizing module 'clefia_enc_control_s_axi_ram__parameterized1' [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:626]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_control_s_axi_ram__parameterized1' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:626]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:322]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc_control_s_axi' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_enc' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_enc_clefia_enc_0_0' (0#1) [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ip/design_enc_clefia_enc_0_0/synth/design_enc_clefia_enc_0_0.v:53]
+WARNING: [Synth 8-3848] Net q0 in module/entity clefia_enc_control_s_axi_ram__parameterized1 does not have driver. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:639]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:388]
+WARNING: [Synth 8-6014] Unused sequential element int_ct_shift0_reg was removed.  [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:613]
+WARNING: [Synth 8-3848] Net int_ct_write in module/entity clefia_enc_control_s_axi does not have driver. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc_control_s_axi.v:169]
+WARNING: [Synth 8-7129] Port q0[31] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[30] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[29] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[28] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[27] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[26] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[25] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[24] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[23] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[22] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[21] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[20] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[19] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[18] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[17] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[16] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[15] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[14] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[13] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[12] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[11] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[10] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[9] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[8] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[7] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[6] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[5] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[4] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[3] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[2] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[1] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[0] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[3] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[2] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[1] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[0] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[31] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[30] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[29] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[28] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[27] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[26] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[25] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[24] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[23] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[22] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[21] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[20] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[19] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[18] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[17] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[16] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[15] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[14] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[13] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[12] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[11] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[10] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[9] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[8] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[7] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[6] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[5] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[4] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[3] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[2] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[1] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[0] in module clefia_enc_control_s_axi_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module clefia_enc_control_s_axi_ram__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.424 . Memory (MB): peak = 1639.910 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ip/design_enc_clefia_enc_0_0/constraints/clefia_enc_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ip/design_enc_clefia_enc_0_0/constraints/clefia_enc_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1639.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1639.910 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_79_reg_74904_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13689]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_119_reg_75321_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13763]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_239_reg_77397_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13916]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_259_reg_78084_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13959]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_379_reg_80432_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14218]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_399_reg_81765_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14294]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_59_reg_74445_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14394]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_344_reg_78705_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14991]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_343_reg_78687_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14990]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_77_reg_74882_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13688]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_117_reg_75304_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13762]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_237_reg_77375_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13915]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_257_reg_78067_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13958]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_377_reg_80410_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14217]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_397_reg_81743_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14293]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_57_reg_74423_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14393]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_219_reg_77281_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13914]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_217_reg_77259_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:13913]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_324_reg_78927_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14128]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_323_reg_78907_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14127]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_234_reg_77161_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14834]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_274_reg_77738_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14898]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_114_reg_75207_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14917]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_374_reg_80300_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15030]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_54_reg_74354_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15079]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_74_reg_74813_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15100]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_325_reg_79407_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14025]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_232_reg_77133_reg' and it is trimmed from '8' to '4' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14833]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_272_reg_77720_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14897]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_112_reg_75182_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14916]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_372_reg_80270_reg' and it is trimmed from '8' to '4' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15029]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_52_reg_74326_reg' and it is trimmed from '8' to '4' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15078]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_72_reg_74785_reg' and it is trimmed from '8' to '4' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15099]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_230_reg_77109_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14832]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_270_reg_77702_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14896]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_110_reg_75162_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14915]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_370_reg_80246_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15028]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_50_reg_74302_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15077]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_70_reg_74761_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15098]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_214_reg_77059_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14831]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_94_reg_75128_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14920]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_254_reg_77847_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14945]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_394_reg_81585_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15051]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_342_reg_78669_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14989]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_212_reg_77031_reg' and it is trimmed from '8' to '4' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14830]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_92_reg_75110_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14919]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_252_reg_77822_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14944]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_392_reg_81555_reg' and it is trimmed from '8' to '4' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15050]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_210_reg_77007_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14829]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_90_reg_75092_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14918]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_250_reg_77802_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14943]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_390_reg_81531_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:15049]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_322_reg_78882_reg' and it is trimmed from '8' to '5' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14126]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln131_321_reg_78866_reg' and it is trimmed from '8' to '6' bits. [d:/tmp/CLEFIA/CLEFIA_192/enc/enc.gen/sources_1/bd/design_enc/ipshared/b179/hdl/verilog/clefia_enc.v:14125]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "clefia_enc_rk_RAM_AUTO_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1639.910 ; gain = 358.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 692   
+	   3 Input      8 Bit         XORs := 165   
+	   4 Input      8 Bit         XORs := 192   
+	   6 Input      8 Bit         XORs := 12    
+	   5 Input      8 Bit         XORs := 52    
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      7 Bit         XORs := 28    
+	   3 Input      7 Bit         XORs := 35    
+	   2 Input      7 Bit         XORs := 55    
+	   4 Input      7 Bit         XORs := 21    
+	   6 Input      7 Bit         XORs := 15    
+	   6 Input      6 Bit         XORs := 25    
+	   2 Input      6 Bit         XORs := 31    
+	   3 Input      6 Bit         XORs := 23    
+	   5 Input      6 Bit         XORs := 21    
+	   4 Input      6 Bit         XORs := 4     
+	   5 Input      5 Bit         XORs := 22    
+	   2 Input      5 Bit         XORs := 25    
+	   6 Input      5 Bit         XORs := 15    
+	   3 Input      5 Bit         XORs := 17    
+	   4 Input      5 Bit         XORs := 4     
+	   5 Input      4 Bit         XORs := 9     
+	   2 Input      4 Bit         XORs := 10    
+	   6 Input      4 Bit         XORs := 5     
+	   4 Input      4 Bit         XORs := 6     
+	   6 Input      1 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 743   
+	                7 Bit    Registers := 317   
+	                6 Bit    Registers := 226   
+	                5 Bit    Registers := 154   
+	                4 Bit    Registers := 106   
+	                3 Bit    Registers := 24    
+	                2 Bit    Registers := 17    
+	                1 Bit    Registers := 303   
++---RAMs : 
+	               1K Bit	(192 X 8 bit)          RAMs := 1     
+	              256 Bit	(8 X 32 bit)          RAMs := 1     
+	              128 Bit	(4 X 32 bit)          RAMs := 2     
++---ROMs : 
+	                    ROMs := 12    
++---Muxes : 
+	 236 Input  235 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 22    
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 65    
+	 191 Input    8 Bit        Muxes := 1     
+	 192 Input    8 Bit        Muxes := 1     
+	  24 Input    5 Bit        Muxes := 1     
+	  16 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 34    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3971] The signal "inst/rk_U/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:11 ; elapsed = 00:02:15 . Memory (MB): peak = 2213.891 ; gain = 932.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+--------------------+---------------+----------------+
+|Module Name | RTL Object         | Depth x Width | Implemented As | 
++------------+--------------------+---------------+----------------+
+|clefia_enc  | clefia_s0_U/q3_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s0_U/q1_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s0_U/q2_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s0_U/q0_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s1_U/q1_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s1_U/q0_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s1_U/q3_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s1_U/q2_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s1_U/q5_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s0_U/q5_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s0_U/q4_reg | 256x8         | Block RAM      | 
+|clefia_enc  | clefia_s1_U/q4_reg | 256x8         | Block RAM      | 
++------------+--------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | rk_U/ram_reg | 192 x 8(READ_FIRST)    | W | R | 192 x 8(READ_FIRST)    | W | R | Port A and B     | 1      | 0      | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------------+------------------+-----------+----------------------+----------------+
+|Module Name              | RTL Object       | Inference | Size (Depth x Width) | Primitives     | 
++-------------------------+------------------+-----------+----------------------+----------------+
+|inst/i_1/control_s_axi_U | int_ct/mem_reg   | Implied   | 4 x 32               | RAM16X1D x 32  | 
+|inst/i_1/control_s_axi_U | int_skey/mem_reg | Implied   | 8 x 32               | RAM16X1D x 32  | 
+|inst/i_1/control_s_axi_U | int_pt/mem_reg   | Implied   | 4 x 32               | RAM16X1D x 32  | 
++-------------------------+------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:22 . Memory (MB): peak = 2213.891 ; gain = 932.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:01 ; elapsed = 00:03:06 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | rk_U/ram_reg | 192 x 8(READ_FIRST)    | W | R | 192 x 8(READ_FIRST)    | W | R | Port A and B     | 1      | 0      | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-------------------------+------------------+-----------+----------------------+----------------+
+|Module Name              | RTL Object       | Inference | Size (Depth x Width) | Primitives     | 
++-------------------------+------------------+-----------+----------------------+----------------+
+|inst/i_1/control_s_axi_U | int_ct/mem_reg   | Implied   | 4 x 32               | RAM16X1D x 32  | 
+|inst/i_1/control_s_axi_U | int_skey/mem_reg | Implied   | 8 x 32               | RAM16X1D x 32  | 
+|inst/i_1/control_s_axi_U | int_pt/mem_reg   | Implied   | 4 x 32               | RAM16X1D x 32  | 
++-------------------------+------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/rk_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/rk_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q3_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q3_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q2_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q2_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q3_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q3_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q5_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q5_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q5_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q5_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:10 ; elapsed = 00:03:14 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:15 ; elapsed = 00:03:19 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:15 ; elapsed = 00:03:19 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:16 ; elapsed = 00:03:20 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:16 ; elapsed = 00:03:20 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:16 ; elapsed = 00:03:21 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:16 ; elapsed = 00:03:21 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    47|
+|2     |LUT2     |   999|
+|3     |LUT3     |   271|
+|4     |LUT4     |   277|
+|5     |LUT5     |  1474|
+|6     |LUT6     |  5477|
+|7     |RAM16X1D |    96|
+|8     |RAMB18E1 |     7|
+|11    |FDRE     |  7321|
+|12    |FDSE     |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:16 ; elapsed = 00:03:21 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 55 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:56 ; elapsed = 00:03:15 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+Synthesis Optimization Complete : Time (s): cpu = 00:03:17 ; elapsed = 00:03:21 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.231 . Memory (MB): peak = 2372.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2372.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 96 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 96 instances
+
+Synth Design complete, checksum: 473cbfdc
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:23 ; elapsed = 00:03:29 . Memory (MB): peak = 2372.184 ; gain = 1090.852
+INFO: [Common 17-1381] The checkpoint 'D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1/design_enc_clefia_enc_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_enc_clefia_enc_0_0, cache-ID = 551ae2471239c61d
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/tmp/CLEFIA/CLEFIA_192/enc/enc.runs/design_enc_clefia_enc_0_0_synth_1/design_enc_clefia_enc_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_enc_clefia_enc_0_0_utilization_synth.rpt -pb design_enc_clefia_enc_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 26 15:09:33 2022...

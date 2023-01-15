@@ -1,0 +1,931 @@
+
+*** Running vivado
+    with args -log design_1_clefia_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_clefia_0_0.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_clefia_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/tmp/CLEFIA_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:clefia:1.0'. The one found in IP location 'd:/tmp/CLEFIA_ip/solution3/impl/ip' will take precedence over the same IP in location d:/tmp/CLEFIA_ip/solution1/impl/ip
+Command: synth_design -top design_1_clefia_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12280
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1289.617 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_clefia_0_0' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ip/design_1_clefia_0_0/synth/design_1_clefia_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'clefia' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_fin_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_fin_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_fin_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_fin_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_rout_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_rout_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_rout_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_rout_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_rk_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_rk_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_rk_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_rk_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_skey_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_skey_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaKeySet_skey_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_skey_ROM_AUTO_1R.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_skey_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_skey_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_con192_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con192_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaKeySet_con192_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con192_ROM_AUTO_1R.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_con192_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con192_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_con256_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con256_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaKeySet_con256_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con256_ROM_AUTO_1R.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_con256_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con256_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_con128_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con128_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaKeySet_con128_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con128_ROM_AUTO_1R.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_con128_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_con128_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_fin_3_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_fin_3_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_fin_3_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_fin_3_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_lk_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_lk_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_lk_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_lk_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_fin_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_fin_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_fin_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_fin_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaKeySet_lk_2_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_lk_2_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet_lk_2_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet_lk_2_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_115' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_115.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_115' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_115.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_112' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_112.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_112' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_112.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_114' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_114.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_114' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_114.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_121' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_121.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_121' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_121.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_120' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_120.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_120_skey_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_120_skey_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ByteCpy_120_skey_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_120_skey_ROM_AUTO_1R.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_120_skey_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_120_skey_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_120' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_120.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF0Xor_2' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R.dat' is read successfully [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_110' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_110.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_110' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_110.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_118' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_118.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_118' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_118.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaMul2' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaMul2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaMul2' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaMul2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_mux_42_8_1_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_mux_42_8_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_mux_42_8_1_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_mux_42_8_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF0Xor_2' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF1Xor_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF1Xor_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_113' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_113.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_113' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_113.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaDoubleSwap_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaDoubleSwap_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_117' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_117.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_117' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_117.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaDoubleSwap_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaDoubleSwap_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_112_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_112_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_112_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_112_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF0Xor_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_11150' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_11150.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_11150' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_11150.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF0Xor_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF1Xor' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF1Xor' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_114' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_114.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_114' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_114.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF0Xor_125' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_125.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_11152' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_11152.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_11152' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_11152.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_143' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_143.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_143' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_143.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF0Xor_125' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF0Xor_125.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaF1Xor_2' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_119' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_119.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_119' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_119.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaF1Xor_2' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaF1Xor_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_116' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_116.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_116' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_116.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_111' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_111.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_111' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_111.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ClefiaDoubleSwap' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaDoubleSwap.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaDoubleSwap' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaDoubleSwap.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ClefiaKeySet' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ClefiaKeySet.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_112_2' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_112_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_112_2' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_112_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_11831' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_11831.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_11831' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_11831.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_11151' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_11151.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_11151' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_11151.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteCpy_2' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteCpy_2' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_ByteXor_1' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_ByteXor_1' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteXor_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clefia_control_s_axi' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clefia_control_s_axi_ram' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:674]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_control_s_axi_ram' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:674]
+INFO: [Synth 8-6157] synthesizing module 'clefia_control_s_axi_ram__parameterized0' [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:674]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_control_s_axi_ram__parameterized0' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:674]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:338]
+INFO: [Synth 8-6155] done synthesizing module 'clefia_control_s_axi' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clefia' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clefia_0_0' (0#1) [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ip/design_1_clefia_0_0/synth/design_1_clefia_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_control_s_axi.v:408]
+WARNING: [Synth 8-7129] Port we0[3] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module clefia_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaF0Xor_2_clefia_s0_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaF1Xor_1_clefia_s1_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaF0Xor_2_clefia_s1_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ByteCpy_120_skey_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_lk_2_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_fin_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_lk_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_fin_3_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_con128_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_con256_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_con192_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_ClefiaKeySet_skey_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_rk_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_fin_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module clefia_rout_RAM_AUTO_1R1W is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1387.992 ; gain = 98.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1387.992 ; gain = 98.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1387.992 ; gain = 98.375
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1387.992 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ip/design_1_clefia_0_0/constraints/clefia_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ip/design_1_clefia_0_0/constraints/clefia_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/tmp/CLEFIA/CLEFIA.runs/design_1_clefia_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/tmp/CLEFIA/CLEFIA.runs/design_1_clefia_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1854.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.189 . Memory (MB): peak = 1861.098 ; gain = 6.965
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/tmp/CLEFIA/CLEFIA.runs/design_1_clefia_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln117_reg_93_reg' and it is trimmed from '6' to '5' bits. [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_115.v:89]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln117_reg_107_reg' and it is trimmed from '6' to '5' bits. [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_114.v:91]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln117_reg_93_reg' and it is trimmed from '5' to '4' bits. [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_121.v:89]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln117_reg_107_reg' and it is trimmed from '5' to '4' bits. [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy.v:91]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln117_reg_93_reg' and it is trimmed from '5' to '4' bits. [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_116.v:89]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln117_reg_93_reg' and it is trimmed from '5' to '4' bits. [d:/tmp/CLEFIA/CLEFIA.gen/sources_1/bd/design_1/ipshared/4190/hdl/verilog/clefia_ByteCpy_11831.v:89]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "clefia_ClefiaKeySet_skey256_RAM_AUTO_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "clefia_ClefiaDoubleSwap_1_t_RAM_AUTO_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "clefia_control_s_axi_ram__parameterized0:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   37 Bit       Adders := 1     
+	   2 Input   36 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 22    
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 60    
+	   2 Input    4 Bit       Adders := 29    
+	   2 Input    3 Bit       Adders := 15    
++---XORs : 
+	   2 Input      8 Bit         XORs := 118   
+	   5 Input      8 Bit         XORs := 7     
+	   4 Input      8 Bit         XORs := 9     
+	   3 Input      8 Bit         XORs := 17    
++---Registers : 
+	               37 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
+	               32 Bit    Registers := 13    
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 189   
+	                7 Bit    Registers := 9     
+	                6 Bit    Registers := 8     
+	                5 Bit    Registers := 47    
+	                4 Bit    Registers := 28    
+	                3 Bit    Registers := 59    
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 89    
++---RAMs : 
+	               1K Bit	(224 X 8 bit)          RAMs := 1     
+	              256 Bit	(32 X 8 bit)          RAMs := 7     
+	              128 Bit	(16 X 8 bit)          RAMs := 14    
+	              128 Bit	(4 X 32 bit)          RAMs := 3     
++---ROMs : 
+	                    ROMs := 21    
++---Muxes : 
+	   2 Input  472 Bit        Muxes := 1     
+	   2 Input  471 Bit        Muxes := 1     
+	   2 Input  469 Bit        Muxes := 1     
+	   2 Input  467 Bit        Muxes := 1     
+	   2 Input  465 Bit        Muxes := 1     
+	   2 Input  463 Bit        Muxes := 1     
+	   2 Input  461 Bit        Muxes := 1     
+	   2 Input  459 Bit        Muxes := 1     
+	   2 Input  457 Bit        Muxes := 1     
+	   2 Input  455 Bit        Muxes := 1     
+	   2 Input  453 Bit        Muxes := 1     
+	   2 Input  451 Bit        Muxes := 1     
+	   2 Input  449 Bit        Muxes := 1     
+	   2 Input  447 Bit        Muxes := 1     
+	   2 Input  445 Bit        Muxes := 1     
+	   2 Input  443 Bit        Muxes := 1     
+	   2 Input  441 Bit        Muxes := 1     
+	   2 Input  439 Bit        Muxes := 1     
+	   2 Input  437 Bit        Muxes := 1     
+	   2 Input  435 Bit        Muxes := 1     
+	   2 Input  433 Bit        Muxes := 1     
+	   2 Input  431 Bit        Muxes := 1     
+	   2 Input  429 Bit        Muxes := 1     
+	   2 Input  427 Bit        Muxes := 1     
+	   2 Input  425 Bit        Muxes := 1     
+	   2 Input  423 Bit        Muxes := 1     
+	   2 Input  421 Bit        Muxes := 1     
+	   2 Input  419 Bit        Muxes := 1     
+	   2 Input  417 Bit        Muxes := 1     
+	   2 Input  415 Bit        Muxes := 1     
+	   2 Input  413 Bit        Muxes := 1     
+	   2 Input  411 Bit        Muxes := 1     
+	   2 Input  409 Bit        Muxes := 1     
+	   2 Input  407 Bit        Muxes := 1     
+	   2 Input  405 Bit        Muxes := 1     
+	   2 Input  403 Bit        Muxes := 1     
+	   2 Input  401 Bit        Muxes := 1     
+	   2 Input  399 Bit        Muxes := 1     
+	   2 Input  397 Bit        Muxes := 1     
+	   2 Input  395 Bit        Muxes := 1     
+	   2 Input  393 Bit        Muxes := 1     
+	   2 Input  391 Bit        Muxes := 1     
+	   2 Input  389 Bit        Muxes := 1     
+	   2 Input  387 Bit        Muxes := 1     
+	   2 Input  385 Bit        Muxes := 1     
+	   2 Input  383 Bit        Muxes := 1     
+	   2 Input  381 Bit        Muxes := 1     
+	   2 Input  379 Bit        Muxes := 1     
+	   2 Input  377 Bit        Muxes := 1     
+	   2 Input  375 Bit        Muxes := 1     
+	   2 Input  373 Bit        Muxes := 1     
+	   2 Input  371 Bit        Muxes := 1     
+	   2 Input  369 Bit        Muxes := 1     
+	   2 Input  367 Bit        Muxes := 1     
+	   2 Input  365 Bit        Muxes := 1     
+	   2 Input  363 Bit        Muxes := 1     
+	   2 Input  361 Bit        Muxes := 1     
+	   2 Input  359 Bit        Muxes := 1     
+	   2 Input  357 Bit        Muxes := 1     
+	   2 Input  355 Bit        Muxes := 1     
+	   2 Input  353 Bit        Muxes := 1     
+	   2 Input  351 Bit        Muxes := 1     
+	   2 Input  349 Bit        Muxes := 1     
+	   2 Input  347 Bit        Muxes := 1     
+	   2 Input  345 Bit        Muxes := 1     
+	   2 Input  343 Bit        Muxes := 1     
+	   5 Input  342 Bit        Muxes := 1     
+	   2 Input  341 Bit        Muxes := 1     
+	   2 Input  340 Bit        Muxes := 1     
+	   2 Input  338 Bit        Muxes := 1     
+	   2 Input  336 Bit        Muxes := 1     
+	   2 Input  334 Bit        Muxes := 1     
+	   2 Input  332 Bit        Muxes := 1     
+	   2 Input  330 Bit        Muxes := 1     
+	   2 Input  328 Bit        Muxes := 1     
+	   2 Input  326 Bit        Muxes := 1     
+	   2 Input  324 Bit        Muxes := 1     
+	   2 Input  322 Bit        Muxes := 1     
+	   2 Input  320 Bit        Muxes := 1     
+	   2 Input  318 Bit        Muxes := 1     
+	   2 Input  316 Bit        Muxes := 1     
+	   2 Input  314 Bit        Muxes := 1     
+	   2 Input  312 Bit        Muxes := 1     
+	   2 Input  310 Bit        Muxes := 1     
+	   2 Input  308 Bit        Muxes := 1     
+	   2 Input  306 Bit        Muxes := 1     
+	   2 Input  304 Bit        Muxes := 1     
+	   2 Input  302 Bit        Muxes := 1     
+	   2 Input  300 Bit        Muxes := 1     
+	   2 Input  298 Bit        Muxes := 1     
+	   2 Input  296 Bit        Muxes := 1     
+	   2 Input  294 Bit        Muxes := 1     
+	   2 Input  292 Bit        Muxes := 1     
+	   2 Input  290 Bit        Muxes := 1     
+	   2 Input  288 Bit        Muxes := 1     
+	   2 Input  286 Bit        Muxes := 1     
+	   2 Input  284 Bit        Muxes := 1     
+	   2 Input  282 Bit        Muxes := 1     
+	   2 Input  280 Bit        Muxes := 1     
+	   2 Input  278 Bit        Muxes := 1     
+	   2 Input  276 Bit        Muxes := 1     
+	   2 Input  274 Bit        Muxes := 1     
+	   2 Input  272 Bit        Muxes := 1     
+	   2 Input  270 Bit        Muxes := 1     
+	   2 Input  268 Bit        Muxes := 1     
+	   2 Input  266 Bit        Muxes := 1     
+	   2 Input  264 Bit        Muxes := 1     
+	   2 Input  262 Bit        Muxes := 1     
+	   2 Input  260 Bit        Muxes := 1     
+	   2 Input  258 Bit        Muxes := 1     
+	   2 Input  256 Bit        Muxes := 1     
+	   2 Input  254 Bit        Muxes := 1     
+	   2 Input  252 Bit        Muxes := 1     
+	   2 Input  250 Bit        Muxes := 1     
+	   2 Input  248 Bit        Muxes := 1     
+	   2 Input  246 Bit        Muxes := 1     
+	   2 Input  244 Bit        Muxes := 1     
+	   2 Input  242 Bit        Muxes := 1     
+	   2 Input  240 Bit        Muxes := 1     
+	   2 Input  238 Bit        Muxes := 1     
+	   2 Input  236 Bit        Muxes := 1     
+	   2 Input  234 Bit        Muxes := 1     
+	   2 Input  232 Bit        Muxes := 1     
+	   2 Input  230 Bit        Muxes := 1     
+	   2 Input  228 Bit        Muxes := 1     
+	   2 Input  226 Bit        Muxes := 1     
+	   2 Input  224 Bit        Muxes := 1     
+	   2 Input  222 Bit        Muxes := 1     
+	   2 Input  220 Bit        Muxes := 1     
+	   2 Input  218 Bit        Muxes := 1     
+	   2 Input  216 Bit        Muxes := 1     
+	   2 Input  214 Bit        Muxes := 1     
+	   2 Input  212 Bit        Muxes := 1     
+	   2 Input  210 Bit        Muxes := 1     
+	   2 Input  208 Bit        Muxes := 1     
+	   2 Input  206 Bit        Muxes := 1     
+	   2 Input  204 Bit        Muxes := 1     
+	   2 Input  202 Bit        Muxes := 1     
+	   2 Input  200 Bit        Muxes := 1     
+	   2 Input  198 Bit        Muxes := 1     
+	   2 Input  196 Bit        Muxes := 1     
+	   2 Input  194 Bit        Muxes := 1     
+	   2 Input  192 Bit        Muxes := 1     
+	   2 Input  190 Bit        Muxes := 1     
+	   2 Input  188 Bit        Muxes := 1     
+	   2 Input  186 Bit        Muxes := 1     
+	   2 Input  184 Bit        Muxes := 1     
+	   2 Input  182 Bit        Muxes := 1     
+	   2 Input  180 Bit        Muxes := 1     
+	   2 Input  174 Bit        Muxes := 1     
+	   2 Input  172 Bit        Muxes := 1     
+	   2 Input  171 Bit        Muxes := 1     
+	   2 Input  169 Bit        Muxes := 1     
+	   2 Input  167 Bit        Muxes := 1     
+	   2 Input  165 Bit        Muxes := 1     
+	   2 Input  163 Bit        Muxes := 1     
+	   2 Input  161 Bit        Muxes := 1     
+	   2 Input  159 Bit        Muxes := 1     
+	   2 Input  157 Bit        Muxes := 1     
+	   2 Input  155 Bit        Muxes := 1     
+	   2 Input  153 Bit        Muxes := 1     
+	   2 Input  151 Bit        Muxes := 1     
+	   2 Input  149 Bit        Muxes := 1     
+	   2 Input  147 Bit        Muxes := 1     
+	   2 Input  145 Bit        Muxes := 1     
+	   2 Input  143 Bit        Muxes := 1     
+	   2 Input  141 Bit        Muxes := 1     
+	   2 Input  139 Bit        Muxes := 1     
+	   2 Input  137 Bit        Muxes := 1     
+	   2 Input  135 Bit        Muxes := 1     
+	   2 Input  133 Bit        Muxes := 1     
+	   2 Input  131 Bit        Muxes := 1     
+	   2 Input  129 Bit        Muxes := 1     
+	   2 Input  127 Bit        Muxes := 1     
+	   2 Input  125 Bit        Muxes := 1     
+	   2 Input  123 Bit        Muxes := 1     
+	   2 Input  121 Bit        Muxes := 1     
+	   2 Input  119 Bit        Muxes := 1     
+	   2 Input  118 Bit        Muxes := 1     
+	   2 Input  117 Bit        Muxes := 1     
+	   2 Input  116 Bit        Muxes := 1     
+	   2 Input  115 Bit        Muxes := 3     
+	   3 Input  115 Bit        Muxes := 1     
+	   2 Input  114 Bit        Muxes := 1     
+	   2 Input  113 Bit        Muxes := 1     
+	   2 Input  112 Bit        Muxes := 1     
+	   2 Input  111 Bit        Muxes := 1     
+	   2 Input  110 Bit        Muxes := 1     
+	   2 Input  109 Bit        Muxes := 1     
+	   2 Input  108 Bit        Muxes := 1     
+	   2 Input  107 Bit        Muxes := 1     
+	   2 Input  106 Bit        Muxes := 1     
+	   2 Input  105 Bit        Muxes := 1     
+	   2 Input  104 Bit        Muxes := 1     
+	   2 Input  103 Bit        Muxes := 1     
+	   2 Input  102 Bit        Muxes := 1     
+	   2 Input  101 Bit        Muxes := 1     
+	   2 Input   99 Bit        Muxes := 1     
+	   2 Input   98 Bit        Muxes := 1     
+	   2 Input   97 Bit        Muxes := 1     
+	   2 Input   96 Bit        Muxes := 1     
+	   2 Input   95 Bit        Muxes := 1     
+	   2 Input   94 Bit        Muxes := 1     
+	   2 Input   93 Bit        Muxes := 1     
+	   2 Input   91 Bit        Muxes := 1     
+	   2 Input   89 Bit        Muxes := 1     
+	   2 Input   87 Bit        Muxes := 1     
+	   2 Input   85 Bit        Muxes := 1     
+	   2 Input   83 Bit        Muxes := 1     
+	   2 Input   81 Bit        Muxes := 1     
+	   2 Input   79 Bit        Muxes := 1     
+	   2 Input   77 Bit        Muxes := 1     
+	   2 Input   75 Bit        Muxes := 1     
+	   2 Input   73 Bit        Muxes := 1     
+	   2 Input   71 Bit        Muxes := 1     
+	   2 Input   69 Bit        Muxes := 1     
+	   2 Input   67 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   63 Bit        Muxes := 1     
+	   2 Input   61 Bit        Muxes := 1     
+	   2 Input   59 Bit        Muxes := 1     
+	   2 Input   57 Bit        Muxes := 1     
+	   2 Input   55 Bit        Muxes := 1     
+	   2 Input   53 Bit        Muxes := 1     
+	   2 Input   51 Bit        Muxes := 1     
+	   2 Input   49 Bit        Muxes := 1     
+	   2 Input   47 Bit        Muxes := 1     
+	   2 Input   45 Bit        Muxes := 1     
+	   2 Input   43 Bit        Muxes := 1     
+	   2 Input   42 Bit        Muxes := 1     
+	   2 Input   41 Bit        Muxes := 1     
+	   2 Input   40 Bit        Muxes := 1     
+	   2 Input   39 Bit        Muxes := 3     
+	   3 Input   39 Bit        Muxes := 1     
+	   2 Input   38 Bit        Muxes := 1     
+	   2 Input   37 Bit        Muxes := 1     
+	   2 Input   36 Bit        Muxes := 1     
+	   2 Input   35 Bit        Muxes := 1     
+	   2 Input   34 Bit        Muxes := 1     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 37    
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 1     
+	   2 Input   29 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   15 Bit        Muxes := 3     
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 3     
+	   2 Input   12 Bit        Muxes := 4     
+	  13 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 7     
+	  11 Input    9 Bit        Muxes := 1     
+	  13 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 205   
+	   3 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	  20 Input    8 Bit        Muxes := 2     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	  12 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 11    
+	   2 Input    5 Bit        Muxes := 42    
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 33    
+	  16 Input    4 Bit        Muxes := 3     
+	   5 Input    4 Bit        Muxes := 4     
+	   8 Input    4 Bit        Muxes := 5     
+	   4 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 17    
+	   5 Input    3 Bit        Muxes := 35    
+	   2 Input    2 Bit        Muxes := 52    
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 205   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3971] The signal "inst/grp_ClefiaKeySet_fu_347/skey256_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_1_fu_637/t_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_fu_877/t_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "inst/control_s_axi_U/int_Clefia_enc/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "inst/control_s_axi_U/int_Clefia_dec/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------------------------------+-------------------------------------------+---------------+----------------+
+|Module Name                          | RTL Object                                | Depth x Width | Implemented As | 
++-------------------------------------+-------------------------------------------+---------------+----------------+
+|clefia_ClefiaKeySet_skey_ROM_AUTO_1R | ram                                       | 32x8          | LUT            | 
+|clefia_ClefiaKeySet_skey_ROM_AUTO_1R | ram                                       | 32x8          | LUT            | 
+|clefia_ByteCpy_120_skey_ROM_AUTO_1R  | ram                                       | 32x8          | LUT            | 
+|clefia_ByteCpy_120                   | p_0_out                                   | 32x8          | LUT            | 
+|clefia_ClefiaF0Xor_2                 | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF0Xor_2                 | clefia_s1_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor_1                 | grp_ByteXor_110_fu_98/dst_03_fu_50_reg    | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor_1                 | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor_1                 | grp_ByteXor_110_fu_98/dst2_02_fu_46_reg   | 256x8         | Block RAM      | 
+|clefia_ClefiaF0Xor_1                 | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF0Xor_1                 | clefia_s1_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor                   | grp_ByteXor_11150_fu_98/dst_03_fu_50_reg  | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor                   | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor                   | grp_ByteXor_11150_fu_98/dst2_02_fu_46_reg | 256x8         | Block RAM      | 
+|clefia_ClefiaF0Xor_125               | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF0Xor_125               | clefia_s1_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor_2                 | grp_ByteXor_11152_fu_82/dst_03_fu_50_reg  | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor_2                 | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia_ClefiaF1Xor_2                 | grp_ByteXor_11152_fu_82/dst2_02_fu_46_reg | 256x8         | Block RAM      | 
+|clefia_ClefiaKeySet                  | con192_U/q0_reg                           | 512x8         | Block RAM      | 
+|clefia_ClefiaKeySet                  | con256_U/q0_reg                           | 512x8         | Block RAM      | 
+|clefia_ClefiaKeySet                  | con128_U/q0_reg                           | 256x8         | Block RAM      | 
+|clefia_ClefiaKeySet                  | p_0_out                                   | 32x8          | LUT            | 
+|clefia_ClefiaKeySet                  | p_0_out                                   | 32x8          | LUT            | 
+|clefia                               | clefia_s0_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia                               | clefia_s1_U/q0_reg                        | 256x8         | Block RAM      | 
+|clefia                               | clefia_s1_U/q1_reg                        | 256x8         | Block RAM      | 
++-------------------------------------+-------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------------------------------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst                                                       | rk_U/ram_reg           | 224 x 8(READ_FIRST)    | W | R | 224 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/grp_ClefiaKeySet_fu_347                               | skey256_U/ram_reg      | 32 x 8(READ_FIRST)     | W | R | 32 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_1_fu_637 | t_U/ram_reg            | 16 x 8(NO_CHANGE)      | W |   | 16 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_fu_877   | t_U/ram_reg            | 16 x 8(NO_CHANGE)      | W |   | 16 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/control_s_axi_U                                       | int_Clefia_enc/mem_reg | 4 x 32(READ_FIRST)     | W | R | 4 x 32(READ_FIRST)     | W | R | Port A and B     | 0      | 1      | 
+|inst/control_s_axi_U                                       | int_Clefia_dec/mem_reg | 4 x 32(READ_FIRST)     | W | R | 4 x 32(READ_FIRST)     | W | R | Port A and B     | 0      | 1      | 
++-----------------------------------------------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------+------------------+-----------+----------------------+----------------+
+|Module Name                  | RTL Object       | Inference | Size (Depth x Width) | Primitives     | 
++-----------------------------+------------------+-----------+----------------------+----------------+
+|inst/grp_ClefiaKeySet_fu_347 | fin_3_U/ram_reg  | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fin_2_U/ram_reg  | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fout_3_U/ram_reg | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fout_2_U/ram_reg | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | lk_U/ram_reg     | Implied   | 32 x 8               | RAM32X1D x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | lk_1_U/ram_reg   | Implied   | 32 x 8               | RAM32X1D x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fin_U/ram_reg    | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fout_U/ram_reg   | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | lk_2_U/ram_reg   | Implied   | 16 x 8               | RAM16X1D x 8   | 
+|inst/control_s_axi_U         | int_pt/mem_reg   | Implied   | 4 x 32               | RAM16X1D x 32  | 
+|inst                         | rin_1_U/ram_reg  | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | rin_U/ram_reg    | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fin_1_U/ram_reg  | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | ct_U/ram_reg     | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fin_U/ram_reg    | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fout_1_U/ram_reg | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fout_U/ram_reg   | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | rout_1_U/ram_reg | Implied   | 16 x 8               | RAM16X1D x 8   | 
+|inst                         | rout_U/ram_reg   | Implied   | 16 x 8               | RAM16X1D x 8   | 
++-----------------------------+------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------------------------------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst                                                       | rk_U/ram_reg           | 224 x 8(READ_FIRST)    | W | R | 224 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/grp_ClefiaKeySet_fu_347                               | skey256_U/ram_reg      | 32 x 8(READ_FIRST)     | W | R | 32 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_1_fu_637 | t_U/ram_reg            | 16 x 8(NO_CHANGE)      | W |   | 16 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_fu_877   | t_U/ram_reg            | 16 x 8(NO_CHANGE)      | W |   | 16 x 8(READ_FIRST)     | W | R | Port A and B     | 1      | 0      | 
+|inst/control_s_axi_U                                       | int_Clefia_enc/mem_reg | 4 x 32(READ_FIRST)     | W | R | 4 x 32(READ_FIRST)     | W | R | Port A and B     | 0      | 1      | 
+|inst/control_s_axi_U                                       | int_Clefia_dec/mem_reg | 4 x 32(READ_FIRST)     | W | R | 4 x 32(READ_FIRST)     | W | R | Port A and B     | 0      | 1      | 
++-----------------------------------------------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-----------------------------+------------------+-----------+----------------------+----------------+
+|Module Name                  | RTL Object       | Inference | Size (Depth x Width) | Primitives     | 
++-----------------------------+------------------+-----------+----------------------+----------------+
+|inst/grp_ClefiaKeySet_fu_347 | fin_3_U/ram_reg  | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fin_2_U/ram_reg  | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fout_3_U/ram_reg | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fout_2_U/ram_reg | Implied   | 32 x 8               | RAM32X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | lk_U/ram_reg     | Implied   | 32 x 8               | RAM32X1D x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | lk_1_U/ram_reg   | Implied   | 32 x 8               | RAM32X1D x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fin_U/ram_reg    | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | fout_U/ram_reg   | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst/grp_ClefiaKeySet_fu_347 | lk_2_U/ram_reg   | Implied   | 16 x 8               | RAM16X1D x 8   | 
+|inst/control_s_axi_U         | int_pt/mem_reg   | Implied   | 4 x 32               | RAM16X1D x 32  | 
+|inst                         | rin_1_U/ram_reg  | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | rin_U/ram_reg    | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fin_1_U/ram_reg  | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | ct_U/ram_reg     | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fin_U/ram_reg    | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fout_1_U/ram_reg | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | fout_U/ram_reg   | Implied   | 16 x 8               | RAM16X1S x 8   | 
+|inst                         | rout_1_U/ram_reg | Implied   | 16 x 8               | RAM16X1D x 8   | 
+|inst                         | rout_U/ram_reg   | Implied   | 16 x 8               | RAM16X1D x 8   | 
++-----------------------------+------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/rk_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/rk_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/skey256_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/skey256_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_2_fu_504/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_2_fu_504/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_2_fu_504/clefia_s1_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF1Xor_1_fu_543/grp_ByteXor_110_fu_98/dst2_02_fu_46_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_1_fu_637/t_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_1_fu_663/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_1_fu_663/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_125_fu_777/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_125_fu_777/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF0Xor_125_fu_777/clefia_s1_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaF1Xor_2_fu_802/grp_ByteXor_11152_fu_82/dst2_02_fu_46_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/grp_ClefiaDoubleSwap_fu_877/t_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/con192_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/con256_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/grp_ClefiaKeySet_fu_347/con128_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_Clefia_enc/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_Clefia_enc/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_Clefia_dec/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_Clefia_dec/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s0_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/clefia_s1_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    41|
+|2     |LUT1     |   121|
+|3     |LUT2     |   443|
+|4     |LUT3     |   596|
+|5     |LUT4     |   505|
+|6     |LUT5     |   846|
+|7     |LUT6     |  1158|
+|8     |MUXF7    |    15|
+|9     |RAM16X1D |    56|
+|10    |RAM16X1S |    72|
+|11    |RAM32X1D |    16|
+|12    |RAM32X1S |    32|
+|13    |RAMB18E1 |    17|
+|24    |RAMB36E1 |     2|
+|25    |FDRE     |  2839|
+|26    |FDSE     |    55|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1861.098 ; gain = 571.480
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 1861.098 ; gain = 98.375
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1861.098 ; gain = 571.480
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1861.098 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 251 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1861.098 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 56 instances
+  RAM16X1S => RAM32X1S (RAMS32): 72 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 16 instances
+  RAM32X1S => RAM32X1S (RAMS32): 32 instances
+
+Synth Design complete, checksum: c05f21f5
+INFO: [Common 17-83] Releasing license: Synthesis
+211 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:31 . Memory (MB): peak = 1861.098 ; gain = 571.480
+INFO: [Common 17-1381] The checkpoint 'D:/tmp/CLEFIA/CLEFIA.runs/design_1_clefia_0_0_synth_1/design_1_clefia_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_clefia_0_0, cache-ID = 9f344d19680d08e0
+INFO: [Coretcl 2-1174] Renamed 91 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/tmp/CLEFIA/CLEFIA.runs/design_1_clefia_0_0_synth_1/design_1_clefia_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_clefia_0_0_utilization_synth.rpt -pb design_1_clefia_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  7 16:43:22 2022...

@@ -1,0 +1,285 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaKeySet128_Pipeline_ClefiaGfn4_label3'
+================================================================
+* Date:           Tue Dec  6 21:01:33 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.998 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       80|       80|  0.800 us|  0.800 us|   80|   80|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+-----------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                            |                 |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |          Instance          |      Module     |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +----------------------------+-----------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_ClefiaF0Xor_121_fu_290  |ClefiaF0Xor_121  |        4|        4|  40.000 ns|  40.000 ns|    1|    1|      yes|
+        |grp_ClefiaF1Xor_fu_309      |ClefiaF1Xor      |        4|        4|  40.000 ns|  40.000 ns|    1|    1|      yes|
+        +----------------------------+-----------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ClefiaGfn4_label3  |       78|       78|         7|          6|          1|    12|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    173|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        4|    -|    1361|   1283|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    347|    -|
+|Register         |        -|    -|     355|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        4|    0|    1716|   1803|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        1|    0|       1|      3|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-----------------+---------+----+-----+-----+-----+
+    |          Instance          |      Module     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------+-----------------+---------+----+-----+-----+-----+
+    |grp_ClefiaF0Xor_121_fu_290  |ClefiaF0Xor_121  |        2|   0|  660|  612|    0|
+    |grp_ClefiaF1Xor_fu_309      |ClefiaF1Xor      |        2|   0|  701|  671|    0|
+    +----------------------------+-----------------+---------+----+-----+-----+-----+
+    |Total                       |                 |        4|   0| 1361| 1283|    0|
+    +----------------------------+-----------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln193_fu_666_p2               |         +|   0|  0|  13|           4|           2|
+    |add_ln196_fu_573_p2               |         +|   0|  0|  14|           7|           4|
+    |icmp_ln197_fu_527_p2              |      icmp|   0|  0|   9|           4|           1|
+    |grp_ClefiaF1Xor_fu_309_rk_offset  |        or|   0|  0|   7|           7|           3|
+    |select_ln197_10_fu_634_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln197_11_fu_640_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln197_12_fu_646_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln197_13_fu_651_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln197_14_fu_656_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln197_15_fu_661_p3         |    select|   0|  0|   8|           1|           8|
+    |select_ln197_1_fu_583_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_2_fu_588_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_3_fu_593_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_4_fu_598_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_5_fu_604_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_6_fu_610_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_7_fu_616_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_8_fu_622_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_9_fu_628_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln197_fu_578_p3            |    select|   0|  0|   8|           1|           8|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 173|          39|         140|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  37|          7|    1|          7|
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1           |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |con128_address0                   |  14|          3|    8|         24|
+    |con128_address1                   |  14|          3|    8|         24|
+    |con128_address2                   |  14|          3|    8|         24|
+    |con128_address3                   |  14|          3|    8|         24|
+    |con128_ce0                        |  14|          3|    1|          3|
+    |con128_ce1                        |  14|          3|    1|          3|
+    |con128_ce2                        |  14|          3|    1|          3|
+    |con128_ce3                        |  14|          3|    1|          3|
+    |fin_0_1_0_fu_114                  |   9|          2|    8|         16|
+    |fin_10_1_0_fu_154                 |   9|          2|    8|         16|
+    |fin_11_1_0_fu_158                 |   9|          2|    8|         16|
+    |fin_12_1_0_fu_162                 |   9|          2|    8|         16|
+    |fin_13_1_0_fu_166                 |   9|          2|    8|         16|
+    |fin_14_1_0_fu_170                 |   9|          2|    8|         16|
+    |fin_15_1_0_fu_174                 |   9|          2|    8|         16|
+    |fin_1_1_0_fu_118                  |   9|          2|    8|         16|
+    |fin_2_1_0_fu_122                  |   9|          2|    8|         16|
+    |fin_3_1_0_fu_126                  |   9|          2|    8|         16|
+    |fin_4_1_0_fu_130                  |   9|          2|    8|         16|
+    |fin_5_1_0_fu_134                  |   9|          2|    8|         16|
+    |fin_6_1_0_fu_138                  |   9|          2|    8|         16|
+    |fin_7_1_0_fu_142                  |   9|          2|    8|         16|
+    |fin_8_1_0_fu_146                  |   9|          2|    8|         16|
+    |fin_9_1_0_fu_150                  |   9|          2|    8|         16|
+    |idx_fu_106                        |   9|          2|    7|         14|
+    |r_assign_fu_110                   |   9|          2|    4|          8|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 347|         75|  180|        401|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                |  6|   0|    6|          0|
+    |ap_done_reg                              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg         |  1|   0|    1|          0|
+    |fin_0_1_0_fu_114                         |  8|   0|    8|          0|
+    |fin_0_1_0_load_reg_894                   |  8|   0|    8|          0|
+    |fin_0_reg_1019                           |  8|   0|    8|          0|
+    |fin_10_1_0_fu_154                        |  8|   0|    8|          0|
+    |fin_10_1_0_load_reg_954                  |  8|   0|    8|          0|
+    |fin_11_1_0_fu_158                        |  8|   0|    8|          0|
+    |fin_11_1_0_load_reg_960                  |  8|   0|    8|          0|
+    |fin_12_1_0_fu_162                        |  8|   0|    8|          0|
+    |fin_12_1_0_load_reg_966                  |  8|   0|    8|          0|
+    |fin_12_reg_995                           |  8|   0|    8|          0|
+    |fin_13_1_0_fu_166                        |  8|   0|    8|          0|
+    |fin_13_1_0_load_reg_972                  |  8|   0|    8|          0|
+    |fin_13_reg_1001                          |  8|   0|    8|          0|
+    |fin_14_1_0_fu_170                        |  8|   0|    8|          0|
+    |fin_14_1_0_load_reg_978                  |  8|   0|    8|          0|
+    |fin_14_reg_1007                          |  8|   0|    8|          0|
+    |fin_15_1_0_fu_174                        |  8|   0|    8|          0|
+    |fin_15_1_0_load_reg_984                  |  8|   0|    8|          0|
+    |fin_15_reg_1013                          |  8|   0|    8|          0|
+    |fin_1_1_0_fu_118                         |  8|   0|    8|          0|
+    |fin_1_1_0_load_reg_900                   |  8|   0|    8|          0|
+    |fin_1_reg_1025                           |  8|   0|    8|          0|
+    |fin_2_1_0_fu_122                         |  8|   0|    8|          0|
+    |fin_2_1_0_load_reg_906                   |  8|   0|    8|          0|
+    |fin_2_reg_1031                           |  8|   0|    8|          0|
+    |fin_3_1_0_fu_126                         |  8|   0|    8|          0|
+    |fin_3_1_0_load_reg_912                   |  8|   0|    8|          0|
+    |fin_3_reg_1037                           |  8|   0|    8|          0|
+    |fin_4_1_0_fu_130                         |  8|   0|    8|          0|
+    |fin_4_1_0_load_reg_918                   |  8|   0|    8|          0|
+    |fin_5_1_0_fu_134                         |  8|   0|    8|          0|
+    |fin_5_1_0_load_reg_924                   |  8|   0|    8|          0|
+    |fin_6_1_0_fu_138                         |  8|   0|    8|          0|
+    |fin_6_1_0_load_reg_930                   |  8|   0|    8|          0|
+    |fin_7_1_0_fu_142                         |  8|   0|    8|          0|
+    |fin_7_1_0_load_reg_936                   |  8|   0|    8|          0|
+    |fin_8_1_0_fu_146                         |  8|   0|    8|          0|
+    |fin_8_1_0_load_reg_942                   |  8|   0|    8|          0|
+    |fin_9_1_0_fu_150                         |  8|   0|    8|          0|
+    |fin_9_1_0_load_reg_948                   |  8|   0|    8|          0|
+    |grp_ClefiaF0Xor_121_fu_290_ap_start_reg  |  1|   0|    1|          0|
+    |grp_ClefiaF1Xor_fu_309_ap_start_reg      |  1|   0|    1|          0|
+    |icmp_ln197_reg_1043                      |  1|   0|    1|          0|
+    |idx_fu_106                               |  7|   0|    7|          0|
+    |idx_load_reg_887                         |  7|   0|    7|          0|
+    |r_assign_fu_110                          |  4|   0|    4|          0|
+    |r_assign_load_reg_990                    |  4|   0|    4|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    |355|   0|  355|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++-------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  ClefiaKeySet128_Pipeline_ClefiaGfn4_label3|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  ClefiaKeySet128_Pipeline_ClefiaGfn4_label3|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  ClefiaKeySet128_Pipeline_ClefiaGfn4_label3|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  ClefiaKeySet128_Pipeline_ClefiaGfn4_label3|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  ClefiaKeySet128_Pipeline_ClefiaGfn4_label3|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  ClefiaKeySet128_Pipeline_ClefiaGfn4_label3|  return value|
+|fin_12_out         |  out|    8|      ap_vld|                                  fin_12_out|       pointer|
+|fin_12_out_ap_vld  |  out|    1|      ap_vld|                                  fin_12_out|       pointer|
+|fin_13_out         |  out|    8|      ap_vld|                                  fin_13_out|       pointer|
+|fin_13_out_ap_vld  |  out|    1|      ap_vld|                                  fin_13_out|       pointer|
+|fin_14_out         |  out|    8|      ap_vld|                                  fin_14_out|       pointer|
+|fin_14_out_ap_vld  |  out|    1|      ap_vld|                                  fin_14_out|       pointer|
+|fin_15_out         |  out|    8|      ap_vld|                                  fin_15_out|       pointer|
+|fin_15_out_ap_vld  |  out|    1|      ap_vld|                                  fin_15_out|       pointer|
+|fin_0_out          |  out|    8|      ap_vld|                                   fin_0_out|       pointer|
+|fin_0_out_ap_vld   |  out|    1|      ap_vld|                                   fin_0_out|       pointer|
+|fin_1_out          |  out|    8|      ap_vld|                                   fin_1_out|       pointer|
+|fin_1_out_ap_vld   |  out|    1|      ap_vld|                                   fin_1_out|       pointer|
+|fin_2_out          |  out|    8|      ap_vld|                                   fin_2_out|       pointer|
+|fin_2_out_ap_vld   |  out|    1|      ap_vld|                                   fin_2_out|       pointer|
+|fin_3_out          |  out|    8|      ap_vld|                                   fin_3_out|       pointer|
+|fin_3_out_ap_vld   |  out|    1|      ap_vld|                                   fin_3_out|       pointer|
+|fin_4_out          |  out|    8|      ap_vld|                                   fin_4_out|       pointer|
+|fin_4_out_ap_vld   |  out|    1|      ap_vld|                                   fin_4_out|       pointer|
+|fin_5_out          |  out|    8|      ap_vld|                                   fin_5_out|       pointer|
+|fin_5_out_ap_vld   |  out|    1|      ap_vld|                                   fin_5_out|       pointer|
+|fin_6_out          |  out|    8|      ap_vld|                                   fin_6_out|       pointer|
+|fin_6_out_ap_vld   |  out|    1|      ap_vld|                                   fin_6_out|       pointer|
+|fin_7_out          |  out|    8|      ap_vld|                                   fin_7_out|       pointer|
+|fin_7_out_ap_vld   |  out|    1|      ap_vld|                                   fin_7_out|       pointer|
+|fin_8_out          |  out|    8|      ap_vld|                                   fin_8_out|       pointer|
+|fin_8_out_ap_vld   |  out|    1|      ap_vld|                                   fin_8_out|       pointer|
+|fin_9_out          |  out|    8|      ap_vld|                                   fin_9_out|       pointer|
+|fin_9_out_ap_vld   |  out|    1|      ap_vld|                                   fin_9_out|       pointer|
+|fin_10_out         |  out|    8|      ap_vld|                                  fin_10_out|       pointer|
+|fin_10_out_ap_vld  |  out|    1|      ap_vld|                                  fin_10_out|       pointer|
+|fin_11_out         |  out|    8|      ap_vld|                                  fin_11_out|       pointer|
+|fin_11_out_ap_vld  |  out|    1|      ap_vld|                                  fin_11_out|       pointer|
+|con128_address0    |  out|    8|   ap_memory|                                      con128|         array|
+|con128_ce0         |  out|    1|   ap_memory|                                      con128|         array|
+|con128_q0          |   in|    8|   ap_memory|                                      con128|         array|
+|con128_address1    |  out|    8|   ap_memory|                                      con128|         array|
+|con128_ce1         |  out|    1|   ap_memory|                                      con128|         array|
+|con128_q1          |   in|    8|   ap_memory|                                      con128|         array|
+|con128_address2    |  out|    8|   ap_memory|                                      con128|         array|
+|con128_ce2         |  out|    1|   ap_memory|                                      con128|         array|
+|con128_q2          |   in|    8|   ap_memory|                                      con128|         array|
+|con128_address3    |  out|    8|   ap_memory|                                      con128|         array|
+|con128_ce3         |  out|    1|   ap_memory|                                      con128|         array|
+|con128_q3          |   in|    8|   ap_memory|                                      con128|         array|
++-------------------+-----+-----+------------+--------------------------------------------+--------------+
+

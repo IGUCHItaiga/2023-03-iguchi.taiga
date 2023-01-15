@@ -1,0 +1,117 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ClefiaKeySet192" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ClefiaDecrypt" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=ct" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=skey" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pt" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=clefia_dec" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=clefia_dec" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_192/dec_ip/solution1/directives.tcl:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/dec.c:213:24" msg_body="Loop 'ClefiaGfn4Inv_label5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="ClefiaGfn4Inv_label5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/dec.c:298:26" msg_body="Loop 'ClefiaKeySet192_label9' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="ClefiaKeySet192_label9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/dec.c:287:26" msg_body="Loop 'ClefiaKeySet192_label8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="ClefiaKeySet192_label8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/dec.c:193:21" msg_body="Loop 'VITIS_LOOP_193_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_193_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/dec.c:123:18" msg_body="Loop 'ByteXor_label2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="ByteXor_label2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/dec.c:116:18" msg_body="Loop 'ByteCpy_label1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="ByteCpy_label1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:208:0" msg_body="Unrolling loop 'ClefiaGfn4Inv_label5' (src/dec.c:213:24) in function 'ClefiaGfn4Inv' completely with a factor of 22">
+        <args Factor="22" LoopLoc="src/dec.c:213:24" LoopName="ClefiaGfn4Inv_label5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:279:0" msg_body="Unrolling loop 'ClefiaKeySet192_label9' (src/dec.c:298:26) in function 'ClefiaKeySet192' completely with a factor of 11">
+        <args Factor="11" LoopLoc="src/dec.c:298:26" LoopName="ClefiaKeySet192_label9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:279:0" msg_body="Unrolling loop 'ClefiaKeySet192_label8' (src/dec.c:287:26) in function 'ClefiaKeySet192' completely with a factor of 8">
+        <args Factor="8" LoopLoc="src/dec.c:287:26" LoopName="ClefiaKeySet192_label8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:189:0" msg_body="Unrolling loop 'VITIS_LOOP_193_1' (src/dec.c:193:21) in function 'ClefiaGfn8' completely with a factor of 10">
+        <args Factor="10" LoopLoc="src/dec.c:193:21" LoopName="VITIS_LOOP_193_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Inlining function 'ByteXor' into 'ClefiaF0Xor'">
+        <args Callee="ByteXor" Caller="ClefiaF0Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Inlining function 'ClefiaMul2' into 'ClefiaF0Xor'">
+        <args Callee="ClefiaMul2" Caller="ClefiaF0Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaF0Xor'">
+        <args Callee="ByteCpy" Caller="ClefiaF0Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Inlining function 'ByteXor' into 'ClefiaF1Xor'">
+        <args Callee="ByteXor" Caller="ClefiaF1Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Inlining function 'ClefiaMul2' into 'ClefiaF1Xor'">
+        <args Callee="ClefiaMul2" Caller="ClefiaF1Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaF1Xor'">
+        <args Callee="ByteCpy" Caller="ClefiaF1Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:226:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaDoubleSwap'">
+        <args Callee="ByteCpy" Caller="ClefiaDoubleSwap"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:279:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaKeySet192'">
+        <args Callee="ByteCpy" Caller="ClefiaKeySet192"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:279:0" msg_body="Inlining function 'ClefiaGfn8' into 'ClefiaKeySet192'">
+        <args Callee="ClefiaGfn8" Caller="ClefiaKeySet192"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:318:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaDecrypt'">
+        <args Callee="ByteCpy" Caller="ClefiaDecrypt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:318:0" msg_body="Inlining function 'ByteXor' into 'ClefiaDecrypt'">
+        <args Callee="ByteXor" Caller="ClefiaDecrypt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:318:0" msg_body="Unrolling loop 'ByteXor_label2' (src/dec.c:123:18) in function 'ClefiaDecrypt' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/dec.c:123:18" LoopName="ByteXor_label2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:318:0" msg_body="Unrolling loop 'ByteCpy_label1' (src/dec.c:116:18) in function 'ClefiaDecrypt' completely with a factor of 16">
+        <args Factor="16" LoopLoc="src/dec.c:116:18" LoopName="ByteCpy_label1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:279:0" msg_body="Unrolling loop 'ByteCpy_label1' (src/dec.c:116:18) in function 'ClefiaKeySet192' completely with a factor of 24">
+        <args Factor="24" LoopLoc="src/dec.c:116:18" LoopName="ByteCpy_label1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:226:0" msg_body="Unrolling loop 'ByteCpy_label1' (src/dec.c:116:18) in function 'ClefiaDoubleSwap' completely with a factor of 16">
+        <args Factor="16" LoopLoc="src/dec.c:116:18" LoopName="ByteCpy_label1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Unrolling loop 'ByteXor_label2' (src/dec.c:123:18) in function 'ClefiaF1Xor' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/dec.c:123:18" LoopName="ByteXor_label2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Unrolling loop 'ByteCpy_label1' (src/dec.c:116:18) in function 'ClefiaF1Xor' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/dec.c:116:18" LoopName="ByteCpy_label1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Unrolling loop 'ByteXor_label2' (src/dec.c:123:18) in function 'ClefiaF0Xor' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/dec.c:123:18" LoopName="ByteXor_label2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Unrolling loop 'ByteCpy_label1' (src/dec.c:116:18) in function 'ClefiaF0Xor' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/dec.c:116:18" LoopName="ByteCpy_label1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

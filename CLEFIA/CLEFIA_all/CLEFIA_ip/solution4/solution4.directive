@@ -1,0 +1,53 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="return"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="key_bitlen"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="pt"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="Clefia_enc"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="Clefia_dec"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clefia"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="recursive" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ClefiaKeySet128" label="ClefiaKeySet128_label7" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="clefia" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clefia"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

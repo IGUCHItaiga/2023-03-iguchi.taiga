@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaF1Xor'
+================================================================
+* Date:           Tue Dec  6 21:01:33 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.998 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        4|        4|  40.000 ns|  40.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    415|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        2|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|     701|    256|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        2|    0|     701|    671|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------+---------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |    Memory   |                 Module                | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+---------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |clefia_s0_U  |ClefiaF0Xor_121_clefia_s0_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    |clefia_s1_U  |ClefiaF0Xor_121_clefia_s1_ROM_AUTO_1R  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +-------------+---------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total        |                                       |        2|  0|   0|    0|   512|   16|     2|         4096|
+    +-------------+---------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln124_51_fu_221_p2     |         +|   0|  0|  15|           8|           2|
+    |add_ln124_52_fu_232_p2     |         +|   0|  0|  15|           8|           2|
+    |add_ln124_fu_210_p2        |         +|   0|  0|  15|           8|           1|
+    |select_ln131_34_fu_335_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_35_fu_377_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_36_fu_411_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_37_fu_453_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_38_fu_495_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_39_fu_537_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_40_fu_571_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_41_fu_613_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_42_fu_655_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_43_fu_689_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_44_fu_731_p3  |    select|   0|  0|   8|           1|           8|
+    |select_ln131_fu_293_p3     |    select|   0|  0|   8|           1|           8|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    |xor_ln124_31_fu_247_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_32_fu_251_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_33_fu_255_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_80_fu_781_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_81_fu_785_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_82_fu_790_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_83_fu_796_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_84_fu_801_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_85_fu_807_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_86_fu_811_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_87_fu_816_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_88_fu_822_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_89_fu_827_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_90_fu_751_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_91_fu_833_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_92_fu_837_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_93_fu_842_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_94_fu_848_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_95_fu_852_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_96_fu_857_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_97_fu_863_p2     |       xor|   0|  0|   8|           8|           8|
+    |xor_ln124_fu_243_p2        |       xor|   0|  0|   8|           8|           8|
+    |xor_ln132_34_fu_329_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_35_fu_371_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_36_fu_405_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_37_fu_447_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_38_fu_489_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_39_fu_531_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_40_fu_565_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_41_fu_607_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_42_fu_649_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_43_fu_683_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_44_fu_725_p2     |       xor|   0|  0|   8|           8|           4|
+    |xor_ln132_fu_287_p2        |       xor|   0|  0|   8|           8|           4|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 415|         309|         327|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4  |   1|   0|    1|          0|
+    |rk_load_10_reg_982       |   8|   0|    8|          0|
+    |rk_load_11_reg_987       |   8|   0|    8|          0|
+    |rk_load_12_reg_992       |   8|   0|    8|          0|
+    |rk_load_reg_977          |   8|   0|    8|          0|
+    |src_10_read_2_reg_939    |   8|   0|    8|          0|
+    |src_11_read_2_reg_933    |   8|   0|    8|          0|
+    |src_12_read_2_reg_928    |   8|   0|    8|          0|
+    |src_13_read11_reg_923    |   8|   0|    8|          0|
+    |src_14_read_2_reg_918    |   8|   0|    8|          0|
+    |src_15_read_2_reg_913    |   8|   0|    8|          0|
+    |src_8_read_2_reg_951     |   8|   0|    8|          0|
+    |src_9_read_2_reg_945     |   8|   0|    8|          0|
+    |tmp_81_reg_1042          |   1|   0|    1|          0|
+    |tmp_89_reg_1064          |   1|   0|    1|          0|
+    |tmp_95_reg_1074          |   1|   0|    1|          0|
+    |tmp_99_reg_1084          |   1|   0|    1|          0|
+    |trunc_ln134_35_reg_1037  |   7|   0|    7|          0|
+    |trunc_ln134_39_reg_1059  |   7|   0|    7|          0|
+    |trunc_ln134_42_reg_1069  |   7|   0|    7|          0|
+    |trunc_ln134_44_reg_1079  |   7|   0|    7|          0|
+    |x_assign_14_reg_1047     |   8|   0|    8|          0|
+    |x_assign_15_reg_1053     |   8|   0|    8|          0|
+    |xor_ln124_90_reg_1089    |   8|   0|    8|          0|
+    |z_10_reg_1022            |   8|   0|    8|          0|
+    |z_11_reg_1027            |   8|   0|    8|          0|
+    |z_12_reg_1032            |   8|   0|    8|          0|
+    |z_reg_1017               |   8|   0|    8|          0|
+    |src_10_read_2_reg_939    |  64|  32|    8|          0|
+    |src_11_read_2_reg_933    |  64|  32|    8|          0|
+    |src_12_read_2_reg_928    |  64|  32|    8|          0|
+    |src_13_read11_reg_923    |  64|  32|    8|          0|
+    |src_14_read_2_reg_918    |  64|  32|    8|          0|
+    |src_15_read_2_reg_913    |  64|  32|    8|          0|
+    |src_8_read_2_reg_951     |  64|  32|    8|          0|
+    |src_9_read_2_reg_945     |  64|  32|    8|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 701| 256|  253|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+--------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------+-----+-----+------------+--------------+--------------+
+|ap_clk       |   in|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_rst       |   in|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_start     |   in|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_done      |  out|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_idle      |  out|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_ready     |  out|    1|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_0  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_1  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_2  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_3  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_4  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_5  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_6  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|ap_return_7  |  out|    8|  ap_ctrl_hs|   ClefiaF1Xor|  return value|
+|src_8_read   |   in|    8|     ap_none|    src_8_read|        scalar|
+|src_9_read   |   in|    8|     ap_none|    src_9_read|        scalar|
+|src_10_read  |   in|    8|     ap_none|   src_10_read|        scalar|
+|src_11_read  |   in|    8|     ap_none|   src_11_read|        scalar|
+|src_12_read  |   in|    8|     ap_none|   src_12_read|        scalar|
+|src_13_read  |   in|    8|     ap_none|   src_13_read|        scalar|
+|src_14_read  |   in|    8|     ap_none|   src_14_read|        scalar|
+|src_15_read  |   in|    8|     ap_none|   src_15_read|        scalar|
+|rk_address0  |  out|    8|   ap_memory|            rk|         array|
+|rk_ce0       |  out|    1|   ap_memory|            rk|         array|
+|rk_q0        |   in|    8|   ap_memory|            rk|         array|
+|rk_address1  |  out|    8|   ap_memory|            rk|         array|
+|rk_ce1       |  out|    1|   ap_memory|            rk|         array|
+|rk_q1        |   in|    8|   ap_memory|            rk|         array|
+|rk_address2  |  out|    8|   ap_memory|            rk|         array|
+|rk_ce2       |  out|    1|   ap_memory|            rk|         array|
+|rk_q2        |   in|    8|   ap_memory|            rk|         array|
+|rk_address3  |  out|    8|   ap_memory|            rk|         array|
+|rk_ce3       |  out|    1|   ap_memory|            rk|         array|
+|rk_q3        |   in|    8|   ap_memory|            rk|         array|
+|rk_offset    |   in|    7|     ap_none|     rk_offset|        scalar|
++-------------+-----+-----+------------+--------------+--------------+
+

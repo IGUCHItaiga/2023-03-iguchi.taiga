@@ -1,0 +1,1363 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Mon Dec 26 14:50:03 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file design_enc_wrapper_timing_summary_routed.rpt -pb design_enc_wrapper_timing_summary_routed.pb -rpx design_enc_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : design_enc_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule    Severity  Description                  Violations  
+------  --------  ---------------------------  ----------  
+RTGT-1  Advisory  RAM retargeting possibility  4           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.374        0.000                      0                18821        0.047        0.000                      0                18821        3.750        0.000                       0                  9127  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----       ------------       ----------      --------------
+clk_fpga_0  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_0          0.374        0.000                      0                18821        0.047        0.000                      0                18821        3.750        0.000                       0                  9127  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                      clk_fpga_0    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_0
+  To Clock:  clk_fpga_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.374ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.047ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.374ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_814_reg_94357_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.518ns  (logic 2.578ns (27.085%)  route 6.940ns (72.915%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.951ns = ( 12.951 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y46         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y46         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/DOADO[7]
+                         net (fo=372, routed)         6.940    12.623    design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg_0[7]
+    SLICE_X90Y133        LUT6 (Prop_lut6_I2_O)        0.124    12.747 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_814_reg_94357[0]_i_1/O
+                         net (fo=1, routed)           0.000    12.747    design_enc_i/clefia_enc_0/inst/xor_ln124_814_fu_64016_p2[0]
+    SLICE_X90Y133        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_814_reg_94357_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.772    12.951    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X90Y133        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_814_reg_94357_reg[0]/C
+                         clock pessimism              0.247    13.198    
+                         clock uncertainty           -0.154    13.044    
+    SLICE_X90Y133        FDRE (Setup_fdre_C_D)        0.077    13.121    design_enc_i/clefia_enc_0/inst/xor_ln124_814_reg_94357_reg[0]
+  -------------------------------------------------------------------
+                         required time                         13.121    
+                         arrival time                         -12.747    
+  -------------------------------------------------------------------
+                         slack                                  0.374    
+
+Slack (MET) :             0.376ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/x_assign_343_reg_94051_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.325ns  (logic 2.454ns (26.315%)  route 6.871ns (73.685%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.086ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.895ns = ( 12.895 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y46         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y46         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/DOADO[7]
+                         net (fo=372, routed)         6.871    12.554    design_enc_i/clefia_enc_0/inst/clefia_s0_q0[7]
+    SLICE_X89Y137        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_343_reg_94051_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.716    12.895    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X89Y137        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_343_reg_94051_reg[0]/C
+                         clock pessimism              0.247    13.142    
+                         clock uncertainty           -0.154    12.988    
+    SLICE_X89Y137        FDRE (Setup_fdre_C_D)       -0.058    12.930    design_enc_i/clefia_enc_0/inst/x_assign_343_reg_94051_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.930    
+                         arrival time                         -12.554    
+  -------------------------------------------------------------------
+                         slack                                  0.376    
+
+Slack (MET) :             0.379ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/x_assign_355_reg_94243_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.298ns  (logic 2.454ns (26.394%)  route 6.844ns (73.606%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.088ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.893ns = ( 12.893 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y46         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y46         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/DOADO[7]
+                         net (fo=372, routed)         6.844    12.526    design_enc_i/clefia_enc_0/inst/clefia_s0_q0[7]
+    SLICE_X89Y134        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_355_reg_94243_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.714    12.893    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X89Y134        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_355_reg_94243_reg[0]/C
+                         clock pessimism              0.247    13.140    
+                         clock uncertainty           -0.154    12.986    
+    SLICE_X89Y134        FDRE (Setup_fdre_C_D)       -0.081    12.905    design_enc_i/clefia_enc_0/inst/x_assign_355_reg_94243_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.905    
+                         arrival time                         -12.526    
+  -------------------------------------------------------------------
+                         slack                                  0.379    
+
+Slack (MET) :             0.409ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/x_assign_367_reg_94405_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.285ns  (logic 2.454ns (26.429%)  route 6.831ns (73.571%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.090ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.891ns = ( 12.891 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y46         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y46         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/DOADO[7]
+                         net (fo=372, routed)         6.831    12.514    design_enc_i/clefia_enc_0/inst/clefia_s0_q0[7]
+    SLICE_X89Y132        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_367_reg_94405_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.712    12.891    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X89Y132        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_367_reg_94405_reg[0]/C
+                         clock pessimism              0.247    13.138    
+                         clock uncertainty           -0.154    12.984    
+    SLICE_X89Y132        FDRE (Setup_fdre_C_D)       -0.061    12.923    design_enc_i/clefia_enc_0/inst/x_assign_367_reg_94405_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.923    
+                         arrival time                         -12.514    
+  -------------------------------------------------------------------
+                         slack                                  0.409    
+
+Slack (MET) :             0.411ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_812_reg_94345_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.376ns  (logic 2.578ns (27.495%)  route 6.798ns (72.505%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.089ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.892ns = ( 12.892 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y46         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y46         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/DOADO[7]
+                         net (fo=372, routed)         6.798    12.481    design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg_0[7]
+    SLICE_X87Y133        LUT6 (Prop_lut6_I5_O)        0.124    12.605 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_812_reg_94345[0]_i_1/O
+                         net (fo=1, routed)           0.000    12.605    design_enc_i/clefia_enc_0/inst/xor_ln124_812_fu_63958_p2[0]
+    SLICE_X87Y133        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_812_reg_94345_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.713    12.892    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X87Y133        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_812_reg_94345_reg[0]/C
+                         clock pessimism              0.247    13.139    
+                         clock uncertainty           -0.154    12.985    
+    SLICE_X87Y133        FDRE (Setup_fdre_C_D)        0.031    13.016    design_enc_i/clefia_enc_0/inst/xor_ln124_812_reg_94345_reg[0]
+  -------------------------------------------------------------------
+                         required time                         13.016    
+                         arrival time                         -12.605    
+  -------------------------------------------------------------------
+                         slack                                  0.411    
+
+Slack (MET) :             0.469ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_782_reg_93983_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.427ns  (logic 2.578ns (27.348%)  route 6.849ns (72.652%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.954ns = ( 12.954 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y46         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y46         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/DOADO[7]
+                         net (fo=372, routed)         6.849    12.531    design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg_0[7]
+    SLICE_X90Y137        LUT6 (Prop_lut6_I2_O)        0.124    12.655 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_782_reg_93983[0]_i_1/O
+                         net (fo=1, routed)           0.000    12.655    design_enc_i/clefia_enc_0/inst/xor_ln124_782_fu_61744_p2[0]
+    SLICE_X90Y137        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_782_reg_93983_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.775    12.954    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X90Y137        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_782_reg_93983_reg[0]/C
+                         clock pessimism              0.247    13.201    
+                         clock uncertainty           -0.154    13.047    
+    SLICE_X90Y137        FDRE (Setup_fdre_C_D)        0.077    13.124    design_enc_i/clefia_enc_0/inst/xor_ln124_782_reg_93983_reg[0]
+  -------------------------------------------------------------------
+                         required time                         13.124    
+                         arrival time                         -12.655    
+  -------------------------------------------------------------------
+                         slack                                  0.469    
+
+Slack (MET) :             0.474ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s1_U/q1_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_765_reg_93774_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.383ns  (logic 2.578ns (27.475%)  route 6.805ns (72.525%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.950ns = ( 12.950 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.162ns
+    Clock Pessimism Removal (CPR):    0.147ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.868     3.162    design_enc_i/clefia_enc_0/inst/clefia_s1_U/ap_clk
+    RAMB18_X2Y49         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/q1_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X2Y49         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      2.454     5.616 r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/q1_reg/DOADO[1]
+                         net (fo=124, routed)         6.805    12.421    design_enc_i/clefia_enc_0/inst/clefia_s1_U/q1_reg_1[1]
+    SLICE_X94Y129        LUT6 (Prop_lut6_I1_O)        0.124    12.545 r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/xor_ln124_765_reg_93774[2]_i_1/O
+                         net (fo=1, routed)           0.000    12.545    design_enc_i/clefia_enc_0/inst/xor_ln124_765_fu_60461_p2[2]
+    SLICE_X94Y129        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_765_reg_93774_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.771    12.950    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X94Y129        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_765_reg_93774_reg[2]/C
+                         clock pessimism              0.147    13.097    
+                         clock uncertainty           -0.154    12.943    
+    SLICE_X94Y129        FDRE (Setup_fdre_C_D)        0.077    13.020    design_enc_i/clefia_enc_0/inst/xor_ln124_765_reg_93774_reg[2]
+  -------------------------------------------------------------------
+                         required time                         13.020    
+                         arrival time                         -12.545    
+  -------------------------------------------------------------------
+                         slack                                  0.474    
+
+Slack (MET) :             0.486ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_195_reg_87007_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.177ns  (logic 2.578ns (28.092%)  route 6.599ns (71.908%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.264ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.815ns = ( 12.815 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.225ns
+    Clock Pessimism Removal (CPR):    0.147ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.931     3.225    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y50         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y50         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.679 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/DOADO[7]
+                         net (fo=294, routed)         6.599    12.278    design_enc_i/clefia_enc_0/inst/clefia_s1_U/xor_ln124_195_reg_87007_reg[7][7]
+    SLICE_X36Y124        LUT6 (Prop_lut6_I4_O)        0.124    12.402 r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/xor_ln124_195_reg_87007[7]_i_1/O
+                         net (fo=1, routed)           0.000    12.402    design_enc_i/clefia_enc_0/inst/xor_ln124_195_fu_28927_p2[7]
+    SLICE_X36Y124        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_195_reg_87007_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.636    12.815    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X36Y124        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_195_reg_87007_reg[7]/C
+                         clock pessimism              0.147    12.962    
+                         clock uncertainty           -0.154    12.808    
+    SLICE_X36Y124        FDRE (Setup_fdre_C_D)        0.081    12.889    design_enc_i/clefia_enc_0/inst/xor_ln124_195_reg_87007_reg[7]
+  -------------------------------------------------------------------
+                         required time                         12.889    
+                         arrival time                         -12.402    
+  -------------------------------------------------------------------
+                         slack                                  0.486    
+
+Slack (MET) :             0.509ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s1_U/q0_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_779_reg_93965_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.272ns  (logic 2.578ns (27.804%)  route 6.694ns (72.196%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.093ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.888ns = ( 12.888 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.228ns
+    Clock Pessimism Removal (CPR):    0.247ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.934     3.228    design_enc_i/clefia_enc_0/inst/clefia_s1_U/ap_clk
+    RAMB18_X3Y47         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/q0_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y47         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[4])
+                                                      2.454     5.682 r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/q0_reg/DOADO[4]
+                         net (fo=243, routed)         6.694    12.377    design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_84_reg_85275_reg[1][4]
+    SLICE_X60Y135        LUT6 (Prop_lut6_I1_O)        0.124    12.501 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_779_reg_93965[5]_i_1/O
+                         net (fo=1, routed)           0.000    12.501    design_enc_i/clefia_enc_0/inst/xor_ln124_779_fu_61657_p2[5]
+    SLICE_X60Y135        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_779_reg_93965_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.709    12.888    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X60Y135        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_779_reg_93965_reg[5]/C
+                         clock pessimism              0.247    13.135    
+                         clock uncertainty           -0.154    12.981    
+    SLICE_X60Y135        FDRE (Setup_fdre_C_D)        0.029    13.010    design_enc_i/clefia_enc_0/inst/xor_ln124_779_reg_93965_reg[5]
+  -------------------------------------------------------------------
+                         required time                         13.010    
+                         arrival time                         -12.501    
+  -------------------------------------------------------------------
+                         slack                                  0.509    
+
+Slack (MET) :             0.545ns  (required time - arrival time)
+  Source:                 design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/x_assign_196_reg_88289_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        9.021ns  (logic 2.454ns (27.202%)  route 6.567ns (72.798%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.264ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.815ns = ( 12.815 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.225ns
+    Clock Pessimism Removal (CPR):    0.147ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.931     3.225    design_enc_i/clefia_enc_0/inst/clefia_s0_U/ap_clk
+    RAMB18_X3Y50         RAMB18E1                                     r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X3Y50         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     5.679 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/DOADO[7]
+                         net (fo=294, routed)         6.567    12.247    design_enc_i/clefia_enc_0/inst/clefia_s0_q1[7]
+    SLICE_X38Y124        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_196_reg_88289_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.636    12.815    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X38Y124        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_196_reg_88289_reg[0]/C
+                         clock pessimism              0.147    12.962    
+                         clock uncertainty           -0.154    12.808    
+    SLICE_X38Y124        FDRE (Setup_fdre_C_D)       -0.016    12.792    design_enc_i/clefia_enc_0/inst/x_assign_196_reg_88289_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.792    
+                         arrival time                         -12.247    
+  -------------------------------------------------------------------
+                         slack                                  0.545    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.047ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/skey_load_13_reg_82903_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_12_reg_83355_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.406ns  (logic 0.186ns (45.869%)  route 0.220ns (54.131%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.271ns
+    Source Clock Delay      (SCD):    0.966ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.630     0.966    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X52Y135        FDRE                                         r  design_enc_i/clefia_enc_0/inst/skey_load_13_reg_82903_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y135        FDRE (Prop_fdre_C_Q)         0.141     1.107 r  design_enc_i/clefia_enc_0/inst/skey_load_13_reg_82903_reg[4]/Q
+                         net (fo=6, routed)           0.220     1.327    design_enc_i/clefia_enc_0/inst/skey_load_13_reg_82903_reg_n_0_[4]
+    SLICE_X45Y135        LUT6 (Prop_lut6_I3_O)        0.045     1.372 r  design_enc_i/clefia_enc_0/inst/xor_ln124_12_reg_83355[4]_i_1/O
+                         net (fo=1, routed)           0.000     1.372    design_enc_i/clefia_enc_0/inst/xor_ln124_12_fu_9004_p2[4]
+    SLICE_X45Y135        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_12_reg_83355_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.905     1.271    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X45Y135        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_12_reg_83355_reg[4]/C
+                         clock pessimism             -0.039     1.232    
+    SLICE_X45Y135        FDRE (Hold_fdre_C_D)         0.092     1.324    design_enc_i/clefia_enc_0/inst/xor_ln124_12_reg_83355_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.324    
+                         arrival time                           1.372    
+  -------------------------------------------------------------------
+                         slack                                  0.047    
+
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/xor_ln124_636_reg_92827_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_1068_reg_97002_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.408ns  (logic 0.247ns (60.510%)  route 0.161ns (39.490%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.275ns
+    Source Clock Delay      (SCD):    0.969ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.633     0.969    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X50Y109        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_636_reg_92827_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y109        FDRE (Prop_fdre_C_Q)         0.148     1.117 r  design_enc_i/clefia_enc_0/inst/xor_ln124_636_reg_92827_reg[4]/Q
+                         net (fo=2, routed)           0.161     1.278    design_enc_i/clefia_enc_0/inst/xor_ln124_636_reg_92827[4]
+    SLICE_X49Y108        LUT5 (Prop_lut5_I3_O)        0.099     1.377 r  design_enc_i/clefia_enc_0/inst/xor_ln124_1068_reg_97002[4]_i_1/O
+                         net (fo=1, routed)           0.000     1.377    design_enc_i/clefia_enc_0/inst/xor_ln124_1068_fu_82497_p2[4]
+    SLICE_X49Y108        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1068_reg_97002_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.909     1.275    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X49Y108        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1068_reg_97002_reg[4]/C
+                         clock pessimism             -0.039     1.236    
+    SLICE_X49Y108        FDRE (Hold_fdre_C_D)         0.091     1.327    design_enc_i/clefia_enc_0/inst/xor_ln124_1068_reg_97002_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.327    
+                         arrival time                           1.377    
+  -------------------------------------------------------------------
+                         slack                                  0.050    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/xor_ln124_4049_reg_96981_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_1067_reg_96997_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.411ns  (logic 0.209ns (50.839%)  route 0.202ns (49.161%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.276ns
+    Source Clock Delay      (SCD):    0.969ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.633     0.969    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X50Y108        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_4049_reg_96981_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y108        FDRE (Prop_fdre_C_Q)         0.164     1.133 r  design_enc_i/clefia_enc_0/inst/xor_ln124_4049_reg_96981_reg[4]/Q
+                         net (fo=1, routed)           0.202     1.335    design_enc_i/clefia_enc_0/inst/xor_ln124_4049_reg_96981[4]
+    SLICE_X49Y106        LUT5 (Prop_lut5_I1_O)        0.045     1.380 r  design_enc_i/clefia_enc_0/inst/xor_ln124_1067_reg_96997[4]_i_1/O
+                         net (fo=1, routed)           0.000     1.380    design_enc_i/clefia_enc_0/inst/xor_ln124_1067_fu_82476_p2[4]
+    SLICE_X49Y106        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1067_reg_96997_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.910     1.276    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X49Y106        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1067_reg_96997_reg[4]/C
+                         clock pessimism             -0.039     1.237    
+    SLICE_X49Y106        FDRE (Hold_fdre_C_D)         0.091     1.328    design_enc_i/clefia_enc_0/inst/xor_ln124_1067_reg_96997_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.328    
+                         arrival time                           1.380    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/x_assign_187_reg_90332_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_252_reg_90401_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.402ns  (logic 0.227ns (56.439%)  route 0.175ns (43.561%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.258ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.268ns
+    Source Clock Delay      (SCD):    0.971ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.635     0.971    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X49Y138        FDRE                                         r  design_enc_i/clefia_enc_0/inst/x_assign_187_reg_90332_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_fdre_C_Q)         0.128     1.099 r  design_enc_i/clefia_enc_0/inst/x_assign_187_reg_90332_reg[6]/Q
+                         net (fo=4, routed)           0.175     1.274    design_enc_i/clefia_enc_0/inst/x_assign_187_reg_90332[6]
+    SLICE_X51Y137        LUT6 (Prop_lut6_I0_O)        0.099     1.373 r  design_enc_i/clefia_enc_0/inst/xor_ln124_252_reg_90401[6]_i_1/O
+                         net (fo=1, routed)           0.000     1.373    design_enc_i/clefia_enc_0/inst/xor_ln124_252_fu_45137_p2[6]
+    SLICE_X51Y137        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_252_reg_90401_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.902     1.268    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X51Y137        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_252_reg_90401_reg[6]/C
+                         clock pessimism             -0.039     1.229    
+    SLICE_X51Y137        FDRE (Hold_fdre_C_D)         0.092     1.321    design_enc_i/clefia_enc_0/inst/xor_ln124_252_reg_90401_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.321    
+                         arrival time                           1.373    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/trunc_ln134_836_reg_89517_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_221_reg_89799_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.410ns  (logic 0.247ns (60.303%)  route 0.163ns (39.697%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.261ns
+    Source Clock Delay      (SCD):    0.958ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.622     0.958    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X50Y123        FDRE                                         r  design_enc_i/clefia_enc_0/inst/trunc_ln134_836_reg_89517_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y123        FDRE (Prop_fdre_C_Q)         0.148     1.106 r  design_enc_i/clefia_enc_0/inst/trunc_ln134_836_reg_89517_reg[1]/Q
+                         net (fo=2, routed)           0.163     1.269    design_enc_i/clefia_enc_0/inst/clefia_s1_U/or_ln134_108_fu_42119_p3[0]
+    SLICE_X49Y123        LUT6 (Prop_lut6_I4_O)        0.099     1.368 r  design_enc_i/clefia_enc_0/inst/clefia_s1_U/xor_ln124_221_reg_89799[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.368    design_enc_i/clefia_enc_0/inst/xor_ln124_221_fu_42536_p2[2]
+    SLICE_X49Y123        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_221_reg_89799_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.895     1.261    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X49Y123        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_221_reg_89799_reg[2]/C
+                         clock pessimism             -0.039     1.222    
+    SLICE_X49Y123        FDRE (Hold_fdre_C_D)         0.092     1.314    design_enc_i/clefia_enc_0/inst/xor_ln124_221_reg_89799_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.314    
+                         arrival time                           1.368    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/control_s_axi_U/rdata_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32/D
+                            (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.253ns  (logic 0.141ns (55.730%)  route 0.112ns (44.270%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.190ns
+    Source Clock Delay      (SCD):    0.893ns
+    Clock Pessimism Removal (CPR):    0.281ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.557     0.893    design_enc_i/clefia_enc_0/inst/control_s_axi_U/ap_clk
+    SLICE_X35Y91         FDRE                                         r  design_enc_i/clefia_enc_0/inst/control_s_axi_U/rdata_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y91         FDRE (Prop_fdre_C_Q)         0.141     1.034 r  design_enc_i/clefia_enc_0/inst/control_s_axi_U/rdata_reg[30]/Q
+                         net (fo=1, routed)           0.112     1.146    design_enc_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[30]
+    SLICE_X34Y92         SRLC32E                                      r  design_enc_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.824     1.190    design_enc_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/aclk
+    SLICE_X34Y92         SRLC32E                                      r  design_enc_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32/CLK
+                         clock pessimism             -0.281     0.909    
+    SLICE_X34Y92         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.183     1.092    design_enc_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32
+  -------------------------------------------------------------------
+                         required time                         -1.092    
+                         arrival time                           1.146    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.056ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/xor_ln124_964_reg_96084_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_988_reg_96209_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.331ns  (logic 0.186ns (56.255%)  route 0.145ns (43.745%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.183ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.243ns
+    Source Clock Delay      (SCD):    1.025ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.689     1.025    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X91Y100        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_964_reg_96084_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y100        FDRE (Prop_fdre_C_Q)         0.141     1.166 r  design_enc_i/clefia_enc_0/inst/xor_ln124_964_reg_96084_reg[2]/Q
+                         net (fo=1, routed)           0.145     1.311    design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_988_reg_96209_reg[7][2]
+    SLICE_X91Y98         LUT5 (Prop_lut5_I4_O)        0.045     1.356 r  design_enc_i/clefia_enc_0/inst/clefia_s0_U/xor_ln124_988_reg_96209[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.356    design_enc_i/clefia_enc_0/inst/xor_ln124_988_fu_76998_p2[2]
+    SLICE_X91Y98         FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_988_reg_96209_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.877     1.243    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X91Y98         FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_988_reg_96209_reg[2]/C
+                         clock pessimism             -0.035     1.208    
+    SLICE_X91Y98         FDRE (Hold_fdre_C_D)         0.092     1.300    design_enc_i/clefia_enc_0/inst/xor_ln124_988_reg_96209_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.300    
+                         arrival time                           1.356    
+  -------------------------------------------------------------------
+                         slack                                  0.056    
+
+Slack (MET) :             0.057ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/xor_ln124_1030_reg_96737_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_1066_reg_96931_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.417ns  (logic 0.186ns (44.650%)  route 0.231ns (55.350%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.277ns
+    Source Clock Delay      (SCD):    0.971ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.635     0.971    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X53Y101        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1030_reg_96737_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y101        FDRE (Prop_fdre_C_Q)         0.141     1.112 r  design_enc_i/clefia_enc_0/inst/xor_ln124_1030_reg_96737_reg[6]/Q
+                         net (fo=1, routed)           0.231     1.343    design_enc_i/clefia_enc_0/inst/xor_ln124_1030_reg_96737[6]
+    SLICE_X43Y101        LUT5 (Prop_lut5_I1_O)        0.045     1.388 r  design_enc_i/clefia_enc_0/inst/xor_ln124_1066_reg_96931[6]_i_1/O
+                         net (fo=1, routed)           0.000     1.388    design_enc_i/clefia_enc_0/inst/xor_ln124_1066_fu_81930_p2[6]
+    SLICE_X43Y101        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1066_reg_96931_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.911     1.277    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X43Y101        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1066_reg_96931_reg[6]/C
+                         clock pessimism             -0.039     1.238    
+    SLICE_X43Y101        FDRE (Hold_fdre_C_D)         0.092     1.330    design_enc_i/clefia_enc_0/inst/xor_ln124_1066_reg_96931_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.330    
+                         arrival time                           1.388    
+  -------------------------------------------------------------------
+                         slack                                  0.057    
+
+Slack (MET) :             0.061ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/trunc_ln134_1659_reg_96951_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_1069_reg_97007_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.363ns  (logic 0.209ns (57.611%)  route 0.154ns (42.389%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.181ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.191ns
+    Source Clock Delay      (SCD):    0.975ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.639     0.975    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X46Y100        FDRE                                         r  design_enc_i/clefia_enc_0/inst/trunc_ln134_1659_reg_96951_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y100        FDRE (Prop_fdre_C_Q)         0.164     1.139 r  design_enc_i/clefia_enc_0/inst/trunc_ln134_1659_reg_96951_reg[4]/Q
+                         net (fo=2, routed)           0.154     1.293    design_enc_i/clefia_enc_0/inst/or_ln134_364_fu_82442_p3[5]
+    SLICE_X46Y99         LUT6 (Prop_lut6_I3_O)        0.045     1.338 r  design_enc_i/clefia_enc_0/inst/xor_ln124_1069_reg_97007[5]_i_1/O
+                         net (fo=1, routed)           0.000     1.338    design_enc_i/clefia_enc_0/inst/xor_ln124_1069_fu_82523_p2[5]
+    SLICE_X46Y99         FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1069_reg_97007_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.825     1.191    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X46Y99         FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_1069_reg_97007_reg[5]/C
+                         clock pessimism             -0.035     1.156    
+    SLICE_X46Y99         FDRE (Hold_fdre_C_D)         0.121     1.277    design_enc_i/clefia_enc_0/inst/xor_ln124_1069_reg_97007_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.277    
+                         arrival time                           1.338    
+  -------------------------------------------------------------------
+                         slack                                  0.061    
+
+Slack (MET) :             0.064ns  (arrival time - required time)
+  Source:                 design_enc_i/clefia_enc_0/inst/trunc_ln134_917_reg_90338_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_enc_i/clefia_enc_0/inst/xor_ln124_251_reg_90395_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.418ns  (logic 0.209ns (50.017%)  route 0.209ns (49.983%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.268ns
+    Source Clock Delay      (SCD):    0.966ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.630     0.966    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X50Y134        FDRE                                         r  design_enc_i/clefia_enc_0/inst/trunc_ln134_917_reg_90338_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y134        FDRE (Prop_fdre_C_Q)         0.164     1.130 r  design_enc_i/clefia_enc_0/inst/trunc_ln134_917_reg_90338_reg[6]/Q
+                         net (fo=4, routed)           0.209     1.339    design_enc_i/clefia_enc_0/inst/or_ln134_124_fu_45071_p3[7]
+    SLICE_X49Y132        LUT6 (Prop_lut6_I0_O)        0.045     1.384 r  design_enc_i/clefia_enc_0/inst/xor_ln124_251_reg_90395[5]_i_1/O
+                         net (fo=1, routed)           0.000     1.384    design_enc_i/clefia_enc_0/inst/xor_ln124_251_fu_45110_p2[5]
+    SLICE_X49Y132        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_251_reg_90395_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.902     1.268    design_enc_i/clefia_enc_0/inst/ap_clk
+    SLICE_X49Y132        FDRE                                         r  design_enc_i/clefia_enc_0/inst/xor_ln124_251_reg_90395_reg[5]/C
+                         clock pessimism             -0.039     1.229    
+    SLICE_X49Y132        FDRE (Hold_fdre_C_D)         0.091     1.320    design_enc_i/clefia_enc_0/inst/xor_ln124_251_reg_90395_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.320    
+                         arrival time                           1.384    
+  -------------------------------------------------------------------
+                         slack                                  0.064    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X2Y40  design_enc_i/clefia_enc_0/inst/rk_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB18_X2Y40  design_enc_i/clefia_enc_0/inst/rk_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y46  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y46  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q0_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y50  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q1_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X2Y47  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q3_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X2Y47  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q3_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X2Y50  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q4_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X2Y50  design_enc_i/clefia_enc_0/inst/clefia_s0_U/q4_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y47  design_enc_i/clefia_enc_0/inst/clefia_s1_U/q0_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_11_11/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_11_11/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y88  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_0_0/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_10_10/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_11_11/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y89  design_enc_i/clefia_enc_0/inst/control_s_axi_U/int_ct/mem_reg_0_3_11_11/DP/CLK
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk_fpga_0
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 design_enc_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.786ns  (logic 0.124ns (6.942%)  route 1.662ns (93.058%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.152ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  design_enc_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           1.662     1.662    design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X40Y83         LUT1 (Prop_lut1_I0_O)        0.124     1.786 r  design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.000     1.786    design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X40Y83         FDRE                                         r  design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        1.472     2.651    design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X40Y83         FDRE                                         r  design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 design_enc_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.716ns  (logic 0.045ns (6.282%)  route 0.671ns (93.718%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.152ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  design_enc_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           0.671     0.671    design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X40Y83         LUT1 (Prop_lut1_I0_O)        0.045     0.716 r  design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.000     0.716    design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X40Y83         FDRE                                         r  design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_enc_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_enc_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_enc_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9127, routed)        0.817     1.183    design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X40Y83         FDRE                                         r  design_enc_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+

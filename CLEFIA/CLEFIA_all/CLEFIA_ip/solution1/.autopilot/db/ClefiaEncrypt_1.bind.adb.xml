@@ -1,0 +1,950 @@
+<stg><name>ClefiaEncrypt.1</name>
+
+
+<trans_list>
+
+<trans id="51" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="52" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="53" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="54" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="55" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="56" from="6" to="7">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="57" from="7" to="8">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="58" from="8" to="9">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln193" val="0"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="59" from="8" to="10">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln193" val="1"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="61" from="9" to="10">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="62" from="10" to="11">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="64" from="11" to="12">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="65" from="12" to="13">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="66" from="13" to="14">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="67" from="14" to="15">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="68" from="15" to="16">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="69" from="16" to="17">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="70" from="17" to="18">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="8" op_0_bw="64">
+<![CDATA[
+entry:5 %fin = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="fin"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="8" op_0_bw="64">
+<![CDATA[
+entry:6 %fout = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="fout"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="8" op_0_bw="64">
+<![CDATA[
+entry:7 %rin = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="rin"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="8" op_0_bw="64">
+<![CDATA[
+entry:8 %rout = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="rout"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+entry:9 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_1, i8 %rin, i8 %pt
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="24" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+entry:9 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_1, i8 %rin, i8 %pt
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="25" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:10 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_1, i8 %rk, i8 %rin
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="26" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:10 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_1, i8 %rk, i8 %rin
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="27" st_id="5" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:11 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_118, i8 %rk, i8 %rin
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="28" st_id="6" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:11 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_118, i8 %rk, i8 %rin
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="29" st_id="7" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:12 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_119, i8 %rin, i8 %fin
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="30" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="5" op_0_bw="5" op_1_bw="5">
+<![CDATA[
+entry:0 %r_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %r
+
+]]></Node>
+<StgValue><ssdm name="r_read"/></StgValue>
+</operation>
+
+<operation id="31" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %Clefia_enc, i64 666, i64 207, i64 1
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln0"/></StgValue>
+</operation>
+
+<operation id="32" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %pt, i64 666, i64 207, i64 1
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln0"/></StgValue>
+</operation>
+
+<operation id="33" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %Clefia_enc, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="34" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %pt, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="35" st_id="8" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:12 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_119, i8 %rin, i8 %fin
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="36" st_id="8" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="1" op_0_bw="5" op_1_bw="5">
+<![CDATA[
+entry:13 %icmp_ln193 = icmp_eq  i5 %r_read, i5 0
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln193"/></StgValue>
+</operation>
+
+<operation id="37" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+entry:14 %br_ln193 = br i1 %icmp_ln193, void %while.body.i30.preheader, void %while.end.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln193"/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="38" st_id="9" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="5" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0">
+<![CDATA[
+while.body.i30.preheader:0 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_193_1, i5 %r_read, i8 %fin, i8 %fout, i8 %rk, i8 %clefia_s0, i8 %clefia_s1
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="10" st_id="10">
+
+<operation id="39" st_id="10" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln193" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="5" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0">
+<![CDATA[
+while.body.i30.preheader:0 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_193_1, i5 %r_read, i8 %fin, i8 %fout, i8 %rk, i8 %clefia_s0, i8 %clefia_s1
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="40" st_id="10" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln193" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="0" op_0_bw="0">
+<![CDATA[
+while.body.i30.preheader:1 %br_ln0 = br void %while.end.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="11" st_id="11">
+
+<operation id="41" st_id="11" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+while.end.i:0 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_120, i8 %fout, i8 %rout
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="12" st_id="12">
+
+<operation id="42" st_id="12" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+while.end.i:0 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_120, i8 %fout, i8 %rout
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="13" st_id="13">
+
+<operation id="43" st_id="13" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+while.end.i:1 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_121, i8 %rout, i8 %Clefia_enc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="14" st_id="14">
+
+<operation id="44" st_id="14" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+while.end.i:1 %call_ln0 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_121, i8 %rout, i8 %Clefia_enc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="15" st_id="15">
+
+<operation id="45" st_id="15" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="8" op_0_bw="8" op_1_bw="5" op_2_bw="3">
+<![CDATA[
+while.end.i:2 %shl_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %r_read, i3 0
+
+]]></Node>
+<StgValue><ssdm name="shl_ln"/></StgValue>
+</operation>
+
+<operation id="46" st_id="15" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0">
+<![CDATA[
+while.end.i:3 %call_ln422 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_122, i8 %shl_ln, i8 %rk, i8 %Clefia_enc
+
+]]></Node>
+<StgValue><ssdm name="call_ln422"/></StgValue>
+</operation>
+</state>
+
+<state id="16" st_id="16">
+
+<operation id="47" st_id="16" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0">
+<![CDATA[
+while.end.i:3 %call_ln422 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_122, i8 %shl_ln, i8 %rk, i8 %Clefia_enc
+
+]]></Node>
+<StgValue><ssdm name="call_ln422"/></StgValue>
+</operation>
+</state>
+
+<state id="17" st_id="17">
+
+<operation id="48" st_id="17" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
+<![CDATA[
+while.end.i:4 %call_ln422 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_123, i8 %shl_ln, i8 %rk, i8 %Clefia_enc
+
+]]></Node>
+<StgValue><ssdm name="call_ln422"/></StgValue>
+</operation>
+</state>
+
+<state id="18" st_id="18">
+
+<operation id="49" st_id="18" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
+<![CDATA[
+while.end.i:4 %call_ln422 = call void @ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_123, i8 %shl_ln, i8 %rk, i8 %Clefia_enc
+
+]]></Node>
+<StgValue><ssdm name="call_ln422"/></StgValue>
+</operation>
+
+<operation id="50" st_id="18" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="0">
+<![CDATA[
+while.end.i:5 %ret_ln424 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln424"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="71" name="Clefia_enc" dir="2" iftype="1">
+<core>RAM_1P</core><StgValue><ssdm name="Clefia_enc"/><MemPortTyVec>2 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="72" name="pt" dir="0" iftype="1">
+<core>RAM_1P</core><StgValue><ssdm name="pt"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="73" name="rk" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="rk"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="74" name="r" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="r"/></StgValue>
+</port>
+<port id="75" name="clefia_s0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="clefia_s0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="76" name="clefia_s1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="clefia_s1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="78" from="StgValue_77" to="fin" fromId="77" toId="19">
+</dataflow>
+<dataflow id="79" from="StgValue_77" to="fout" fromId="77" toId="20">
+</dataflow>
+<dataflow id="80" from="StgValue_77" to="rin" fromId="77" toId="21">
+</dataflow>
+<dataflow id="81" from="StgValue_77" to="rout" fromId="77" toId="22">
+</dataflow>
+<dataflow id="83" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_1" to="call_ln0" fromId="82" toId="23">
+</dataflow>
+<dataflow id="84" from="rin" to="call_ln0" fromId="21" toId="23">
+</dataflow>
+<dataflow id="85" from="pt" to="call_ln0" fromId="72" toId="23">
+</dataflow>
+<dataflow id="86" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_1" to="call_ln0" fromId="82" toId="24">
+</dataflow>
+<dataflow id="87" from="rin" to="call_ln0" fromId="21" toId="24">
+</dataflow>
+<dataflow id="88" from="pt" to="call_ln0" fromId="72" toId="24">
+</dataflow>
+<dataflow id="90" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_1" to="call_ln0" fromId="89" toId="25">
+</dataflow>
+<dataflow id="91" from="rk" to="call_ln0" fromId="73" toId="25">
+</dataflow>
+<dataflow id="92" from="rin" to="call_ln0" fromId="21" toId="25">
+</dataflow>
+<dataflow id="93" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_1" to="call_ln0" fromId="89" toId="26">
+</dataflow>
+<dataflow id="94" from="rk" to="call_ln0" fromId="73" toId="26">
+</dataflow>
+<dataflow id="95" from="rin" to="call_ln0" fromId="21" toId="26">
+</dataflow>
+<dataflow id="97" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_118" to="call_ln0" fromId="96" toId="27">
+</dataflow>
+<dataflow id="98" from="rk" to="call_ln0" fromId="73" toId="27">
+</dataflow>
+<dataflow id="99" from="rin" to="call_ln0" fromId="21" toId="27">
+</dataflow>
+<dataflow id="100" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_118" to="call_ln0" fromId="96" toId="28">
+</dataflow>
+<dataflow id="101" from="rk" to="call_ln0" fromId="73" toId="28">
+</dataflow>
+<dataflow id="102" from="rin" to="call_ln0" fromId="21" toId="28">
+</dataflow>
+<dataflow id="104" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_119" to="call_ln0" fromId="103" toId="29">
+</dataflow>
+<dataflow id="105" from="rin" to="call_ln0" fromId="21" toId="29">
+</dataflow>
+<dataflow id="106" from="fin" to="call_ln0" fromId="19" toId="29">
+</dataflow>
+<dataflow id="108" from="_ssdm_op_Read.ap_auto.i5" to="r_read" fromId="107" toId="30">
+</dataflow>
+<dataflow id="109" from="r" to="r_read" fromId="74" toId="30">
+</dataflow>
+<dataflow id="111" from="_ssdm_op_SpecMemCore" to="specmemcore_ln0" fromId="110" toId="31">
+</dataflow>
+<dataflow id="112" from="Clefia_enc" to="specmemcore_ln0" fromId="71" toId="31">
+</dataflow>
+<dataflow id="114" from="StgValue_113" to="specmemcore_ln0" fromId="113" toId="31">
+</dataflow>
+<dataflow id="116" from="StgValue_115" to="specmemcore_ln0" fromId="115" toId="31">
+</dataflow>
+<dataflow id="117" from="StgValue_77" to="specmemcore_ln0" fromId="77" toId="31">
+</dataflow>
+<dataflow id="118" from="_ssdm_op_SpecMemCore" to="specmemcore_ln0" fromId="110" toId="32">
+</dataflow>
+<dataflow id="119" from="pt" to="specmemcore_ln0" fromId="72" toId="32">
+</dataflow>
+<dataflow id="120" from="StgValue_113" to="specmemcore_ln0" fromId="113" toId="32">
+</dataflow>
+<dataflow id="121" from="StgValue_115" to="specmemcore_ln0" fromId="115" toId="32">
+</dataflow>
+<dataflow id="122" from="StgValue_77" to="specmemcore_ln0" fromId="77" toId="32">
+</dataflow>
+<dataflow id="124" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="123" toId="33">
+</dataflow>
+<dataflow id="125" from="Clefia_enc" to="specinterface_ln0" fromId="71" toId="33">
+</dataflow>
+<dataflow id="127" from="empty_3" to="specinterface_ln0" fromId="126" toId="33">
+</dataflow>
+<dataflow id="129" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="130" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="132" from="empty_0" to="specinterface_ln0" fromId="131" toId="33">
+</dataflow>
+<dataflow id="134" from="StgValue_133" to="specinterface_ln0" fromId="133" toId="33">
+</dataflow>
+<dataflow id="135" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="136" from="empty_0" to="specinterface_ln0" fromId="131" toId="33">
+</dataflow>
+<dataflow id="137" from="empty_0" to="specinterface_ln0" fromId="131" toId="33">
+</dataflow>
+<dataflow id="138" from="empty_0" to="specinterface_ln0" fromId="131" toId="33">
+</dataflow>
+<dataflow id="139" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="140" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="141" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="142" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="143" from="empty_0" to="specinterface_ln0" fromId="131" toId="33">
+</dataflow>
+<dataflow id="144" from="empty_0" to="specinterface_ln0" fromId="131" toId="33">
+</dataflow>
+<dataflow id="146" from="StgValue_145" to="specinterface_ln0" fromId="145" toId="33">
+</dataflow>
+<dataflow id="147" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="33">
+</dataflow>
+<dataflow id="148" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="123" toId="34">
+</dataflow>
+<dataflow id="149" from="pt" to="specinterface_ln0" fromId="72" toId="34">
+</dataflow>
+<dataflow id="150" from="empty_3" to="specinterface_ln0" fromId="126" toId="34">
+</dataflow>
+<dataflow id="151" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="152" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="153" from="empty_0" to="specinterface_ln0" fromId="131" toId="34">
+</dataflow>
+<dataflow id="154" from="StgValue_133" to="specinterface_ln0" fromId="133" toId="34">
+</dataflow>
+<dataflow id="155" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="156" from="empty_0" to="specinterface_ln0" fromId="131" toId="34">
+</dataflow>
+<dataflow id="157" from="empty_0" to="specinterface_ln0" fromId="131" toId="34">
+</dataflow>
+<dataflow id="158" from="empty_0" to="specinterface_ln0" fromId="131" toId="34">
+</dataflow>
+<dataflow id="159" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="160" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="161" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="162" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="163" from="empty_0" to="specinterface_ln0" fromId="131" toId="34">
+</dataflow>
+<dataflow id="164" from="empty_0" to="specinterface_ln0" fromId="131" toId="34">
+</dataflow>
+<dataflow id="165" from="StgValue_145" to="specinterface_ln0" fromId="145" toId="34">
+</dataflow>
+<dataflow id="166" from="StgValue_128" to="specinterface_ln0" fromId="128" toId="34">
+</dataflow>
+<dataflow id="167" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_119" to="call_ln0" fromId="103" toId="35">
+</dataflow>
+<dataflow id="168" from="rin" to="call_ln0" fromId="21" toId="35">
+</dataflow>
+<dataflow id="169" from="fin" to="call_ln0" fromId="19" toId="35">
+</dataflow>
+<dataflow id="170" from="r_read" to="icmp_ln193" fromId="30" toId="36">
+</dataflow>
+<dataflow id="172" from="StgValue_171" to="icmp_ln193" fromId="171" toId="36">
+</dataflow>
+<dataflow id="173" from="icmp_ln193" to="br_ln193" fromId="36" toId="37">
+</dataflow>
+<dataflow id="175" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_193_1" to="call_ln0" fromId="174" toId="38">
+</dataflow>
+<dataflow id="176" from="r_read" to="call_ln0" fromId="30" toId="38">
+</dataflow>
+<dataflow id="177" from="fin" to="call_ln0" fromId="19" toId="38">
+</dataflow>
+<dataflow id="178" from="fout" to="call_ln0" fromId="20" toId="38">
+</dataflow>
+<dataflow id="179" from="rk" to="call_ln0" fromId="73" toId="38">
+</dataflow>
+<dataflow id="180" from="clefia_s0" to="call_ln0" fromId="75" toId="38">
+</dataflow>
+<dataflow id="181" from="clefia_s1" to="call_ln0" fromId="76" toId="38">
+</dataflow>
+<dataflow id="182" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_193_1" to="call_ln0" fromId="174" toId="39">
+</dataflow>
+<dataflow id="183" from="r_read" to="call_ln0" fromId="30" toId="39">
+</dataflow>
+<dataflow id="184" from="fin" to="call_ln0" fromId="19" toId="39">
+</dataflow>
+<dataflow id="185" from="fout" to="call_ln0" fromId="20" toId="39">
+</dataflow>
+<dataflow id="186" from="rk" to="call_ln0" fromId="73" toId="39">
+</dataflow>
+<dataflow id="187" from="clefia_s0" to="call_ln0" fromId="75" toId="39">
+</dataflow>
+<dataflow id="188" from="clefia_s1" to="call_ln0" fromId="76" toId="39">
+</dataflow>
+<dataflow id="190" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_120" to="call_ln0" fromId="189" toId="41">
+</dataflow>
+<dataflow id="191" from="fout" to="call_ln0" fromId="20" toId="41">
+</dataflow>
+<dataflow id="192" from="rout" to="call_ln0" fromId="22" toId="41">
+</dataflow>
+<dataflow id="193" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_120" to="call_ln0" fromId="189" toId="42">
+</dataflow>
+<dataflow id="194" from="fout" to="call_ln0" fromId="20" toId="42">
+</dataflow>
+<dataflow id="195" from="rout" to="call_ln0" fromId="22" toId="42">
+</dataflow>
+<dataflow id="197" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_121" to="call_ln0" fromId="196" toId="43">
+</dataflow>
+<dataflow id="198" from="rout" to="call_ln0" fromId="22" toId="43">
+</dataflow>
+<dataflow id="199" from="Clefia_enc" to="call_ln0" fromId="71" toId="43">
+</dataflow>
+<dataflow id="200" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_116_121" to="call_ln0" fromId="196" toId="44">
+</dataflow>
+<dataflow id="201" from="rout" to="call_ln0" fromId="22" toId="44">
+</dataflow>
+<dataflow id="202" from="Clefia_enc" to="call_ln0" fromId="71" toId="44">
+</dataflow>
+<dataflow id="204" from="_ssdm_op_BitConcatenate.i8.i5.i3" to="shl_ln" fromId="203" toId="45">
+</dataflow>
+<dataflow id="205" from="r_read" to="shl_ln" fromId="30" toId="45">
+</dataflow>
+<dataflow id="207" from="StgValue_206" to="shl_ln" fromId="206" toId="45">
+</dataflow>
+<dataflow id="209" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_122" to="call_ln422" fromId="208" toId="46">
+</dataflow>
+<dataflow id="210" from="shl_ln" to="call_ln422" fromId="45" toId="46">
+</dataflow>
+<dataflow id="211" from="rk" to="call_ln422" fromId="73" toId="46">
+</dataflow>
+<dataflow id="212" from="Clefia_enc" to="call_ln422" fromId="71" toId="46">
+</dataflow>
+<dataflow id="213" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_122" to="call_ln422" fromId="208" toId="47">
+</dataflow>
+<dataflow id="214" from="shl_ln" to="call_ln422" fromId="45" toId="47">
+</dataflow>
+<dataflow id="215" from="rk" to="call_ln422" fromId="73" toId="47">
+</dataflow>
+<dataflow id="216" from="Clefia_enc" to="call_ln422" fromId="71" toId="47">
+</dataflow>
+<dataflow id="218" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_123" to="call_ln422" fromId="217" toId="48">
+</dataflow>
+<dataflow id="219" from="shl_ln" to="call_ln422" fromId="45" toId="48">
+</dataflow>
+<dataflow id="220" from="rk" to="call_ln422" fromId="73" toId="48">
+</dataflow>
+<dataflow id="221" from="Clefia_enc" to="call_ln422" fromId="71" toId="48">
+</dataflow>
+<dataflow id="222" from="ClefiaEncrypt.1_Pipeline_VITIS_LOOP_123_123" to="call_ln422" fromId="217" toId="49">
+</dataflow>
+<dataflow id="223" from="shl_ln" to="call_ln422" fromId="45" toId="49">
+</dataflow>
+<dataflow id="224" from="rk" to="call_ln422" fromId="73" toId="49">
+</dataflow>
+<dataflow id="225" from="Clefia_enc" to="call_ln422" fromId="71" toId="49">
+</dataflow>
+<dataflow id="226" from="icmp_ln193" to="StgValue_10" fromId="36" toId="10">
+</dataflow>
+<dataflow id="227" from="icmp_ln193" to="StgValue_8" fromId="36" toId="8">
+</dataflow>
+</dataflows>
+
+
+</stg>

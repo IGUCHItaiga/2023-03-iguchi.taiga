@@ -1,0 +1,186 @@
+<stg><name>ClefiaMul2</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:0 %x_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %x
+
+]]></Node>
+<StgValue><ssdm name="x_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32">
+<![CDATA[
+entry:1 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %x_read, i32 7
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:2 %xor_ln132 = xor i8 %x_read, i8 14
+
+]]></Node>
+<StgValue><ssdm name="xor_ln132"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+entry:3 %select_ln131 = select i1 %tmp, i8 %xor_ln132, i8 %x_read
+
+]]></Node>
+<StgValue><ssdm name="select_ln131"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="7" op_0_bw="8">
+<![CDATA[
+entry:4 %trunc_ln134 = trunc i8 %select_ln131
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln134"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32">
+<![CDATA[
+entry:5 %tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131, i32 7
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="8" op_0_bw="8" op_1_bw="7" op_2_bw="1">
+<![CDATA[
+entry:6 %or_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134, i1 %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="or_ln"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="8">
+<![CDATA[
+entry:7 %ret_ln134 = ret i8 %or_ln
+
+]]></Node>
+<StgValue><ssdm name="ret_ln134"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="11" name="x" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="x"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="13" from="_ssdm_op_Read.ap_auto.i8" to="x_read" fromId="12" toId="2">
+</dataflow>
+<dataflow id="14" from="x" to="x_read" fromId="11" toId="2">
+</dataflow>
+<dataflow id="16" from="_ssdm_op_BitSelect.i1.i8.i32" to="tmp" fromId="15" toId="3">
+</dataflow>
+<dataflow id="17" from="x_read" to="tmp" fromId="2" toId="3">
+</dataflow>
+<dataflow id="19" from="StgValue_18" to="tmp" fromId="18" toId="3">
+</dataflow>
+<dataflow id="20" from="x_read" to="xor_ln132" fromId="2" toId="4">
+</dataflow>
+<dataflow id="22" from="StgValue_21" to="xor_ln132" fromId="21" toId="4">
+</dataflow>
+<dataflow id="23" from="tmp" to="select_ln131" fromId="3" toId="5">
+</dataflow>
+<dataflow id="24" from="xor_ln132" to="select_ln131" fromId="4" toId="5">
+</dataflow>
+<dataflow id="25" from="x_read" to="select_ln131" fromId="2" toId="5">
+</dataflow>
+<dataflow id="26" from="select_ln131" to="trunc_ln134" fromId="5" toId="6">
+</dataflow>
+<dataflow id="27" from="_ssdm_op_BitSelect.i1.i8.i32" to="tmp_1" fromId="15" toId="7">
+</dataflow>
+<dataflow id="28" from="select_ln131" to="tmp_1" fromId="5" toId="7">
+</dataflow>
+<dataflow id="29" from="StgValue_18" to="tmp_1" fromId="18" toId="7">
+</dataflow>
+<dataflow id="31" from="_ssdm_op_BitConcatenate.i8.i7.i1" to="or_ln" fromId="30" toId="8">
+</dataflow>
+<dataflow id="32" from="trunc_ln134" to="or_ln" fromId="6" toId="8">
+</dataflow>
+<dataflow id="33" from="tmp_1" to="or_ln" fromId="7" toId="8">
+</dataflow>
+<dataflow id="34" from="or_ln" to="ret_ln134" fromId="8" toId="9">
+</dataflow>
+<dataflow id="35" from="tmp" to="StgValue_1" fromId="3" toId="1">
+</dataflow>
+</dataflows>
+
+
+</stg>

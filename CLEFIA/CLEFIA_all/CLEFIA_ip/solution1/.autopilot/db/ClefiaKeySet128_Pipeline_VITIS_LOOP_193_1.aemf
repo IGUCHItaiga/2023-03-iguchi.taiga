@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670321458845">
+  <ports id="1" name="fin" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="16">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="fout" type="PortType" coreName="RAM" coreId="4294967295" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="16">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <edges id="104" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="108" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="111" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="116" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="120" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="124" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="128" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="132" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="136" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="140" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="143" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="147" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="150" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="154" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="157" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="161" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="164" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="168" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="171" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="175" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="178" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="182" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="185" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="189" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="192" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="196" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="199" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="202" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="205" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="208" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="211" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="214" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="217" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="220" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="225" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="226" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="227" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="228" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.35"/>
+  <edges id="234" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="235" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="236" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="237" source_obj="//@regions.0/@basic_blocks.0/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="238" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.37"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.0/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="245" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="246" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.0/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="251" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="252" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="253" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="254" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="255" source_obj="//@regions.0/@basic_blocks.0/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="256" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="257" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="258" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="259" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="260" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="261" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="262" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="263" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="264" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="265" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="267" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="268" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="270" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="271" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="272" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="273" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="274" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="275" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="277" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="278" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="279" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="280" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="282" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="283" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="284" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="285" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="287" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="289" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="290" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="291" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="292" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="293" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="294" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="295" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="296" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="297" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="298" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="299" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="300" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="301" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="302" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="303" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="304" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="305" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="306" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="307" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="308" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="309" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="310" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="330" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="331" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="332" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="333" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="334" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@blocks.1"/>
+  <edges id="335" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="336" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="337" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="338" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="339" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="340" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="341" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="342" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="343" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="344" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="345" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="346" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="347" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="348" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="349" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="350" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="351" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="352" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="353" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="354" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="355" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="356" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="357" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="358" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="359" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="360" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="361" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="362" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="363" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="364" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="365" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="366" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="367" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="368" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="369" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="370" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="371" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="372" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="373" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="374" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="375" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="376" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="377" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="378" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="379" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="380" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="381" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="382" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="383" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="384" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="385" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="386" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="387" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="388" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="389" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="390" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="391" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="392" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="393" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="394" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="395" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="396" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="397" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="398" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="399" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="400" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="401" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="402" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="403" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="404" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="405" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="406" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="407" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="408" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34" is_back_edge="1"/>
+  <edges id="-111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="-116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="-120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@ports.0"/>
+  <edges id="-124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@ports.1"/>
+  <edges id="-128" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="-132" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@ports.1"/>
+  <edges id="-136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@ports.0"/>
+  <edges id="-140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@ports.1"/>
+  <edges id="-143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.0"/>
+  <edges id="-147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@ports.1"/>
+  <edges id="-150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@ports.0"/>
+  <edges id="-154" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@ports.1"/>
+  <edges id="-157" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@ports.0"/>
+  <edges id="-161" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@ports.1"/>
+  <edges id="-164" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@ports.0"/>
+  <edges id="-168" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.1"/>
+  <edges id="-171" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@ports.0"/>
+  <edges id="-175" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@ports.1"/>
+  <edges id="-178" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@ports.0"/>
+  <edges id="-182" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@ports.1"/>
+  <edges id="-185" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@ports.0"/>
+  <edges id="-189" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@ports.1"/>
+  <edges id="-192" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@ports.0"/>
+  <edges id="-196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@ports.1"/>
+  <edges id="-199" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@ports.0"/>
+  <edges id="-202" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@ports.1"/>
+  <edges id="-205" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@ports.0"/>
+  <edges id="-208" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@ports.1"/>
+  <edges id="-211" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@ports.0"/>
+  <edges id="-214" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@ports.1"/>
+  <edges id="-217" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.0"/>
+  <edges id="-220" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@ports.1"/>
+  <edges id="-225" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@ports.1"/>
+  <edges id="-226" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@ports.0"/>
+  <edges id="-234" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@ports.1"/>
+  <edges id="-235" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@ports.0"/>
+  <blocks id="11" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>while.body.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="idx56" coreId="0" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="r_assign" originalName="r" coreId="1936942336" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="r_assign_write_ln0" coreId="92486768" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="idx56_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln0" coreId="54249120" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <controlInputObjs>while.body.i</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="98" name="while.body.i38.i.preheader.exitStub" type="BlockType">
+    <controlInputObjs>if.end.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="_ln0" coreId="1313423872" opcode="ret" nodeLabel="27.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="27" typeName="Pipeline" iiViolation="Resource Limitation;mFailedII=26;mDependenceDistancedII=-1;mLimitedResource=2;nodes=58__core/RAM/fout//load/store,62__core/RAM/fout//load/store,66__core/RAM/fout//load/store,70__core/RAM/fout//load/store,74__core/RAM/fout//load/store,78__core/RAM/fout//load/store,84__core/RAM/fout//load/store,56__core/RAM/fout//load/store,60__core/RAM/fout//load/store,64__core/RAM/fout//load/store,68__core/RAM/fout//load/store,72__core/RAM/fout//load/store,76__core/RAM/fout//load/store,80__core/RAM/fout//load/store,82__;" id="565" pipe_depth="28" RegionName="VITIS_LOOP_193_1">
+    <basic_blocks id="55" name="while.body.i" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>if.end.i.while.body.i_crit_edge</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.end.i</controlOutputObjs>
+      <controlOutputObjs>while.body.i20.i.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="idx56_load" lineNumber="196" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaGfn4" bitwidth="7" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="196" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="r_assign_load" lineNumber="193" originalName="r" fileName="clefia.c" fileDirectory=".." coreId="92484096" contextFuncName="ClefiaGfn4" bitwidth="4" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="193" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="fin_addr" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49713208" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="fout_addr" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="1717924352" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="26.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="fin_addr_63" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="fout_addr_63" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="2949577984" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="26.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="fin_addr_64" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="1953394432" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="26.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="fout_addr_64" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="1684957440" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="25.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="fin_addr_65" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="26.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="fout_addr_65" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="1869833472" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="25.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="fin_addr_66" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="25.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="fout_addr_66" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49720528" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="24.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="fin_addr_67" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="25.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="fout_addr_67" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="54270432" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="24.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="fin_addr_68" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="108" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="24.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="fout_addr_68" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="108" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="23.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="fin_addr_69" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="24.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="fout_addr_69" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="92488832" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="23.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="fin_addr_70" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="23.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="fout_addr_70" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="1717924352" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="22.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="fin_addr_71" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="1397508096" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="23.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="fout_addr_71" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49724624" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="22.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="fin_addr_72" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="22.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="fout_addr_72" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49690808" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="21.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="fin_addr_73" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="22.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="fout_addr_73" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49710904" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="21.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="fin_addr_74" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49705680" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="21.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="fout_addr_74" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49714512" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="fin_addr_75" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="21.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="fout_addr_75" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="92490224" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="fin_addr_76" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="fout_addr_76" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="19.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="fin_addr_77" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="49696208" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="fout_addr_77" lineNumber="114" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteCpy" bitwidth="4" opcode="getelementptr" nodeLabel="19.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="114" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln194" lineNumber="194" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaF0Xor_125_fu_390" coreId="49693624" contextFuncName="ClefiaGfn4" opcode="call" nodeLabel="1.0" nodeLatency="8" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="194" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>store</dataInputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>ClefiaF0Xor_125</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="or_ln195" lineNumber="195" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaF1Xor_fu_405_rk_offset" coreId="49696080" contextFuncName="ClefiaGfn4" bitwidth="7" opcode="or" nodeLabel="10.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="195" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln195" lineNumber="195" fileName="clefia.c" fileDirectory=".." rtlName="grp_ClefiaF1Xor_fu_405" coreId="0" contextFuncName="ClefiaGfn4" opcode="call" nodeLabel="10.0" nodeLatency="8" m_display="1" m_delay="3.25" m_isLCDNode="true" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="195" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>fout</dataInputObjs>
+        <dataInputObjs>fin</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>fout</dataOutputObjs>
+        <dataOutputObjs>fin</dataOutputObjs>
+        <constName>ClefiaF1Xor</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="add_ln196" lineNumber="196" fileName="clefia.c" fileDirectory=".." rtlName="add_ln196_fu_454_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ClefiaGfn4" bitwidth="7" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.87" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="196" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="icmp_ln197" lineNumber="197" fileName="clefia.c" fileDirectory=".." rtlName="icmp_ln197_fu_433_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ClefiaGfn4" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.3" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="197" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="br_ln197" lineNumber="197" fileName="clefia.c" fileDirectory=".." coreId="49699768" contextFuncName="ClefiaGfn4" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="197" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>while.body.i20.i.0</controlInputObjs>
+        <controlInputObjs>if.end.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="clefia.c">
+        <validLinenumbers>196</validLinenumbers>
+        <validLinenumbers>193</validLinenumbers>
+        <validLinenumbers>114</validLinenumbers>
+        <validLinenumbers>194</validLinenumbers>
+        <validLinenumbers>195</validLinenumbers>
+        <validLinenumbers>197</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="89" name="while.body.i20.i.0" type="BlockType">
+      <controlInputObjs>while.body.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.end.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="fout_load" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="19.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="fin_addr_77_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="20.0" m_display="0" m_delay="2.32" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="fout_load_63" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="19.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="fin_addr_76_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="20.0" m_display="0" m_delay="2.32" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="fout_load_64" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="fin_addr_75_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="21.0" m_display="0" m_delay="2.32" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="fout_load_65" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="fin_addr_74_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="21.0" m_display="0" m_delay="2.32" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="fout_load_66" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="21.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="fin_addr_73_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="22.0" m_display="0" m_delay="2.32" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="fout_load_67" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="21.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="fin_addr_72_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="22.0" m_display="0" m_delay="2.32" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="fout_load_68" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="22.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="fin_addr_71_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="23.0" m_display="0" m_delay="2.32" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="fout_load_69" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="22.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="fin_addr_70_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="23.0" m_display="0" m_delay="2.32" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="fout_load_70" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="23.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="fin_addr_69_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="24.0" m_display="0" m_delay="2.32" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="fout_load_71" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="23.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="fin_addr_68_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="24.0" m_display="0" m_delay="2.32" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="fout_load_72" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="24.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="fin_addr_67_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="25.0" m_display="0" m_delay="2.32" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="fout_load_73" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="24.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="fin_addr_66_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="25.0" m_display="0" m_delay="2.32" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="fout_load_74" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="fin_addr_65_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="26.0" m_display="0" m_delay="2.32" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="fout_load_75" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="25.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="fin_addr_64_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="26.0" m_display="0" m_delay="2.32" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="fout_load_76" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="26.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="fin_addr_63_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="27.0" m_display="0" m_delay="2.32" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="fout_load_77" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" bitwidth="8" opcode="load" nodeLabel="26.0" nodeLatency="1" m_display="1" m_delay="2.32" m_isLCDNode="true" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="fin_addr_write_ln117" lineNumber="117" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteCpy" opcode="store" nodeLabel="27.0" m_display="1" m_delay="2.32" m_isLCDNode="true" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="117" fileDirectory="D:\tmp" functionName="ByteCpy"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln0" coreId="49744568" opcode="br" nodeLabel="27.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <controlInputObjs>if.end.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="clefia.c">
+        <validLinenumbers>117</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="92" name="if.end.i" type="BlockType">
+      <controlInputObjs>while.body.i</controlInputObjs>
+      <controlInputObjs>while.body.i20.i.0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>while.body.i38.i.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>if.end.i.while.body.i_crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="add_ln193" lineNumber="193" originalName="r" fileName="clefia.c" fileDirectory=".." rtlName="add_ln193_fu_439_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ClefiaGfn4" bitwidth="4" opcode="add" m_display="0" m_delay="1.73" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="193" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln193" lineNumber="193" fileName="clefia.c" fileDirectory=".." coreId="1953394432" contextFuncName="ClefiaGfn4" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="193" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>if.end.i.while.body.i_crit_edge</controlInputObjs>
+        <controlInputObjs>while.body.i38.i.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="clefia.c">
+        <validLinenumbers>193</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="96" name="if.end.i.while.body.i_crit_edge" type="BlockType">
+      <controlInputObjs>if.end.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>while.body.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="r_assign_write_ln193" lineNumber="193" fileName="clefia.c" fileDirectory=".." coreId="54063104" contextFuncName="ClefiaGfn4" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="193" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="idx56_write_ln193" lineNumber="193" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ClefiaGfn4" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="193" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln193" lineNumber="193" fileName="clefia.c" fileDirectory=".." coreId="49762000" contextFuncName="ClefiaGfn4" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="193" fileDirectory="D:\tmp" functionName="ClefiaGfn4"/>
+        <controlInputObjs>while.body.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="clefia.c">
+        <validLinenumbers>193</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <regnodes realName="fout_addr_71_reg_530">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_74_reg_505">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="idx56_reg_471">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="idx56_load_reg_489">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_66_reg_545">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_68_reg_535">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_70_reg_525">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_63_reg_570">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_77_reg_500">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_76_reg_495">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_69_reg_540">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_75_reg_510">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_67_reg_550">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln197_reg_485">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_reg_565">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_64_reg_555">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_65_reg_560">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="r_assign_reg_478">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_73_reg_520">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="fout_addr_72_reg_515">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <expressionNodes realName="fout_addr_64_gep_fu_300">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_77_gep_fu_90">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_68_gep_fu_228">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_76_gep_fu_125">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_69_gep_fu_236">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_65_gep_fu_308">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_63_gep_fu_380">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_67_gep_fu_324">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln193_fu_439">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_72_gep_fu_156">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln196_fu_454">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_71_gep_fu_252">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_77_gep_fu_133">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_73_gep_fu_164">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_gep_fu_336">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_69_gep_fu_288">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_75_gep_fu_117">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln195_fu_465">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_76_gep_fu_82">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_assign_fu_78">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_74_gep_fu_172">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idx56_fu_74">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_63_gep_fu_344">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_64_gep_fu_352">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_73_gep_fu_216">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_70_gep_fu_192">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_72_gep_fu_208">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_65_gep_fu_360">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_66_gep_fu_264">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_75_gep_fu_180">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_66_gep_fu_316">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_gep_fu_372">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_74_gep_fu_109">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_68_gep_fu_280">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_71_gep_fu_200">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fin_addr_70_gep_fu_244">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fout_addr_67_gep_fu_272">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln197_fu_433">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_ClefiaF1Xor_fu_405">
+    <nodeIds>50</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ClefiaF0Xor_125_fu_390">
+    <nodeIds>48</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="r_assign_load_load_fu_430">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_420">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln193_store_fu_460">
+    <nodeIds>94</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_425">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="idx56_load_load_fu_450">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln193_store_fu_445">
+    <nodeIds>93</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="clefia_s0" portID="100">
+    <nodeIds>48</nodeIds>
+    <nodeIds>50</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="clefia_s1" portID="100">
+    <nodeIds>48</nodeIds>
+    <nodeIds>50</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="con128" portID="100">
+    <nodeIds>48</nodeIds>
+    <nodeIds>50</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fin">
+    <nodeIds>59</nodeIds>
+    <nodeIds>63</nodeIds>
+    <nodeIds>67</nodeIds>
+    <nodeIds>71</nodeIds>
+    <nodeIds>75</nodeIds>
+    <nodeIds>79</nodeIds>
+    <nodeIds>83</nodeIds>
+    <nodeIds>87</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fin" portID="1">
+    <nodeIds>57</nodeIds>
+    <nodeIds>61</nodeIds>
+    <nodeIds>65</nodeIds>
+    <nodeIds>69</nodeIds>
+    <nodeIds>73</nodeIds>
+    <nodeIds>77</nodeIds>
+    <nodeIds>81</nodeIds>
+    <nodeIds>85</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fin" portID="100">
+    <nodeIds>48</nodeIds>
+    <nodeIds>50</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fout">
+    <nodeIds>58</nodeIds>
+    <nodeIds>62</nodeIds>
+    <nodeIds>66</nodeIds>
+    <nodeIds>70</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>78</nodeIds>
+    <nodeIds>82</nodeIds>
+    <nodeIds>86</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fout" portID="1">
+    <nodeIds>56</nodeIds>
+    <nodeIds>60</nodeIds>
+    <nodeIds>64</nodeIds>
+    <nodeIds>68</nodeIds>
+    <nodeIds>72</nodeIds>
+    <nodeIds>76</nodeIds>
+    <nodeIds>80</nodeIds>
+    <nodeIds>84</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fout" portID="100">
+    <nodeIds>48</nodeIds>
+    <nodeIds>50</nodeIds>
+  </memoryPorts>
+  <ioPorts name="fin(p0)">
+    <contents name="store">
+      <nodeIds>59</nodeIds>
+      <nodeIds>63</nodeIds>
+      <nodeIds>67</nodeIds>
+      <nodeIds>71</nodeIds>
+      <nodeIds>75</nodeIds>
+      <nodeIds>79</nodeIds>
+      <nodeIds>83</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="fin(p1)">
+    <contents name="store">
+      <nodeIds>57</nodeIds>
+      <nodeIds>61</nodeIds>
+      <nodeIds>65</nodeIds>
+      <nodeIds>69</nodeIds>
+      <nodeIds>73</nodeIds>
+      <nodeIds>77</nodeIds>
+      <nodeIds>81</nodeIds>
+      <nodeIds>85</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="fout(p0)">
+    <contents name="load">
+      <nodeIds>58</nodeIds>
+      <nodeIds>62</nodeIds>
+      <nodeIds>66</nodeIds>
+      <nodeIds>70</nodeIds>
+      <nodeIds>74</nodeIds>
+      <nodeIds>78</nodeIds>
+      <nodeIds>82</nodeIds>
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="fout(p1)">
+    <contents name="load">
+      <nodeIds>56</nodeIds>
+      <nodeIds>60</nodeIds>
+      <nodeIds>64</nodeIds>
+      <nodeIds>68</nodeIds>
+      <nodeIds>72</nodeIds>
+      <nodeIds>76</nodeIds>
+      <nodeIds>80</nodeIds>
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="48" stage="9" latency="9"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="48" stage="8" latency="9"/>
+    </states>
+    <states id="4">
+      <operations id="48" stage="7" latency="9"/>
+    </states>
+    <states id="5">
+      <operations id="48" stage="6" latency="9"/>
+    </states>
+    <states id="6">
+      <operations id="48" stage="5" latency="9"/>
+    </states>
+    <states id="7">
+      <operations id="48" stage="4" latency="9"/>
+    </states>
+    <states id="8">
+      <operations id="48" stage="3" latency="9"/>
+    </states>
+    <states id="9">
+      <operations id="48" stage="2" latency="9"/>
+    </states>
+    <states id="10">
+      <operations id="48" stage="1" latency="9"/>
+    </states>
+    <states id="11">
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="9" latency="9"/>
+    </states>
+    <states id="12">
+      <operations id="50" stage="8" latency="9"/>
+    </states>
+    <states id="13">
+      <operations id="50" stage="7" latency="9"/>
+    </states>
+    <states id="14">
+      <operations id="50" stage="6" latency="9"/>
+    </states>
+    <states id="15">
+      <operations id="50" stage="5" latency="9"/>
+    </states>
+    <states id="16">
+      <operations id="50" stage="4" latency="9"/>
+    </states>
+    <states id="17">
+      <operations id="50" stage="3" latency="9"/>
+    </states>
+    <states id="18">
+      <operations id="50" stage="2" latency="9"/>
+    </states>
+    <states id="19">
+      <operations id="50" stage="1" latency="9"/>
+    </states>
+    <states id="20">
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="56" stage="2" latency="2"/>
+      <operations id="58" stage="2" latency="2"/>
+    </states>
+    <states id="21">
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="2"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="2"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="2" latency="2"/>
+      <operations id="62" stage="2" latency="2"/>
+    </states>
+    <states id="22">
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="2"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="2"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="2" latency="2"/>
+      <operations id="66" stage="2" latency="2"/>
+    </states>
+    <states id="23">
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="2"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="2" latency="2"/>
+      <operations id="70" stage="2" latency="2"/>
+    </states>
+    <states id="24">
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="2"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="2"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="2" latency="2"/>
+      <operations id="74" stage="2" latency="2"/>
+    </states>
+    <states id="25">
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="2"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="2"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="2" latency="2"/>
+      <operations id="78" stage="2" latency="2"/>
+    </states>
+    <states id="26">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="2"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="2"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="2" latency="2"/>
+      <operations id="82" stage="2" latency="2"/>
+    </states>
+    <states id="27">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="2"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="2"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="2" latency="2"/>
+      <operations id="86" stage="2" latency="2"/>
+    </states>
+    <states id="28">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="2"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="2"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="353" mMaxLatency="353">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>11</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_193_1" mII="27" mDepth="28" mMinTripCount="12" mMaxTripCount="12" mMinLatency="351" mMaxLatency="351" mType="1">
+      <basicBlocks>55</basicBlocks>
+      <basicBlocks>89</basicBlocks>
+      <basicBlocks>92</basicBlocks>
+      <basicBlocks>96</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>98</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

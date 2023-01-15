@@ -1,0 +1,238 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Dec  7 16:41:00 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clefia_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clefia_0_0 (xilinx.com:hls:clefia:1.0) from (Rev. 2112802530) to (Rev. 2112802957)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Dec  7 09:34:25 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clefia_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clefia_0_0 (xilinx.com:hls:clefia:1.0) from (Rev. 2112801674) to (Rev. 2112802530)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Dec  6 19:15:26 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clefia_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_clefia_0_0 (xilinx.com:hls:clefia:1.0) from (Rev. 2112801443) to (Rev. 2112801674)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_clefia_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
+
+-Upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Dec  6 15:29:42 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clefia_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_clefia_0_0 (xilinx.com:hls:clefia:1.0) from (Rev. 2112801381) to (Rev. 2112801443)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_clefia_0_0'.
+
+
+-Upgrade has removed interface 'ap_ctrl'
+
+-Upgrade has added interface 'interrupt' (xilinx.com:signal:interrupt:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_clefia_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'ap_done'
+
+-Upgrade has removed port 'ap_idle'
+
+-Upgrade has removed port 'ap_ready'
+
+-Upgrade has removed port 'ap_start'
+
+-Upgrade has added port 'interrupt'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Dec  6 14:27:50 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clefia_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_clefia_0_0 (xilinx.com:hls:clefia:1.0) from (Rev. 2112801365) to (Rev. 2112801381)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Dec  6 14:11:09 2022
+| Host         : DESKTOP-CTM6DMJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clefia_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_clefia_0_0 (xilinx.com:hls:clefia:1.0) from (Rev. 2112801349) to (Rev. 2112801365)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_clefia_0_0'.
+
+
+-Upgrade has removed interface 'ap_rst'
+
+-Upgrade has removed interface 'key_bitlen'
+
+-Upgrade has removed interface 'pt_address0'
+
+-Upgrade has removed interface 'pt_q0'
+
+-Upgrade has added interface 'ap_rst_n' (xilinx.com:signal:reset:1.0)
+
+-Upgrade has added interface 's_axi_control' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_clefia_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'ap_rst'
+
+-Upgrade has removed port 'key_bitlen'
+
+-Upgrade has removed port 'pt_address0'
+
+-Upgrade has removed port 'pt_ce0'
+
+-Upgrade has removed port 'pt_q0'
+
+-Upgrade has added port 'ap_rst_n'
+
+-Upgrade has added port 's_axi_control_ARADDR'
+
+-Upgrade has added port 's_axi_control_ARREADY'
+
+-Upgrade has added port 's_axi_control_ARVALID'
+
+-Upgrade has added port 's_axi_control_AWADDR'
+
+-Upgrade has added port 's_axi_control_AWREADY'
+
+-Upgrade has added port 's_axi_control_AWVALID'
+
+-Upgrade has added port 's_axi_control_BREADY'
+
+-Upgrade has added port 's_axi_control_BRESP'
+
+-Upgrade has added port 's_axi_control_BVALID'
+
+-Upgrade has added port 's_axi_control_RDATA'
+
+-Upgrade has added port 's_axi_control_RREADY'
+
+-Upgrade has added port 's_axi_control_RRESP'
+
+-Upgrade has added port 's_axi_control_RVALID'
+
+-Upgrade has added port 's_axi_control_WDATA'
+
+-Upgrade has added port 's_axi_control_WREADY'
+
+-Upgrade has added port 's_axi_control_WSTRB'
+
+-Upgrade has added port 's_axi_control_WVALID'
+
+

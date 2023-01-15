@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670803216779">
+  <ports id="1" name="lk" type="PortType" coreName="RAM" coreId="100" bitwidth="8" iftype="IfTypeRegister" arraysize="16">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="rk" type="PortType" coreName="RAM" coreId="100" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="224">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="38" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="39" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="41" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="47" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="49" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="50" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="51" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="57" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="58" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="61" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="62" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@ports.1"/>
+  <edges id="71" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="103" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="105" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="106" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="107" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <blocks id="7" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>while.body.i564</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="idx_i562" coreId="1684957440" bitwidth="5" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="idx_i562_write_ln0" coreId="1541032864" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="br_ln0" coreId="6775040" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>while.body.i564</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="33" name="ByteXor.exit568.exitStub" type="BlockType">
+    <controlInputObjs>while.body.i564</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="_ln0" coreId="1539302336" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="121" pipe_depth="3" RegionName="ByteXor_label2">
+    <basic_blocks id="14" name="while.body.i564" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>while.body.split.i567</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>ByteXor.exit568.exitStub</controlOutputObjs>
+      <controlOutputObjs>while.body.split.i567</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="idx_i562_load" lineNumber="124" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteXor" bitwidth="5" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="124" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="icmp_ln123" lineNumber="123" fileName="clefia.c" fileDirectory=".." rtlName="icmp_ln123_fu_89_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ByteXor" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.36" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="123" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="add_ln124" lineNumber="124" fileName="clefia.c" fileDirectory=".." rtlName="add_ln124_fu_95_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ByteXor" bitwidth="5" opcode="add" m_display="0" m_delay="1.78" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="124" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln123" lineNumber="123" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteXor" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="123" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>while.body.split.i567</controlInputObjs>
+        <controlInputObjs>ByteXor.exit568.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="clefia.c">
+        <validLinenumbers>124</validLinenumbers>
+        <validLinenumbers>123</validLinenumbers>
+        <validLinenumbers>310</validLinenumbers>
+        <validLinenumbers>396</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="31" name="while.body.split.i567" type="BlockType">
+      <controlInputObjs>while.body.i564</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>while.body.i564</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln121_7" lineNumber="121" fileName="clefia.c" fileDirectory=".." rtlName="zext_ln121_7_fu_119_p1" coreId="0" contextFuncName="ByteXor" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="zext_ln121_208" lineNumber="121" fileName="clefia.c" fileDirectory=".." rtlName="zext_ln121_208_fu_123_p1" coreId="6775040" contextFuncName="ByteXor" bitwidth="6" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln121_209_cast" lineNumber="121" fileName="clefia.c" fileDirectory=".." rtlName="zext_ln121_209_cast_fu_101_p3" coreId="0" contextFuncName="ByteXor" bitwidth="8" opcode="bitconcatenate" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln121" lineNumber="121" fileName="clefia.c" fileDirectory=".." rtlName="zext_ln121_fu_109_p1" coreId="0" contextFuncName="ByteXor" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="con128_addr" lineNumber="121" originalName="b" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteXor" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="lk_addr" lineNumber="121" originalName="a" fileName="clefia.c" fileDirectory=".." coreId="1869833472" contextFuncName="ByteXor" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>lk</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="add_ln121_33" lineNumber="121" fileName="clefia.c" fileDirectory=".." rtlName="add_ln121_33_fu_126_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ByteXor" bitwidth="6" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="zext_ln121_210" lineNumber="121" fileName="clefia.c" fileDirectory=".." rtlName="zext_ln121_210_fu_132_p1" coreId="1541562496" contextFuncName="ByteXor" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="rk_addr_70" lineNumber="121" originalName="dst" fileName="clefia.c" fileDirectory=".." coreId="0" contextFuncName="ByteXor" bitwidth="8" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="121" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>rk</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="lk_load" lineNumber="124" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteXor" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="124" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="con128_load" lineNumber="124" fileName="clefia.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="no" opType="rom" coreId="95" contextFuncName="ByteXor" bitwidth="8" opcode="load" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="124" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="xor_ln124_23" lineNumber="124" fileName="clefia.c" fileDirectory=".." rtlName="rk_d0" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ByteXor" bitwidth="8" opcode="xor" nodeLabel="2.0" m_display="0" m_delay="0.99" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="124" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="rk_addr_70_write_ln124" lineNumber="124" fileName="clefia.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="ByteXor" opcode="store" nodeLabel="2.0" m_display="0" m_delay="3.25" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="124" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="idx_i562_write_ln123" lineNumber="123" fileName="clefia.c" fileDirectory=".." coreId="1514276096" contextFuncName="ByteXor" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="123" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="br_ln123" lineNumber="123" fileName="clefia.c" fileDirectory=".." coreId="1540125136" contextFuncName="ByteXor" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="clefia.c" linenumber="310" fileDirectory="D:\tmp"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="123" fileDirectory="D:\tmp" functionName="ByteXor"/>
+        <inlineStackInfo fileName="clefia.c" linenumber="396" fileDirectory="D:\tmp" functionName="ClefiaKeySet"/>
+        <controlInputObjs>while.body.i564</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="clefia.c">
+        <validLinenumbers>121</validLinenumbers>
+        <validLinenumbers>124</validLinenumbers>
+        <validLinenumbers>123</validLinenumbers>
+        <validLinenumbers>310</validLinenumbers>
+        <validLinenumbers>396</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="idx_i562_load_reg_150">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln123_reg_156">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="idx_i562_reg_143">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="con128_addr_reg_160">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="con128_load_reg_170">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="lk_addr_reg_165">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <expressionNodes realName="zext_ln121_209_cast_fu_101">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln124_23_fu_137">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln121_fu_109">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln121_7_fu_119">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln123_fu_89">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="con128_addr_gep_fu_42">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln124_fu_95">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rk_addr_70_gep_fu_68">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln121_208_fu_123">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln121_210_fu_132">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lk_addr_gep_fu_55">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idx_i562_fu_38">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln121_33_fu_126">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_81">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="idx_i562_load_load_fu_86">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln123_store_fu_114">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="con128">
+    <nodeIds>26</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="lk">
+    <nodeIds>25</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="rk">
+    <nodeIds>28</nodeIds>
+  </memoryPorts>
+  <ioPorts name="lk(p0)">
+    <contents name="load">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="rk(p0)">
+    <contents name="store">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="26" stage="2" latency="2"/>
+      <operations id="29" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="25" stage="2" latency="2"/>
+      <operations id="26" stage="1" latency="2"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="2"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="clefia_Pipeline_ByteXor_label234" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="19" mMaxLatency="19">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>7</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="ByteXor_label2" mII="1" mDepth="3" mMinTripCount="16" mMaxTripCount="16" mMinLatency="17" mMaxLatency="17" mType="1">
+      <basicBlocks>14</basicBlocks>
+      <basicBlocks>31</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>33</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

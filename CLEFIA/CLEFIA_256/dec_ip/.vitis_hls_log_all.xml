@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="dec_ip" solutionName="solution2" date="2022-12-26T16:00:11.454+0900" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:41.106+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label27' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('pt_load', src/dec.c:124) on array 'pt' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'pt'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:38.517+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ByteXor_label26' (loop 'ByteXor_label2'): Unable to schedule 'load' operation ('pt_load', src/dec.c:124) on array 'pt' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'pt'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:38.347+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_4_write_ln117', src/dec.c:117) of variable 'xor_ln124_11', src/dec.c:124 on array 'fin' due to limited memory ports (II = 12). Please consider using a memory core with more ports or partitioning the array 'fin'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:37.426+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'store' operation ('fin_addr_6_write_ln117', src/dec.c:117) of variable 'xor_ln124_9', src/dec.c:124 on array 'fin' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'fin'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:37.262+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to schedule 'load' operation ('rk_load_4', src/dec.c:124) on array 'rk' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'rk'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:36.956+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:36.677+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:36.592+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'clefia_dec_Pipeline_ClefiaGfn4Inv_label5' (loop 'ClefiaGfn4Inv_label5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('fin_addr_12_write_ln117', src/dec.c:117) of variable 'xor_ln124_19', src/dec.c:124 on array 'fin' and 'load' operation ('fin_load_3', src/dec.c:124) on array 'fin'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:36.577+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:21)" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:34.581+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:12)" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:34.565+0900" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (src/dec.c:124:14)" projectName="dec_ip" solutionName="solution1" date="2022-12-13T15:00:34.554+0900" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

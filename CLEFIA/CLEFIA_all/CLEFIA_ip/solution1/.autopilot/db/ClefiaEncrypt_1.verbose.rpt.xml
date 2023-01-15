@@ -1,0 +1,185 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ClefiaEncrypt_1'" level="0">
+<item name = "Date">Tue Dec  6 19:11:05 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
+<item name = "Project">CLEFIA_ip</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.084 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">126, ?, 1.260 us, ?, 126, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118_fu_95">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119_fu_102">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1, 56, ?, 0.560 us, ?, 56, ?, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120_fu_121">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121_fu_127">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122_fu_134">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123_fu_143">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 11, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">4, -, 691, 2674, -</column>
+<column name="Memory">0, -, 56, 8, 0</column>
+<column name="Multiplexer">-, -, -, 528, -</column>
+<column name="Register">-, -, 33, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 0, ~0, 6, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1, 0, 0, 12, 60, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119_fu_102">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119, 0, 0, 12, 60, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120_fu_121">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120, 0, 0, 12, 60, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121_fu_127">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121, 0, 0, 12, 60, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1, 0, 0, 81, 119, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118_fu_95">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118, 0, 0, 80, 119, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122_fu_134">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122, 0, 0, 9, 102, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123_fu_143">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123, 0, 0, 10, 102, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108">ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1, 4, 0, 463, 1992, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="fin_U">ClefiaEncrypt_1_fin_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
+<column name="fout_U">ClefiaEncrypt_1_fin_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
+<column name="rin_U">ClefiaEncrypt_1_rin_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
+<column name="rout_U">ClefiaEncrypt_1_rout_RAM_AUTO_1R1W, 0, 8, 2, 0, 16, 8, 1, 128</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state10_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln193_fu_152_p2">icmp, 0, 0, 9, 5, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Clefia_enc_address0">20, 4, 4, 16</column>
+<column name="Clefia_enc_ce0">20, 4, 1, 4</column>
+<column name="Clefia_enc_d0">20, 4, 8, 32</column>
+<column name="Clefia_enc_we0">20, 4, 1, 4</column>
+<column name="ap_NS_fsm">93, 19, 1, 19</column>
+<column name="fin_address0">14, 3, 4, 12</column>
+<column name="fin_ce0">14, 3, 1, 3</column>
+<column name="fin_ce1">9, 2, 1, 2</column>
+<column name="fin_d0">14, 3, 8, 24</column>
+<column name="fin_we0">14, 3, 1, 3</column>
+<column name="fin_we1">9, 2, 1, 2</column>
+<column name="fout_address0">14, 3, 4, 12</column>
+<column name="fout_ce0">14, 3, 1, 3</column>
+<column name="fout_ce1">9, 2, 1, 2</column>
+<column name="fout_we0">9, 2, 1, 2</column>
+<column name="fout_we1">9, 2, 1, 2</column>
+<column name="rin_address0">25, 5, 4, 20</column>
+<column name="rin_address1">14, 3, 4, 12</column>
+<column name="rin_ce0">25, 5, 1, 5</column>
+<column name="rin_ce1">14, 3, 1, 3</column>
+<column name="rin_d0">20, 4, 8, 32</column>
+<column name="rin_we0">20, 4, 1, 4</column>
+<column name="rk_address0">31, 6, 8, 48</column>
+<column name="rk_ce0">31, 6, 1, 6</column>
+<column name="rk_ce1">9, 2, 1, 2</column>
+<column name="rout_address0">14, 3, 4, 12</column>
+<column name="rout_ce0">14, 3, 1, 3</column>
+<column name="rout_we0">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">18, 0, 18, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119_fu_102_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120_fu_121_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121_fu_127_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118_fu_95_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122_fu_134_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123_fu_143_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln193_reg_172">1, 0, 1, 0</column>
+<column name="shl_ln_reg_176">5, 0, 8, 3</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, ClefiaEncrypt.1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, ClefiaEncrypt.1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, ClefiaEncrypt.1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, ClefiaEncrypt.1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, ClefiaEncrypt.1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, ClefiaEncrypt.1, return value</column>
+<column name="Clefia_enc_address0">out, 4, ap_memory, Clefia_enc, array</column>
+<column name="Clefia_enc_ce0">out, 1, ap_memory, Clefia_enc, array</column>
+<column name="Clefia_enc_we0">out, 1, ap_memory, Clefia_enc, array</column>
+<column name="Clefia_enc_d0">out, 8, ap_memory, Clefia_enc, array</column>
+<column name="Clefia_enc_q0">in, 8, ap_memory, Clefia_enc, array</column>
+<column name="pt_address0">out, 4, ap_memory, pt, array</column>
+<column name="pt_ce0">out, 1, ap_memory, pt, array</column>
+<column name="pt_q0">in, 8, ap_memory, pt, array</column>
+<column name="rk_address0">out, 8, ap_memory, rk, array</column>
+<column name="rk_ce0">out, 1, ap_memory, rk, array</column>
+<column name="rk_q0">in, 8, ap_memory, rk, array</column>
+<column name="rk_address1">out, 8, ap_memory, rk, array</column>
+<column name="rk_ce1">out, 1, ap_memory, rk, array</column>
+<column name="rk_q1">in, 8, ap_memory, rk, array</column>
+<column name="r">in, 5, ap_none, r, scalar</column>
+</table>
+</item>
+</section>
+</profile>

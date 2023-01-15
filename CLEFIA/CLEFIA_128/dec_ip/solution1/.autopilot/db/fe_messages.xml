@@ -1,0 +1,51 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_128/dec_ip/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=clefia_dec" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_128/dec_ip/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_128/dec_ip/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=ct" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_128/dec_ip/solution1/directives.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/tmp/CLEFIA/CLEFIA_128/dec_ip/solution1/directives.tcl:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clefia_dec" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pt" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Inlining function 'ByteXor' into 'ClefiaF0Xor'">
+        <args Callee="ByteXor" Caller="ClefiaF0Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Inlining function 'ClefiaMul2' into 'ClefiaF0Xor'">
+        <args Callee="ClefiaMul2" Caller="ClefiaF0Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:143:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaF0Xor'">
+        <args Callee="ByteCpy" Caller="ClefiaF0Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Inlining function 'ByteXor' into 'ClefiaF1Xor'">
+        <args Callee="ByteXor" Caller="ClefiaF1Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Inlining function 'ClefiaMul2' into 'ClefiaF1Xor'">
+        <args Callee="ClefiaMul2" Caller="ClefiaF1Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:166:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaF1Xor'">
+        <args Callee="ByteCpy" Caller="ClefiaF1Xor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:206:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaGfn4Inv'">
+        <args Callee="ByteCpy" Caller="ClefiaGfn4Inv"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:302:0" msg_body="Inlining function 'ByteCpy' into 'ClefiaDecrypt'">
+        <args Callee="ByteCpy" Caller="ClefiaDecrypt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:302:0" msg_body="Inlining function 'ByteXor' into 'ClefiaDecrypt'">
+        <args Callee="ByteXor" Caller="ClefiaDecrypt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/dec.c:302:0" msg_body="Inlining function 'ClefiaGfn4Inv' into 'ClefiaDecrypt'">
+        <args Callee="ClefiaGfn4Inv" Caller="ClefiaDecrypt"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/dec.c:124:14" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/dec.c:124:12" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/dec.c:124:21" msg_body="The program may have out of bound array access"/>
+</xilinx:hls_fe_msgs>
+

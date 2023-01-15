@@ -1,0 +1,369 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaEncrypt_1_Pipeline_ClefiaGfn4_label3'
+================================================================
+* Date:           Tue Dec  6 21:01:17 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.084 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       24|        ?|  0.240 us|         ?|   24|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- ClefiaGfn4_label3  |       22|        ?|        12|         11|          1|  1 ~ ?|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 11, depth = 12
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 1
+  Pipeline-0 : II = 11, D = 12, States = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%idx = alloca i32 1"   --->   Operation 15 'alloca' 'idx' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%dec12_i_in = alloca i32 1"   --->   Operation 16 'alloca' 'dec12_i_in' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%fin_0_3_0 = alloca i32 1"   --->   Operation 17 'alloca' 'fin_0_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%fin_1_3_0 = alloca i32 1"   --->   Operation 18 'alloca' 'fin_1_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%fin_2_3_0 = alloca i32 1"   --->   Operation 19 'alloca' 'fin_2_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%fin_3_3_0 = alloca i32 1"   --->   Operation 20 'alloca' 'fin_3_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%fin_4_3_0 = alloca i32 1"   --->   Operation 21 'alloca' 'fin_4_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%fin_5_3_0 = alloca i32 1"   --->   Operation 22 'alloca' 'fin_5_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%fin_6_3_0 = alloca i32 1"   --->   Operation 23 'alloca' 'fin_6_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%fin_7_3_0 = alloca i32 1"   --->   Operation 24 'alloca' 'fin_7_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%fin_8_3_0 = alloca i32 1"   --->   Operation 25 'alloca' 'fin_8_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%fin_9_3_0 = alloca i32 1"   --->   Operation 26 'alloca' 'fin_9_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%fin_10_3_0 = alloca i32 1"   --->   Operation 27 'alloca' 'fin_10_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%fin_11_3_0 = alloca i32 1"   --->   Operation 28 'alloca' 'fin_11_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%fin_12_3_0 = alloca i32 1"   --->   Operation 29 'alloca' 'fin_12_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%fin_13_3_0 = alloca i32 1"   --->   Operation 30 'alloca' 'fin_13_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%fin_14_3_0 = alloca i32 1"   --->   Operation 31 'alloca' 'fin_14_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%fin_15_3_0 = alloca i32 1"   --->   Operation 32 'alloca' 'fin_15_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%r_cast2_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %r_cast2"   --->   Operation 33 'read' 'r_cast2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%rin_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin"   --->   Operation 34 'read' 'rin_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%rin_16_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_16"   --->   Operation 35 'read' 'rin_16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%rin_17_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_17"   --->   Operation 36 'read' 'rin_17_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%rin_18_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_18"   --->   Operation 37 'read' 'rin_18_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%rin_23_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_23"   --->   Operation 38 'read' 'rin_23_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%rin_24_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_24"   --->   Operation 39 'read' 'rin_24_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%rin_25_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_25"   --->   Operation 40 'read' 'rin_25_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%rin_26_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_26"   --->   Operation 41 'read' 'rin_26_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%rin_19_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_19"   --->   Operation 42 'read' 'rin_19_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%rin_20_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_20"   --->   Operation 43 'read' 'rin_20_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%rin_21_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_21"   --->   Operation 44 'read' 'rin_21_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%rin_22_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_22"   --->   Operation 45 'read' 'rin_22_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%rin_27_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_27"   --->   Operation 46 'read' 'rin_27_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%rin_28_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_28"   --->   Operation 47 'read' 'rin_28_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%rin_29_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_29"   --->   Operation 48 'read' 'rin_29_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%rin_30_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rin_30"   --->   Operation 49 'read' 'rin_30_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%r_cast2_cast = zext i5 %r_cast2_read"   --->   Operation 50 'zext' 'r_cast2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_30_read, i8 %fin_15_3_0"   --->   Operation 51 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 52 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_29_read, i8 %fin_14_3_0"   --->   Operation 52 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 53 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_28_read, i8 %fin_13_3_0"   --->   Operation 53 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 54 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_27_read, i8 %fin_12_3_0"   --->   Operation 54 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 55 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_22_read, i8 %fin_11_3_0"   --->   Operation 55 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 56 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_21_read, i8 %fin_10_3_0"   --->   Operation 56 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 57 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_20_read, i8 %fin_9_3_0"   --->   Operation 57 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_19_read, i8 %fin_8_3_0"   --->   Operation 58 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 59 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_26_read, i8 %fin_7_3_0"   --->   Operation 59 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 60 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_25_read, i8 %fin_6_3_0"   --->   Operation 60 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 61 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_24_read, i8 %fin_5_3_0"   --->   Operation 61 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 62 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_23_read, i8 %fin_4_3_0"   --->   Operation 62 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 63 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_18_read, i8 %fin_3_3_0"   --->   Operation 63 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 64 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_17_read, i8 %fin_2_3_0"   --->   Operation 64 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 65 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_16_read, i8 %fin_1_3_0"   --->   Operation 65 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 66 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %rin_read, i8 %fin_0_3_0"   --->   Operation 66 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 67 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %r_cast2_cast, i32 %dec12_i_in"   --->   Operation 67 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 68 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 0, i64 %idx"   --->   Operation 68 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln0 = br void %while.body.i30"   --->   Operation 69 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.08>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%idx_load = load i64 %idx" [clefia.c:188]   --->   Operation 70 'load' 'idx_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%fin_0_3_0_load = load i8 %fin_0_3_0" [clefia.c:194]   --->   Operation 71 'load' 'fin_0_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%fin_1_3_0_load = load i8 %fin_1_3_0" [clefia.c:194]   --->   Operation 72 'load' 'fin_1_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%fin_2_3_0_load = load i8 %fin_2_3_0" [clefia.c:194]   --->   Operation 73 'load' 'fin_2_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%fin_3_3_0_load = load i8 %fin_3_3_0" [clefia.c:194]   --->   Operation 74 'load' 'fin_3_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%fin_4_3_0_load = load i8 %fin_4_3_0" [clefia.c:194]   --->   Operation 75 'load' 'fin_4_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%fin_5_3_0_load = load i8 %fin_5_3_0" [clefia.c:194]   --->   Operation 76 'load' 'fin_5_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%fin_6_3_0_load = load i8 %fin_6_3_0" [clefia.c:194]   --->   Operation 77 'load' 'fin_6_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%fin_7_3_0_load = load i8 %fin_7_3_0" [clefia.c:194]   --->   Operation 78 'load' 'fin_7_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%trunc_ln188 = trunc i64 %idx_load" [clefia.c:188]   --->   Operation 79 'trunc' 'trunc_ln188' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (1.91ns)   --->   "%add_ln194 = add i8 %trunc_ln188, i8 8" [clefia.c:194]   --->   Operation 80 'add' 'add_ln194' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 81 [5/5] (5.16ns)   --->   "%call_ret2 = call i64 @ClefiaF0Xor, i8 %fin_0_3_0_load, i8 %fin_1_3_0_load, i8 %fin_2_3_0_load, i8 %fin_3_3_0_load, i8 %fin_4_3_0_load, i8 %fin_5_3_0_load, i8 %fin_6_3_0_load, i8 %fin_7_3_0_load, i8 %rk, i8 %add_ln194, i8 %clefia_s0, i8 %clefia_s1" [clefia.c:194]   --->   Operation 81 'call' 'call_ret2' <Predicate = true> <Delay = 5.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 6.74>
+ST_3 : Operation 82 [4/5] (6.74ns)   --->   "%call_ret2 = call i64 @ClefiaF0Xor, i8 %fin_0_3_0_load, i8 %fin_1_3_0_load, i8 %fin_2_3_0_load, i8 %fin_3_3_0_load, i8 %fin_4_3_0_load, i8 %fin_5_3_0_load, i8 %fin_6_3_0_load, i8 %fin_7_3_0_load, i8 %rk, i8 %add_ln194, i8 %clefia_s0, i8 %clefia_s1" [clefia.c:194]   --->   Operation 82 'call' 'call_ret2' <Predicate = true> <Delay = 6.74> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 6.74>
+ST_4 : Operation 83 [3/5] (6.74ns)   --->   "%call_ret2 = call i64 @ClefiaF0Xor, i8 %fin_0_3_0_load, i8 %fin_1_3_0_load, i8 %fin_2_3_0_load, i8 %fin_3_3_0_load, i8 %fin_4_3_0_load, i8 %fin_5_3_0_load, i8 %fin_6_3_0_load, i8 %fin_7_3_0_load, i8 %rk, i8 %add_ln194, i8 %clefia_s0, i8 %clefia_s1" [clefia.c:194]   --->   Operation 83 'call' 'call_ret2' <Predicate = true> <Delay = 6.74> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 6.74>
+ST_5 : Operation 84 [2/5] (6.74ns)   --->   "%call_ret2 = call i64 @ClefiaF0Xor, i8 %fin_0_3_0_load, i8 %fin_1_3_0_load, i8 %fin_2_3_0_load, i8 %fin_3_3_0_load, i8 %fin_4_3_0_load, i8 %fin_5_3_0_load, i8 %fin_6_3_0_load, i8 %fin_7_3_0_load, i8 %rk, i8 %add_ln194, i8 %clefia_s0, i8 %clefia_s1" [clefia.c:194]   --->   Operation 84 'call' 'call_ret2' <Predicate = true> <Delay = 6.74> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 6.74>
+ST_6 : Operation 85 [1/5] (6.74ns)   --->   "%call_ret2 = call i64 @ClefiaF0Xor, i8 %fin_0_3_0_load, i8 %fin_1_3_0_load, i8 %fin_2_3_0_load, i8 %fin_3_3_0_load, i8 %fin_4_3_0_load, i8 %fin_5_3_0_load, i8 %fin_6_3_0_load, i8 %fin_7_3_0_load, i8 %rk, i8 %add_ln194, i8 %clefia_s0, i8 %clefia_s1" [clefia.c:194]   --->   Operation 85 'call' 'call_ret2' <Predicate = true> <Delay = 6.74> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%fin_12 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 86 'extractvalue' 'fin_12' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%fin_13 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 87 'extractvalue' 'fin_13' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%fin_14 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 88 'extractvalue' 'fin_14' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] (0.00ns)   --->   "%fin_15 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 89 'extractvalue' 'fin_15' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%fin_0 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 90 'extractvalue' 'fin_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%fin_1 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 91 'extractvalue' 'fin_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%fin_2 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 92 'extractvalue' 'fin_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "%fin_3 = extractvalue i64 %call_ret2" [clefia.c:194]   --->   Operation 93 'extractvalue' 'fin_3' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 7.08>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%fin_8_3_0_load = load i8 %fin_8_3_0" [clefia.c:195]   --->   Operation 94 'load' 'fin_8_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%fin_9_3_0_load = load i8 %fin_9_3_0" [clefia.c:195]   --->   Operation 95 'load' 'fin_9_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%fin_10_3_0_load = load i8 %fin_10_3_0" [clefia.c:195]   --->   Operation 96 'load' 'fin_10_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%fin_11_3_0_load = load i8 %fin_11_3_0" [clefia.c:195]   --->   Operation 97 'load' 'fin_11_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "%fin_12_3_0_load = load i8 %fin_12_3_0" [clefia.c:195]   --->   Operation 98 'load' 'fin_12_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%fin_13_3_0_load = load i8 %fin_13_3_0" [clefia.c:195]   --->   Operation 99 'load' 'fin_13_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "%fin_14_3_0_load = load i8 %fin_14_3_0" [clefia.c:195]   --->   Operation 100 'load' 'fin_14_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 101 [1/1] (0.00ns)   --->   "%fin_15_3_0_load = load i8 %fin_15_3_0" [clefia.c:195]   --->   Operation 101 'load' 'fin_15_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 102 [1/1] (1.91ns)   --->   "%add_ln195 = add i8 %trunc_ln188, i8 12" [clefia.c:195]   --->   Operation 102 'add' 'add_ln195' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 103 [6/6] (5.16ns)   --->   "%call_ret = call i64 @ClefiaF1Xor.3, i8 %fin_8_3_0_load, i8 %fin_9_3_0_load, i8 %fin_10_3_0_load, i8 %fin_11_3_0_load, i8 %fin_12_3_0_load, i8 %fin_13_3_0_load, i8 %fin_14_3_0_load, i8 %fin_15_3_0_load, i8 %rk, i8 %add_ln195, i8 %clefia_s1, i8 %clefia_s0" [clefia.c:195]   --->   Operation 103 'call' 'call_ret' <Predicate = true> <Delay = 5.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 6.99>
+ST_8 : Operation 104 [5/6] (6.99ns)   --->   "%call_ret = call i64 @ClefiaF1Xor.3, i8 %fin_8_3_0_load, i8 %fin_9_3_0_load, i8 %fin_10_3_0_load, i8 %fin_11_3_0_load, i8 %fin_12_3_0_load, i8 %fin_13_3_0_load, i8 %fin_14_3_0_load, i8 %fin_15_3_0_load, i8 %rk, i8 %add_ln195, i8 %clefia_s1, i8 %clefia_s0" [clefia.c:195]   --->   Operation 104 'call' 'call_ret' <Predicate = true> <Delay = 6.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 6.99>
+ST_9 : Operation 105 [4/6] (6.99ns)   --->   "%call_ret = call i64 @ClefiaF1Xor.3, i8 %fin_8_3_0_load, i8 %fin_9_3_0_load, i8 %fin_10_3_0_load, i8 %fin_11_3_0_load, i8 %fin_12_3_0_load, i8 %fin_13_3_0_load, i8 %fin_14_3_0_load, i8 %fin_15_3_0_load, i8 %rk, i8 %add_ln195, i8 %clefia_s1, i8 %clefia_s0" [clefia.c:195]   --->   Operation 105 'call' 'call_ret' <Predicate = true> <Delay = 6.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 6.99>
+ST_10 : Operation 106 [3/6] (6.99ns)   --->   "%call_ret = call i64 @ClefiaF1Xor.3, i8 %fin_8_3_0_load, i8 %fin_9_3_0_load, i8 %fin_10_3_0_load, i8 %fin_11_3_0_load, i8 %fin_12_3_0_load, i8 %fin_13_3_0_load, i8 %fin_14_3_0_load, i8 %fin_15_3_0_load, i8 %rk, i8 %add_ln195, i8 %clefia_s1, i8 %clefia_s0" [clefia.c:195]   --->   Operation 106 'call' 'call_ret' <Predicate = true> <Delay = 6.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 6.99>
+ST_11 : Operation 107 [1/1] (0.00ns)   --->   "%dec12_i_in_load = load i32 %dec12_i_in" [clefia.c:188]   --->   Operation 107 'load' 'dec12_i_in_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 108 [1/1] (2.55ns)   --->   "%add_ln188_1 = add i32 %dec12_i_in_load, i32 4294967295" [clefia.c:188]   --->   Operation 108 'add' 'add_ln188_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 109 [2/6] (6.99ns)   --->   "%call_ret = call i64 @ClefiaF1Xor.3, i8 %fin_8_3_0_load, i8 %fin_9_3_0_load, i8 %fin_10_3_0_load, i8 %fin_11_3_0_load, i8 %fin_12_3_0_load, i8 %fin_13_3_0_load, i8 %fin_14_3_0_load, i8 %fin_15_3_0_load, i8 %rk, i8 %add_ln195, i8 %clefia_s1, i8 %clefia_s0" [clefia.c:195]   --->   Operation 109 'call' 'call_ret' <Predicate = true> <Delay = 6.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 110 [1/1] (2.47ns)   --->   "%icmp_ln193 = icmp_sgt  i32 %add_ln188_1, i32 0" [clefia.c:193]   --->   Operation 110 'icmp' 'icmp_ln193' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln193 = br i1 %icmp_ln193, void %while.body.i77.loopexit.exitStub, void %while.body.i30.while.body.i30_crit_edge" [clefia.c:193]   --->   Operation 111 'br' 'br_ln193' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 5.30>
+ST_12 : Operation 112 [1/1] (0.00ns)   --->   "%specpipeline_ln14 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [D:/tmp/CLEFIA_ip/solution2/directives.tcl:14]   --->   Operation 112 'specpipeline' 'specpipeline_ln14' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 113 [1/1] (0.00ns)   --->   "%specloopname_ln188 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [clefia.c:188]   --->   Operation 113 'specloopname' 'specloopname_ln188' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 114 [1/1] (3.52ns)   --->   "%add_ln188 = add i64 %idx_load, i64 8" [clefia.c:188]   --->   Operation 114 'add' 'add_ln188' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 115 [1/6] (1.98ns)   --->   "%call_ret = call i64 @ClefiaF1Xor.3, i8 %fin_8_3_0_load, i8 %fin_9_3_0_load, i8 %fin_10_3_0_load, i8 %fin_11_3_0_load, i8 %fin_12_3_0_load, i8 %fin_13_3_0_load, i8 %fin_14_3_0_load, i8 %fin_15_3_0_load, i8 %rk, i8 %add_ln195, i8 %clefia_s1, i8 %clefia_s0" [clefia.c:195]   --->   Operation 115 'call' 'call_ret' <Predicate = true> <Delay = 1.98> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 116 [1/1] (0.00ns)   --->   "%fin_4 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 116 'extractvalue' 'fin_4' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 117 [1/1] (0.00ns)   --->   "%fin_5 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 117 'extractvalue' 'fin_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 118 [1/1] (0.00ns)   --->   "%fin_6 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 118 'extractvalue' 'fin_6' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 119 [1/1] (0.00ns)   --->   "%fin_7 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 119 'extractvalue' 'fin_7' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 120 [1/1] (0.00ns)   --->   "%fin_8 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 120 'extractvalue' 'fin_8' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 121 [1/1] (0.00ns)   --->   "%fin_9 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 121 'extractvalue' 'fin_9' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 122 [1/1] (0.00ns)   --->   "%fin_10 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 122 'extractvalue' 'fin_10' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 123 [1/1] (0.00ns)   --->   "%fin_11 = extractvalue i64 %call_ret" [clefia.c:195]   --->   Operation 123 'extractvalue' 'fin_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 124 [1/1] (2.47ns)   --->   "%icmp_ln197 = icmp_eq  i32 %add_ln188_1, i32 0" [clefia.c:197]   --->   Operation 124 'icmp' 'icmp_ln197' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 125 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0"   --->   Operation 125 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 126 [1/1] (1.24ns)   --->   "%select_ln197 = select i1 %icmp_ln197, i8 %fin_15_3_0_load, i8 %fin_15" [clefia.c:197]   --->   Operation 126 'select' 'select_ln197' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 127 [1/1] (1.24ns)   --->   "%select_ln197_16 = select i1 %icmp_ln197, i8 %fin_14_3_0_load, i8 %fin_14" [clefia.c:197]   --->   Operation 127 'select' 'select_ln197_16' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 128 [1/1] (1.24ns)   --->   "%select_ln197_17 = select i1 %icmp_ln197, i8 %fin_13_3_0_load, i8 %fin_13" [clefia.c:197]   --->   Operation 128 'select' 'select_ln197_17' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 129 [1/1] (1.24ns)   --->   "%select_ln197_18 = select i1 %icmp_ln197, i8 %fin_12_3_0_load, i8 %fin_12" [clefia.c:197]   --->   Operation 129 'select' 'select_ln197_18' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 130 [1/1] (1.24ns)   --->   "%select_ln197_19 = select i1 %icmp_ln197, i8 %fin_11_3_0_load, i8 %fin_11" [clefia.c:197]   --->   Operation 130 'select' 'select_ln197_19' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 131 [1/1] (1.24ns)   --->   "%select_ln197_20 = select i1 %icmp_ln197, i8 %fin_10_3_0_load, i8 %fin_10" [clefia.c:197]   --->   Operation 131 'select' 'select_ln197_20' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 132 [1/1] (1.24ns)   --->   "%select_ln197_21 = select i1 %icmp_ln197, i8 %fin_9_3_0_load, i8 %fin_9" [clefia.c:197]   --->   Operation 132 'select' 'select_ln197_21' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 133 [1/1] (1.24ns)   --->   "%select_ln197_22 = select i1 %icmp_ln197, i8 %fin_8_3_0_load, i8 %fin_8" [clefia.c:197]   --->   Operation 133 'select' 'select_ln197_22' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 134 [1/1] (1.24ns)   --->   "%select_ln197_23 = select i1 %icmp_ln197, i8 %fin_7_3_0_load, i8 %fin_7" [clefia.c:197]   --->   Operation 134 'select' 'select_ln197_23' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 135 [1/1] (1.24ns)   --->   "%select_ln197_24 = select i1 %icmp_ln197, i8 %fin_6_3_0_load, i8 %fin_6" [clefia.c:197]   --->   Operation 135 'select' 'select_ln197_24' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 136 [1/1] (1.24ns)   --->   "%select_ln197_25 = select i1 %icmp_ln197, i8 %fin_5_3_0_load, i8 %fin_5" [clefia.c:197]   --->   Operation 136 'select' 'select_ln197_25' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 137 [1/1] (1.24ns)   --->   "%select_ln197_26 = select i1 %icmp_ln197, i8 %fin_4_3_0_load, i8 %fin_4" [clefia.c:197]   --->   Operation 137 'select' 'select_ln197_26' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 138 [1/1] (1.24ns)   --->   "%select_ln197_27 = select i1 %icmp_ln197, i8 %fin_3_3_0_load, i8 %fin_3" [clefia.c:197]   --->   Operation 138 'select' 'select_ln197_27' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 139 [1/1] (1.24ns)   --->   "%select_ln197_28 = select i1 %icmp_ln197, i8 %fin_2_3_0_load, i8 %fin_2" [clefia.c:197]   --->   Operation 139 'select' 'select_ln197_28' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 140 [1/1] (1.24ns)   --->   "%select_ln197_29 = select i1 %icmp_ln197, i8 %fin_1_3_0_load, i8 %fin_1" [clefia.c:197]   --->   Operation 140 'select' 'select_ln197_29' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 141 [1/1] (1.24ns)   --->   "%select_ln197_30 = select i1 %icmp_ln197, i8 %fin_0_3_0_load, i8 %fin_0" [clefia.c:197]   --->   Operation 141 'select' 'select_ln197_30' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 142 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197, i8 %fin_15_3_0" [clefia.c:193]   --->   Operation 142 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 143 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_16, i8 %fin_14_3_0" [clefia.c:193]   --->   Operation 143 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 144 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_17, i8 %fin_13_3_0" [clefia.c:193]   --->   Operation 144 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 145 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_18, i8 %fin_12_3_0" [clefia.c:193]   --->   Operation 145 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 146 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_19, i8 %fin_11_3_0" [clefia.c:193]   --->   Operation 146 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 147 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_20, i8 %fin_10_3_0" [clefia.c:193]   --->   Operation 147 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 148 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_21, i8 %fin_9_3_0" [clefia.c:193]   --->   Operation 148 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 149 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_22, i8 %fin_8_3_0" [clefia.c:193]   --->   Operation 149 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 150 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_23, i8 %fin_7_3_0" [clefia.c:193]   --->   Operation 150 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 151 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_24, i8 %fin_6_3_0" [clefia.c:193]   --->   Operation 151 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 152 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_25, i8 %fin_5_3_0" [clefia.c:193]   --->   Operation 152 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 153 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_26, i8 %fin_4_3_0" [clefia.c:193]   --->   Operation 153 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 154 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_27, i8 %fin_3_3_0" [clefia.c:193]   --->   Operation 154 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 155 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_28, i8 %fin_2_3_0" [clefia.c:193]   --->   Operation 155 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 156 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_29, i8 %fin_1_3_0" [clefia.c:193]   --->   Operation 156 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 157 [1/1] (1.58ns)   --->   "%store_ln193 = store i8 %select_ln197_30, i8 %fin_0_3_0" [clefia.c:193]   --->   Operation 157 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 158 [1/1] (1.58ns)   --->   "%store_ln193 = store i32 %add_ln188_1, i32 %dec12_i_in" [clefia.c:193]   --->   Operation 158 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 159 [1/1] (1.58ns)   --->   "%store_ln193 = store i64 %add_ln188, i64 %idx" [clefia.c:193]   --->   Operation 159 'store' 'store_ln193' <Predicate = (icmp_ln193)> <Delay = 1.58>
+ST_12 : Operation 160 [1/1] (0.00ns)   --->   "%br_ln193 = br void %while.body.i30" [clefia.c:193]   --->   Operation 160 'br' 'br_ln193' <Predicate = (icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 161 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_12_out, i8 %fin_12" [clefia.c:194]   --->   Operation 161 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 162 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_13_out, i8 %fin_13" [clefia.c:194]   --->   Operation 162 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 163 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_14_out, i8 %fin_14" [clefia.c:194]   --->   Operation 163 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 164 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_15_out, i8 %fin_15" [clefia.c:194]   --->   Operation 164 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 165 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_0_out, i8 %fin_0" [clefia.c:194]   --->   Operation 165 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 166 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_1_out, i8 %fin_1" [clefia.c:194]   --->   Operation 166 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 167 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_2_out, i8 %fin_2" [clefia.c:194]   --->   Operation 167 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 168 [1/1] (0.00ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_3_out, i8 %fin_3" [clefia.c:194]   --->   Operation 168 'write' 'write_ln194' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 169 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_4_out, i8 %fin_4" [clefia.c:195]   --->   Operation 169 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 170 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_5_out, i8 %fin_5" [clefia.c:195]   --->   Operation 170 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 171 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_6_out, i8 %fin_6" [clefia.c:195]   --->   Operation 171 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 172 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_7_out, i8 %fin_7" [clefia.c:195]   --->   Operation 172 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 173 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_8_out, i8 %fin_8" [clefia.c:195]   --->   Operation 173 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 174 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_9_out, i8 %fin_9" [clefia.c:195]   --->   Operation 174 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 175 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_10_out, i8 %fin_10" [clefia.c:195]   --->   Operation 175 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 176 [1/1] (0.00ns)   --->   "%write_ln195 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %fin_11_out, i8 %fin_11" [clefia.c:195]   --->   Operation 176 'write' 'write_ln195' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+ST_12 : Operation 177 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 177 'ret' 'ret_ln0' <Predicate = (!icmp_ln193)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'store' operation ('store_ln0') of variable 'rin_30_read' on local variable 'fin_15_3_0' [73]  (1.59 ns)
+
+ <State 2>: 7.08ns
+The critical path consists of the following:
+	'load' operation ('idx_load', clefia.c:188) on local variable 'idx' [93]  (0 ns)
+	'add' operation ('add_ln194', clefia.c:194) [116]  (1.92 ns)
+	'call' operation ('call_ret2', clefia.c:194) to 'ClefiaF0Xor' [117]  (5.17 ns)
+
+ <State 3>: 6.74ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', clefia.c:194) to 'ClefiaF0Xor' [117]  (6.74 ns)
+
+ <State 4>: 6.74ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', clefia.c:194) to 'ClefiaF0Xor' [117]  (6.74 ns)
+
+ <State 5>: 6.74ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', clefia.c:194) to 'ClefiaF0Xor' [117]  (6.74 ns)
+
+ <State 6>: 6.74ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', clefia.c:194) to 'ClefiaF0Xor' [117]  (6.74 ns)
+
+ <State 7>: 7.08ns
+The critical path consists of the following:
+	'add' operation ('add_ln195', clefia.c:195) [126]  (1.92 ns)
+	'call' operation ('call_ret', clefia.c:195) to 'ClefiaF1Xor.3' [127]  (5.17 ns)
+
+ <State 8>: 7ns
+The critical path consists of the following:
+	'call' operation ('call_ret', clefia.c:195) to 'ClefiaF1Xor.3' [127]  (7 ns)
+
+ <State 9>: 7ns
+The critical path consists of the following:
+	'call' operation ('call_ret', clefia.c:195) to 'ClefiaF1Xor.3' [127]  (7 ns)
+
+ <State 10>: 7ns
+The critical path consists of the following:
+	'call' operation ('call_ret', clefia.c:195) to 'ClefiaF1Xor.3' [127]  (7 ns)
+
+ <State 11>: 7ns
+The critical path consists of the following:
+	'call' operation ('call_ret', clefia.c:195) to 'ClefiaF1Xor.3' [127]  (7 ns)
+
+ <State 12>: 5.31ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln197', clefia.c:197) [136]  (2.47 ns)
+	'select' operation ('select_ln197', clefia.c:197) [138]  (1.25 ns)
+	'store' operation ('store_ln193', clefia.c:193) of variable 'select_ln197', clefia.c:197 on local variable 'fin_15_3_0' [157]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,595 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clefia'
+================================================================
++ General Information: 
+    * Date:           Tue Dec  6 19:11:13 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        CLEFIA_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+-----------+-------------+-----+
+    |                      Modules                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |    |           |             |     |
+    |                      & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF    |     LUT     | URAM|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+-----------+-------------+-----+
+    |+ clefia                                          |     -|  0.22|        -|          -|         -|        -|     -|        no|  28 (10%)|   -|  4689 (4%)|  20301 (38%)|    -|
+    | + ClefiaKeySet256                                |     -|  0.30|     1790|  1.790e+04|         -|     1790|     -|        no|    7 (2%)|   -|  894 (~0%)|    4444 (8%)|    -|
+    |  + ClefiaKeySet256_Pipeline_VITIS_LOOP_116_1     |     -|  2.66|       35|    350.000|         -|       35|     -|        no|         -|   -|   22 (~0%)|     64 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1     |     -|  0.30|      585|  5.850e+03|         -|      585|     -|        no|    5 (1%)|   -|  496 (~0%)|    2601 (4%)|    -|
+    |   o VITIS_LOOP_210_1                             |    II|  7.30|      583|  5.830e+03|        54|       53|    10|       yes|         -|   -|          -|            -|    -|
+    |    + ClefiaF0Xor_2                               |    II|  1.55|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  200 (~0%)|     783 (1%)|    -|
+    |    + ClefiaF1Xor_2                               |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  216 (~0%)|     839 (1%)|    -|
+    |  + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_1     |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|   27 (~0%)|     72 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet256_Pipeline_VITIS_LOOP_116_13    |     -|  2.66|       35|    350.000|         -|       35|     -|        no|         -|   -|   14 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_18    |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|   27 (~0%)|     91 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|          -|            -|    -|
+    |  o VITIS_LOOP_373_1                              |     -|  7.30|     1118|  1.118e+04|        86|        -|    13|        no|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_16   |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|   28 (~0%)|     98 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_14   |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|   28 (~0%)|    104 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_17   |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|   42 (~0%)|     94 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |   + ClefiaDoubleSwap_1                           |     -|  2.66|       43|    430.000|         -|       43|     -|        no|         -|   -|   65 (~0%)|     604 (1%)|    -|
+    |    o VITIS_LOOP_116_1                            |     -|  7.30|       33|    330.000|         2|        -|    16|        no|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_15   |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|   42 (~0%)|     88 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    | + ClefiaKeySet192                                |     -|  0.30|     1618|  1.618e+04|         -|     1618|     -|        no|    7 (2%)|   -|  854 (~0%)|    4519 (8%)|    -|
+    |  + ClefiaKeySet192_Pipeline_VITIS_LOOP_116_1     |     -|  2.66|       35|    350.000|         -|       35|     -|        no|         -|   -|   14 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1     |     -|  0.30|      585|  5.850e+03|         -|      585|     -|        no|    5 (1%)|   -|  496 (~0%)|    2601 (4%)|    -|
+    |   o VITIS_LOOP_210_1                             |    II|  7.30|      583|  5.830e+03|        54|       53|    10|       yes|         -|   -|          -|            -|    -|
+    |    + ClefiaF0Xor_1                               |    II|  1.55|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  200 (~0%)|     783 (1%)|    -|
+    |    + ClefiaF1Xor_1                               |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  216 (~0%)|     839 (1%)|    -|
+    |  + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_1     |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|   11 (~0%)|     68 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet192_Pipeline_VITIS_LOOP_116_19    |     -|  2.66|       35|    350.000|         -|       35|     -|        no|         -|   -|   14 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_114   |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|   11 (~0%)|     88 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|          -|            -|    -|
+    |  o VITIS_LOOP_340_2                              |     -|  7.30|      946|  9.460e+03|        86|        -|    11|        no|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_112  |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|   28 (~0%)|     98 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_110  |     -|  0.73|       19|    190.000|         -|       19|     -|        no|   1 (~0%)|   -|   28 (~0%)|    104 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_113  |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|   34 (~0%)|     90 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |   + ClefiaDoubleSwap_1                           |     -|  2.66|       43|    430.000|         -|       43|     -|        no|         -|   -|   65 (~0%)|     604 (1%)|    -|
+    |    o VITIS_LOOP_116_1                            |     -|  7.30|       33|    330.000|         2|        -|    16|        no|         -|   -|          -|            -|    -|
+    |   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_111  |     -|  2.13|       19|    190.000|         -|       19|     -|        no|         -|   -|   34 (~0%)|     84 (~0%)|    -|
+    |    o VITIS_LOOP_123_1                            |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|         -|   -|          -|            -|    -|
+    | + ClefiaKeySet128                                |     -|  0.30|      563|  5.630e+03|         -|      563|     -|        no|    5 (1%)|   -|  985 (~0%)|    4080 (7%)|    -|
+    |  + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1     |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   20 (~0%)|     64 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1     |     -|  0.30|      353|  3.530e+03|         -|      353|     -|        no|    4 (1%)|   -|  407 (~0%)|    1894 (3%)|    -|
+    |   o VITIS_LOOP_193_1                             |    II|  7.30|      351|  3.510e+03|        28|       27|    12|       yes|         -|   -|          -|            -|    -|
+    |    + ClefiaF0Xor_125                             |    II|  1.55|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  166 (~0%)|     601 (1%)|    -|
+    |    + ClefiaF1Xor                                 |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  189 (~0%)|     660 (1%)|    -|
+    |  + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116   |     -|  1.72|       10|    100.000|         -|       10|     -|        no|         -|   -|   19 (~0%)|     64 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_115   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet128_Pipeline_VITIS_LOOP_309_1     |     -|  2.13|      153|  1.530e+03|         -|      153|     -|        no|         -|   -|  444 (~0%)|    1518 (2%)|    -|
+    |   o VITIS_LOOP_309_1                             |    II|  7.30|      151|  1.510e+03|        19|       16|     9|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117   |     -|  1.72|       10|    100.000|         -|       10|     -|        no|         -|   -|   19 (~0%)|     84 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|         -|   -|          -|            -|    -|
+    | + ClefiaEncrypt_1                                |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|  780 (~0%)|    3221 (6%)|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1     |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1     |     -|  0.48|        7|     70.000|         -|        7|     -|        no|         -|   -|   81 (~0%)|    119 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118   |     -|  0.48|        7|     70.000|         -|        7|     -|        no|         -|   -|   80 (~0%)|    119 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1     |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|  463 (~0%)|    1992 (3%)|    -|
+    |   o VITIS_LOOP_193_1                             |    II|  7.30|        -|          -|        28|       27|     -|       yes|         -|   -|          -|            -|    -|
+    |    + ClefiaF0Xor                                 |    II|  1.55|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  159 (~0%)|     590 (1%)|    -|
+    |    + ClefiaF1Xor_3                               |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  159 (~0%)|     646 (1%)|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122   |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|    9 (~0%)|    102 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123   |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|   10 (~0%)|    102 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|         -|   -|          -|            -|    -|
+    | + clefia_Pipeline_VITIS_LOOP_116_1               |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |  o VITIS_LOOP_116_1                              |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    | + ClefiaDecrypt_1                                |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|  782 (~0%)|    3215 (6%)|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_1     |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_1     |     -|  0.48|        7|     70.000|         -|        7|     -|        no|         -|   -|   81 (~0%)|    134 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_124   |     -|  0.48|        7|     70.000|         -|        7|     -|        no|         -|   -|   80 (~0%)|    134 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_125   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1     |     -|  0.22|        -|          -|         -|        -|     -|        no|    4 (1%)|   -|  465 (~0%)|    1986 (3%)|    -|
+    |   o VITIS_LOOP_230_1                             |    II|  7.30|        -|          -|        28|       27|     -|       yes|         -|   -|          -|            -|    -|
+    |    + ClefiaF0Xor                                 |    II|  1.55|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  159 (~0%)|     590 (1%)|    -|
+    |    + ClefiaF1Xor_3                               |    II|  0.30|        8|     80.000|         -|        4|     -|       yes|   2 (~0%)|   -|  159 (~0%)|     646 (1%)|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_126   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_127   |     -|  2.66|       19|    190.000|         -|       19|     -|        no|         -|   -|   12 (~0%)|     60 (~0%)|    -|
+    |   o VITIS_LOOP_116_1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_128   |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|    9 (~0%)|     87 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|         -|   -|          -|            -|    -|
+    |  + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_129   |     -|  0.73|       10|    100.000|         -|       10|     -|        no|         -|   -|   10 (~0%)|     87 (~0%)|    -|
+    |   o VITIS_LOOP_123_1                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|         -|   -|          -|            -|    -|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | key_bitlen | 0x20   | 32    | W      | Data signal of key_bitlen        |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+-----------------------+
+| Argument   | Direction | Datatype              |
++------------+-----------+-----------------------+
+| pt         | in        | unsigned char const * |
+| key_bitlen | in        | int                   |
+| Clefia_enc | inout     | unsigned char const * |
+| Clefia_dec | inout     | unsigned char const * |
++------------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++------------+---------------+----------+--------------------------------------+
+| Argument   | HW Interface  | HW Type  | HW Info                              |
++------------+---------------+----------+--------------------------------------+
+| pt         | s_axi_control | memory   | name=pt offset=16 range=16           |
+| key_bitlen | s_axi_control | register | name=key_bitlen offset=0x20 range=32 |
+| Clefia_enc | s_axi_control | memory   | name=Clefia_enc offset=48 range=16   |
+| Clefia_dec | s_axi_control | memory   | name=Clefia_dec offset=64 range=16   |
++------------+---------------+----------+--------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                                   | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++--------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + clefia                                               | 0   |        |              |     |        |         |
+|  + ClefiaKeySet256                                     | 0   |        |              |     |        |         |
+|    add_ln373_fu_196_p2                                 | -   |        | add_ln373    | add | fabric | 0       |
+|    add_ln381_fu_234_p2                                 | -   |        | add_ln381    | add | fabric | 0       |
+|    add_ln387_fu_242_p2                                 | -   |        | add_ln387    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_116_1          | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1          | 0   |        |              |     |        |         |
+|     add_ln215_fu_798_p2                                | -   |        | add_ln215    | add | fabric | 0       |
+|     add_ln210_fu_783_p2                                | -   |        | add_ln210    | add | fabric | 0       |
+|    + ClefiaF0Xor_2                                     | 0   |        |              |     |        |         |
+|      add_ln121_fu_347_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_54_fu_322_p2                            | -   |        | add_ln121_54 | add | fabric | 0       |
+|      add_ln121_55_fu_389_p2                            | -   |        | add_ln121_55 | add | fabric | 0       |
+|      add_ln121_56_fu_358_p2                            | -   |        | add_ln121_56 | add | fabric | 0       |
+|      add_ln121_57_fu_423_p2                            | -   |        | add_ln121_57 | add | fabric | 0       |
+|      add_ln121_58_fu_368_p2                            | -   |        | add_ln121_58 | add | fabric | 0       |
+|      add_ln114_fu_378_p2                               | -   |        | add_ln114    | add | fabric | 0       |
+|      add_ln114_5_fu_403_p2                             | -   |        | add_ln114_5  | add | fabric | 0       |
+|      add_ln114_6_fu_413_p2                             | -   |        | add_ln114_6  | add | fabric | 0       |
+|      add_ln121_59_fu_756_p2                            | -   |        | add_ln121_59 | add | fabric | 0       |
+|      add_ln121_60_fu_788_p2                            | -   |        | add_ln121_60 | add | fabric | 0       |
+|      add_ln121_61_fu_766_p2                            | -   |        | add_ln121_61 | add | fabric | 0       |
+|      add_ln121_62_fu_826_p2                            | -   |        | add_ln121_62 | add | fabric | 0       |
+|      add_ln121_63_fu_864_p2                            | -   |        | add_ln121_63 | add | fabric | 0       |
+|      add_ln121_64_fu_896_p2                            | -   |        | add_ln121_64 | add | fabric | 0       |
+|      add_ln121_65_fu_874_p2                            | -   |        | add_ln121_65 | add | fabric | 0       |
+|      add_ln121_66_fu_934_p2                            | -   |        | add_ln121_66 | add | fabric | 0       |
+|    + ClefiaF1Xor_2                                     | 0   |        |              |     |        |         |
+|      add_ln121_fu_347_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_26_fu_322_p2                            | -   |        | add_ln121_26 | add | fabric | 0       |
+|      add_ln121_27_fu_389_p2                            | -   |        | add_ln121_27 | add | fabric | 0       |
+|      add_ln121_28_fu_358_p2                            | -   |        | add_ln121_28 | add | fabric | 0       |
+|      add_ln121_29_fu_423_p2                            | -   |        | add_ln121_29 | add | fabric | 0       |
+|      add_ln121_30_fu_368_p2                            | -   |        | add_ln121_30 | add | fabric | 0       |
+|      add_ln114_fu_378_p2                               | -   |        | add_ln114    | add | fabric | 0       |
+|      add_ln114_1_fu_403_p2                             | -   |        | add_ln114_1  | add | fabric | 0       |
+|      add_ln114_2_fu_413_p2                             | -   |        | add_ln114_2  | add | fabric | 0       |
+|      add_ln121_31_fu_929_p2                            | -   |        | add_ln121_31 | add | fabric | 0       |
+|      add_ln121_32_fu_973_p2                            | -   |        | add_ln121_32 | add | fabric | 0       |
+|      add_ln121_33_fu_939_p2                            | -   |        | add_ln121_33 | add | fabric | 0       |
+|      add_ln121_34_fu_1011_p2                           | -   |        | add_ln121_34 | add | fabric | 0       |
+|      add_ln121_35_fu_1049_p2                           | -   |        | add_ln121_35 | add | fabric | 0       |
+|      add_ln121_36_fu_1069_p2                           | -   |        | add_ln121_36 | add | fabric | 0       |
+|      add_ln121_37_fu_1059_p2                           | -   |        | add_ln121_37 | add | fabric | 0       |
+|      add_ln121_38_fu_1100_p2                           | -   |        | add_ln121_38 | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_1          | 0   |        |              |     |        |         |
+|     add_ln124_fu_90_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_116_13         | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_16         | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_1_fu_142_p2                              | -   |        | add_ln121_1  | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_14         | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_2_fu_148_p2                              | -   |        | add_ln121_2  | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_18         | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_122_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_17         | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_109_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaDoubleSwap_1 (grp_ClefiaDoubleSwap_1_fu_157) | 0   |        |              |     |        |         |
+|     add_ln246_fu_448_p2                                | -   |        | add_ln246    | add | fabric | 0       |
+|     add_ln247_fu_458_p2                                | -   |        | add_ln247    | add | fabric | 0       |
+|     add_ln248_fu_493_p2                                | -   |        | add_ln248    | add | fabric | 0       |
+|     add_ln249_fu_503_p2                                | -   |        | add_ln249    | add | fabric | 0       |
+|     add_ln250_fu_538_p2                                | -   |        | add_ln250    | add | fabric | 0       |
+|     add_ln251_fu_548_p2                                | -   |        | add_ln251    | add | fabric | 0       |
+|     add_ln252_fu_583_p2                                | -   |        | add_ln252    | add | fabric | 0       |
+|     add_ln253_fu_593_p2                                | -   |        | add_ln253    | add | fabric | 0       |
+|     add_ln255_fu_628_p2                                | -   |        | add_ln255    | add | fabric | 0       |
+|     add_ln256_fu_638_p2                                | -   |        | add_ln256    | add | fabric | 0       |
+|     add_ln257_fu_669_p2                                | -   |        | add_ln257    | add | fabric | 0       |
+|     add_ln258_fu_683_p2                                | -   |        | add_ln258    | add | fabric | 0       |
+|     add_ln259_fu_714_p2                                | -   |        | add_ln259    | add | fabric | 0       |
+|     add_ln260_fu_728_p2                                | -   |        | add_ln260    | add | fabric | 0       |
+|     add_ln261_fu_759_p2                                | -   |        | add_ln261    | add | fabric | 0       |
+|     add_ln114_fu_804_p2                                | -   |        | add_ln114    | add | fabric | 0       |
+|     add_ln117_fu_814_p2                                | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_15         | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_103_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|  + ClefiaKeySet192                                     | 0   |        |              |     |        |         |
+|    add_ln340_fu_196_p2                                 | -   |        | add_ln340    | add | fabric | 0       |
+|    add_ln348_fu_234_p2                                 | -   |        | add_ln348    | add | fabric | 0       |
+|    add_ln354_fu_242_p2                                 | -   |        | add_ln354    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_116_1          | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1          | 0   |        |              |     |        |         |
+|     add_ln215_fu_798_p2                                | -   |        | add_ln215    | add | fabric | 0       |
+|     add_ln210_fu_783_p2                                | -   |        | add_ln210    | add | fabric | 0       |
+|    + ClefiaF0Xor_1                                     | 0   |        |              |     |        |         |
+|      add_ln121_fu_347_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_69_fu_322_p2                            | -   |        | add_ln121_69 | add | fabric | 0       |
+|      add_ln121_70_fu_389_p2                            | -   |        | add_ln121_70 | add | fabric | 0       |
+|      add_ln121_71_fu_358_p2                            | -   |        | add_ln121_71 | add | fabric | 0       |
+|      add_ln121_72_fu_423_p2                            | -   |        | add_ln121_72 | add | fabric | 0       |
+|      add_ln121_73_fu_368_p2                            | -   |        | add_ln121_73 | add | fabric | 0       |
+|      add_ln114_fu_378_p2                               | -   |        | add_ln114    | add | fabric | 0       |
+|      add_ln114_7_fu_403_p2                             | -   |        | add_ln114_7  | add | fabric | 0       |
+|      add_ln114_8_fu_413_p2                             | -   |        | add_ln114_8  | add | fabric | 0       |
+|      add_ln121_74_fu_756_p2                            | -   |        | add_ln121_74 | add | fabric | 0       |
+|      add_ln121_75_fu_788_p2                            | -   |        | add_ln121_75 | add | fabric | 0       |
+|      add_ln121_76_fu_766_p2                            | -   |        | add_ln121_76 | add | fabric | 0       |
+|      add_ln121_77_fu_826_p2                            | -   |        | add_ln121_77 | add | fabric | 0       |
+|      add_ln121_78_fu_864_p2                            | -   |        | add_ln121_78 | add | fabric | 0       |
+|      add_ln121_79_fu_896_p2                            | -   |        | add_ln121_79 | add | fabric | 0       |
+|      add_ln121_80_fu_874_p2                            | -   |        | add_ln121_80 | add | fabric | 0       |
+|      add_ln121_81_fu_934_p2                            | -   |        | add_ln121_81 | add | fabric | 0       |
+|    + ClefiaF1Xor_1                                     | 0   |        |              |     |        |         |
+|      add_ln121_fu_347_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_39_fu_322_p2                            | -   |        | add_ln121_39 | add | fabric | 0       |
+|      add_ln121_40_fu_389_p2                            | -   |        | add_ln121_40 | add | fabric | 0       |
+|      add_ln121_41_fu_358_p2                            | -   |        | add_ln121_41 | add | fabric | 0       |
+|      add_ln121_42_fu_423_p2                            | -   |        | add_ln121_42 | add | fabric | 0       |
+|      add_ln121_43_fu_368_p2                            | -   |        | add_ln121_43 | add | fabric | 0       |
+|      add_ln114_fu_378_p2                               | -   |        | add_ln114    | add | fabric | 0       |
+|      add_ln114_3_fu_403_p2                             | -   |        | add_ln114_3  | add | fabric | 0       |
+|      add_ln114_4_fu_413_p2                             | -   |        | add_ln114_4  | add | fabric | 0       |
+|      add_ln121_44_fu_929_p2                            | -   |        | add_ln121_44 | add | fabric | 0       |
+|      add_ln121_45_fu_973_p2                            | -   |        | add_ln121_45 | add | fabric | 0       |
+|      add_ln121_46_fu_939_p2                            | -   |        | add_ln121_46 | add | fabric | 0       |
+|      add_ln121_47_fu_1011_p2                           | -   |        | add_ln121_47 | add | fabric | 0       |
+|      add_ln121_48_fu_1049_p2                           | -   |        | add_ln121_48 | add | fabric | 0       |
+|      add_ln121_49_fu_1069_p2                           | -   |        | add_ln121_49 | add | fabric | 0       |
+|      add_ln121_50_fu_1059_p2                           | -   |        | add_ln121_50 | add | fabric | 0       |
+|      add_ln121_51_fu_1100_p2                           | -   |        | add_ln121_51 | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_1          | 0   |        |              |     |        |         |
+|     add_ln124_fu_90_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_116_19         | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_112        | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_3_fu_142_p2                              | -   |        | add_ln121_3  | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_110        | 0   |        |              |     |        |         |
+|     add_ln124_fu_109_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_119_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_4_fu_148_p2                              | -   |        | add_ln121_4  | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_114        | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_122_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_113        | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_109_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaDoubleSwap_1 (grp_ClefiaDoubleSwap_1_fu_157) | 0   |        |              |     |        |         |
+|     add_ln246_fu_448_p2                                | -   |        | add_ln246    | add | fabric | 0       |
+|     add_ln247_fu_458_p2                                | -   |        | add_ln247    | add | fabric | 0       |
+|     add_ln248_fu_493_p2                                | -   |        | add_ln248    | add | fabric | 0       |
+|     add_ln249_fu_503_p2                                | -   |        | add_ln249    | add | fabric | 0       |
+|     add_ln250_fu_538_p2                                | -   |        | add_ln250    | add | fabric | 0       |
+|     add_ln251_fu_548_p2                                | -   |        | add_ln251    | add | fabric | 0       |
+|     add_ln252_fu_583_p2                                | -   |        | add_ln252    | add | fabric | 0       |
+|     add_ln253_fu_593_p2                                | -   |        | add_ln253    | add | fabric | 0       |
+|     add_ln255_fu_628_p2                                | -   |        | add_ln255    | add | fabric | 0       |
+|     add_ln256_fu_638_p2                                | -   |        | add_ln256    | add | fabric | 0       |
+|     add_ln257_fu_669_p2                                | -   |        | add_ln257    | add | fabric | 0       |
+|     add_ln258_fu_683_p2                                | -   |        | add_ln258    | add | fabric | 0       |
+|     add_ln259_fu_714_p2                                | -   |        | add_ln259    | add | fabric | 0       |
+|     add_ln260_fu_728_p2                                | -   |        | add_ln260    | add | fabric | 0       |
+|     add_ln261_fu_759_p2                                | -   |        | add_ln261    | add | fabric | 0       |
+|     add_ln114_fu_804_p2                                | -   |        | add_ln114    | add | fabric | 0       |
+|     add_ln117_fu_814_p2                                | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_111        | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_103_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|  + ClefiaKeySet128                                     | 0   |        |              |     |        |         |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1          | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1          | 0   |        |              |     |        |         |
+|     add_ln196_fu_454_p2                                | -   |        | add_ln196    | add | fabric | 0       |
+|     add_ln193_fu_439_p2                                | -   |        | add_ln193    | add | fabric | 0       |
+|    + ClefiaF0Xor_125                                   | 0   |        |              |     |        |         |
+|      add_ln121_fu_321_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_67_fu_331_p2                            | -   |        | add_ln121_67 | add | fabric | 0       |
+|      add_ln121_68_fu_345_p2                            | -   |        | add_ln121_68 | add | fabric | 0       |
+|    + ClefiaF1Xor                                       | 0   |        |              |     |        |         |
+|      add_ln121_fu_326_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_52_fu_337_p2                            | -   |        | add_ln121_52 | add | fabric | 0       |
+|      add_ln121_53_fu_351_p2                            | -   |        | add_ln121_53 | add | fabric | 0       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116        | 0   |        |              |     |        |         |
+|     add_ln117_fu_75_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_115        | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_309_1          | 0   |        |              |     |        |         |
+|     add_ln309_fu_617_p2                                | -   |        | add_ln309    | add | fabric | 0       |
+|     add_ln121_fu_631_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln121_1_fu_646_p2                              | -   |        | add_ln121_1  | add | fabric | 0       |
+|     add_ln121_2_fu_674_p2                              | -   |        | add_ln121_2  | add | fabric | 0       |
+|     add_ln121_3_fu_701_p2                              | -   |        | add_ln121_3  | add | fabric | 0       |
+|     add_ln121_4_fu_733_p2                              | -   |        | add_ln121_4  | add | fabric | 0       |
+|     add_ln121_5_fu_765_p2                              | -   |        | add_ln121_5  | add | fabric | 0       |
+|     add_ln121_6_fu_797_p2                              | -   |        | add_ln121_6  | add | fabric | 0       |
+|     add_ln121_7_fu_829_p2                              | -   |        | add_ln121_7  | add | fabric | 0       |
+|     add_ln121_8_fu_861_p2                              | -   |        | add_ln121_8  | add | fabric | 0       |
+|     add_ln121_16_fu_1012_p2                            | -   |        | add_ln121_16 | add | fabric | 0       |
+|     add_ln121_9_fu_955_p2                              | -   |        | add_ln121_9  | add | fabric | 0       |
+|     add_ln121_17_fu_1090_p2                            | -   |        | add_ln121_17 | add | fabric | 0       |
+|     add_ln121_10_fu_1033_p2                            | -   |        | add_ln121_10 | add | fabric | 0       |
+|     add_ln121_18_fu_1154_p2                            | -   |        | add_ln121_18 | add | fabric | 0       |
+|     add_ln121_11_fu_1105_p2                            | -   |        | add_ln121_11 | add | fabric | 0       |
+|     add_ln121_19_fu_1222_p2                            | -   |        | add_ln121_19 | add | fabric | 0       |
+|     add_ln121_12_fu_1169_p2                            | -   |        | add_ln121_12 | add | fabric | 0       |
+|     add_ln121_20_fu_1290_p2                            | -   |        | add_ln121_20 | add | fabric | 0       |
+|     add_ln121_13_fu_1237_p2                            | -   |        | add_ln121_13 | add | fabric | 0       |
+|     add_ln121_21_fu_1358_p2                            | -   |        | add_ln121_21 | add | fabric | 0       |
+|     add_ln121_14_fu_1305_p2                            | -   |        | add_ln121_14 | add | fabric | 0       |
+|     add_ln121_22_fu_1427_p2                            | -   |        | add_ln121_22 | add | fabric | 0       |
+|     add_ln121_15_fu_1374_p2                            | -   |        | add_ln121_15 | add | fabric | 0       |
+|     add_ln121_23_fu_1449_p2                            | -   |        | add_ln121_23 | add | fabric | 0       |
+|     add_ln315_fu_1465_p2                               | -   |        | add_ln315    | add | fabric | 0       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117        | 0   |        |              |     |        |         |
+|     add_ln117_fu_77_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|     add_ln114_fu_102_p2                                | -   |        | add_ln114    | add | fabric | 0       |
+|  + ClefiaEncrypt_1                                     | 0   |        |              |     |        |         |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1          | 0   |        |              |     |        |         |
+|     add_ln117_fu_88_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1          | 0   |        |              |     |        |         |
+|     add_ln124_fu_116_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118        | 0   |        |              |     |        |         |
+|     add_ln124_fu_120_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119        | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1          | 0   |        |              |     |        |         |
+|     add_ln188_1_fu_465_p2                              | -   |        | add_ln188_1  | add | fabric | 0       |
+|     add_ln188_fu_471_p2                                | -   |        | add_ln188    | add | fabric | 0       |
+|     grp_ClefiaF0Xor_fu_398_rk_offset                   | -   |        | add_ln194    | add | fabric | 0       |
+|     grp_ClefiaF1Xor_3_fu_413_rk_offset                 | -   |        | add_ln195    | add | fabric | 0       |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_398)              | 0   |        |              |     |        |         |
+|      add_ln121_fu_324_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_82_fu_335_p2                            | -   |        | add_ln121_82 | add | fabric | 0       |
+|      add_ln121_83_fu_345_p2                            | -   |        | add_ln121_83 | add | fabric | 0       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_413)          | 0   |        |              |     |        |         |
+|      add_ln121_fu_326_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_24_fu_337_p2                            | -   |        | add_ln121_24 | add | fabric | 0       |
+|      add_ln121_25_fu_347_p2                            | -   |        | add_ln121_25 | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120        | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121        | 0   |        |              |     |        |         |
+|     add_ln117_fu_88_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122        | 0   |        |              |     |        |         |
+|     add_ln124_fu_102_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_124_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123        | 0   |        |              |     |        |         |
+|     add_ln124_fu_102_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|     add_ln121_fu_128_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|  + clefia_Pipeline_VITIS_LOOP_116_1                    | 0   |        |              |     |        |         |
+|    add_ln117_fu_88_p2                                  | -   |        | add_ln117    | add | fabric | 0       |
+|  + ClefiaDecrypt_1                                     | 0   |        |              |     |        |         |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_1          | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_1          | 0   |        |              |     |        |         |
+|     add_ln121_fu_124_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln124_fu_147_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_124        | 0   |        |              |     |        |         |
+|     add_ln121_fu_124_p2                                | -   |        | add_ln121    | add | fabric | 0       |
+|     add_ln124_fu_139_p2                                | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_125        | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1          | 0   |        |              |     |        |         |
+|     add_ln224_1_fu_472_p2                              | -   |        | add_ln224_1  | add | fabric | 0       |
+|     grp_ClefiaF0Xor_fu_406_rk_offset                   | -   |        | add_ln224    | add | fabric | 0       |
+|     add_ln233_fu_478_p2                                | -   |        | add_ln233    | add | fabric | 0       |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_406)              | 0   |        |              |     |        |         |
+|      add_ln121_fu_324_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_82_fu_335_p2                            | -   |        | add_ln121_82 | add | fabric | 0       |
+|      add_ln121_83_fu_345_p2                            | -   |        | add_ln121_83 | add | fabric | 0       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_421)          | 0   |        |              |     |        |         |
+|      add_ln121_fu_326_p2                               | -   |        | add_ln121    | add | fabric | 0       |
+|      add_ln121_24_fu_337_p2                            | -   |        | add_ln121_24 | add | fabric | 0       |
+|      add_ln121_25_fu_347_p2                            | -   |        | add_ln121_25 | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_126        | 0   |        |              |     |        |         |
+|     add_ln117_fu_74_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_127        | 0   |        |              |     |        |         |
+|     add_ln117_fu_88_p2                                 | -   |        | add_ln117    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_128        | 0   |        |              |     |        |         |
+|     add_ln124_fu_88_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_129        | 0   |        |              |     |        |         |
+|     add_ln124_fu_92_p2                                 | -   |        | add_ln124    | add | fabric | 0       |
++--------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| Name                                                   | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++--------------------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| + clefia                                               | 28   | 0    |        |           |         |      |         |
+|   ct_U                                                 | -    | -    |        | ct        | ram_1p  | auto | 1       |
+|   rk_U                                                 | 1    | -    |        | rk        | ram_t2p | auto | 1       |
+|  + ClefiaKeySet256                                     | 7    | 0    |        |           |         |      |         |
+|    fin_U                                               | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                              | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    lk_U                                                | -    | -    |        | lk        | ram_s2p | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_116_1          | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1          | 5    | 0    |        |           |         |      |         |
+|     con256_U                                           | 1    | -    |        | con256    | rom_1p  | auto | 1       |
+|    + ClefiaF0Xor_2                                     | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_2                                     | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_1          | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_16         | 1    | 0    |        |           |         |      |         |
+|     con256_U                                           | 1    | -    |        | con256    | rom_1p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_14         | 1    | 0    |        |           |         |      |         |
+|     con256_U                                           | 1    | -    |        | con256    | rom_1p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_18         | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_17         | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|   + ClefiaDoubleSwap_1 (grp_ClefiaDoubleSwap_1_fu_157) | 0    | 0    |        |           |         |      |         |
+|     t_U                                                | -    | -    |        | t         | ram_t2p | auto | 1       |
+|   + ClefiaKeySet256_Pipeline_VITIS_LOOP_123_15         | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + ClefiaKeySet192                                     | 7    | 0    |        |           |         |      |         |
+|    fin_U                                               | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                              | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    lk_U                                                | -    | -    |        | lk        | ram_s2p | auto | 1       |
+|    skey256_U                                           | -    | -    |        | skey256   | rom_2p  | auto | 1       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1          | 5    | 0    |        |           |         |      |         |
+|     con192_U                                           | 1    | -    |        | con192    | rom_1p  | auto | 1       |
+|    + ClefiaF0Xor_1                                     | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_1                                     | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_112        | 1    | 0    |        |           |         |      |         |
+|     con192_U                                           | 1    | -    |        | con192    | rom_1p  | auto | 1       |
+|   + ClefiaKeySet192_Pipeline_VITIS_LOOP_123_110        | 1    | 0    |        |           |         |      |         |
+|     con192_U                                           | 1    | -    |        | con192    | rom_1p  | auto | 1       |
+|   + ClefiaDoubleSwap_1 (grp_ClefiaDoubleSwap_1_fu_157) | 0    | 0    |        |           |         |      |         |
+|     t_U                                                | -    | -    |        | t         | ram_t2p | auto | 1       |
+|  + ClefiaKeySet128                                     | 5    | 0    |        |           |         |      |         |
+|    fin_U                                               | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                              | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    lk_U                                                | -    | -    |        | lk        | ram_t2p | auto | 1       |
+|    con128_U                                            | 1    | -    |        | con128    | rom_1p  | auto | 1       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1          | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1          | 4    | 0    |        |           |         |      |         |
+|    + ClefiaF0Xor_125                                   | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor                                       | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116        | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|   + ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117        | 0    | 0    |        |           |         |      |         |
+|     skey_U                                             | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + ClefiaEncrypt_1                                     | 4    | 0    |        |           |         |      |         |
+|    fin_U                                               | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                              | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    rin_U                                               | -    | -    |        | rin       | ram_s2p | auto | 1       |
+|    rout_U                                              | -    | -    |        | rout      | ram_1p  | auto | 1       |
+|   + ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1          | 4    | 0    |        |           |         |      |         |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_398)              | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_413)          | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|  + ClefiaDecrypt_1                                     | 4    | 0    |        |           |         |      |         |
+|    fin_U                                               | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|    fout_U                                              | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|    rin_U                                               | -    | -    |        | rin       | ram_s2p | auto | 1       |
+|    rout_U                                              | -    | -    |        | rout      | ram_1p  | auto | 1       |
+|   + ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1          | 4    | 0    |        |           |         |      |         |
+|    + ClefiaF0Xor (grp_ClefiaF0Xor_fu_406)              | 2    | 0    |        |           |         |      |         |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|    + ClefiaF1Xor_3 (grp_ClefiaF1Xor_3_fu_421)          | 2    | 0    |        |           |         |      |         |
+|      clefia_s1_U                                       | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|      clefia_s0_U                                       | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
++--------------------------------------------------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------+-------------------------------------------------------------+
+| Type      | Options                   | Location                                                    |
++-----------+---------------------------+-------------------------------------------------------------+
+| interface | s_axilite port=Clefia_dec | CLEFIA_ip/solution1/directives.tcl:10 in clefia, Clefia_dec |
+| interface | s_axilite port=Clefia_enc | CLEFIA_ip/solution1/directives.tcl:9 in clefia, Clefia_enc  |
+| interface | s_axilite port=key_bitlen | CLEFIA_ip/solution1/directives.tcl:7 in clefia, key_bitlen  |
+| interface | s_axilite port=pt         | CLEFIA_ip/solution1/directives.tcl:8 in clefia, pt          |
+| interface | s_axilite port=return     | CLEFIA_ip/solution1/directives.tcl:6 in clefia, return      |
++-----------+---------------------------+-------------------------------------------------------------+
+
+

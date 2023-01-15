@@ -1,0 +1,619 @@
+{
+	"version": "1.0",
+	"modules": {
+		"clefia": {
+			"proto_instances": {
+				"/AESL_inst_clefia_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst_n"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_125_fu_104/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_125_fu_104_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_126_fu_124/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_126_fu_124_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_127_fu_130/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_127_fu_130_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_124_fu_96/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_124_fu_96_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_128_fu_137/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_128_fu_137_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_129_fu_145/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_129_fu_145_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1_fu_110/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1_fu_110_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1_fu_110/grp_ClefiaF0Xor_fu_406/grp_ClefiaF0Xor_fu_406_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1_fu_110/grp_ClefiaF1Xor_3_fu_421/grp_ClefiaF1Xor_3_fu_421_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaDecrypt_1_fu_212/grp_ClefiaDecrypt_1_fu_212_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119_fu_102/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_119_fu_102_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120_fu_121/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_120_fu_121_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121_fu_127/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_121_fu_127_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_116_1_fu_80_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118_fu_95/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_118_fu_95_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122_fu_134/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_122_fu_134_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123_fu_143/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_123_fu_143_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_123_1_fu_88_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108/grp_ClefiaF0Xor_fu_398/grp_ClefiaF0Xor_fu_398_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_Pipeline_VITIS_LOOP_193_1_fu_108/grp_ClefiaF1Xor_3_fu_413/grp_ClefiaF1Xor_3_fu_413_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaEncrypt_1_fu_190/grp_ClefiaEncrypt_1_fu_190_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_115_fu_64/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_115_fu_64_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116_fu_56/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116_fu_56_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117_fu_79/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117_fu_79_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1_fu_36/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1_fu_36_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1_fu_44/grp_ClefiaF0Xor_125_fu_390/grp_ClefiaF0Xor_125_fu_390_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1_fu_44/grp_ClefiaF1Xor_fu_405/grp_ClefiaF1Xor_fu_405_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1_fu_44/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1_fu_44_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_309_1_fu_70/grp_ClefiaKeySet128_Pipeline_VITIS_LOOP_309_1_fu_70_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet128_fu_176/grp_ClefiaKeySet128_fu_176_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaDoubleSwap_1_fu_157/grp_ClefiaDoubleSwap_1_fu_157_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_116_19_fu_112/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_116_19_fu_112_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_116_1_fu_84/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_116_1_fu_84_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_110_fu_129/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_110_fu_129_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_111_fu_165/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_111_fu_165_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_112_fu_118/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_112_fu_118_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_113_fu_148/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_113_fu_148_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_114_fu_140/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_114_fu_140_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_1_fu_104/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_123_1_fu_104_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1_fu_92/grp_ClefiaF0Xor_1_fu_722/grp_ClefiaF0Xor_1_fu_722_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1_fu_92/grp_ClefiaF1Xor_1_fu_743/grp_ClefiaF1Xor_1_fu_743_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1_fu_92/grp_ClefiaKeySet192_Pipeline_VITIS_LOOP_210_1_fu_92_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet192_fu_162/grp_ClefiaKeySet192_fu_162_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaDoubleSwap_1_fu_157/grp_ClefiaDoubleSwap_1_fu_157_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_116_13_fu_112/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_116_13_fu_112_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_116_1_fu_84/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_116_1_fu_84_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_14_fu_129/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_14_fu_129_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_15_fu_165/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_15_fu_165_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_16_fu_118/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_16_fu_118_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_17_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_17_fu_148_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_18_fu_140/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_18_fu_140_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_1_fu_104/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_123_1_fu_104_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1_fu_92/grp_ClefiaF0Xor_2_fu_722/grp_ClefiaF0Xor_2_fu_722_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1_fu_92/grp_ClefiaF1Xor_2_fu_743/grp_ClefiaF1Xor_2_fu_743_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1_fu_92/grp_ClefiaKeySet256_Pipeline_VITIS_LOOP_210_1_fu_92_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ClefiaKeySet256_fu_148/grp_ClefiaKeySet256_fu_148_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_clefia_Pipeline_VITIS_LOOP_116_1_fu_205/grp_clefia_Pipeline_VITIS_LOOP_116_1_fu_205_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

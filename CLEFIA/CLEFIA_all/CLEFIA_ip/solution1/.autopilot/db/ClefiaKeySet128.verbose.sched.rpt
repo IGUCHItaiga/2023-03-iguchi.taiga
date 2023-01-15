@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaKeySet128'
+================================================================
+* Date:           Tue Dec  6 19:10:30 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.998 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      563|      563|  5.630 us|  5.630 us|  563|  563|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%fin = alloca i64 1" [clefia.c:190]   --->   Operation 11 'alloca' 'fin' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%fout = alloca i64 1" [clefia.c:190]   --->   Operation 12 'alloca' 'fout' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%lk = alloca i64 1" [clefia.c:298]   --->   Operation 13 'alloca' 'lk' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1, i8 %fin, i8 %skey"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 15 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_1, i8 %fin, i8 %skey"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 16 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1, i8 %fin, i8 %fout, i8 %clefia_s0, i8 %clefia_s1, i8 %con128"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 17 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116, i8 %rk, i8 %skey"   --->   Operation 17 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_193_1, i8 %fin, i8 %fout, i8 %clefia_s0, i8 %clefia_s1, i8 %con128"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_116, i8 %rk, i8 %skey"   --->   Operation 19 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_115, i8 %fout, i8 %lk"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 21 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_115, i8 %fout, i8 %lk"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 22 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_309_1, i8 %lk, i8 %rk, i8 %con128"   --->   Operation 22 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 23 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_309_1, i8 %lk, i8 %rk, i8 %con128"   --->   Operation 23 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117, i8 %rk, i8 %skey"   --->   Operation 24 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln0 = call void @ClefiaKeySet128_Pipeline_VITIS_LOOP_116_117, i8 %rk, i8 %skey"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln318 = ret" [clefia.c:318]   --->   Operation 26 'ret' 'ret_ln318' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

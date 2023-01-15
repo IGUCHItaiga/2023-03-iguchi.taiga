@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaDecrypt_1_Pipeline_VITIS_LOOP_230_1'
+================================================================
+* Date:           Tue Dec  6 19:11:07 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.084 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       56|        ?|  0.560 us|         ?|   56|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                          |               |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |         Instance         |     Module    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +--------------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_ClefiaF0Xor_fu_406    |ClefiaF0Xor    |        8|        8|  80.000 ns|  80.000 ns|    4|    4|      yes|
+        |grp_ClefiaF1Xor_3_fu_421  |ClefiaF1Xor_3  |        8|        8|  80.000 ns|  80.000 ns|    4|    4|      yes|
+        +--------------------------+---------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_230_1  |       54|        ?|        28|         27|          1|  1 ~ ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    143|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        4|    -|     318|   1236|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    607|    -|
+|Register         |        -|    -|     147|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        4|    0|     465|   1986|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        1|    0|      ~0|      3|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+---------------+---------+----+-----+-----+-----+
+    |         Instance         |     Module    | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------+---------------+---------+----+-----+-----+-----+
+    |grp_ClefiaF0Xor_fu_406    |ClefiaF0Xor    |        2|   0|  159|  590|    0|
+    |grp_ClefiaF1Xor_3_fu_421  |ClefiaF1Xor_3  |        2|   0|  159|  646|    0|
+    +--------------------------+---------------+---------+----+-----+-----+-----+
+    |Total                     |               |        4|   0|  318| 1236|    0|
+    +--------------------------+---------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln224_1_fu_472_p2               |         +|   0|  0|  39|          32|           2|
+    |add_ln224_fu_457_p2                 |         +|   0|  0|  15|           8|           8|
+    |add_ln233_fu_478_p2                 |         +|   0|  0|  43|          36|           5|
+    |icmp_ln230_fu_489_p2                |      icmp|   0|  0|  18|          32|           1|
+    |icmp_ln234_fu_483_p2                |      icmp|   0|  0|  18|          32|           1|
+    |grp_ClefiaF1Xor_3_fu_421_rk_offset  |        or|   0|  0|   8|           3|           8|
+    |ap_enable_pp0                       |       xor|   0|  0|   2|           1|           2|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |Total                               |          |   0|  0| 143|         144|          27|
+    +------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+-----+-----------+-----+-----------+
+    |               Name               | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  125|         28|    1|         28|
+    |ap_done_int                       |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0           |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1           |    9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |    9|          2|    1|          2|
+    |dec12_i_in_fu_82                  |    9|          2|   32|         64|
+    |fin_address0                      |   59|         11|    4|         44|
+    |fin_address1                      |   59|         11|    4|         44|
+    |fin_ce0                           |   20|          4|    1|          4|
+    |fin_ce1                           |   20|          4|    1|          4|
+    |fout_address0                     |   59|         11|    4|         44|
+    |fout_address1                     |   59|         11|    4|         44|
+    |fout_ce0                          |   20|          4|    1|          4|
+    |fout_ce1                          |   20|          4|    1|          4|
+    |fout_d0                           |   14|          3|    8|         24|
+    |fout_d1                           |   14|          3|    8|         24|
+    |fout_we0                          |   14|          3|    1|          3|
+    |fout_we1                          |   14|          3|    1|          3|
+    |idx109_fu_78                      |    9|          2|   36|         72|
+    |rk_address0                       |   14|          3|    8|         24|
+    |rk_address1                       |   14|          3|    8|         24|
+    |rk_ce0                            |   14|          3|    1|          3|
+    |rk_ce1                            |   14|          3|    1|          3|
+    +----------------------------------+-----+-----------+-----+-----------+
+    |Total                             |  607|        124|  129|        472|
+    +----------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |add_ln224_reg_529                      |   8|   0|    8|          0|
+    |ap_CS_fsm                              |  27|   0|   27|          0|
+    |ap_done_reg                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg       |   1|   0|    1|          0|
+    |dec12_i_in_fu_82                       |  32|   0|   32|          0|
+    |grp_ClefiaF0Xor_fu_406_ap_start_reg    |   1|   0|    1|          0|
+    |grp_ClefiaF1Xor_3_fu_421_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln230_reg_549                     |   1|   0|    1|          0|
+    |icmp_ln234_reg_545                     |   1|   0|    1|          0|
+    |idx109_fu_78                           |  36|   0|   36|          0|
+    |idx109_load_reg_524                    |  36|   0|   36|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  | 147|   0|  147|          0|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+-------------------------------------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++---------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk         |   in|    1|  ap_ctrl_hs|  ClefiaDecrypt.1_Pipeline_VITIS_LOOP_230_1|  return value|
+|ap_rst         |   in|    1|  ap_ctrl_hs|  ClefiaDecrypt.1_Pipeline_VITIS_LOOP_230_1|  return value|
+|ap_start       |   in|    1|  ap_ctrl_hs|  ClefiaDecrypt.1_Pipeline_VITIS_LOOP_230_1|  return value|
+|ap_done        |  out|    1|  ap_ctrl_hs|  ClefiaDecrypt.1_Pipeline_VITIS_LOOP_230_1|  return value|
+|ap_idle        |  out|    1|  ap_ctrl_hs|  ClefiaDecrypt.1_Pipeline_VITIS_LOOP_230_1|  return value|
+|ap_ready       |  out|    1|  ap_ctrl_hs|  ClefiaDecrypt.1_Pipeline_VITIS_LOOP_230_1|  return value|
+|r_cast5        |   in|    5|     ap_none|                                    r_cast5|        scalar|
+|fin_address0   |  out|    4|   ap_memory|                                        fin|         array|
+|fin_ce0        |  out|    1|   ap_memory|                                        fin|         array|
+|fin_we0        |  out|    1|   ap_memory|                                        fin|         array|
+|fin_d0         |  out|    8|   ap_memory|                                        fin|         array|
+|fin_q0         |   in|    8|   ap_memory|                                        fin|         array|
+|fin_address1   |  out|    4|   ap_memory|                                        fin|         array|
+|fin_ce1        |  out|    1|   ap_memory|                                        fin|         array|
+|fin_we1        |  out|    1|   ap_memory|                                        fin|         array|
+|fin_d1         |  out|    8|   ap_memory|                                        fin|         array|
+|fin_q1         |   in|    8|   ap_memory|                                        fin|         array|
+|fout_address0  |  out|    4|   ap_memory|                                       fout|         array|
+|fout_ce0       |  out|    1|   ap_memory|                                       fout|         array|
+|fout_we0       |  out|    1|   ap_memory|                                       fout|         array|
+|fout_d0        |  out|    8|   ap_memory|                                       fout|         array|
+|fout_q0        |   in|    8|   ap_memory|                                       fout|         array|
+|fout_address1  |  out|    4|   ap_memory|                                       fout|         array|
+|fout_ce1       |  out|    1|   ap_memory|                                       fout|         array|
+|fout_we1       |  out|    1|   ap_memory|                                       fout|         array|
+|fout_d1        |  out|    8|   ap_memory|                                       fout|         array|
+|fout_q1        |   in|    8|   ap_memory|                                       fout|         array|
+|shl_ln         |   in|    8|     ap_none|                                     shl_ln|        scalar|
+|rk_address0    |  out|    8|   ap_memory|                                         rk|         array|
+|rk_ce0         |  out|    1|   ap_memory|                                         rk|         array|
+|rk_q0          |   in|    8|   ap_memory|                                         rk|         array|
+|rk_address1    |  out|    8|   ap_memory|                                         rk|         array|
+|rk_ce1         |  out|    1|   ap_memory|                                         rk|         array|
+|rk_q1          |   in|    8|   ap_memory|                                         rk|         array|
++---------------+-----+-----+------------+-------------------------------------------+--------------+
+

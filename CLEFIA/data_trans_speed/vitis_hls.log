@@ -1,0 +1,46 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'iguchi.taiga' on host 'desktop-ctm6dmj' (Windows NT_amd64 version 6.2) on Wed Jan 04 15:00:15 +0900 2023
+INFO: [HLS 200-10] In directory 'D:/tmp/CLEFIA/data_trans_speed'
+Sourcing Tcl script 'D:/tmp/CLEFIA/data_trans_speed/data_trans_speed_ip/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source D:/tmp/CLEFIA/data_trans_speed/data_trans_speed_ip/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project data_trans_speed_ip 
+INFO: [HLS 200-10] Opening project 'D:/tmp/CLEFIA/data_trans_speed/data_trans_speed_ip'.
+INFO: [HLS 200-1510] Running: set_top data_transfer 
+INFO: [HLS 200-1510] Running: add_files src/data_transfer.c 
+INFO: [HLS 200-10] Adding design file 'src/data_transfer.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src/data_transfer_tb.c 
+INFO: [HLS 200-10] Adding test bench file 'src/data_transfer_tb.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'D:/tmp/CLEFIA/data_trans_speed/data_trans_speed_ip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./data_trans_speed_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite data_transfer 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite data_transfer pt 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite data_transfer ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite data_transfer skey 
+INFO: [HLS 200-1510] Running: set_directive_top -name data_transfer data_transfer 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  4 15:00:24 2023...
+INFO: [HLS 200-802] Generated output file data_trans_speed_ip/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 8.54 seconds; current allocated memory: 448.480 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.694 seconds; peak allocated memory: 1.107 GB.

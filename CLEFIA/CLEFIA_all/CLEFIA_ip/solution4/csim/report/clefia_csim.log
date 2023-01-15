@@ -1,0 +1,24 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../clefia_tb.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'iguchi.taiga' on host 'desktop-ctm6dmj' (Windows NT_amd64 version 6.2) on Wed Dec 07 21:53:18 +0900 2022
+INFO: [HLS 200-10] In directory 'D:/tmp/CLEFIA_ip/solution4/csim/build'
+../../../../clefia_tb.c:28:16: error: use of undeclared identifier 'CLOCK_REALTIME'
+        clock_gettime(CLOCK_REALTIME, &start_time);
+                      ^
+../../../../clefia_tb.c:30:16: error: use of undeclared identifier 'CLOCK_REALTIME'
+        clock_gettime(CLOCK_REALTIME, &end_time);
+                      ^
+2 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is D:/tmp/apcc_db_iguchi.taiga/63441738261757
+ERROR: [APCC 202-1] APCC failed.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.502 seconds; peak allocated memory: 0.676 MB.
+   Generating csim.exe
+Makefile.rules:392: recipe for target 'csim.exe' failed
+g++.exe: error: obj/clefia_tb.o: No such file or directory
+make: *** [csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

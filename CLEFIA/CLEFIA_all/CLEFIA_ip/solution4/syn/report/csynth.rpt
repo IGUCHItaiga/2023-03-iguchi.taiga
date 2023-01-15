@@ -1,0 +1,869 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clefia'
+================================================================
++ General Information: 
+    * Date:           Mon Dec 12 09:01:14 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        CLEFIA_ip
+    * Solution:       solution4 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-------------+-------------+-----+
+    |                    Modules                    | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |    |             |             |     |
+    |                    & Loops                    | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|      FF     |     LUT     | URAM|
+    +-----------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-------------+-------------+-----+
+    |+ clefia                                       |     -|  0.30|        -|          -|         -|        -|     -|        no|  6 (2%)|   -|  12016 (11%)|  42661 (80%)|    -|
+    | + clefia_Pipeline_ByteCpy_label157            |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     22 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label152            |     -|  2.66|       27|    270.000|         -|       27|     -|        no|       -|   -|     22 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       25|    250.000|         2|        1|    24|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1              |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     20 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn8_label458         |     -|  0.30|      265|  2.650e+03|         -|      265|     -|        no|       -|   -|    674 (~0%)|    2263 (4%)|    -|
+    |  o ClefiaGfn8_label4                          |    II|  7.30|      263|  2.630e+03|        24|       24|    10|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label260            |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     27 (~0%)|     72 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label159            |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     14 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaKeySet256_label10     |     -|  2.13|      217|  2.170e+03|         -|      217|     -|        no|       -|   -|    595 (~0%)|    2161 (4%)|    -|
+    |  o ClefiaKeySet256_label10                    |    II|  7.30|      215|  2.150e+03|        18|       16|    13|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label261            |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     27 (~0%)|     91 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaKeySet192_label8      |     -|  1.67|       10|    100.000|         -|       10|     -|        no|       -|   -|     19 (~0%)|     77 (~0%)|    -|
+    |  o ClefiaKeySet192_label8                     |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label153            |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     14 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn8_label4           |     -|  0.30|      265|  2.650e+03|         -|      265|     -|        no|       -|   -|    674 (~0%)|    2263 (4%)|    -|
+    |  o ClefiaGfn8_label4                          |    II|  7.30|      263|  2.630e+03|        24|       24|    10|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label255            |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     11 (~0%)|     68 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label154            |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     14 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaKeySet192_label9      |     -|  2.13|      185|  1.850e+03|         -|      185|     -|        no|       -|   -|    731 (~0%)|    2034 (3%)|    -|
+    |  o ClefiaKeySet192_label9                     |    II|  7.30|      183|  1.830e+03|        18|       16|    11|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label256            |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     11 (~0%)|     88 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn4_label3           |     -|  0.30|      170|  1.700e+03|         -|      170|     -|        no|       -|   -|    412 (~0%)|    1206 (2%)|    -|
+    |  o ClefiaGfn4_label3                          |    II|  7.30|      168|  1.680e+03|        13|       13|    12|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label129            |     -|  1.72|       10|    100.000|         -|       10|     -|        no|       -|   -|     19 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label128            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2              |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     82 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label130            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label231            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     89 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label232            |     -|  2.22|       19|    190.000|         -|       19|     -|        no|       -|   -|     38 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label133            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label234            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     83 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label135            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label236            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     98 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label237            |     -|  2.18|       19|    190.000|         -|       19|     -|        no|       -|   -|     40 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label138            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label239            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     83 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label140            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label241            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     98 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label242            |     -|  2.18|       19|    190.000|         -|       19|     -|        no|       -|   -|     40 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label143            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label244            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     83 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label145            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label246            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     98 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label247            |     -|  2.13|       19|    190.000|         -|       19|     -|        no|       -|   -|     42 (~0%)|     88 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label148            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label249            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     84 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label150            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label151            |     -|  1.72|       10|    100.000|         -|       10|     -|        no|       -|   -|     19 (~0%)|     84 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label162            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label263            |     -|  0.48|        7|     70.000|         -|        7|     -|        no|       -|   -|     81 (~0%)|    119 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label264            |     -|  0.48|        7|     70.000|         -|        7|     -|        no|       -|   -|     80 (~0%)|    119 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label165            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn4_label366         |     -|  0.30|        -|          -|         -|        -|     -|        no|       -|   -|    542 (~0%)|    1326 (2%)|    -|
+    |  o ClefiaGfn4_label3                          |    II|  7.30|        -|          -|        12|       12|     -|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label167            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label168            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label269            |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|      9 (~0%)|     95 (~0%)|    -|
+    |  o ByteXor_label2                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label270            |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     10 (~0%)|     95 (~0%)|    -|
+    |  o ByteXor_label2                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label171            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1107           |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     22 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label199            |     -|  2.66|       27|    270.000|         -|       27|     -|        no|       -|   -|     22 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       25|    250.000|         2|        1|    24|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label172            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     20 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn8_label4108        |     -|  0.30|      265|  2.650e+03|         -|      265|     -|        no|       -|   -|    674 (~0%)|    2263 (4%)|    -|
+    |  o ClefiaGfn8_label4                          |    II|  7.30|      263|  2.630e+03|        24|       24|    10|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2110           |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     27 (~0%)|     72 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1109           |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     14 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaKeySet256_label10111  |     -|  2.13|      217|  2.170e+03|         -|      217|     -|        no|       -|   -|    595 (~0%)|    2161 (4%)|    -|
+    |  o ClefiaKeySet256_label10                    |    II|  7.30|      215|  2.150e+03|        18|       16|    13|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2112           |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     27 (~0%)|     91 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaKeySet192_label8100   |     -|  1.67|       10|    100.000|         -|       10|     -|        no|       -|   -|     19 (~0%)|     77 (~0%)|    -|
+    |  o ClefiaKeySet192_label8                     |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1101           |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     14 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn8_label4102        |     -|  0.30|      265|  2.650e+03|         -|      265|     -|        no|       -|   -|    674 (~0%)|    2263 (4%)|    -|
+    |  o ClefiaGfn8_label4                          |    II|  7.30|      263|  2.630e+03|        24|       24|    10|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2104           |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     11 (~0%)|     68 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1103           |     -|  2.66|       35|    350.000|         -|       35|     -|        no|       -|   -|     14 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       33|    330.000|         2|        1|    32|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaKeySet192_label9105   |     -|  2.13|      185|  1.850e+03|         -|      185|     -|        no|       -|   -|    731 (~0%)|    2034 (3%)|    -|
+    |  o ClefiaKeySet192_label9                     |    II|  7.30|      183|  1.830e+03|        18|       16|    11|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2106           |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     11 (~0%)|     88 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn4_label373         |     -|  0.30|      170|  1.700e+03|         -|      170|     -|        no|       -|   -|    412 (~0%)|    1206 (2%)|    -|
+    |  o ClefiaGfn4_label3                          |    II|  7.30|      168|  1.680e+03|        13|       13|    12|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label175            |     -|  1.72|       10|    100.000|         -|       10|     -|        no|       -|   -|     19 (~0%)|     64 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label174            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label276            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     82 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label177            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label278            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     89 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label279            |     -|  2.22|       19|    190.000|         -|       19|     -|        no|       -|   -|     38 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label180            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label281            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     83 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label182            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label283            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     98 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label284            |     -|  2.18|       19|    190.000|         -|       19|     -|        no|       -|   -|     40 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label185            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label286            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     83 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label187            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label288            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     98 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label289            |     -|  2.18|       19|    190.000|         -|       19|     -|        no|       -|   -|     40 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label190            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label291            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     83 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label192            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label293            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     98 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label294            |     -|  2.13|       19|    190.000|         -|       19|     -|        no|       -|   -|     42 (~0%)|     88 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label195            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label296            |     -|  0.73|       19|    190.000|         -|       19|     -|        no|       -|   -|     28 (~0%)|     84 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|       17|    170.000|         3|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label197            |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label198            |     -|  1.72|       10|    100.000|         -|       10|     -|        no|       -|   -|     19 (~0%)|     84 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1113           |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2114           |     -|  0.48|        7|     70.000|         -|        7|     -|        no|       -|   -|     81 (~0%)|    127 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2115           |     -|  0.48|        7|     70.000|         -|        7|     -|        no|       -|   -|     80 (~0%)|    127 (~0%)|    -|
+    |  o ByteXor_label2                             |     -|  7.30|        5|     50.000|         2|        1|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1116           |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ClefiaGfn4Inv_label5        |     -|  0.30|        -|          -|         -|        -|     -|        no|       -|   -|    606 (~0%)|    1292 (2%)|    -|
+    |  o ClefiaGfn4Inv_label5                       |    II|  7.30|        -|          -|        12|       12|     -|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1117           |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteCpy_label1118           |     -|  2.66|       19|    190.000|         -|       19|     -|        no|       -|   -|     12 (~0%)|     60 (~0%)|    -|
+    |  o ByteCpy_label1                             |     -|  7.30|       17|    170.000|         2|        1|    16|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2119           |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|      9 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|       -|   -|            -|            -|    -|
+    | + clefia_Pipeline_ByteXor_label2120           |     -|  0.73|       10|    100.000|         -|       10|     -|        no|       -|   -|     10 (~0%)|     87 (~0%)|    -|
+    |  o ByteXor_label2                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|       -|   -|            -|            -|    -|
+    +-----------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | key_bitlen | 0x20   | 32    | W      | Data signal of key_bitlen        |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+-----------------------+
+| Argument   | Direction | Datatype              |
++------------+-----------+-----------------------+
+| pt         | in        | unsigned char const * |
+| key_bitlen | in        | int                   |
+| Clefia_enc | inout     | unsigned char*        |
+| Clefia_dec | inout     | unsigned char*        |
++------------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++------------+---------------+----------+--------------------------------------+
+| Argument   | HW Interface  | HW Type  | HW Info                              |
++------------+---------------+----------+--------------------------------------+
+| pt         | s_axi_control | memory   | name=pt offset=16 range=16           |
+| key_bitlen | s_axi_control | register | name=key_bitlen offset=0x20 range=32 |
+| Clefia_enc | s_axi_control | memory   | name=Clefia_enc offset=48 range=16   |
+| Clefia_dec | s_axi_control | memory   | name=Clefia_dec offset=64 range=16   |
++------------+---------------+----------+--------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------+-----+--------+---------------+-----+--------+---------+
+| Name                                          | DSP | Pragma | Variable      | Op  | Impl   | Latency |
++-----------------------------------------------+-----+--------+---------------+-----+--------+---------+
+| + clefia                                      | 0   |        |               |     |        |         |
+|  + clefia_Pipeline_ByteCpy_label157           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label152           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1             | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn8_label458        | 0   |        |               |     |        |         |
+|    add_ln215_fu_3450_p2                       | -   |        | add_ln215     | add | fabric | 0       |
+|    add_ln210_fu_3455_p2                       | -   |        | add_ln210     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label260           | 0   |        |               |     |        |         |
+|    add_ln124_fu_90_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label159           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaKeySet256_label10    | 0   |        |               |     |        |         |
+|    add_ln373_fu_1589_p2                       | -   |        | add_ln373     | add | fabric | 0       |
+|    add_ln121_1_fu_1620_p2                     | -   |        | add_ln121_1   | add | fabric | 0       |
+|    grp_fu_1035_p2                             | -   |        | add_ln121_2   | add | fabric | 0       |
+|    grp_fu_1040_p2                             | -   |        | add_ln121_3   | add | fabric | 0       |
+|    grp_fu_1045_p2                             | -   |        | add_ln121_4   | add | fabric | 0       |
+|    grp_fu_1059_p2                             | -   |        | add_ln121_6   | add | fabric | 0       |
+|    grp_fu_1064_p2                             | -   |        | add_ln121_7   | add | fabric | 0       |
+|    grp_fu_1079_p2                             | -   |        | add_ln121_9   | add | fabric | 0       |
+|    grp_fu_1084_p2                             | -   |        | add_ln121_10  | add | fabric | 0       |
+|    grp_fu_1099_p2                             | -   |        | add_ln121_11  | add | fabric | 0       |
+|    grp_fu_1129_p2                             | -   |        | add_ln121_12  | add | fabric | 0       |
+|    grp_fu_1104_p2                             | -   |        | add_ln121_13  | add | fabric | 0       |
+|    grp_fu_1134_p2                             | -   |        | add_ln121_14  | add | fabric | 0       |
+|    grp_fu_1119_p2                             | -   |        | add_ln121_15  | add | fabric | 0       |
+|    grp_fu_1149_p2                             | -   |        | add_ln121_16  | add | fabric | 0       |
+|    grp_fu_1124_p2                             | -   |        | add_ln121_17  | add | fabric | 0       |
+|    grp_fu_1154_p2                             | -   |        | add_ln121_18  | add | fabric | 0       |
+|    grp_fu_1139_p2                             | -   |        | add_ln121_19  | add | fabric | 0       |
+|    grp_fu_1169_p2                             | -   |        | add_ln121_20  | add | fabric | 0       |
+|    grp_fu_1144_p2                             | -   |        | add_ln121_21  | add | fabric | 0       |
+|    grp_fu_1174_p2                             | -   |        | add_ln121_22  | add | fabric | 0       |
+|    grp_fu_1159_p2                             | -   |        | add_ln121_23  | add | fabric | 0       |
+|    grp_fu_1193_p2                             | -   |        | add_ln121_24  | add | fabric | 0       |
+|    grp_fu_1164_p2                             | -   |        | add_ln121_25  | add | fabric | 0       |
+|    grp_fu_1198_p2                             | -   |        | add_ln121_26  | add | fabric | 0       |
+|    grp_fu_1035_p2                             | -   |        | add_ln121_27  | add | fabric | 0       |
+|    grp_fu_1040_p2                             | -   |        | add_ln121_28  | add | fabric | 0       |
+|    grp_fu_1045_p2                             | -   |        | add_ln121_29  | add | fabric | 0       |
+|    grp_fu_1059_p2                             | -   |        | add_ln121_30  | add | fabric | 0       |
+|    grp_fu_1064_p2                             | -   |        | add_ln121_32  | add | fabric | 0       |
+|    grp_fu_1079_p2                             | -   |        | add_ln121_34  | add | fabric | 0       |
+|    grp_fu_1084_p2                             | -   |        | add_ln121_37  | add | fabric | 0       |
+|    grp_fu_1099_p2                             | -   |        | add_ln121_39  | add | fabric | 0       |
+|    grp_fu_1129_p2                             | -   |        | add_ln121_40  | add | fabric | 0       |
+|    grp_fu_1104_p2                             | -   |        | add_ln121_41  | add | fabric | 0       |
+|    grp_fu_1134_p2                             | -   |        | add_ln121_42  | add | fabric | 0       |
+|    grp_fu_1119_p2                             | -   |        | add_ln121_43  | add | fabric | 0       |
+|    grp_fu_1149_p2                             | -   |        | add_ln121_44  | add | fabric | 0       |
+|    grp_fu_1124_p2                             | -   |        | add_ln121_45  | add | fabric | 0       |
+|    grp_fu_1154_p2                             | -   |        | add_ln121_46  | add | fabric | 0       |
+|    grp_fu_1139_p2                             | -   |        | add_ln121     | add | fabric | 0       |
+|    grp_fu_1169_p2                             | -   |        | add_ln121_47  | add | fabric | 0       |
+|    grp_fu_1144_p2                             | -   |        | add_ln121_48  | add | fabric | 0       |
+|    grp_fu_1174_p2                             | -   |        | add_ln121_49  | add | fabric | 0       |
+|    grp_fu_1159_p2                             | -   |        | add_ln121_50  | add | fabric | 0       |
+|    grp_fu_1193_p2                             | -   |        | add_ln121_51  | add | fabric | 0       |
+|    grp_fu_1164_p2                             | -   |        | add_ln121_52  | add | fabric | 0       |
+|    grp_fu_1198_p2                             | -   |        | add_ln121_53  | add | fabric | 0       |
+|    add_ln387_fu_2556_p2                       | -   |        | add_ln387     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label261           | 0   |        |               |     |        |         |
+|    add_ln124_fu_88_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_8_fu_122_p2                      | -   |        | add_ln121_8   | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaKeySet192_label8     | 0   |        |               |     |        |         |
+|    add_ln329_fu_76_p2                         | -   |        | add_ln329     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label153           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn8_label4          | 0   |        |               |     |        |         |
+|    add_ln215_fu_3450_p2                       | -   |        | add_ln215     | add | fabric | 0       |
+|    add_ln210_fu_3455_p2                       | -   |        | add_ln210     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label255           | 0   |        |               |     |        |         |
+|    add_ln124_fu_90_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label154           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaKeySet192_label9     | 0   |        |               |     |        |         |
+|    add_ln340_fu_1634_p2                       | -   |        | add_ln340     | add | fabric | 0       |
+|    add_ln121_57_fu_1665_p2                    | -   |        | add_ln121_57  | add | fabric | 0       |
+|    grp_fu_1235_p2                             | -   |        | add_ln121_58  | add | fabric | 0       |
+|    grp_fu_1246_p2                             | -   |        | add_ln121_59  | add | fabric | 0       |
+|    grp_fu_1251_p2                             | -   |        | add_ln121_60  | add | fabric | 0       |
+|    grp_fu_1271_p2                             | -   |        | add_ln121_61  | add | fabric | 0       |
+|    grp_fu_1276_p2                             | -   |        | add_ln121_62  | add | fabric | 0       |
+|    grp_fu_1291_p2                             | -   |        | add_ln121_66  | add | fabric | 0       |
+|    grp_fu_1296_p2                             | -   |        | add_ln121_71  | add | fabric | 0       |
+|    grp_fu_1311_p2                             | -   |        | add_ln121_73  | add | fabric | 0       |
+|    grp_fu_1341_p2                             | -   |        | add_ln121_74  | add | fabric | 0       |
+|    grp_fu_1316_p2                             | -   |        | add_ln121_75  | add | fabric | 0       |
+|    grp_fu_1346_p2                             | -   |        | add_ln121_76  | add | fabric | 0       |
+|    grp_fu_1331_p2                             | -   |        | add_ln121_77  | add | fabric | 0       |
+|    grp_fu_1361_p2                             | -   |        | add_ln121_78  | add | fabric | 0       |
+|    grp_fu_1336_p2                             | -   |        | add_ln121_79  | add | fabric | 0       |
+|    grp_fu_1366_p2                             | -   |        | add_ln121_80  | add | fabric | 0       |
+|    grp_fu_1351_p2                             | -   |        | add_ln121_81  | add | fabric | 0       |
+|    grp_fu_1381_p2                             | -   |        | add_ln121_82  | add | fabric | 0       |
+|    grp_fu_1356_p2                             | -   |        | add_ln121_83  | add | fabric | 0       |
+|    grp_fu_1386_p2                             | -   |        | add_ln121_84  | add | fabric | 0       |
+|    grp_fu_1371_p2                             | -   |        | add_ln121_85  | add | fabric | 0       |
+|    grp_fu_1399_p2                             | -   |        | add_ln121_86  | add | fabric | 0       |
+|    grp_fu_1376_p2                             | -   |        | add_ln121_87  | add | fabric | 0       |
+|    grp_fu_1404_p2                             | -   |        | add_ln121_88  | add | fabric | 0       |
+|    grp_fu_1235_p2                             | -   |        | add_ln121_89  | add | fabric | 0       |
+|    grp_fu_1246_p2                             | -   |        | add_ln121_90  | add | fabric | 0       |
+|    grp_fu_1251_p2                             | -   |        | add_ln121_91  | add | fabric | 0       |
+|    grp_fu_1271_p2                             | -   |        | add_ln121_92  | add | fabric | 0       |
+|    grp_fu_1276_p2                             | -   |        | add_ln121_93  | add | fabric | 0       |
+|    grp_fu_1291_p2                             | -   |        | add_ln121_94  | add | fabric | 0       |
+|    grp_fu_1296_p2                             | -   |        | add_ln121_95  | add | fabric | 0       |
+|    grp_fu_1311_p2                             | -   |        | add_ln121_96  | add | fabric | 0       |
+|    grp_fu_1341_p2                             | -   |        | add_ln121_97  | add | fabric | 0       |
+|    grp_fu_1316_p2                             | -   |        | add_ln121_98  | add | fabric | 0       |
+|    grp_fu_1346_p2                             | -   |        | add_ln121_99  | add | fabric | 0       |
+|    grp_fu_1331_p2                             | -   |        | add_ln121     | add | fabric | 0       |
+|    grp_fu_1361_p2                             | -   |        | add_ln121_100 | add | fabric | 0       |
+|    grp_fu_1336_p2                             | -   |        | add_ln121_101 | add | fabric | 0       |
+|    grp_fu_1366_p2                             | -   |        | add_ln121_102 | add | fabric | 0       |
+|    grp_fu_1351_p2                             | -   |        | add_ln121_103 | add | fabric | 0       |
+|    grp_fu_1381_p2                             | -   |        | add_ln121_104 | add | fabric | 0       |
+|    grp_fu_1356_p2                             | -   |        | add_ln121_105 | add | fabric | 0       |
+|    grp_fu_1386_p2                             | -   |        | add_ln121_106 | add | fabric | 0       |
+|    grp_fu_1371_p2                             | -   |        | add_ln121_107 | add | fabric | 0       |
+|    grp_fu_1399_p2                             | -   |        | add_ln121_108 | add | fabric | 0       |
+|    grp_fu_1376_p2                             | -   |        | add_ln121_109 | add | fabric | 0       |
+|    grp_fu_1404_p2                             | -   |        | add_ln121_110 | add | fabric | 0       |
+|    add_ln354_fu_2557_p2                       | -   |        | add_ln354     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label256           | 0   |        |               |     |        |         |
+|    add_ln124_fu_88_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_49_fu_122_p2                     | -   |        | add_ln121_49  | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn4_label3          | 0   |        |               |     |        |         |
+|    add_ln196_fu_1772_p2                       | -   |        | add_ln196     | add | fabric | 0       |
+|    add_ln193_fu_1777_p2                       | -   |        | add_ln193     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label129           | 0   |        |               |     |        |         |
+|    add_ln117_fu_75_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label128           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2             | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_127_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label130           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label231           | 0   |        |               |     |        |         |
+|    add_ln124_fu_91_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_5_fu_124_p2                      | -   |        | add_ln121_5   | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label232           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_31_fu_95_p2                      | -   |        | add_ln121_31  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label133           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label234           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_33_fu_126_p2                     | -   |        | add_ln121_33  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label135           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label236           | 0   |        |               |     |        |         |
+|    add_ln124_fu_93_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_35_fu_103_p2                     | -   |        | add_ln121_35  | add | fabric | 0       |
+|    add_ln121_36_fu_126_p2                     | -   |        | add_ln121_36  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label237           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_38_fu_95_p2                      | -   |        | add_ln121_38  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label138           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label239           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_51_fu_126_p2                     | -   |        | add_ln121_51  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label140           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label241           | 0   |        |               |     |        |         |
+|    add_ln124_fu_93_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_63_fu_103_p2                     | -   |        | add_ln121_63  | add | fabric | 0       |
+|    add_ln121_64_fu_126_p2                     | -   |        | add_ln121_64  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label242           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_65_fu_95_p2                      | -   |        | add_ln121_65  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label143           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label244           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_67_fu_130_p2                     | -   |        | add_ln121_67  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label145           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label246           | 0   |        |               |     |        |         |
+|    add_ln124_fu_93_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_68_fu_103_p2                     | -   |        | add_ln121_68  | add | fabric | 0       |
+|    add_ln121_69_fu_130_p2                     | -   |        | add_ln121_69  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label247           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_70_fu_95_p2                      | -   |        | add_ln121_70  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label148           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label249           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_72_fu_130_p2                     | -   |        | add_ln121_72  | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label150           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label151           | 0   |        |               |     |        |         |
+|    add_ln117_fu_77_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|    add_ln114_fu_102_p2                        | -   |        | add_ln114     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label162           | 0   |        |               |     |        |         |
+|    add_ln117_fu_88_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label263           | 0   |        |               |     |        |         |
+|    add_ln124_fu_116_p2                        | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label264           | 0   |        |               |     |        |         |
+|    add_ln124_fu_120_p2                        | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label165           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn4_label366        | 0   |        |               |     |        |         |
+|    add_ln188_1_fu_668_p2                      | -   |        | add_ln188_1   | add | fabric | 0       |
+|    add_ln188_fu_597_p2                        | -   |        | add_ln188     | add | fabric | 0       |
+|    add_ln121_fu_604_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|    add_ln121_111_fu_615_p2                    | -   |        | add_ln121_111 | add | fabric | 0       |
+|    add_ln121_112_fu_625_p2                    | -   |        | add_ln121_112 | add | fabric | 0       |
+|    add_ln121_113_fu_645_p2                    | -   |        | add_ln121_113 | add | fabric | 0       |
+|    add_ln121_114_fu_655_p2                    | -   |        | add_ln121_114 | add | fabric | 0       |
+|    add_ln121_115_fu_836_p2                    | -   |        | add_ln121_115 | add | fabric | 0       |
+|    add_ln121_116_fu_846_p2                    | -   |        | add_ln121_116 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label167           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label168           | 0   |        |               |     |        |         |
+|    add_ln117_fu_88_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label269           | 0   |        |               |     |        |         |
+|    add_ln124_fu_104_p2                        | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label270           | 0   |        |               |     |        |         |
+|    add_ln124_fu_104_p2                        | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label171           | 0   |        |               |     |        |         |
+|    add_ln117_fu_88_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1107          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label199           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label172           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn8_label4108       | 0   |        |               |     |        |         |
+|    add_ln215_fu_3450_p2                       | -   |        | add_ln215     | add | fabric | 0       |
+|    add_ln210_fu_3455_p2                       | -   |        | add_ln210     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2110          | 0   |        |               |     |        |         |
+|    add_ln124_fu_90_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1109          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaKeySet256_label10111 | 0   |        |               |     |        |         |
+|    add_ln373_fu_1589_p2                       | -   |        | add_ln373     | add | fabric | 0       |
+|    add_ln121_fu_1620_p2                       | -   |        | add_ln121     | add | fabric | 0       |
+|    grp_fu_1035_p2                             | -   |        | add_ln121_24  | add | fabric | 0       |
+|    grp_fu_1040_p2                             | -   |        | add_ln121_25  | add | fabric | 0       |
+|    grp_fu_1045_p2                             | -   |        | add_ln121_26  | add | fabric | 0       |
+|    grp_fu_1059_p2                             | -   |        | add_ln121_27  | add | fabric | 0       |
+|    grp_fu_1064_p2                             | -   |        | add_ln121_28  | add | fabric | 0       |
+|    grp_fu_1079_p2                             | -   |        | add_ln121_29  | add | fabric | 0       |
+|    grp_fu_1084_p2                             | -   |        | add_ln121_30  | add | fabric | 0       |
+|    grp_fu_1099_p2                             | -   |        | add_ln121_31  | add | fabric | 0       |
+|    grp_fu_1129_p2                             | -   |        | add_ln121_32  | add | fabric | 0       |
+|    grp_fu_1104_p2                             | -   |        | add_ln121_33  | add | fabric | 0       |
+|    grp_fu_1134_p2                             | -   |        | add_ln121_34  | add | fabric | 0       |
+|    grp_fu_1119_p2                             | -   |        | add_ln121_35  | add | fabric | 0       |
+|    grp_fu_1149_p2                             | -   |        | add_ln121_36  | add | fabric | 0       |
+|    grp_fu_1124_p2                             | -   |        | add_ln121_37  | add | fabric | 0       |
+|    grp_fu_1154_p2                             | -   |        | add_ln121_38  | add | fabric | 0       |
+|    grp_fu_1139_p2                             | -   |        | add_ln121_39  | add | fabric | 0       |
+|    grp_fu_1169_p2                             | -   |        | add_ln121_40  | add | fabric | 0       |
+|    grp_fu_1144_p2                             | -   |        | add_ln121_41  | add | fabric | 0       |
+|    grp_fu_1174_p2                             | -   |        | add_ln121_42  | add | fabric | 0       |
+|    grp_fu_1159_p2                             | -   |        | add_ln121_43  | add | fabric | 0       |
+|    grp_fu_1193_p2                             | -   |        | add_ln121_44  | add | fabric | 0       |
+|    grp_fu_1164_p2                             | -   |        | add_ln121_45  | add | fabric | 0       |
+|    grp_fu_1198_p2                             | -   |        | add_ln121_46  | add | fabric | 0       |
+|    grp_fu_1035_p2                             | -   |        | add_ln121_1   | add | fabric | 0       |
+|    grp_fu_1040_p2                             | -   |        | add_ln121_2   | add | fabric | 0       |
+|    grp_fu_1045_p2                             | -   |        | add_ln121_3   | add | fabric | 0       |
+|    grp_fu_1059_p2                             | -   |        | add_ln121_4   | add | fabric | 0       |
+|    grp_fu_1064_p2                             | -   |        | add_ln121_5   | add | fabric | 0       |
+|    grp_fu_1079_p2                             | -   |        | add_ln121_6   | add | fabric | 0       |
+|    grp_fu_1084_p2                             | -   |        | add_ln121_7   | add | fabric | 0       |
+|    grp_fu_1099_p2                             | -   |        | add_ln121_8   | add | fabric | 0       |
+|    grp_fu_1129_p2                             | -   |        | add_ln121_9   | add | fabric | 0       |
+|    grp_fu_1104_p2                             | -   |        | add_ln121_10  | add | fabric | 0       |
+|    grp_fu_1134_p2                             | -   |        | add_ln121_11  | add | fabric | 0       |
+|    grp_fu_1119_p2                             | -   |        | add_ln121_12  | add | fabric | 0       |
+|    grp_fu_1149_p2                             | -   |        | add_ln121_13  | add | fabric | 0       |
+|    grp_fu_1124_p2                             | -   |        | add_ln121_14  | add | fabric | 0       |
+|    grp_fu_1154_p2                             | -   |        | add_ln121_15  | add | fabric | 0       |
+|    grp_fu_1139_p2                             | -   |        | add_ln121_16  | add | fabric | 0       |
+|    grp_fu_1169_p2                             | -   |        | add_ln121_17  | add | fabric | 0       |
+|    grp_fu_1144_p2                             | -   |        | add_ln121_18  | add | fabric | 0       |
+|    grp_fu_1174_p2                             | -   |        | add_ln121_19  | add | fabric | 0       |
+|    grp_fu_1159_p2                             | -   |        | add_ln121_20  | add | fabric | 0       |
+|    grp_fu_1193_p2                             | -   |        | add_ln121_21  | add | fabric | 0       |
+|    grp_fu_1164_p2                             | -   |        | add_ln121_22  | add | fabric | 0       |
+|    grp_fu_1198_p2                             | -   |        | add_ln121_23  | add | fabric | 0       |
+|    add_ln387_fu_2556_p2                       | -   |        | add_ln387     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2112          | 0   |        |               |     |        |         |
+|    add_ln124_fu_88_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_122_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaKeySet192_label8100  | 0   |        |               |     |        |         |
+|    add_ln329_fu_76_p2                         | -   |        | add_ln329     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1101          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn8_label4102       | 0   |        |               |     |        |         |
+|    add_ln215_fu_3450_p2                       | -   |        | add_ln215     | add | fabric | 0       |
+|    add_ln210_fu_3455_p2                       | -   |        | add_ln210     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2104          | 0   |        |               |     |        |         |
+|    add_ln124_fu_90_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1103          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaKeySet192_label9105  | 0   |        |               |     |        |         |
+|    add_ln340_fu_1634_p2                       | -   |        | add_ln340     | add | fabric | 0       |
+|    add_ln121_fu_1665_p2                       | -   |        | add_ln121     | add | fabric | 0       |
+|    grp_fu_1235_p2                             | -   |        | add_ln121_77  | add | fabric | 0       |
+|    grp_fu_1246_p2                             | -   |        | add_ln121_78  | add | fabric | 0       |
+|    grp_fu_1251_p2                             | -   |        | add_ln121_79  | add | fabric | 0       |
+|    grp_fu_1271_p2                             | -   |        | add_ln121_80  | add | fabric | 0       |
+|    grp_fu_1276_p2                             | -   |        | add_ln121_81  | add | fabric | 0       |
+|    grp_fu_1291_p2                             | -   |        | add_ln121_82  | add | fabric | 0       |
+|    grp_fu_1296_p2                             | -   |        | add_ln121_83  | add | fabric | 0       |
+|    grp_fu_1311_p2                             | -   |        | add_ln121_84  | add | fabric | 0       |
+|    grp_fu_1341_p2                             | -   |        | add_ln121_85  | add | fabric | 0       |
+|    grp_fu_1316_p2                             | -   |        | add_ln121_86  | add | fabric | 0       |
+|    grp_fu_1346_p2                             | -   |        | add_ln121_87  | add | fabric | 0       |
+|    grp_fu_1331_p2                             | -   |        | add_ln121_88  | add | fabric | 0       |
+|    grp_fu_1361_p2                             | -   |        | add_ln121_89  | add | fabric | 0       |
+|    grp_fu_1336_p2                             | -   |        | add_ln121_90  | add | fabric | 0       |
+|    grp_fu_1366_p2                             | -   |        | add_ln121_91  | add | fabric | 0       |
+|    grp_fu_1351_p2                             | -   |        | add_ln121_92  | add | fabric | 0       |
+|    grp_fu_1381_p2                             | -   |        | add_ln121_93  | add | fabric | 0       |
+|    grp_fu_1356_p2                             | -   |        | add_ln121_94  | add | fabric | 0       |
+|    grp_fu_1386_p2                             | -   |        | add_ln121_95  | add | fabric | 0       |
+|    grp_fu_1371_p2                             | -   |        | add_ln121_96  | add | fabric | 0       |
+|    grp_fu_1399_p2                             | -   |        | add_ln121_97  | add | fabric | 0       |
+|    grp_fu_1376_p2                             | -   |        | add_ln121_98  | add | fabric | 0       |
+|    grp_fu_1404_p2                             | -   |        | add_ln121_99  | add | fabric | 0       |
+|    grp_fu_1235_p2                             | -   |        | add_ln121_54  | add | fabric | 0       |
+|    grp_fu_1246_p2                             | -   |        | add_ln121_55  | add | fabric | 0       |
+|    grp_fu_1251_p2                             | -   |        | add_ln121_56  | add | fabric | 0       |
+|    grp_fu_1271_p2                             | -   |        | add_ln121_57  | add | fabric | 0       |
+|    grp_fu_1276_p2                             | -   |        | add_ln121_58  | add | fabric | 0       |
+|    grp_fu_1291_p2                             | -   |        | add_ln121_59  | add | fabric | 0       |
+|    grp_fu_1296_p2                             | -   |        | add_ln121_60  | add | fabric | 0       |
+|    grp_fu_1311_p2                             | -   |        | add_ln121_61  | add | fabric | 0       |
+|    grp_fu_1341_p2                             | -   |        | add_ln121_62  | add | fabric | 0       |
+|    grp_fu_1316_p2                             | -   |        | add_ln121_63  | add | fabric | 0       |
+|    grp_fu_1346_p2                             | -   |        | add_ln121_64  | add | fabric | 0       |
+|    grp_fu_1331_p2                             | -   |        | add_ln121_65  | add | fabric | 0       |
+|    grp_fu_1361_p2                             | -   |        | add_ln121_66  | add | fabric | 0       |
+|    grp_fu_1336_p2                             | -   |        | add_ln121_67  | add | fabric | 0       |
+|    grp_fu_1366_p2                             | -   |        | add_ln121_68  | add | fabric | 0       |
+|    grp_fu_1351_p2                             | -   |        | add_ln121_69  | add | fabric | 0       |
+|    grp_fu_1381_p2                             | -   |        | add_ln121_70  | add | fabric | 0       |
+|    grp_fu_1356_p2                             | -   |        | add_ln121_71  | add | fabric | 0       |
+|    grp_fu_1386_p2                             | -   |        | add_ln121_72  | add | fabric | 0       |
+|    grp_fu_1371_p2                             | -   |        | add_ln121_73  | add | fabric | 0       |
+|    grp_fu_1399_p2                             | -   |        | add_ln121_74  | add | fabric | 0       |
+|    grp_fu_1376_p2                             | -   |        | add_ln121_75  | add | fabric | 0       |
+|    grp_fu_1404_p2                             | -   |        | add_ln121_76  | add | fabric | 0       |
+|    add_ln354_fu_2557_p2                       | -   |        | add_ln354     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2106          | 0   |        |               |     |        |         |
+|    add_ln124_fu_88_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_122_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn4_label373        | 0   |        |               |     |        |         |
+|    add_ln196_fu_1772_p2                       | -   |        | add_ln196     | add | fabric | 0       |
+|    add_ln193_fu_1777_p2                       | -   |        | add_ln193     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label175           | 0   |        |               |     |        |         |
+|    add_ln117_fu_75_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label174           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label276           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_111_fu_127_p2                    | -   |        | add_ln121_111 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label177           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label278           | 0   |        |               |     |        |         |
+|    add_ln124_fu_91_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_115_fu_124_p2                    | -   |        | add_ln121_115 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label279           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_116_fu_95_p2                     | -   |        | add_ln121_116 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label180           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label281           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_118_fu_126_p2                    | -   |        | add_ln121_118 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label182           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label283           | 0   |        |               |     |        |         |
+|    add_ln124_fu_93_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_103_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|    add_ln121_119_fu_126_p2                    | -   |        | add_ln121_119 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label284           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_95_p2                         | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label185           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label286           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_126_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label187           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label288           | 0   |        |               |     |        |         |
+|    add_ln124_fu_93_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_103_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|    add_ln121_118_fu_126_p2                    | -   |        | add_ln121_118 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label289           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_95_p2                         | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label190           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label291           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_130_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label192           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label293           | 0   |        |               |     |        |         |
+|    add_ln124_fu_93_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_103_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|    add_ln121_117_fu_130_p2                    | -   |        | add_ln121_117 | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label294           | 0   |        |               |     |        |         |
+|    add_ln124_fu_80_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_95_p2                         | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label195           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label296           | 0   |        |               |     |        |         |
+|    add_ln124_fu_95_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|    add_ln121_fu_130_p2                        | -   |        | add_ln121     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label197           | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label198           | 0   |        |               |     |        |         |
+|    add_ln117_fu_77_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|    add_ln114_fu_102_p2                        | -   |        | add_ln114     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1113          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2114          | 0   |        |               |     |        |         |
+|    add_ln124_fu_147_p2                        | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2115          | 0   |        |               |     |        |         |
+|    add_ln124_fu_151_p2                        | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1116          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ClefiaGfn4Inv_label5       | 0   |        |               |     |        |         |
+|    add_ln224_1_fu_686_p2                      | -   |        | add_ln224_1   | add | fabric | 0       |
+|    add_ln224_fu_611_p2                        | -   |        | add_ln224     | add | fabric | 0       |
+|    add_ln233_fu_1787_p2                       | -   |        | add_ln233     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1117          | 0   |        |               |     |        |         |
+|    add_ln117_fu_74_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteCpy_label1118          | 0   |        |               |     |        |         |
+|    add_ln117_fu_88_p2                         | -   |        | add_ln117     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2119          | 0   |        |               |     |        |         |
+|    add_ln124_fu_88_p2                         | -   |        | add_ln124     | add | fabric | 0       |
+|  + clefia_Pipeline_ByteXor_label2120          | 0   |        |               |     |        |         |
+|    add_ln124_fu_92_p2                         | -   |        | add_ln124     | add | fabric | 0       |
++-----------------------------------------------+-----+--------+---------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| Name                                         | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++----------------------------------------------+------+------+--------+-----------+---------+------+---------+
+| + clefia                                     | 6    | 0    |        |           |         |      |         |
+|   t_17_U                                     | -    | -    |        | t_17      | ram_t2p | auto | 1       |
+|   t_16_U                                     | -    | -    |        | t_16      | ram_t2p | auto | 1       |
+|   t_15_U                                     | -    | -    |        | t_15      | ram_t2p | auto | 1       |
+|   t_14_U                                     | -    | -    |        | t_14      | ram_t2p | auto | 1       |
+|   t_13_U                                     | -    | -    |        | t_13      | ram_t2p | auto | 1       |
+|   t_12_U                                     | -    | -    |        | t_12      | ram_t2p | auto | 1       |
+|   t_11_U                                     | -    | -    |        | t_11      | ram_t2p | auto | 1       |
+|   t_10_U                                     | -    | -    |        | t_10      | ram_t2p | auto | 1       |
+|   t_9_U                                      | -    | -    |        | t_9       | ram_t2p | auto | 1       |
+|   t_8_U                                      | -    | -    |        | t_8       | ram_t2p | auto | 1       |
+|   t_7_U                                      | -    | -    |        | t_7       | ram_t2p | auto | 1       |
+|   t_6_U                                      | -    | -    |        | t_6       | ram_t2p | auto | 1       |
+|   t_5_U                                      | -    | -    |        | t_5       | ram_t2p | auto | 1       |
+|   t_4_U                                      | -    | -    |        | t_4       | ram_t2p | auto | 1       |
+|   t_3_U                                      | -    | -    |        | t_3       | ram_t2p | auto | 1       |
+|   t_2_U                                      | -    | -    |        | t_2       | ram_t2p | auto | 1       |
+|   t_1_U                                      | -    | -    |        | t_1       | ram_t2p | auto | 1       |
+|   t_U                                        | -    | -    |        | t         | ram_t2p | auto | 1       |
+|   fin_7_U                                    | -    | -    |        | fin_7     | ram_t2p | auto | 1       |
+|   fout_7_U                                   | -    | -    |        | fout_7    | ram_t2p | auto | 1       |
+|   rin_1_U                                    | -    | -    |        | rin_1     | ram_s2p | auto | 1       |
+|   rout_1_U                                   | -    | -    |        | rout_1    | ram_1p  | auto | 1       |
+|   fin_6_U                                    | -    | -    |        | fin_6     | ram_t2p | auto | 1       |
+|   fout_6_U                                   | -    | -    |        | fout_6    | ram_t2p | auto | 1       |
+|   lk_1_U                                     | -    | -    |        | lk_1      | ram_t2p | auto | 1       |
+|   fin_5_U                                    | -    | -    |        | fin_5     | ram_t2p | auto | 1       |
+|   fout_5_U                                   | -    | -    |        | fout_5    | ram_t2p | auto | 1       |
+|   skey256_1_U                                | -    | -    |        | skey256_1 | ram_s2p | auto | 1       |
+|   lk_2_U                                     | -    | -    |        | lk_2      | ram_t2p | auto | 1       |
+|   fin_4_U                                    | -    | -    |        | fin_4     | ram_t2p | auto | 1       |
+|   fout_4_U                                   | -    | -    |        | fout_4    | ram_t2p | auto | 1       |
+|   lk_3_U                                     | -    | -    |        | lk_3      | ram_s2p | auto | 1       |
+|   fin_3_U                                    | -    | -    |        | fin_3     | ram_t2p | auto | 1       |
+|   fout_3_U                                   | -    | -    |        | fout_3    | ram_t2p | auto | 1       |
+|   rin_U                                      | -    | -    |        | rin       | ram_s2p | auto | 1       |
+|   rout_U                                     | -    | -    |        | rout      | ram_1p  | auto | 1       |
+|   fin_2_U                                    | -    | -    |        | fin_2     | ram_t2p | auto | 1       |
+|   fout_2_U                                   | -    | -    |        | fout_2    | ram_t2p | auto | 1       |
+|   lk_4_U                                     | -    | -    |        | lk_4      | ram_t2p | auto | 1       |
+|   fin_1_U                                    | -    | -    |        | fin_1     | ram_t2p | auto | 1       |
+|   fout_1_U                                   | -    | -    |        | fout_1    | ram_t2p | auto | 1       |
+|   skey256_U                                  | -    | -    |        | skey256   | ram_s2p | auto | 1       |
+|   lk_5_U                                     | -    | -    |        | lk_5      | ram_t2p | auto | 1       |
+|   fin_U                                      | -    | -    |        | fin       | ram_t2p | auto | 1       |
+|   fout_U                                     | -    | -    |        | fout      | ram_t2p | auto | 1       |
+|   lk_U                                       | -    | -    |        | lk        | ram_s2p | auto | 1       |
+|   ct_U                                       | -    | -    |        | ct        | ram_1p  | auto | 1       |
+|   rk_U                                       | 1    | -    |        | rk        | ram_t2p | auto | 1       |
+|   con128_U                                   | 1    | -    |        | con128    | rom_1p  | auto | 1       |
+|   clefia_s0_U                                | 1    | -    |        | clefia_s0 | rom_1p  | auto | 1       |
+|   clefia_s1_U                                | 1    | -    |        | clefia_s1 | rom_1p  | auto | 1       |
+|   con192_U                                   | 1    | -    |        | con192    | rom_2p  | auto | 1       |
+|   con256_U                                   | 1    | -    |        | con256    | rom_2p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label157          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label152          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label1            | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label260          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label261          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|  + clefia_Pipeline_ClefiaKeySet192_label8    | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label129          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label232          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label237          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label242          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label247          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label151          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label1107         | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label199          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label172          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label2110         | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label2112         | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_2p  | auto | 1       |
+|  + clefia_Pipeline_ClefiaKeySet192_label8100 | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label175          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label279          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label284          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label289          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteXor_label294          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
+|  + clefia_Pipeline_ByteCpy_label198          | 0    | 0    |        |           |         |      |         |
+|    skey_U                                    | -    | -    |        | skey      | rom_1p  | auto | 1       |
++----------------------------------------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------+-------------------------------------------------------------+
+| Type      | Options                   | Location                                                    |
++-----------+---------------------------+-------------------------------------------------------------+
+| inline    | recursive                 | CLEFIA_ip/solution4/directives.tcl:12 in clefia             |
+| interface | s_axilite port=Clefia_dec | CLEFIA_ip/solution4/directives.tcl:10 in clefia, Clefia_dec |
+| interface | s_axilite port=Clefia_enc | CLEFIA_ip/solution4/directives.tcl:9 in clefia, Clefia_enc  |
+| interface | s_axilite port=key_bitlen | CLEFIA_ip/solution4/directives.tcl:7 in clefia, key_bitlen  |
+| interface | s_axilite port=pt         | CLEFIA_ip/solution4/directives.tcl:8 in clefia, pt          |
+| interface | s_axilite port=return     | CLEFIA_ip/solution4/directives.tcl:6 in clefia, return      |
+| unroll    |                           | CLEFIA_ip/solution4/directives.tcl:13 in clefiakeyset128    |
++-----------+---------------------------+-------------------------------------------------------------+
+
+

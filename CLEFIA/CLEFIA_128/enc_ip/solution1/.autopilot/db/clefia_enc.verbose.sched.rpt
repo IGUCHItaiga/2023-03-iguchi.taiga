@@ -1,0 +1,391 @@
+
+
+================================================================
+== Vitis HLS Report for 'clefia_enc'
+================================================================
+* Date:           Tue Dec 13 15:28:38 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        enc_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.998 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      383|      383|  3.830 us|  3.830 us|  384|  384|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 26
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%xor_ln117_19_loc = alloca i64 1"   --->   Operation 27 'alloca' 'xor_ln117_19_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%xor_ln117_18_loc = alloca i64 1"   --->   Operation 28 'alloca' 'xor_ln117_18_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%xor_ln117_17_loc = alloca i64 1"   --->   Operation 29 'alloca' 'xor_ln117_17_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%xor_ln117_16_loc = alloca i64 1"   --->   Operation 30 'alloca' 'xor_ln117_16_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%fin_load_11_loc = alloca i64 1"   --->   Operation 31 'alloca' 'fin_load_11_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%fin_load_10_loc = alloca i64 1"   --->   Operation 32 'alloca' 'fin_load_10_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%fin_load_9_loc = alloca i64 1"   --->   Operation 33 'alloca' 'fin_load_9_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%fin_load_8_loc = alloca i64 1"   --->   Operation 34 'alloca' 'fin_load_8_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%xor_ln117_11_loc = alloca i64 1"   --->   Operation 35 'alloca' 'xor_ln117_11_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%xor_ln117_10_loc = alloca i64 1"   --->   Operation 36 'alloca' 'xor_ln117_10_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%xor_ln117_9_loc = alloca i64 1"   --->   Operation 37 'alloca' 'xor_ln117_9_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%xor_ln117_8_loc = alloca i64 1"   --->   Operation 38 'alloca' 'xor_ln117_8_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%fin_load_3_loc = alloca i64 1"   --->   Operation 39 'alloca' 'fin_load_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%fin_load_2_loc = alloca i64 1"   --->   Operation 40 'alloca' 'fin_load_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%fin_load_1_loc = alloca i64 1"   --->   Operation 41 'alloca' 'fin_load_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%fin_load_loc = alloca i64 1"   --->   Operation 42 'alloca' 'fin_load_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%fin = alloca i64 1" [src/enc.c:183]   --->   Operation 43 'alloca' 'fin' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%fout = alloca i64 1" [src/enc.c:183]   --->   Operation 44 'alloca' 'fout' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%rin = alloca i64 1" [src/enc.c:278->src/enc.c:312]   --->   Operation 45 'alloca' 'rin' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%rout = alloca i64 1" [src/enc.c:278->src/enc.c:312]   --->   Operation 46 'alloca' 'rout' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label1, i8 %rin, i8 %pt"   --->   Operation 47 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label1, i8 %rin, i8 %pt"   --->   Operation 48 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label2, i8 %rin, i8 %rk"   --->   Operation 49 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 50 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label2, i8 %rin, i8 %rk"   --->   Operation 50 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 51 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label22, i8 %rin, i8 %rk"   --->   Operation 51 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 52 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label22, i8 %rin, i8 %rk"   --->   Operation 52 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 53 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label13, i8 %rin, i8 %fin"   --->   Operation 53 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 54 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label13, i8 %rin, i8 %fin"   --->   Operation 54 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 55 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ClefiaGfn4_label3, i8 %fin, i8 %fin_load_loc, i8 %fin_load_1_loc, i8 %fin_load_2_loc, i8 %fin_load_3_loc, i8 %xor_ln117_8_loc, i8 %xor_ln117_9_loc, i8 %xor_ln117_10_loc, i8 %xor_ln117_11_loc, i8 %fin_load_8_loc, i8 %fin_load_9_loc, i8 %fin_load_10_loc, i8 %fin_load_11_loc, i8 %xor_ln117_16_loc, i8 %xor_ln117_17_loc, i8 %xor_ln117_18_loc, i8 %xor_ln117_19_loc, i8 %rk, i8 %clefia_s0, i8 %clefia_s1"   --->   Operation 55 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ClefiaGfn4_label3, i8 %fin, i8 %fin_load_loc, i8 %fin_load_1_loc, i8 %fin_load_2_loc, i8 %fin_load_3_loc, i8 %xor_ln117_8_loc, i8 %xor_ln117_9_loc, i8 %xor_ln117_10_loc, i8 %xor_ln117_11_loc, i8 %fin_load_8_loc, i8 %fin_load_9_loc, i8 %fin_load_10_loc, i8 %fin_load_11_loc, i8 %xor_ln117_16_loc, i8 %xor_ln117_17_loc, i8 %xor_ln117_18_loc, i8 %xor_ln117_19_loc, i8 %rk, i8 %clefia_s0, i8 %clefia_s1"   --->   Operation 56 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 2.32>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%fout_addr_14 = getelementptr i8 %fout, i64 0, i64 14" [src/enc.c:114]   --->   Operation 57 'getelementptr' 'fout_addr_14' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (0.00ns)   --->   "%fout_addr_15 = getelementptr i8 %fout, i64 0, i64 15" [src/enc.c:114]   --->   Operation 58 'getelementptr' 'fout_addr_15' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%xor_ln117_18_loc_load = load i8 %xor_ln117_18_loc"   --->   Operation 59 'load' 'xor_ln117_18_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "%xor_ln117_19_loc_load = load i8 %xor_ln117_19_loc"   --->   Operation 60 'load' 'xor_ln117_19_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 61 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_19_loc_load, i4 %fout_addr_15" [src/enc.c:117]   --->   Operation 61 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_11 : Operation 62 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_18_loc_load, i4 %fout_addr_14" [src/enc.c:117]   --->   Operation 62 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 12 <SV = 11> <Delay = 2.32>
+ST_12 : Operation 63 [1/1] (0.00ns)   --->   "%fout_addr_12 = getelementptr i8 %fout, i64 0, i64 12" [src/enc.c:114]   --->   Operation 63 'getelementptr' 'fout_addr_12' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 64 [1/1] (0.00ns)   --->   "%fout_addr_13 = getelementptr i8 %fout, i64 0, i64 13" [src/enc.c:114]   --->   Operation 64 'getelementptr' 'fout_addr_13' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 65 [1/1] (0.00ns)   --->   "%xor_ln117_16_loc_load = load i8 %xor_ln117_16_loc"   --->   Operation 65 'load' 'xor_ln117_16_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 66 [1/1] (0.00ns)   --->   "%xor_ln117_17_loc_load = load i8 %xor_ln117_17_loc"   --->   Operation 66 'load' 'xor_ln117_17_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 67 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_17_loc_load, i4 %fout_addr_13" [src/enc.c:117]   --->   Operation 67 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_12 : Operation 68 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_16_loc_load, i4 %fout_addr_12" [src/enc.c:117]   --->   Operation 68 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 13 <SV = 12> <Delay = 2.32>
+ST_13 : Operation 69 [1/1] (0.00ns)   --->   "%fout_addr_10 = getelementptr i8 %fout, i64 0, i64 10" [src/enc.c:107]   --->   Operation 69 'getelementptr' 'fout_addr_10' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 70 [1/1] (0.00ns)   --->   "%fout_addr_11 = getelementptr i8 %fout, i64 0, i64 11" [src/enc.c:107]   --->   Operation 70 'getelementptr' 'fout_addr_11' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 71 [1/1] (0.00ns)   --->   "%fin_load_21 = load i8 %fin_load_10_loc"   --->   Operation 71 'load' 'fin_load_21' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 72 [1/1] (0.00ns)   --->   "%fin_load_22 = load i8 %fin_load_11_loc"   --->   Operation 72 'load' 'fin_load_22' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 73 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_22, i4 %fout_addr_11" [src/enc.c:110]   --->   Operation 73 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 74 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_21, i4 %fout_addr_10" [src/enc.c:110]   --->   Operation 74 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 14 <SV = 13> <Delay = 2.32>
+ST_14 : Operation 75 [1/1] (0.00ns)   --->   "%fout_addr_8 = getelementptr i8 %fout, i64 0, i64 8" [src/enc.c:107]   --->   Operation 75 'getelementptr' 'fout_addr_8' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 76 [1/1] (0.00ns)   --->   "%fout_addr_9 = getelementptr i8 %fout, i64 0, i64 9" [src/enc.c:107]   --->   Operation 76 'getelementptr' 'fout_addr_9' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 77 [1/1] (0.00ns)   --->   "%fin_load_19 = load i8 %fin_load_8_loc"   --->   Operation 77 'load' 'fin_load_19' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 78 [1/1] (0.00ns)   --->   "%fin_load_20 = load i8 %fin_load_9_loc"   --->   Operation 78 'load' 'fin_load_20' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 79 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_20, i4 %fout_addr_9" [src/enc.c:110]   --->   Operation 79 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 80 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_19, i4 %fout_addr_8" [src/enc.c:110]   --->   Operation 80 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 15 <SV = 14> <Delay = 2.32>
+ST_15 : Operation 81 [1/1] (0.00ns)   --->   "%fout_addr_6 = getelementptr i8 %fout, i64 0, i64 6" [src/enc.c:114]   --->   Operation 81 'getelementptr' 'fout_addr_6' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 82 [1/1] (0.00ns)   --->   "%fout_addr_7 = getelementptr i8 %fout, i64 0, i64 7" [src/enc.c:114]   --->   Operation 82 'getelementptr' 'fout_addr_7' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 83 [1/1] (0.00ns)   --->   "%xor_ln117_10_loc_load = load i8 %xor_ln117_10_loc"   --->   Operation 83 'load' 'xor_ln117_10_loc_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 84 [1/1] (0.00ns)   --->   "%xor_ln117_11_loc_load = load i8 %xor_ln117_11_loc"   --->   Operation 84 'load' 'xor_ln117_11_loc_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 85 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_11_loc_load, i4 %fout_addr_7" [src/enc.c:117]   --->   Operation 85 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 86 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_10_loc_load, i4 %fout_addr_6" [src/enc.c:117]   --->   Operation 86 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 16 <SV = 15> <Delay = 2.32>
+ST_16 : Operation 87 [1/1] (0.00ns)   --->   "%fout_addr_4 = getelementptr i8 %fout, i64 0, i64 4" [src/enc.c:114]   --->   Operation 87 'getelementptr' 'fout_addr_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 88 [1/1] (0.00ns)   --->   "%fout_addr_5 = getelementptr i8 %fout, i64 0, i64 5" [src/enc.c:114]   --->   Operation 88 'getelementptr' 'fout_addr_5' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 89 [1/1] (0.00ns)   --->   "%xor_ln117_8_loc_load = load i8 %xor_ln117_8_loc"   --->   Operation 89 'load' 'xor_ln117_8_loc_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 90 [1/1] (0.00ns)   --->   "%xor_ln117_9_loc_load = load i8 %xor_ln117_9_loc"   --->   Operation 90 'load' 'xor_ln117_9_loc_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 91 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_9_loc_load, i4 %fout_addr_5" [src/enc.c:117]   --->   Operation 91 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 92 [1/1] (2.32ns)   --->   "%store_ln117 = store i8 %xor_ln117_8_loc_load, i4 %fout_addr_4" [src/enc.c:117]   --->   Operation 92 'store' 'store_ln117' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 17 <SV = 16> <Delay = 2.32>
+ST_17 : Operation 93 [1/1] (0.00ns)   --->   "%fout_addr_2 = getelementptr i8 %fout, i64 0, i64 2" [src/enc.c:107]   --->   Operation 93 'getelementptr' 'fout_addr_2' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 94 [1/1] (0.00ns)   --->   "%fout_addr_3 = getelementptr i8 %fout, i64 0, i64 3" [src/enc.c:107]   --->   Operation 94 'getelementptr' 'fout_addr_3' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 95 [1/1] (0.00ns)   --->   "%fin_load_17 = load i8 %fin_load_2_loc"   --->   Operation 95 'load' 'fin_load_17' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 96 [1/1] (0.00ns)   --->   "%fin_load_18 = load i8 %fin_load_3_loc"   --->   Operation 96 'load' 'fin_load_18' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 97 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_18, i4 %fout_addr_3" [src/enc.c:110]   --->   Operation 97 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 98 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_17, i4 %fout_addr_2" [src/enc.c:110]   --->   Operation 98 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 18 <SV = 17> <Delay = 2.32>
+ST_18 : Operation 99 [1/1] (0.00ns)   --->   "%fout_addr = getelementptr i8 %fout, i64 0, i64 0" [src/enc.c:107]   --->   Operation 99 'getelementptr' 'fout_addr' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 100 [1/1] (0.00ns)   --->   "%fout_addr_1 = getelementptr i8 %fout, i64 0, i64 1" [src/enc.c:107]   --->   Operation 100 'getelementptr' 'fout_addr_1' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 101 [1/1] (0.00ns)   --->   "%fin_load = load i8 %fin_load_loc"   --->   Operation 101 'load' 'fin_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 102 [1/1] (0.00ns)   --->   "%fin_load_16 = load i8 %fin_load_1_loc"   --->   Operation 102 'load' 'fin_load_16' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 103 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load_16, i4 %fout_addr_1" [src/enc.c:110]   --->   Operation 103 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 104 [1/1] (2.32ns)   --->   "%store_ln110 = store i8 %fin_load, i4 %fout_addr" [src/enc.c:110]   --->   Operation 104 'store' 'store_ln110' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 105 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label14, i8 %fout, i8 %rout"   --->   Operation 105 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 106 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label14, i8 %fout, i8 %rout"   --->   Operation 106 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 107 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label15, i8 %rout, i8 %ct"   --->   Operation 107 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 0.00>
+ST_22 : Operation 108 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteCpy_label15, i8 %rout, i8 %ct"   --->   Operation 108 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 0.00>
+ST_23 : Operation 109 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label26, i8 %ct, i8 %rk"   --->   Operation 109 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 0.00>
+ST_24 : Operation 110 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label26, i8 %ct, i8 %rk"   --->   Operation 110 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 111 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label27, i8 %ct, i8 %rk"   --->   Operation 111 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 0.00>
+ST_26 : Operation 112 [1/1] (0.00ns)   --->   "%spectopmodule_ln299 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7" [src/enc.c:299]   --->   Operation 112 'spectopmodule' 'spectopmodule_ln299' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 113 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %pt, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 113 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 114 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %pt, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 114 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 115 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %pt, i64 666, i64 207, i64 1"   --->   Operation 115 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 116 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %pt"   --->   Operation 116 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 117 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %ct, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 117 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 118 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %ct, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 118 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 119 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %ct, i64 666, i64 207, i64 1"   --->   Operation 119 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 120 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %ct"   --->   Operation 120 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 121 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 121 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 122 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clefia_enc_Pipeline_ByteXor_label27, i8 %ct, i8 %rk"   --->   Operation 122 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_26 : Operation 123 [1/1] (0.00ns)   --->   "%ret_ln314 = ret" [src/enc.c:314]   --->   Operation 123 'ret' 'ret_ln314' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_15', src/enc.c:114) [55]  (0 ns)
+	'store' operation ('store_ln117', src/enc.c:117) of variable 'xor_ln117_19_loc_load' on array 'fout', src/enc.c:183 [73]  (2.32 ns)
+
+ <State 12>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_13', src/enc.c:114) [53]  (0 ns)
+	'store' operation ('store_ln117', src/enc.c:117) of variable 'xor_ln117_17_loc_load' on array 'fout', src/enc.c:183 [75]  (2.32 ns)
+
+ <State 13>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_11', src/enc.c:107) [51]  (0 ns)
+	'store' operation ('store_ln110', src/enc.c:110) of variable 'fin_load_22' on array 'fout', src/enc.c:183 [77]  (2.32 ns)
+
+ <State 14>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_9', src/enc.c:107) [49]  (0 ns)
+	'store' operation ('store_ln110', src/enc.c:110) of variable 'fin_load_20' on array 'fout', src/enc.c:183 [79]  (2.32 ns)
+
+ <State 15>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_7', src/enc.c:114) [47]  (0 ns)
+	'store' operation ('store_ln117', src/enc.c:117) of variable 'xor_ln117_11_loc_load' on array 'fout', src/enc.c:183 [81]  (2.32 ns)
+
+ <State 16>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_5', src/enc.c:114) [45]  (0 ns)
+	'store' operation ('store_ln117', src/enc.c:117) of variable 'xor_ln117_9_loc_load' on array 'fout', src/enc.c:183 [83]  (2.32 ns)
+
+ <State 17>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_3', src/enc.c:107) [43]  (0 ns)
+	'store' operation ('store_ln110', src/enc.c:110) of variable 'fin_load_18' on array 'fout', src/enc.c:183 [85]  (2.32 ns)
+
+ <State 18>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('fout_addr_1', src/enc.c:107) [41]  (0 ns)
+	'store' operation ('store_ln110', src/enc.c:110) of variable 'fin_load_16' on array 'fout', src/enc.c:183 [87]  (2.32 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 0ns
+The critical path consists of the following:
+
+ <State 21>: 0ns
+The critical path consists of the following:
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 0ns
+The critical path consists of the following:
+
+ <State 24>: 0ns
+The critical path consists of the following:
+
+ <State 25>: 0ns
+The critical path consists of the following:
+
+ <State 26>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,310 @@
+
+
+================================================================
+== Vitis HLS Report for 'ClefiaF1Xor_3'
+================================================================
+* Date:           Tue Dec  6 21:01:16 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CLEFIA_ip
+* Solution:       solution2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.998 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    2|    2|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.16>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%rk_offset_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %rk_offset" [clefia.c:121]   --->   Operation 7 'read' 'rk_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%zext_ln121 = zext i8 %rk_offset_read" [clefia.c:121]   --->   Operation 8 'zext' 'zext_ln121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%rk_addr = getelementptr i8 %rk, i64 0, i64 %zext_ln121" [clefia.c:121]   --->   Operation 9 'getelementptr' 'rk_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.91ns)   --->   "%add_ln124 = add i8 %rk_offset_read, i8 1" [clefia.c:124]   --->   Operation 10 'add' 'add_ln124' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln124 = zext i8 %add_ln124" [clefia.c:124]   --->   Operation 11 'zext' 'zext_ln124' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%rk_addr_26 = getelementptr i8 %rk, i64 0, i64 %zext_ln124" [clefia.c:124]   --->   Operation 12 'getelementptr' 'rk_addr_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (3.25ns)   --->   "%rk_load = load i8 %rk_addr" [clefia.c:124]   --->   Operation 13 'load' 'rk_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_1 : Operation 14 [2/2] (3.25ns)   --->   "%rk_load_1 = load i8 %rk_addr_26" [clefia.c:124]   --->   Operation 14 'load' 'rk_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 2 <SV = 1> <Delay = 5.16>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%src_15_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_15_read" [clefia.c:121]   --->   Operation 15 'read' 'src_15_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%src_14_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_14_read" [clefia.c:121]   --->   Operation 16 'read' 'src_14_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%src_13_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_13_read" [clefia.c:121]   --->   Operation 17 'read' 'src_13_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%src_12_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_12_read" [clefia.c:121]   --->   Operation 18 'read' 'src_12_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%src_11_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_11_read" [clefia.c:121]   --->   Operation 19 'read' 'src_11_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%src_10_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_10_read" [clefia.c:121]   --->   Operation 20 'read' 'src_10_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%src_9_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_9_read" [clefia.c:121]   --->   Operation 21 'read' 'src_9_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%src_8_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %src_8_read" [clefia.c:121]   --->   Operation 22 'read' 'src_8_read_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (3.25ns)   --->   "%rk_load = load i8 %rk_addr" [clefia.c:124]   --->   Operation 23 'load' 'rk_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_2 : Operation 24 [1/1] (1.91ns)   --->   "%add_ln124_27 = add i8 %rk_offset_read, i8 2" [clefia.c:124]   --->   Operation 24 'add' 'add_ln124_27' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln124_30 = zext i8 %add_ln124_27" [clefia.c:124]   --->   Operation 25 'zext' 'zext_ln124_30' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%rk_addr_27 = getelementptr i8 %rk, i64 0, i64 %zext_ln124_30" [clefia.c:124]   --->   Operation 26 'getelementptr' 'rk_addr_27' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/2] (3.25ns)   --->   "%rk_load_1 = load i8 %rk_addr_26" [clefia.c:124]   --->   Operation 27 'load' 'rk_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_2 : Operation 28 [1/1] (1.91ns)   --->   "%add_ln124_28 = add i8 %rk_offset_read, i8 3" [clefia.c:124]   --->   Operation 28 'add' 'add_ln124_28' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln124_31 = zext i8 %add_ln124_28" [clefia.c:124]   --->   Operation 29 'zext' 'zext_ln124_31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%rk_addr_28 = getelementptr i8 %rk, i64 0, i64 %zext_ln124_31" [clefia.c:124]   --->   Operation 30 'getelementptr' 'rk_addr_28' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [2/2] (3.25ns)   --->   "%rk_load_2 = load i8 %rk_addr_27" [clefia.c:124]   --->   Operation 31 'load' 'rk_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_2 : Operation 32 [2/2] (3.25ns)   --->   "%rk_load_3 = load i8 %rk_addr_28" [clefia.c:124]   --->   Operation 32 'load' 'rk_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+
+State 3 <SV = 2> <Delay = 4.24>
+ST_3 : Operation 33 [1/1] (0.99ns)   --->   "%xor_ln124 = xor i8 %rk_load, i8 %src_8_read_1" [clefia.c:124]   --->   Operation 33 'xor' 'xor_ln124' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.99ns)   --->   "%xor_ln124_31 = xor i8 %rk_load_1, i8 %src_9_read_1" [clefia.c:124]   --->   Operation 34 'xor' 'xor_ln124_31' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/2] (3.25ns)   --->   "%rk_load_2 = load i8 %rk_addr_27" [clefia.c:124]   --->   Operation 35 'load' 'rk_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_3 : Operation 36 [1/2] (3.25ns)   --->   "%rk_load_3 = load i8 %rk_addr_28" [clefia.c:124]   --->   Operation 36 'load' 'rk_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 224> <RAM>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i8 %xor_ln124" [clefia.c:173]   --->   Operation 37 'zext' 'zext_ln173' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%clefia_s1_addr = getelementptr i8 %clefia_s1, i64 0, i64 %zext_ln173" [clefia.c:173]   --->   Operation 38 'getelementptr' 'clefia_s1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [2/2] (3.25ns)   --->   "%z = load i8 %clefia_s1_addr" [clefia.c:173]   --->   Operation 39 'load' 'z' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln174 = zext i8 %xor_ln124_31" [clefia.c:174]   --->   Operation 40 'zext' 'zext_ln174' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%clefia_s0_addr = getelementptr i8 %clefia_s0, i64 0, i64 %zext_ln174" [clefia.c:174]   --->   Operation 41 'getelementptr' 'clefia_s0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [2/2] (3.25ns)   --->   "%z_1 = load i8 %clefia_s0_addr" [clefia.c:174]   --->   Operation 42 'load' 'z_1' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 4 <SV = 3> <Delay = 6.99>
+ST_4 : Operation 43 [1/1] (0.99ns)   --->   "%xor_ln124_32 = xor i8 %rk_load_2, i8 %src_10_read_1" [clefia.c:124]   --->   Operation 43 'xor' 'xor_ln124_32' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 44 [1/1] (0.99ns)   --->   "%xor_ln124_33 = xor i8 %rk_load_3, i8 %src_11_read_1" [clefia.c:124]   --->   Operation 44 'xor' 'xor_ln124_33' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/2] (3.25ns)   --->   "%z = load i8 %clefia_s1_addr" [clefia.c:173]   --->   Operation 45 'load' 'z' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 46 [1/2] (3.25ns)   --->   "%z_1 = load i8 %clefia_s0_addr" [clefia.c:174]   --->   Operation 46 'load' 'z_1' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln175 = zext i8 %xor_ln124_32" [clefia.c:175]   --->   Operation 47 'zext' 'zext_ln175' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%clefia_s1_addr_1 = getelementptr i8 %clefia_s1, i64 0, i64 %zext_ln175" [clefia.c:175]   --->   Operation 48 'getelementptr' 'clefia_s1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [2/2] (3.25ns)   --->   "%z_2 = load i8 %clefia_s1_addr_1" [clefia.c:175]   --->   Operation 49 'load' 'z_2' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln176 = zext i8 %xor_ln124_33" [clefia.c:176]   --->   Operation 50 'zext' 'zext_ln176' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%clefia_s0_addr_1 = getelementptr i8 %clefia_s0, i64 0, i64 %zext_ln176" [clefia.c:176]   --->   Operation 51 'getelementptr' 'clefia_s0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [2/2] (3.25ns)   --->   "%z_3 = load i8 %clefia_s0_addr_1" [clefia.c:176]   --->   Operation 52 'load' 'z_3' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node select_ln131)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %z_1, i32 7" [clefia.c:131]   --->   Operation 53 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node select_ln131)   --->   "%xor_ln132 = xor i8 %z_1, i8 14" [clefia.c:132]   --->   Operation 54 'xor' 'xor_ln132' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 55 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131 = select i1 %tmp, i8 %xor_ln132, i8 %z_1" [clefia.c:131]   --->   Operation 55 'select' 'select_ln131' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln134 = trunc i8 %select_ln131" [clefia.c:134]   --->   Operation 56 'trunc' 'trunc_ln134' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_8 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131, i32 7" [clefia.c:134]   --->   Operation 57 'bitselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%x_assign_3 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134, i1 %tmp_8" [clefia.c:134]   --->   Operation 58 'bitconcatenate' 'x_assign_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_1)   --->   "%tmp_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131, i32 6" [clefia.c:131]   --->   Operation 59 'bitselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_1)   --->   "%xor_ln132_1 = xor i8 %x_assign_3, i8 14" [clefia.c:132]   --->   Operation 60 'xor' 'xor_ln132_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_1 = select i1 %tmp_9, i8 %xor_ln132_1, i8 %x_assign_3" [clefia.c:131]   --->   Operation 61 'select' 'select_ln131_1' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%trunc_ln134_1 = trunc i8 %select_ln131_1" [clefia.c:134]   --->   Operation 62 'trunc' 'trunc_ln134_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_1, i32 7" [clefia.c:134]   --->   Operation 63 'bitselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%x_assign_6 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_1, i1 %tmp_10" [clefia.c:134]   --->   Operation 64 'bitconcatenate' 'x_assign_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_2)   --->   "%tmp_11 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_1, i32 6" [clefia.c:131]   --->   Operation 65 'bitselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_2)   --->   "%xor_ln132_2 = xor i8 %x_assign_6, i8 14" [clefia.c:132]   --->   Operation 66 'xor' 'xor_ln132_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 67 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_2 = select i1 %tmp_11, i8 %xor_ln132_2, i8 %x_assign_6" [clefia.c:131]   --->   Operation 67 'select' 'select_ln131_2' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%trunc_ln134_2 = trunc i8 %select_ln131_2" [clefia.c:134]   --->   Operation 68 'trunc' 'trunc_ln134_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_12 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_2, i32 7" [clefia.c:134]   --->   Operation 69 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_7)   --->   "%tmp_21 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %z, i32 7" [clefia.c:131]   --->   Operation 70 'bitselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_7)   --->   "%xor_ln132_7 = xor i8 %z, i8 14" [clefia.c:132]   --->   Operation 71 'xor' 'xor_ln132_7' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_7 = select i1 %tmp_21, i8 %xor_ln132_7, i8 %z" [clefia.c:131]   --->   Operation 72 'select' 'select_ln131_7' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln134_7 = trunc i8 %select_ln131_7" [clefia.c:134]   --->   Operation 73 'trunc' 'trunc_ln134_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_22 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_7, i32 7" [clefia.c:134]   --->   Operation 74 'bitselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%x_assign_4 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_7, i1 %tmp_22" [clefia.c:134]   --->   Operation 75 'bitconcatenate' 'x_assign_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_8)   --->   "%tmp_23 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_7, i32 6" [clefia.c:131]   --->   Operation 76 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_8)   --->   "%xor_ln132_8 = xor i8 %x_assign_4, i8 14" [clefia.c:132]   --->   Operation 77 'xor' 'xor_ln132_8' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_8 = select i1 %tmp_23, i8 %xor_ln132_8, i8 %x_assign_4" [clefia.c:131]   --->   Operation 78 'select' 'select_ln131_8' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%trunc_ln134_8 = trunc i8 %select_ln131_8" [clefia.c:134]   --->   Operation 79 'trunc' 'trunc_ln134_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_24 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_8, i32 7" [clefia.c:134]   --->   Operation 80 'bitselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%x_assign_5 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_8, i1 %tmp_24" [clefia.c:134]   --->   Operation 81 'bitconcatenate' 'x_assign_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_9)   --->   "%tmp_25 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_8, i32 6" [clefia.c:131]   --->   Operation 82 'bitselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_9)   --->   "%xor_ln132_9 = xor i8 %x_assign_5, i8 14" [clefia.c:132]   --->   Operation 83 'xor' 'xor_ln132_9' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_9 = select i1 %tmp_25, i8 %xor_ln132_9, i8 %x_assign_5" [clefia.c:131]   --->   Operation 84 'select' 'select_ln131_9' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln134_9 = trunc i8 %select_ln131_9" [clefia.c:134]   --->   Operation 85 'trunc' 'trunc_ln134_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_26 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_9, i32 7" [clefia.c:134]   --->   Operation 86 'bitselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (0.99ns)   --->   "%xor_ln124_44 = xor i8 %x_assign_4, i8 %x_assign_3" [clefia.c:124]   --->   Operation 87 'xor' 'xor_ln124_44' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.99>
+ST_5 : Operation 88 [1/2] (3.25ns)   --->   "%z_2 = load i8 %clefia_s1_addr_1" [clefia.c:175]   --->   Operation 88 'load' 'z_2' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 89 [1/2] (3.25ns)   --->   "%z_3 = load i8 %clefia_s0_addr_1" [clefia.c:176]   --->   Operation 89 'load' 'z_3' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_3)   --->   "%tmp_13 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %z_2, i32 7" [clefia.c:131]   --->   Operation 90 'bitselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_3)   --->   "%xor_ln132_3 = xor i8 %z_2, i8 14" [clefia.c:132]   --->   Operation 91 'xor' 'xor_ln132_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 92 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_3 = select i1 %tmp_13, i8 %xor_ln132_3, i8 %z_2" [clefia.c:131]   --->   Operation 92 'select' 'select_ln131_3' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%trunc_ln134_3 = trunc i8 %select_ln131_3" [clefia.c:134]   --->   Operation 93 'trunc' 'trunc_ln134_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_14 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_3, i32 7" [clefia.c:134]   --->   Operation 94 'bitselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%x_assign_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_3, i1 %tmp_14" [clefia.c:134]   --->   Operation 95 'bitconcatenate' 'x_assign_s' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_4)   --->   "%tmp_15 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %z_3, i32 7" [clefia.c:131]   --->   Operation 96 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_4)   --->   "%xor_ln132_4 = xor i8 %z_3, i8 14" [clefia.c:132]   --->   Operation 97 'xor' 'xor_ln132_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 98 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_4 = select i1 %tmp_15, i8 %xor_ln132_4, i8 %z_3" [clefia.c:131]   --->   Operation 98 'select' 'select_ln131_4' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%trunc_ln134_4 = trunc i8 %select_ln131_4" [clefia.c:134]   --->   Operation 99 'trunc' 'trunc_ln134_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_16 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_4, i32 7" [clefia.c:134]   --->   Operation 100 'bitselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "%x_assign_1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_4, i1 %tmp_16" [clefia.c:134]   --->   Operation 101 'bitconcatenate' 'x_assign_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_5)   --->   "%tmp_17 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_4, i32 6" [clefia.c:131]   --->   Operation 102 'bitselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_5)   --->   "%xor_ln132_5 = xor i8 %x_assign_1, i8 14" [clefia.c:132]   --->   Operation 103 'xor' 'xor_ln132_5' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_5 = select i1 %tmp_17, i8 %xor_ln132_5, i8 %x_assign_1" [clefia.c:131]   --->   Operation 104 'select' 'select_ln131_5' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "%trunc_ln134_5 = trunc i8 %select_ln131_5" [clefia.c:134]   --->   Operation 105 'trunc' 'trunc_ln134_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_18 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_5, i32 7" [clefia.c:134]   --->   Operation 106 'bitselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 107 [1/1] (0.00ns)   --->   "%x_assign_2 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_5, i1 %tmp_18" [clefia.c:134]   --->   Operation 107 'bitconcatenate' 'x_assign_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_6)   --->   "%tmp_19 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_5, i32 6" [clefia.c:131]   --->   Operation 108 'bitselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_6)   --->   "%xor_ln132_6 = xor i8 %x_assign_2, i8 14" [clefia.c:132]   --->   Operation 109 'xor' 'xor_ln132_6' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 110 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_6 = select i1 %tmp_19, i8 %xor_ln132_6, i8 %x_assign_2" [clefia.c:131]   --->   Operation 110 'select' 'select_ln131_6' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln134_6 = trunc i8 %select_ln131_6" [clefia.c:134]   --->   Operation 111 'trunc' 'trunc_ln134_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_20 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_6, i32 7" [clefia.c:134]   --->   Operation 112 'bitselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_10)   --->   "%tmp_27 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_3, i32 6" [clefia.c:131]   --->   Operation 113 'bitselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_10)   --->   "%xor_ln132_10 = xor i8 %x_assign_s, i8 14" [clefia.c:132]   --->   Operation 114 'xor' 'xor_ln132_10' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 115 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_10 = select i1 %tmp_27, i8 %xor_ln132_10, i8 %x_assign_s" [clefia.c:131]   --->   Operation 115 'select' 'select_ln131_10' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 116 [1/1] (0.00ns)   --->   "%trunc_ln134_10 = trunc i8 %select_ln131_10" [clefia.c:134]   --->   Operation 116 'trunc' 'trunc_ln134_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_28 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_10, i32 7" [clefia.c:134]   --->   Operation 117 'bitselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%x_assign_7 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_10, i1 %tmp_28" [clefia.c:134]   --->   Operation 118 'bitconcatenate' 'x_assign_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_11)   --->   "%tmp_29 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_10, i32 6" [clefia.c:131]   --->   Operation 119 'bitselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node select_ln131_11)   --->   "%xor_ln132_11 = xor i8 %x_assign_7, i8 14" [clefia.c:132]   --->   Operation 120 'xor' 'xor_ln132_11' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 121 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln131_11 = select i1 %tmp_29, i8 %xor_ln132_11, i8 %x_assign_7" [clefia.c:131]   --->   Operation 121 'select' 'select_ln131_11' <Predicate = true> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%trunc_ln134_11 = trunc i8 %select_ln131_11" [clefia.c:134]   --->   Operation 122 'trunc' 'trunc_ln134_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_30 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %select_ln131_11, i32 7" [clefia.c:134]   --->   Operation 123 'bitselect' 'tmp_30' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.98>
+ST_6 : Operation 124 [1/1] (0.00ns)   --->   "%or_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_2, i1 %tmp_12" [clefia.c:134]   --->   Operation 124 'bitconcatenate' 'or_ln' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 125 [1/1] (0.00ns)   --->   "%or_ln134_4 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_6, i1 %tmp_20" [clefia.c:134]   --->   Operation 125 'bitconcatenate' 'or_ln134_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 126 [1/1] (0.00ns)   --->   "%or_ln134_7 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_9, i1 %tmp_26" [clefia.c:134]   --->   Operation 126 'bitconcatenate' 'or_ln134_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 127 [1/1] (0.00ns)   --->   "%or_ln134_9 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %trunc_ln134_11, i1 %tmp_30" [clefia.c:134]   --->   Operation 127 'bitconcatenate' 'or_ln134_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_38)   --->   "%xor_ln124_34 = xor i8 %x_assign_s, i8 %src_12_read_1" [clefia.c:124]   --->   Operation 128 'xor' 'xor_ln124_34' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 129 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_38)   --->   "%xor_ln124_35 = xor i8 %xor_ln124_34, i8 %z" [clefia.c:124]   --->   Operation 129 'xor' 'xor_ln124_35' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 130 [1/1] (0.99ns)   --->   "%xor_ln124_36 = xor i8 %or_ln, i8 %or_ln134_4" [clefia.c:124]   --->   Operation 130 'xor' 'xor_ln124_36' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_38)   --->   "%xor_ln124_37 = xor i8 %xor_ln124_36, i8 %x_assign_1" [clefia.c:124]   --->   Operation 131 'xor' 'xor_ln124_37' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 132 [1/1] (0.99ns) (out node of the LUT)   --->   "%xor_ln124_38 = xor i8 %xor_ln124_37, i8 %xor_ln124_35" [clefia.c:124]   --->   Operation 132 'xor' 'xor_ln124_38' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 133 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_43)   --->   "%xor_ln124_39 = xor i8 %x_assign_s, i8 %x_assign_1" [clefia.c:124]   --->   Operation 133 'xor' 'xor_ln124_39' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_43)   --->   "%xor_ln124_40 = xor i8 %xor_ln124_39, i8 %z_1" [clefia.c:124]   --->   Operation 134 'xor' 'xor_ln124_40' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_43)   --->   "%xor_ln124_41 = xor i8 %or_ln134_7, i8 %or_ln134_9" [clefia.c:124]   --->   Operation 135 'xor' 'xor_ln124_41' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 136 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_43)   --->   "%xor_ln124_42 = xor i8 %xor_ln124_41, i8 %src_13_read_1" [clefia.c:124]   --->   Operation 136 'xor' 'xor_ln124_42' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 137 [1/1] (0.99ns) (out node of the LUT)   --->   "%xor_ln124_43 = xor i8 %xor_ln124_42, i8 %xor_ln124_40" [clefia.c:124]   --->   Operation 137 'xor' 'xor_ln124_43' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_47)   --->   "%xor_ln124_45 = xor i8 %xor_ln124_44, i8 %z_2" [clefia.c:124]   --->   Operation 138 'xor' 'xor_ln124_45' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_47)   --->   "%xor_ln124_46 = xor i8 %xor_ln124_36, i8 %src_14_read_1" [clefia.c:124]   --->   Operation 139 'xor' 'xor_ln124_46' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 140 [1/1] (0.99ns) (out node of the LUT)   --->   "%xor_ln124_47 = xor i8 %xor_ln124_46, i8 %xor_ln124_45" [clefia.c:124]   --->   Operation 140 'xor' 'xor_ln124_47' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_51)   --->   "%xor_ln124_48 = xor i8 %xor_ln124_44, i8 %z_3" [clefia.c:124]   --->   Operation 141 'xor' 'xor_ln124_48' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 142 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_51)   --->   "%xor_ln124_49 = xor i8 %or_ln134_9, i8 %src_15_read_1" [clefia.c:124]   --->   Operation 142 'xor' 'xor_ln124_49' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node xor_ln124_51)   --->   "%xor_ln124_50 = xor i8 %xor_ln124_49, i8 %or_ln134_7" [clefia.c:124]   --->   Operation 143 'xor' 'xor_ln124_50' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 144 [1/1] (0.99ns) (out node of the LUT)   --->   "%xor_ln124_51 = xor i8 %xor_ln124_50, i8 %xor_ln124_48" [clefia.c:124]   --->   Operation 144 'xor' 'xor_ln124_51' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 145 [1/1] (0.00ns)   --->   "%mrv = insertvalue i64 <undef>, i8 %src_8_read_1" [clefia.c:186]   --->   Operation 145 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 146 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i64 %mrv, i8 %src_9_read_1" [clefia.c:186]   --->   Operation 146 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 147 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i64 %mrv_1, i8 %src_10_read_1" [clefia.c:186]   --->   Operation 147 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 148 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i64 %mrv_2, i8 %src_11_read_1" [clefia.c:186]   --->   Operation 148 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 149 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i64 %mrv_3, i8 %xor_ln124_38" [clefia.c:186]   --->   Operation 149 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 150 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i64 %mrv_4, i8 %xor_ln124_43" [clefia.c:186]   --->   Operation 150 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 151 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i64 %mrv_5, i8 %xor_ln124_47" [clefia.c:186]   --->   Operation 151 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 152 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue i64 %mrv_6, i8 %xor_ln124_51" [clefia.c:186]   --->   Operation 152 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 153 [1/1] (0.00ns)   --->   "%ret_ln186 = ret i64 %mrv_7" [clefia.c:186]   --->   Operation 153 'ret' 'ret_ln186' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 5.17ns
+The critical path consists of the following:
+	wire read operation ('rk_offset_read', clefia.c:121) on port 'rk_offset' (clefia.c:121) [13]  (0 ns)
+	'add' operation ('add_ln124', clefia.c:124) [24]  (1.92 ns)
+	'getelementptr' operation ('b', clefia.c:124) [26]  (0 ns)
+	'load' operation ('rk_load_1', clefia.c:124) on array 'rk' [32]  (3.25 ns)
+
+ <State 2>: 5.17ns
+The critical path consists of the following:
+	'add' operation ('add_ln124_27', clefia.c:124) [29]  (1.92 ns)
+	'getelementptr' operation ('b', clefia.c:124) [31]  (0 ns)
+	'load' operation ('rk_load_2', clefia.c:124) on array 'rk' [37]  (3.25 ns)
+
+ <State 3>: 4.24ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln124', clefia.c:124) [28]  (0.99 ns)
+	'getelementptr' operation ('clefia_s1_addr', clefia.c:173) [42]  (0 ns)
+	'load' operation ('z', clefia.c:173) on array 'clefia_s1' [43]  (3.25 ns)
+
+ <State 4>: 7ns
+The critical path consists of the following:
+	'load' operation ('z', clefia.c:174) on array 'clefia_s0' [46]  (3.25 ns)
+	'select' operation ('x', clefia.c:131) [55]  (1.25 ns)
+	'select' operation ('x', clefia.c:131) [61]  (1.25 ns)
+	'select' operation ('x', clefia.c:131) [67]  (1.25 ns)
+
+ <State 5>: 7ns
+The critical path consists of the following:
+	'load' operation ('z', clefia.c:176) on array 'clefia_s0' [52]  (3.25 ns)
+	'select' operation ('x', clefia.c:131) [79]  (1.25 ns)
+	'select' operation ('x', clefia.c:131) [85]  (1.25 ns)
+	'select' operation ('x', clefia.c:131) [91]  (1.25 ns)
+
+ <State 6>: 1.98ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln124_36', clefia.c:124) [127]  (0.99 ns)
+	'xor' operation ('xor_ln124_37', clefia.c:124) [128]  (0 ns)
+	'xor' operation ('xor_ln124_38', clefia.c:124) [129]  (0.99 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

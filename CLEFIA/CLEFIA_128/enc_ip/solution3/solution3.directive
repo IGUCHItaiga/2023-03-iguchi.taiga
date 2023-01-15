@@ -1,0 +1,46 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="clefia_enc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="return"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia_enc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="pt"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia_enc" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clefia_enc"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia_enc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="ct"/>
+            </pragma>
+        </directive>
+        <directive functionName="clefia_enc" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="recursive" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ByteCpy" label="ByteCpy_label1" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ByteXor" label="ByteXor_label2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="ClefiaGfn4" label="ClefiaGfn4_label3" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

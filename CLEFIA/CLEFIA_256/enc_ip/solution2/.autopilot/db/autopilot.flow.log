@@ -1,0 +1,1228 @@
+INFO-FLOW: Workspace D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2 opened at Mon Dec 26 14:12:10 +0900 2022
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.435 sec.
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.106 sec.
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.145 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.603 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 0.647 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.118 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.141 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+Execute   source ./enc_ip/solution2/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+Execute     set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+Execute     set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+Execute     set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+Execute     set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+Execute     set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+Execute     set_directive_interface -mode s_axilite clefia_enc skey 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc skey 
+Execute     set_directive_pipeline ClefiaEncrypt 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaEncrypt 
+Execute     set_directive_pipeline ClefiaKeySet256 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaKeySet256 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 685.211 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/enc.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling src/enc.c as C
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang src/enc.c -foptimization-record-file=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot D:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-mingw32 -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.c.clang.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.c.clang.err.log 
+Command       ap_eval done; 0.275 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute       set_directive_top clefia_enc -name=clefia_enc 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clang.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.243 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c std=gnu99 -target fpga  -directive=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/.systemc_flag -fix-errors D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c std=gnu99 -target fpga  -directive=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/all.directive.json -fix-errors D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.108 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c std=gnu99 -target fpga  
+INFO-FLOW: exec D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c std=gnu99 -target fpga  
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.clang-tidy.loop-label.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.11 sec.
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.166 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.xilinx-dataflow-lawyer.diag.yml D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.xilinx-dataflow-lawyer.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.xilinx-dataflow-lawyer.err.log 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.bc -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.clang.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.pp.0.c.clang.err.log 
+Command       ap_eval done; 0.232 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.366 seconds; current allocated memory: 1.100 GB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc -args  "D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.g.bc"  
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/enc.g.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc -args D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.2.m1.bc -args D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.2.m1.bc > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 3.11 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 3.113 sec.
+Execute       run_link_or_opt -opt -out D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc -args D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=clefia_enc -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=clefia_enc -reflow-float-conversion -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 1.071 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.075 sec.
+Execute       run_link_or_opt -out D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.4.m2.bc -args D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.4.m2.bc > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+Command         ap_eval done; 0.127 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.13 sec.
+Execute       run_link_or_opt -opt -out D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.5.gdce.bc -args D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=clefia_enc 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.5.gdce.bc > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+Execute       get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=clefia_enc -mllvm -hls-db-dir -mllvm D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.5.gdce.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.lto.bc -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.575 sec.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_193_1' is marked as complete unroll implied by the pipeline pragma (src/enc.c:193:21)
+INFO: [HLS 214-291] Loop 'ClefiaKeySet256_label10' is marked as complete unroll implied by the pipeline pragma (src/enc.c:291:27)
+INFO: [HLS 214-291] Loop 'ClefiaGfn8_label4' is marked as complete unroll implied by the pipeline pragma (src/enc.c:210:21)
+INFO: [HLS 214-291] Loop 'ByteXor_label2' is marked as complete unroll implied by the pipeline pragma (src/enc.c:123:18)
+INFO: [HLS 214-291] Loop 'ByteCpy_label1' is marked as complete unroll implied by the pipeline pragma (src/enc.c:116:18)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_193_1' (src/enc.c:193:21) in function 'ClefiaGfn4' completely with a factor of 26 (src/enc.c:189:0)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaKeySet256_label10' (src/enc.c:291:27) in function 'ClefiaKeySet256' completely with a factor of 13 (src/enc.c:278:0)
+INFO: [HLS 214-186] Unrolling loop 'ClefiaGfn8_label4' (src/enc.c:210:21) in function 'ClefiaGfn8' completely with a factor of 10 (src/enc.c:206:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF0Xor' (src/enc.c:143:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaMul2' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaF1Xor' (src/enc.c:166:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaDoubleSwap' (src/enc.c:225:0)
+INFO: [HLS 214-178] Inlining function 'ClefiaGfn8' into 'ClefiaKeySet256' (src/enc.c:278:0)
+INFO: [HLS 214-178] Inlining function 'ByteCpy' into 'ClefiaEncrypt' (src/enc.c:311:0)
+INFO: [HLS 214-178] Inlining function 'ByteXor' into 'ClefiaEncrypt' (src/enc.c:311:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ClefiaEncrypt' completely with a factor of 4 (src/enc.c:311:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaEncrypt' completely with a factor of 16 (src/enc.c:311:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaDoubleSwap' completely with a factor of 16 (src/enc.c:225:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ClefiaF1Xor' completely with a factor of 4 (src/enc.c:166:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaF1Xor' completely with a factor of 4 (src/enc.c:166:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ClefiaF0Xor' completely with a factor of 4 (src/enc.c:143:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ClefiaF0Xor' completely with a factor of 4 (src/enc.c:143:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ByteXor.2' completely with a factor of 16 (src/enc.c:122:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ByteXor' completely with a factor of 16 (src/enc.c:122:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteXor_label2' (src/enc.c:123:18) in function 'ByteXor.1' completely with a factor of 8 (src/enc.c:122:0)
+INFO: [HLS 214-186] Unrolling loop 'ByteCpy_label1' (src/enc.c:116:18) in function 'ByteCpy.1' completely with a factor of 32 (src/enc.c:115:0)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.605 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.100 GB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top clefia_enc -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.0.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'ClefiaKeySet256.1' into 'clefia_enc' (src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaEncrypt.1' into 'clefia_enc' (src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy.1' into 'clefia_enc' (src/enc.c:209).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:217).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:218).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:211).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:212).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:213).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:214).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:221).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.1' into 'clefia_enc' (src/enc.c:289->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.2' into 'clefia_enc' (src/enc.c:301->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:293->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:297->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:293->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.2' into 'clefia_enc' (src/enc.c:295->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:297->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.2' into 'clefia_enc' (src/enc.c:301->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:293->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:297->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:293->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.2' into 'clefia_enc' (src/enc.c:295->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:297->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.2' into 'clefia_enc' (src/enc.c:301->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:293->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:297->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:293->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.2' into 'clefia_enc' (src/enc.c:295->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:297->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor' into 'clefia_enc' (src/enc.c:299->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaDoubleSwap' into 'clefia_enc' (src/enc.c:303->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ByteXor.1' into 'clefia_enc' (src/enc.c:307->src/enc.c:339).
+INFO: [XFORM 203-603] Inlining function 'ClefiaGfn4' into 'clefia_enc' (src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:192->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:198->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:199->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF0Xor' into 'clefia_enc' (src/enc.c:194->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ClefiaF1Xor' into 'clefia_enc' (src/enc.c:195->src/enc.c:320->src/enc.c:340).
+INFO: [XFORM 203-603] Inlining function 'ByteCpy' into 'clefia_enc' (src/enc.c:202->src/enc.c:320->src/enc.c:340).
+Command         transform done; 3.611 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.65 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.1.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 29.098 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.2.prechk.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.132 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 29 seconds. CPU system time: 0 seconds. Elapsed time: 29.245 seconds; current allocated memory: 1.100 GB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.g.1.bc to D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.1.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [HLS 200-489] Unrolling loop 'ByteCpy_label1' (src/enc.c:114) in function 'clefia_enc' completely with a factor of 28.
+INFO: [XFORM 203-102] Partitioning array 'fin.1' (src/enc.c:190) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fout.1' (src/enc.c:190) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rin' (src/enc.c:312) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rout.i' automatically.
+INFO: [XFORM 203-102] Partitioning array 'fin' (src/enc.c:207) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fout' (src/enc.c:207) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lk' (src/enc.c:280) automatically.
+Command         transform done; 84.944 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.1.tmp.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'clefia_enc' (src/enc.c:117:10)...3302 expression(s) balanced.
+Command         transform done; 10.004 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 94 seconds. CPU system time: 0 seconds. Elapsed time: 94.977 seconds; current allocated memory: 1.100 GB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.2.bc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'rk' (src/enc.c:124:12)
+Command         transform done; 71.573 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 71 seconds. CPU system time: 0 seconds. Elapsed time: 71.579 seconds; current allocated memory: 1.100 GB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 199.497 sec.
+Command     elaborate done; 206.5 sec.
+Execute     ap_eval exec zip -j D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command     ap_eval done; 0.153 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'clefia_enc' ...
+Execute       ap_set_top_model clefia_enc 
+Execute       get_model_list clefia_enc -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model clefia_enc 
+Execute       get_model_list clefia_enc -filter all-wo-channel 
+INFO-FLOW: Model list for configure: clefia_enc
+INFO-FLOW: Configuring Module : clefia_enc ...
+Execute       set_default_model clefia_enc 
+Execute       apply_spec_resource_limit clefia_enc 
+INFO-FLOW: Model list for preprocess: clefia_enc
+INFO-FLOW: Preprocessing Module: clefia_enc ...
+Execute       set_default_model clefia_enc 
+Execute       cdfg_preprocess -model clefia_enc 
+Command       cdfg_preprocess done; 0.412 sec.
+Execute       rtl_gen_preprocess clefia_enc 
+INFO-FLOW: Model list for synthesis: clefia_enc
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clefia_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model clefia_enc 
+Execute       schedule -model clefia_enc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 36.71 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 36 seconds. CPU system time: 0 seconds. Elapsed time: 37.384 seconds; current allocated memory: 1.100 GB.
+Execute       syn_report -verbosereport -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 7.292 sec.
+Execute       db_write -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.sched.adb -f 
+Command       db_write done; 4.472 sec.
+INFO-FLOW: Finish scheduling clefia_enc.
+Execute       set_default_model clefia_enc 
+Execute       bind -model clefia_enc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 33.322 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 44 seconds. CPU system time: 1 seconds. Elapsed time: 45.089 seconds; current allocated memory: 1.100 GB.
+Execute       syn_report -verbosereport -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 33.995 sec.
+Execute       db_write -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.bind.adb -f 
+Command       db_write done; 6.103 sec.
+INFO-FLOW: Finish binding clefia_enc.
+Execute       get_model_list clefia_enc -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess clefia_enc 
+INFO-FLOW: Model list for RTL generation: clefia_enc
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clefia_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model clefia_enc -top_prefix  -sub_prefix clefia_enc_ -mg_file D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/pt' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/skey' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clefia_enc/ct' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clefia_enc' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'pt', 'skey', 'ct' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clefia_enc'.
+Command       create_rtl_model done; 5.688 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 43 seconds. CPU system time: 1 seconds. Elapsed time: 45.877 seconds; current allocated memory: 1.100 GB.
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute       gen_rtl clefia_enc -istop -style xilinx -f -lang vhdl -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/syn/vhdl/clefia_enc 
+Command       gen_rtl done; 19.45 sec.
+Execute       gen_rtl clefia_enc -istop -style xilinx -f -lang vlog -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/syn/verilog/clefia_enc 
+Command       gen_rtl done; 10.148 sec.
+Execute       syn_report -csynth -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/syn/report/clefia_enc_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 9.53 sec.
+Execute       syn_report -rtlxml -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/syn/report/clefia_enc_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Command       syn_report done; 9.009 sec.
+Execute       syn_report -verbosereport -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 43.04 sec.
+Execute       db_write -model clefia_enc -f -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.adb 
+Command       db_write done; 16.262 sec.
+Execute       db_write -model clefia_enc -bindview -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/design.bindinfo.xml 
+Command       db_write done; 2.45 sec.
+Execute       gen_tb_info clefia_enc -p D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc 
+Execute       export_constraint_db -f -tool general -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.constraint.tcl 
+Execute       syn_report -designview -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.design.xml 
+Command       syn_report done; 18.712 sec.
+Execute       syn_report -csynthDesign -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model clefia_enc -o D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks clefia_enc 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain clefia_enc 
+INFO-FLOW: Model list for RTL component generation: clefia_enc
+INFO-FLOW: Handling components in module [clefia_enc] ... 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.tcl 
+INFO-FLOW: Found component clefia_enc_clefia_s0_ROM_AUTO_1R.
+INFO-FLOW: Append model clefia_enc_clefia_s0_ROM_AUTO_1R
+INFO-FLOW: Found component clefia_enc_clefia_s1_ROM_AUTO_1R.
+INFO-FLOW: Append model clefia_enc_clefia_s1_ROM_AUTO_1R
+INFO-FLOW: Found component clefia_enc_rk_RAM_AUTO_1R1W.
+INFO-FLOW: Append model clefia_enc_rk_RAM_AUTO_1R1W
+INFO-FLOW: Found component clefia_enc_control_s_axi.
+INFO-FLOW: Append model clefia_enc_control_s_axi
+INFO-FLOW: Append model clefia_enc
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: clefia_enc_clefia_s0_ROM_AUTO_1R clefia_enc_clefia_s1_ROM_AUTO_1R clefia_enc_rk_RAM_AUTO_1R1W clefia_enc_control_s_axi clefia_enc
+INFO-FLOW: Generating D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model clefia_enc_clefia_s0_ROM_AUTO_1R
+INFO-FLOW: To file: write model clefia_enc_clefia_s1_ROM_AUTO_1R
+INFO-FLOW: To file: write model clefia_enc_rk_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model clefia_enc_control_s_axi
+INFO-FLOW: To file: write model clefia_enc
+INFO-FLOW: Generating D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.239 sec.
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.337 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/vhdl' dstVlogDir='D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/vlog' tclDir='D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db' modelList='clefia_enc_clefia_s0_ROM_AUTO_1R
+clefia_enc_clefia_s1_ROM_AUTO_1R
+clefia_enc_rk_RAM_AUTO_1R1W
+clefia_enc_control_s_axi
+clefia_enc
+' expOnly='0'
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'clefia_enc_clefia_s0_ROM_AUTO_1R' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'clefia_enc_clefia_s1_ROM_AUTO_1R' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'clefia_enc_rk_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source ./control.slave.tcl 
+Command       ap_source done; 0.57 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 131 seconds. CPU system time: 9 seconds. Elapsed time: 145.434 seconds; current allocated memory: 1.100 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='clefia_enc_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0.8 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute       get_config_op mul -impl 
+Execute       get_config_op mul -latency 
+Execute       get_config_op mul -precision 
+Execute       get_config_op add -impl 
+Execute       get_config_op add -latency 
+Execute       get_config_op add -precision 
+Execute       get_config_op sub -impl 
+Execute       get_config_op sub -latency 
+Execute       get_config_op sub -precision 
+Execute       get_config_op fadd -impl 
+Execute       get_config_op fadd -latency 
+Execute       get_config_op fadd -precision 
+Execute       get_config_op fsub -impl 
+Execute       get_config_op fsub -latency 
+Execute       get_config_op fsub -precision 
+Execute       get_config_op fdiv -impl 
+Execute       get_config_op fdiv -latency 
+Execute       get_config_op fdiv -precision 
+Execute       get_config_op fexp -impl 
+Execute       get_config_op fexp -latency 
+Execute       get_config_op fexp -precision 
+Execute       get_config_op flog -impl 
+Execute       get_config_op flog -latency 
+Execute       get_config_op flog -precision 
+Execute       get_config_op fmul -impl 
+Execute       get_config_op fmul -latency 
+Execute       get_config_op fmul -precision 
+Execute       get_config_op frsqrt -impl 
+Execute       get_config_op frsqrt -latency 
+Execute       get_config_op frsqrt -precision 
+Execute       get_config_op frecip -impl 
+Execute       get_config_op frecip -latency 
+Execute       get_config_op frecip -precision 
+Execute       get_config_op fsqrt -impl 
+Execute       get_config_op fsqrt -latency 
+Execute       get_config_op fsqrt -precision 
+Execute       get_config_op dadd -impl 
+Execute       get_config_op dadd -latency 
+Execute       get_config_op dadd -precision 
+Execute       get_config_op dsub -impl 
+Execute       get_config_op dsub -latency 
+Execute       get_config_op dsub -precision 
+Execute       get_config_op ddiv -impl 
+Execute       get_config_op ddiv -latency 
+Execute       get_config_op ddiv -precision 
+Execute       get_config_op dexp -impl 
+Execute       get_config_op dexp -latency 
+Execute       get_config_op dexp -precision 
+Execute       get_config_op dlog -impl 
+Execute       get_config_op dlog -latency 
+Execute       get_config_op dlog -precision 
+Execute       get_config_op dmul -impl 
+Execute       get_config_op dmul -latency 
+Execute       get_config_op dmul -precision 
+Execute       get_config_op drsqrt -impl 
+Execute       get_config_op drsqrt -latency 
+Execute       get_config_op drsqrt -precision 
+Execute       get_config_op drecip -impl 
+Execute       get_config_op drecip -latency 
+Execute       get_config_op drecip -precision 
+Execute       get_config_op dsqrt -impl 
+Execute       get_config_op dsqrt -latency 
+Execute       get_config_op dsqrt -precision 
+Execute       get_config_op hadd -impl 
+Execute       get_config_op hadd -latency 
+Execute       get_config_op hadd -precision 
+Execute       get_config_op hsub -impl 
+Execute       get_config_op hsub -latency 
+Execute       get_config_op hsub -precision 
+Execute       get_config_op hdiv -impl 
+Execute       get_config_op hdiv -latency 
+Execute       get_config_op hdiv -precision 
+Execute       get_config_op hmul -impl 
+Execute       get_config_op hmul -latency 
+Execute       get_config_op hmul -precision 
+Execute       get_config_op hsqrt -impl 
+Execute       get_config_op hsqrt -latency 
+Execute       get_config_op hsqrt -precision 
+Execute       get_config_op facc -impl 
+Execute       get_config_op facc -latency 
+Execute       get_config_op facc -precision 
+Execute       get_config_op fmacc -impl 
+Execute       get_config_op fmacc -latency 
+Execute       get_config_op fmacc -precision 
+Execute       get_config_op fmadd -impl 
+Execute       get_config_op fmadd -latency 
+Execute       get_config_op fmadd -precision 
+Execute       get_config_storage fifo -auto_srl_max_bits 
+Execute       get_config_storage fifo -auto_srl_max_depth 
+Execute       get_config_storage fifo -impl 
+Execute       get_solution -flow_target 
+Execute       get_config_array_partition -complete_threshold 
+Execute       get_config_array_partition -throughput_driven 
+Execute       get_config_compile -enable_auto_rewind 
+Execute       get_config_compile -ignore_long_run_time 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_compile -no_signed_zeros 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -unsafe_math_optimizations 
+Execute       get_config_dataflow -default_channel 
+Execute       get_config_dataflow -disable_fifo_sizing_opt 
+Execute       get_config_dataflow -fifo_depth 
+Execute       get_config_dataflow -override_user_fifo_depth 
+Execute       get_config_dataflow -scalar_fifo_depth 
+Execute       get_config_dataflow -start_fifo_depth 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_dataflow -strict_stable_sync 
+Execute       get_config_dataflow -task_level_fifo_depth 
+Execute       get_config_debug -directory 
+Execute       get_config_debug -enable 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_max_timing_paths 
+Execute       get_config_export -vivado_optimization_level 
+Execute       get_config_export -vivado_pblock 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_export -vivado_report_level 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_interface -clock_enable 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_addr64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_buffer_impl 
+Execute       get_config_interface -m_axi_conservative_mode 
+Execute       get_config_interface -m_axi_flush_mode 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -register_io 
+Execute       get_config_interface -s_axilite_auto_restart_counter 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_status_regs 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -header 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -mult_keep_attribute 
+Execute       get_config_rtl -register_all_io 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -reset 
+Execute       get_config_rtl -reset_async 
+Execute       get_config_rtl -reset_level 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0.2 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='clefia_enc_clefia_s0_ROM_AUTO_1R
+clefia_enc_clefia_s1_ROM_AUTO_1R
+clefia_enc_rk_RAM_AUTO_1R1W
+clefia_enc_control_s_axi
+clefia_enc
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/top-io-be.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.constraint.tcl 
+Execute       sc_get_clocks clefia_enc 
+Execute       source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE clefia_enc LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST clefia_enc MODULE2INSTS {clefia_enc clefia_enc} INST2MODULE {clefia_enc clefia_enc} INSTDATA {clefia_enc {DEPTH 1 CHILDREN {}}} MODULEDATA {clefia_enc {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME rk_U SOURCE src/enc.c:335 VARIABLE rk LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME clefia_s0_U SOURCE {} VARIABLE clefia_s0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 6 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME clefia_s1_U SOURCE {} VARIABLE clefia_s1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 5 URAM 0 DISPNAME {bind_storage rom_np}}} AREA {DSP 0 BRAM 12 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.348 seconds; current allocated memory: 1.100 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clefia_enc.
+INFO: [VLOG 209-307] Generating Verilog RTL for clefia_enc.
+Execute       syn_report -model clefia_enc -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 142.90 MHz
+Command     autosyn done; 276.111 sec.
+Command   csynth_design done; 482.773 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 454 seconds. CPU system time: 12 seconds. Elapsed time: 482.774 seconds; current allocated memory: 452.422 MB.
+Command ap_source done; 483.745 sec.
+Execute cleanup_all 
+Command cleanup_all done; 0.377 sec.
+INFO-FLOW: Workspace D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2 opened at Mon Dec 26 14:24:52 +0900 2022
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.38 sec.
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.144 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.542 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 0.585 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.112 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.136 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+Execute   source ./enc_ip/solution2/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./enc_ip/solution2/directives.tcl
+Execute     set_directive_interface -mode s_axilite clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc 
+Execute     set_directive_inline -recursive clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_inline -recursive clefia_enc 
+Execute     set_directive_interface -mode s_axilite clefia_enc pt 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc pt 
+Execute     set_directive_interface -mode s_axilite clefia_enc ct 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc ct 
+Execute     set_directive_top -name clefia_enc clefia_enc 
+INFO: [HLS 200-1510] Running: set_directive_top -name clefia_enc clefia_enc 
+Execute     set_directive_interface -mode s_axilite clefia_enc skey 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite clefia_enc skey 
+Execute     set_directive_pipeline ClefiaEncrypt 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaEncrypt 
+Execute     set_directive_pipeline ClefiaKeySet256 
+INFO: [HLS 200-1510] Running: set_directive_pipeline ClefiaKeySet256 
+Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -output 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.112 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=clefia_enc xml_exists=0
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     get_config_rtl -deadlock_detection 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to clefia_enc
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=5 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='clefia_enc_clefia_s0_ROM_AUTO_1R
+clefia_enc_clefia_s1_ROM_AUTO_1R
+clefia_enc_rk_RAM_AUTO_1R1W
+clefia_enc_control_s_axi
+clefia_enc
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/top-io-be.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute     get_config_interface -s_axilite_interrupt_mode 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute     get_config_export -format 
+Execute     get_config_export -vendor 
+Execute     get_config_export -library 
+Execute     get_config_export -version 
+Execute     get_config_export -ipname 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     get_solution -flow_target 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -stall_sig_gen 
+Execute     get_config_rtl -profile 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.constraint.tcl 
+Execute     sc_get_clocks clefia_enc 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_debug -directory 
+Execute     get_config_rtl -deadlock_detection 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to clefia_enc
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/driver
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute     get_config_interface -s_axilite_interrupt_mode 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.compgen.dataonly.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=clefia_enc
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.rtl_wrap.cfg.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_export -ip_xdc_file 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.constraint.tcl 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/clefia_enc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.112 sec.
+INFO-FLOW: DBG:PUTS:     IP package: exec D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success D:/tmp/CLEFIA/CLEFIA_256/enc_ip/solution2/impl/ip/pack.bat
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s enc_ip/solution2/impl/export.zip 
+INFO: [HLS 200-802] Generated output file enc_ip/solution2/impl/export.zip
+Command   export_design done; 16.975 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 16.975 seconds; current allocated memory: 452.859 MB.
+Command ap_source done; 17.812 sec.
+Execute cleanup_all 
