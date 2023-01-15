@@ -11,19 +11,22 @@ CLEFIA is a symmetric block cipher which processes data blocks of 128 bits using
 
 # Install and Usage
 
-ここに、プログラムのコンパイルの仕方やインストールの仕方を書く。
+"CLEFIA" contains files I used to generate bitstreams.
+"pynq_jupyter" is a directory, downloaded from PYNQ. It contains uploaded files (e.g. ".bit", ".hwh", and ".c" files) and jupyter notebooks.
+"FPGA_data.xlsx" is an excel file that contains data I collected from Vitis HLS, Vivado, and jupyter notebook.
 
 # Author
 
-ここに、自分の名前を書く。
+・TaigaIguchi
 
 # References
 
-ここに、参照した文献やサイトのURLを書く。
+・About CLEFIA 
+https://www.sony.co.jp/Products/cryptography/clefia/
+
+・Reference code  
+https://www.sony.co.jp/Products/cryptography/clefia/download/data/clefia_ref.c
 
 # License
 
-ここに、自分のプログラムのライセンスを書く。
-ライセンスは自分で決めてよいですが、誰もが利用できるライセンスにしてください。MIT Licenseを選ぶ学生さんが多いようです。
-
-必要なら、上記以外の項目を追加して、加筆してもかまいません。
+・MIT
